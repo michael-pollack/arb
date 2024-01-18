@@ -1,0 +1,68 @@
+;;; -*- Mode: TDL; Coding: utf-8 -*-
+;;; Nouns
+
+walid := common-noun-lex &
+  [ STEM < "walid" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_boy_n_rel" ].
+
+talib := common-noun-lex &
+  [ STEM < "talib" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_student_n_rel" ].
+
+kitab := common-noun-lex &
+  [ STEM < "kitab" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_book_n_rel" ].
+
+qita := common-noun-lex &
+  [ STEM < "qita" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_cat_n_rel" ].
+
+kalp := common-noun-lex &
+  [ STEM < "kalp" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_dog_n_rel" ].
+
+huwa := pronoun-noun-lex &
+  [ STEM < "huwa" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_3rd_sg_masc_subj_rel" ].
+
+2anta := pronoun-noun-lex &
+  [ STEM < "2anta" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_2nd_sg_masc_subj_rel" ].
+
+2iyyaahu := pronoun-noun-lex &
+  [ STEM < "2iyyaahu" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_3rd_sg_masc_obj_rel" ].
+
+hiya := pronoun-noun-lex &
+  [ STEM < "hiya" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_3rd_sg_fem_subj_rel" ].
+
+madha := wh-pronoun-noun-lex &
+  [ STEM < "madha" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_what_n_rel" ].
+
+man := wh-pronoun-noun-lex &
+  [ STEM < "man" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_who_n_rel" ].
+
+;;; Adjectives
+
+;;; Verbs
+
+qadima := v1-verb-lex &
+  [ STEM < "qadima" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_come_v_rel" ].
+
+wasala := v1-verb-lex &
+  [ STEM < "wasala" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_arrive_v_rel" ].
+
+qara2a := v2-verb-lex &
+  [ STEM < "qara2a" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_read_v_rel" ].
+
+halla := v2-verb-lex &
+  [ STEM < "halla" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_solve_v_rel" ].
+
+;;; Adverbs
