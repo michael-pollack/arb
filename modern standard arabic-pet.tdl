@@ -11,7 +11,7 @@
 
 :include "head-types".
 :include "matrix".
-:include "modern standard arabic".
+:include "modern_standard_arabic".
 :include "mtr".
 
 

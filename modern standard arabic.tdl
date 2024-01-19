@@ -1,8 +1,8 @@
 ;;; -*- Mode: TDL; Coding: utf-8 -*-
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;; Grammar of Modern Standard Arabic
+;;; Grammar of Modern_Standard_Arabic
 ;;; created at:
-;;;     Thu Jan 18 03:41:30 UTC 2024
+;;;     Fri Jan 19 19:10:13 UTC 2024
 ;;; based on Matrix customization system version of:
 ;;;     Fri 27 Oct 2023 04:16:13 PM UTC
 ;;;
@@ -18,8 +18,9 @@ non-mod-lex-item := lex-item &
 ;;; Matrix Type Addenda
 ;;;;;;;;;;;;;;;;;;;;;;;;;
 
-basic-head-comp-phrase :+ [ SYNSEM [ LIGHT -,
-             LOCAL.CAT.MC #mc ],
+basic-head-comp-phrase :+ [ SYNSEM [ LIGHT #light,
+             LOCAL.CAT [ HC-LIGHT #light,
+                         MC #mc ] ],
     HEAD-DTR.SYNSEM.LOCAL.CAT.MC #mc ].
 
 head :+ [ PRON bool ].
@@ -97,35 +98,46 @@ acc := case.  ; accusative
 
 ;;; Nouns
 
-wh-pronoun-noun-lex := basic-wh-word-lex & norm-hook-lex-item & basic-icons-lex-item & non-mod-lex-item & zero-arg-que & wh-pronoun-noun-lex &
-  [ SYNSEM [ LOCAL [ CAT [ HEAD noun,
-                           VAL [ SPR < >,
-                                 SUBJ < >,
-                                 COMPS < >,
-                                 SPEC < > ] ],
-                     CONT [ RELS.LIST < [ LBL #larg,
-                                          ARG0 ref-ind & #arg0 ],
-                                        quant-relation &
-                                        [ PRED "which_q_rel",
-                                          ARG0 #arg0,
-                                          RSTR #harg ] >,
-                            HCONS.LIST < [ HARG #harg,
-                                           LARG #larg ] > ] ],
-             NON-LOCAL.QUE.LIST < #arg0 > ] ].
-
 noun-lex := basic-noun-lex & basic-non-wh-word-lex & non-local-none-lex-item & no-hcons-lex-item & non-mod-lex-item &
-  [ ARG-ST < #spr >,
-    SYNSEM.LOCAL.CAT.VAL [ COMPS < >,
+  [ SYNSEM.LOCAL.CAT.VAL [ SPR < #spr &
+                                 [ LOCAL.CAT.HEAD det ] >,
+                           COMPS < >,
                            SUBJ < >,
-                           SPEC < >,
-                           SPR < #spr &
-                                 [ LOCAL.CAT.HEAD det,
-                                   OPT + ] > ] ].
+                           SPEC < > ],
+    ARG-ST < #spr > ].
 
-common-noun-lex := noun-lex.
+common-3sgm-nom-noun-lex := noun-lex &
+  [ SYNSEM.LOCAL [ CAT.HEAD.CASE nom,
+                   CONT.HOOK.INDEX.PNG [ PER 3rd,
+                                         NUM sg,
+                                         GEND masc ] ] ].
 
-pronoun-noun-lex := noun-lex &
-  [ SYNSEM.LOCAL.CAT.HEAD.PRON + ].
+common-3sg-acc-noun-lex := noun-lex &
+  [ SYNSEM.LOCAL [ CAT.HEAD.CASE acc,
+                   CONT.HOOK.INDEX.PNG [ NUM sg,
+                                         PER 3rd ] ] ].
+
+common-3pl-nom-noun-lex := noun-lex &
+  [ SYNSEM.LOCAL [ CAT.HEAD.CASE nom,
+                   CONT.HOOK.INDEX.PNG [ NUM pl,
+                                         PER 3rd ] ] ].
+
+common-3pl-acc-noun-lex := noun-lex &
+  [ SYNSEM.LOCAL [ CAT.HEAD.CASE acc,
+                   CONT.HOOK.INDEX.PNG [ NUM sg,
+                                         PER 3rd ] ] ].
+
+common-3sgf-nom-noun-lex := noun-lex &
+  [ SYNSEM.LOCAL [ CONT.HOOK.INDEX.PNG [ NUM sg,
+                                         PER 3rd,
+                                         GEND fem ],
+                   CAT.HEAD.CASE nom ] ].
+
+common-3plf-nom-noun-lex := noun-lex &
+  [ SYNSEM.LOCAL [ CONT.HOOK.INDEX.PNG [ NUM pl,
+                                         PER 3rd,
+                                         GEND fem ],
+                   CAT.HEAD.CASE nom ] ].
 
 ;;; Verbs
 
@@ -162,13 +174,83 @@ nom-acc-transitive-verb-lex := transitive-verb-lex &
              [ LOCAL.CAT.HEAD noun &
                               [ CASE acc ] ] > ].
 
-v1-verb-lex := nom-intransitive-verb-lex.
+tr-3sgm-verb-lex := nom-acc-transitive-verb-lex &
+  [ SYNSEM.LOCAL.CAT.VAL.SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG [ NUM sg,
+                                                                PER 3rd,
+                                                                GEND masc ] ].
 
-v2-verb-lex := nom-acc-transitive-verb-lex.
+tr-3plm-verb-lex := nom-acc-transitive-verb-lex &
+  [ SYNSEM.LOCAL.CAT.VAL.SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG [ NUM pl,
+                                                                PER 3rd,
+                                                                GEND masc ] ].
+
+itr-3sgm-verb-lex := nom-intransitive-verb-lex &
+  [ SYNSEM.LOCAL.CAT.VAL.SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG [ NUM sg,
+                                                                PER 3rd,
+                                                                GEND masc ] ].
+
+itr-3plm-verb-lex := nom-intransitive-verb-lex &
+  [ SYNSEM.LOCAL.CAT.VAL.SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG [ NUM pl,
+                                                                PER 3rd,
+                                                                GEND masc ] ].
+
+tr-3sgf-verb-lex := nom-acc-transitive-verb-lex &
+  [ SYNSEM.LOCAL.CAT.VAL.SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG [ NUM sg,
+                                                                PER 3rd,
+                                                                GEND fem ] ].
+
+tr-3plf-verb-lex := nom-acc-transitive-verb-lex &
+  [ SYNSEM.LOCAL.CAT.VAL.SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG [ NUM pl,
+                                                                PER 3rd,
+                                                                GEND fem ] ].
+
+itr-3sgf-verb-lex := nom-intransitive-verb-lex &
+  [ SYNSEM.LOCAL.CAT.VAL.SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG [ NUM sg,
+                                                                PER 3rd,
+                                                                GEND fem ] ].
 
 ;;; Complementizers
 
+; We treat question particles as complementizers.
+; Here is the lexical type for complementizers.
+
+complementizer-lex-item := raise-sem-lex-item & non-local-none-lex-item & basic-icons-lex-item &
+  [ SYNSEM.LOCAL.CAT [ HEAD comp &
+                            [ MOD < > ],
+                       VAL [ SPR < >,
+                             SPEC < >,
+                             SUBJ < >,
+                             COMPS < #comp > ] ],
+    ARG-ST < #comp &
+             [ LOCAL.CAT [ HEAD verb,
+                           VAL [ SUBJ < >,
+                                 COMPS < > ] ] ] > ].
+
+; Subtype for question particles. Constrains SF to ques.
+
+qpart-lex-item := complementizer-lex-item &
+  [ SYNSEM.LOCAL.CONT.HOOK.INDEX.SF ques ].
+
+q-particle1-lex := qpart-lex-item &
+  [ SYNSEM.LOCAL.CAT [ MC #mc,
+                       VAL.COMPS.FIRST.LOCAL.CAT.MC #mc & + ] ].
+
+q-particle2-lex := qpart-lex-item &
+  [ SYNSEM.LOCAL.CAT [ MC #mc,
+                       VAL.COMPS.FIRST.LOCAL.CAT.MC #mc & + ] ].
+
 ;;; Others
+
+;;; Determiners
+;;; SPEC is non-empty, and already specified by basic-determiner-lex.
+
+determiner-lex := basic-determiner-lex & basic-non-wh-word-lex & norm-zero-arg & non-mod-lex-item &
+  [ SYNSEM.LOCAL.CAT.VAL [ SPR < >,
+                           COMPS < >,
+                           SUBJ < > ] ].
+
+definite-determiner-lex := determiner-lex & no-icons-lex-item &
+  [ SYNSEM.L-QUE - ].
 
 ;;; Adverbs
 
@@ -198,11 +280,19 @@ subj-head-phrase := decl-head-subj-phrase & head-final-head-nexus.
 
 head-comp-phrase := basic-head-1st-comp-phrase & head-initial-head-nexus.
 
-comp-head-phrase := basic-head-1st-comp-phrase & head-final-head-nexus.
+; The head of comp-head-phrase can't be: ['comp']
+
+comp-head-phrase := basic-head-1st-comp-phrase & head-final-head-nexus &
+  [ SYNSEM.LOCAL.CAT.HEAD +nvjrpdmo ].
 
 head-comp-phrase-2 := basic-head-2nd-comp-phrase & head-initial-head-nexus.
 
 comp-head-phrase-2 := basic-head-2nd-comp-phrase & head-final-head-nexus.
+
+; Rules for building NPs.  Note that the Matrix uses SPR for
+; the specifier of nouns and SUBJ for the subject (specifier) of verbs.
+
+head-spec-phrase := basic-head-spec-phrase & head-final.
 
 ; Bare NP phrase.  Consider modifying the PRED value of the quantifier relation
 ; introduced to match the semantic effect of bare NPs in your language.

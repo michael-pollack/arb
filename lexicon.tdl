@@ -1,68 +1,188 @@
 ;;; -*- Mode: TDL; Coding: utf-8 -*-
 ;;; Nouns
 
-walid := common-noun-lex &
-  [ STEM < "walid" >,
+waladu := common-3sgm-nom-noun-lex &
+  [ STEM < "waladu" >,
     SYNSEM.LKEYS.KEYREL.PRED "_boy_n_rel" ].
 
-talib := common-noun-lex &
-  [ STEM < "talib" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_student_n_rel" ].
+talibu := common-3sgm-nom-noun-lex &
+  [ STEM < "talibu" >,
+    SYNSEM.LKEYS.KEYREL.PRED " _student_n_rel" ].
 
-kitab := common-noun-lex &
-  [ STEM < "kitab" >,
+kitabu := common-3sgm-nom-noun-lex &
+  [ STEM < "kitabu" >,
     SYNSEM.LKEYS.KEYREL.PRED "_book_n_rel" ].
 
-qita := common-noun-lex &
-  [ STEM < "qita" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_cat_n_rel" ].
+arnabu := common-3sgm-nom-noun-lex &
+  [ STEM < "arnabu" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_rabbit_n_rel" ].
 
-kalp := common-noun-lex &
-  [ STEM < "kalp" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_dog_n_rel" ].
+mas2alatu := common-3sgm-nom-noun-lex &
+  [ STEM < "mas2alatu" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_problem_n_rel" ].
 
-huwa := pronoun-noun-lex &
-  [ STEM < "huwa" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_3rd_sg_masc_subj_rel" ].
+rajulu := common-3sgm-nom-noun-lex &
+  [ STEM < "rajulu" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_man_n_rel" ].
 
-2anta := pronoun-noun-lex &
-  [ STEM < "2anta" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_2nd_sg_masc_subj_rel" ].
+walada := common-3sg-acc-noun-lex &
+  [ STEM < "walada" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_boy_n_rel" ].
 
-2iyyaahu := pronoun-noun-lex &
-  [ STEM < "2iyyaahu" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_3rd_sg_masc_obj_rel" ].
+taliba := common-3sg-acc-noun-lex &
+  [ STEM < "taliba" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_student_n_rel" ].
 
-hiya := pronoun-noun-lex &
-  [ STEM < "hiya" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_3rd_sg_fem_subj_rel" ].
+kitaba := common-3sg-acc-noun-lex &
+  [ STEM < "kitaba" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_book_n_rel" ].
 
-madha := wh-pronoun-noun-lex &
-  [ STEM < "madha" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_what_n_rel" ].
+arnaba := common-3sg-acc-noun-lex &
+  [ STEM < "arnaba" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_rabbit_n_rel" ].
 
-man := wh-pronoun-noun-lex &
-  [ STEM < "man" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_who_n_rel" ].
+mas2alata := common-3sg-acc-noun-lex &
+  [ STEM < "mas2alata" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_solve_n_1_rel" ].
+
+rajula := common-3sg-acc-noun-lex &
+  [ STEM < "rajula" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_man_n_rel" ].
+
+tullaabu := common-3pl-nom-noun-lex &
+  [ STEM < "tullaabu" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_students_n_rel" ].
+
+2awladu := common-3pl-nom-noun-lex &
+  [ STEM < "2awladu" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_boys_n_rel" ].
+
+aranibu := common-3pl-nom-noun-lex &
+  [ STEM < "aranibu" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_rabbit_n_rel" ].
+
+katabu := common-3pl-nom-noun-lex &
+  [ STEM < "katabu" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_books_n_rel" ].
+
+mas2akilu := common-3pl-nom-noun-lex &
+  [ STEM < "mas2akilu" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_problems_n_rel" ].
+
+tullaaba := common-3pl-acc-noun-lex &
+  [ STEM < "tullaaba" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_students_n_rel" ].
+
+2awlada := common-3pl-acc-noun-lex &
+  [ STEM < "2awlada" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_boys_n_rel" ].
+
+araniba := common-3pl-acc-noun-lex &
+  [ STEM < "araniba" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_rabbit_n_rel" ].
+
+kataba := common-3pl-acc-noun-lex &
+  [ STEM < "kataba" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_books_n_rel" ].
+
+mas2akila := common-3pl-acc-noun-lex &
+  [ STEM < "mas2akila" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_problems_n_rel" ].
+
+bintu := common-3sgf-nom-noun-lex &
+  [ STEM < "bintu" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_girl_n_rel" ].
+
+banatu := common-3plf-nom-noun-lex &
+  [ STEM < "banatu" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_bantu_n_rel" ].
 
 ;;; Adjectives
 
 ;;; Verbs
 
-qadima := v1-verb-lex &
-  [ STEM < "qadima" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_come_v_rel" ].
-
-wasala := v1-verb-lex &
-  [ STEM < "wasala" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_arrive_v_rel" ].
-
-qara2a := v2-verb-lex &
+qara2a := tr-3sgm-verb-lex &
   [ STEM < "qara2a" >,
     SYNSEM.LKEYS.KEYREL.PRED "_read_v_rel" ].
 
-halla := v2-verb-lex &
+halla := tr-3sgm-verb-lex &
   [ STEM < "halla" >,
     SYNSEM.LKEYS.KEYREL.PRED "_solve_v_rel" ].
 
+qabala := tr-3sgm-verb-lex &
+  [ STEM < "qabala" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_met_v_rel" ].
+
+halluu := tr-3plm-verb-lex &
+  [ STEM < "halluu" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_solve_v_rel" ].
+
+qara2uu := tr-3plm-verb-lex &
+  [ STEM < "qara2uu" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_read_v_rel" ].
+
+qabaluu := tr-3plm-verb-lex &
+  [ STEM < "qabaluu" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_meet_v_rel" ].
+
+wasala := itr-3sgm-verb-lex &
+  [ STEM < "wasala" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_arrive_v_rel" ].
+
+qadima := itr-3sgm-verb-lex &
+  [ STEM < "qadima" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_come_v_rel" ].
+
+wasaluu := itr-3plm-verb-lex &
+  [ STEM < "wasaluu" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_arrive_v_rel" ].
+
+qadimuu := itr-3plm-verb-lex &
+  [ STEM < "qadimuu" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_come_v_rel" ].
+
+qara2at := tr-3sgf-verb-lex &
+  [ STEM < "qara2at" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_read_v_rel" ].
+
+hallat := tr-3sgf-verb-lex &
+  [ STEM < "hallat" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_solve_v_rel" ].
+
+qabalat := tr-3sgf-verb-lex &
+  [ STEM < "qabalat" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_met_v_rel" ].
+
+katabat := tr-3sgf-verb-lex &
+  [ STEM < "katabat" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_write_v_rel" ].
+
+qabalna := tr-3plf-verb-lex &
+  [ STEM < "qabalna" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_meet_v_rel" ].
+
+katabna := tr-3plf-verb-lex &
+  [ STEM < "katabna" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_write_v_rel" ].
+
+namat := itr-3sgf-verb-lex &
+  [ STEM < "namat" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_sleep_v_rel" ].
+
+jilesat := itr-3sgf-verb-lex &
+  [ STEM < "jilesat" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_sat_v_rel" ].
+
+;;; Determiners
+
+al := definite-determiner-lex &
+  [ STEM < "al" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_definite_q_rel" ].
+
 ;;; Adverbs
+
+hal := q-particle1-lex &
+  [ STEM < "hal" > ].
+
+2a := q-particle2-lex &
+  [ STEM < "2a" > ].
