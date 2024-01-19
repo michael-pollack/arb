@@ -1,0 +1,681 @@
+LING 567 Lab 2
+Write-up
+
+Language: Modern Standard Arabic
+Language code: <Ethnologue language code>
+Lines: <orth orth-seg gloss translit translit-seg translat>1
+Author: <your name>
+Date: 17/1/2024
+Source a: Ahmed, A. M. T. (2016). Case in Standard Arabic: A dependent case approach.
+Source b: Mohammad, M. A. (2000). Word order, agreement and pronominalization in Standard and Palestinian Arabic. Word Order, Agreement and Pronominalization in Standard and Palestinian Arabic, 1-213.
+Source c: Alonini, T. M. (2023). Unaccusative verbs in Modern Standard Arabic. Saudi Journal of Language Studies, 3(1), 47-58.
+Source m: Btoosh, M. (2010). Wh-Movement in Standard Arabic: An Optimality-Theoretic Account. Poznań Studies in Contemporary Linguistics, 46(1), 1-26. https://doi.org/10.2478/v10010-010-0001-y
+
+#Ex number and optional comment
+Source: {a:page, b:page, author, elicited, attested}
+Vetted: {t, f, s}
+Judgment: {g, u}
+Phenomena: {word order, case, agreement, ...}
+<Example in standard orthography> (one of this and transliteration is required; including both is okay)
+<Example in transliteration> (one of this and standard orthography is required; including both is okay)
+<Example with morpheme boundaries noted and morpheme forms regularized>
+<Morpheme-by-morpheme glosses>
+<Free translation>
+
+Standard Arabic is described to have two frequent word orders; VSO and SVO. When the subject is definite as marked with the definite marker  ‘al-’, the other permutations are also possible,  although the SOV and OSV orders are marginally acceptable. 
+For basic clauses with intransitive verbs with definite subject NPs, both VS and SV orders are possible.
+
+#1-VS0 word order for transitive clauses with definite NP subjects
+Source: a:29, Amer Ahmed, attested
+Vetted: s
+Judgment: g
+Phenomena: {word order, determiner}
+hall-a 		l-talib-u 	l-mas2alat-a.
+solved-3.SG.M	the-student-NOM	the-problem-ACC
+‘The student solved the problem.’
+
+
+#2-SVO word order for transitive clauses with definite NP subjects
+Source: a:29, Amer Ahmed, attested
+Vetted: s
+Judgment: g
+Phenomena: {word order, determiner}
+l-talib-u 	hall-a 		l-mas2alat-a.
+the-student-NOM	 solved-3.SG.M 	the-problem-ACC
+‘The student solved the problem’	
+
+#3-OVS word order for transitive clauses with definite NP subjects
+Source: a:29, Amer Ahmed, attested
+Vetted: s
+Judgment: g
+Phenomena: {word order, determiner}
+al-mas2alat-a	 	hall-a			al-talib-u.
+the-problem-ACC 	solved-3.SG.M	 	the-student-NOM
+‘It was the problem that the student solved.’
+
+
+#4-SOV word order for transitive clauses with definite NP subjects
+Source: a:29, b:3, Amer Ahmed, Mohammad A. Mohammad, attested
+Vetted: s
+Judgment: g
+Phenomena: {word order, determiner}
+al-mas2alat-a	 	hall-a			al-talib-u.
+the-problem-ACC 	solved-3.SG.M	 	the-student-nom
+‘It was the problem that the student solved.’
+
+
+#5-VOS word order for transitive clauses with definite NP subjects
+Source: a:29, Amer Ahmed, attested
+Vetted: s
+Judgment: g
+Phenomena: {word order, determiner}
+hall-a 		al-mas2alat-a 		al-talib-u.
+solved-3.SG.M 	the-problem-ACC 	the-student-NOM
+‘It was the problem that the student solved.’
+
+
+#6-OSV word order for transitive clauses with definite NP subjects
+Source: a:29,b:3 Amer Ahmed, Mohammad A. Mohammad, attested
+Vetted: s
+Judgment: g
+Phenomena: {word order, determiner}
+al-mas2alat-a  		al-talib-u 		hall-a
+the-problem-ACC 	the-student-NOM 	solved-3.SG.M
+‘The problem, the student, he solved it.’
+
+
+#7-VS word order for intransitive clauses with definite NP subjects
+Source: b:2, Mohammad A. Mohammad, attested
+Vetted: s
+Judgment: g 
+Phenomena: {word order, determiner}
+wasal-a	 		al-walad-u
+arrived-3.SG.M		the-boy-NOM
+‘The boy arrived.’
+
+#8-SV word order for intransitive clauses with definite NP subjects
+Source: b:2, Mohammad A. Mohammad, attested
+Vetted: s
+Judgment: g 
+Phenomena: {word order, determiner}
+al-walad-u		wasal-a	 
+the-boy-NOM		arrived-3.SG.M
+‘The boy arrived.’
+
+In order to model this, we selected the 'free word order' option in the questionaire to gain coverage of all the possible word orders for basic declarative clauses with full Noun Phrases (i.e definite NPs that co-occur with the determiner 'al'). 
+The reason for choosing sentences with definite NPs for the above is because definiteness on NPs constraint the word order possibilities. These are documented below. We allowed our grammar to overgenerate for the purpose of this lab, but developed the tests for these below.
+
+As for the definiteness constraint on word order, when the subject is indefinite (indicated by the absence of 'al'), for transitive clauses, the verb must be sentence-initial. All other orders are ungrammatical. On the other hand, for intransitive clauses with indefinite NP subjects, the verb must be sentence-final. 
+
+#9-VSO word order for transitive clauses with indefinite NP subjects
+Source: b:9, Mohammad A. Mohammad, attested
+Vetted: s
+Judgment: g 
+Phenomena: {word order, determiner}
+qabal-a 	rajul-u 	al-walad-a
+met-3.SG.M	man-NOM		the-boy-ACC
+'A man met the boy.'
+
+#10-VOS word order for transitive clauses with indefinite NP subjects
+Source: b:9, Mohammad A. Mohammad, attested
+Vetted: s
+Judgment: g 
+Phenomena: {word order, determiner}
+qabal-a 	al-walad-a	rajul-u 
+met-3.SG.M	the-boy-ACC	man-NOM
+'A man met the boy.'
+
+#11-SVO word order for transitive clauses with indefinite NP subjects
+Source: b:9, Mohammad A. Mohammad, attested
+Vetted: s
+Judgment: u
+Phenomena: {word order, determiner}
+rajul-u 	qabal-a 	al-walad-a	
+man-NOM		met-3.sg.m	the-boy-ACC	
+intended:'A man met the boy.'
+
+
+#12-SOV word order for transitive clauses with indefinite NP subjects
+Source: b:10, Mohammad A. Mohammad, attested
+Vetted: s
+Judgment: u
+Phenomena: {word order, determiner}
+rajul-u 	al-walad-a	qabal-a 		
+man-NOM		the-boy-ACC	met-3.SG.M	
+intended: 'A man met the boy.'
+
+#13-OSV word order for transitive clauses with indefinite NP subjects
+Source: b:10, Mohammad A. Mohammad, attested
+Vetted: s
+Judgment: u
+Phenomena: {word order, determiner}
+al-walad-a 	    rajul-u		qabal-a 		
+the-boy-ACC 	man-NOM		met-3.SG.M	
+intended: 'A man met the boy.'
+
+
+#14-OVS word order for transitive clauses with indefinite NP subjects
+Source: b:10, Mohammad A. Mohammad, attested
+Vetted: s
+Judgment: u
+Phenomena: {word order, determiner}
+al-walad-a 	qabal-a 	rajul-u			
+the-boy-ACC 	met-3.SG.M	man-NOM	
+intended: 'A man met the boy.'
+
+#15-VS word order for intransitive clauses with indefinite NP subjects
+Source: b:9, Mohammad A. Mohammad, attested
+Vetted: s
+Judgment: u
+Phenomena: {word order, determiner}
+walad-u 	qadim-a 			
+boy-NOM 	came-3.SG.M	
+intended: 'A boy came.'
+
+#16-SV word order for intransitive clauses with indefinite NP subjects
+Source: b:9, Mohammad A. Mohammad, attested
+Vetted: s
+Judgment: g
+Phenomena: {word order, determiner}
+qadim-a 	    walad-u 		
+ came-3.SG.M	boy-NOM	
+'A boy came.'
+
+
+
+
+
+###############Pronouns########################
+
+
+
+############ Case ########################
+
+Modern Standard Arabic has a nominative-accusative alignment case system. The nominative case is indicated by -u while the accusative case is indicated by the suffix -a. 
+
+The subject is marked with "-u/-un”  which is the nominative suffix while the object is marked with the accusative ‘-a/-an’. Having the subject assigned accusative case while the object assigned nominative case render the sentence ungrammatical.
+This is consistent for both transitive clauses and intransitive clauses.
+
+Since the subject of the transitive clause and the subject of the intransitive clause have the same nominative case pattern to the exclusion of the object in the transitive clause, Arabic is analyzed as a language with  nominative-accusative alignment.
+
+In order to model case, we defined nominative and accusative case inflection slots for nouns. 
+The nominative case marker -u/-un constraints the nominal forms to be in nominative case and expressed as a subject of the main verb, while the accusative case constrains the nominals to be expressed as an object of the verb.
+
+
+#-case (basic transitive clauses)
+Source: b:7, Mohammad A. Mohammad, attested
+Vetted: s
+Judgment: g
+Phenomena: {case}
+gabal-a	 	    al-walad-u      		al-arnab-a
+met-3sg.m		the-boy-nom         	the-rabbit-acc
+‘The boy met the rabbit.'
+
+
+#-case (basic transitive clause)
+Source: b:7, Mohammad A. Mohammad, attested
+Vetted: s
+Judgment: u
+Phenomena: {case}
+gabala-a	 	al-walad-a			al-arnab-u
+met-3sg.m		the-boy-acc	        rabbit-nom
+intended:‘The boy met the rabbit.'
+
+#-case (basic intransitive clause)
+Source: c:2, Alonini, attested
+Vetted: s
+Judgment: g
+Phenomena: {case}
+wasal-a	 		    al-walad-u
+arrived-3sg.m		the-boy-nom
+‘The boy arrived.’
+
+#-case (basic intransitive clause)
+Source: c:2, Alonini, attested
+Vetted: s
+Judgment: u
+Phenomena: {case}
+wasal-a	 		    al-walad-a
+arrived-3sg.m		the-boy-acc
+intended:‘The boy arrived.’
+
+It is also observed that the logical object of the sentence can be expressed in the nominative case, only if the verb has a pronominal suffix.  
+This constraint only applies to word order possibilities where the object is sentence-initial (OSV, OVS).
+This pattern expresses topicalization of the object in the sentence. In these two cases, it is not possible for the sentence-initial object to be in accusative case, unless the pronominal -haa is absent, which is parallel with the OSV/OVS order documented previously.
+
+To model this, we created verbs with pronominal suffix -haa and created negative test examples for OVS and OSV orders where the Object is expressed with accusative case in the context of this verb type. We maintained the use of definite subjects for consistency.
+We also created negative examples for OVS and OSV orders where the object is nominative in the context of a verb with no pronominal suffix. These are also ungrammatical. We maintained the use of definite subjects for consistency.
+
+
+#-OVS, O-nom, V-pronoun
+Source: a:28, Ahmer, attested
+Vetted: s
+Judgment: g
+Phenomena: {case, word order, pronouns}
+al-mas2alat-u 		hall-a-haa  		al-talib-u.
+the-problem-nom 	solved-3.sg.m-it	the-student-nom
+‘As for the problem, the student solved it.’
+
+#-OVS, O-acc, V-pronoun
+Source: a:28, Ahmer, attested
+Vetted: s
+Judgment: u
+Phenomena: {case, word order, pronouns}
+al-mas2alat-a 		hall-a-haa  		al-talib-u.
+the-problem-acc 	solved-3.sg.m-it	the-student-nom
+intended: ‘As for the problem, the student solved it.’
+
+#-OVS, O-nom, V
+Source: a:28, Ahmer, attested
+Vetted: s
+Judgment: u
+Phenomena: {case, word order, pronouns}
+al-mas2alat-u 		hall-a       		al-talib-u.
+the-problem-nom 	solved-3.sg.m   	the-student-nom
+intended: ‘As for the problem, the student solved it.’
+
+# OSV, O-nom, V-pronoun
+Source: a:28, Ahmer, attested
+Vetted: s
+Judgment: g
+Phenomena: {case, word order, pronouns}
+al-mas2alat-u  	    al-talib-u 	        hall-a-haa
+the-problem-nom 	the-student-nom 	solved-3.m.sg-it
+‘The problem, the student, he solved it.’
+
+# OSV, O-acc, V-pronoun
+Source: a:28, Ahmer, attested
+Vetted: s
+Judgment: u
+Phenomena: {case, word order, pronouns}
+al-mas2alat-a  	    al-talib-u 	        hall-a-haa
+the-problem-acc 	the-student-nom 	solved-3.m.sg-it
+intended: ‘The problem, the student, he solved it.’
+
+# OSV, O-nom, V
+Source: a:28, Ahmer, attested
+Vetted: s
+Judgment: u
+Phenomena: {case, word order, pronouns}
+al-mas2alat-u 	al-talib-u 	        hall-a
+the-problem-u 	the-student-nom 	solved-3.m.sg
+intended: ‘The problem, the student, he solved it.’
+
+
+####matrix wh-questions#############3
+
+In matrix wh-questions, the interrogative wh- element is sentence initial, followed by the verbal predicate. The verb is followed by either the object/subject of the verb depending on whether the wh-question is the subject or object respectively. Unlike in declarative sentences with ‘free-er’ word order possibilities, Q-V-NP is the only possible order of constituents (Mohammad, 2000) for matrix wh-questions when the Q is a wh-word. In yes/no questions, however, other word order possibilities are possible with additional constraints, which we will turn to at the end of this section.
+
+The wh- ‘who' is indicated by the word ‘man’. In the who-subject interrogative, “man” can be used independently to express the subject. But for the who-object. the wh-word ‘man’ can optionally  be used with a preposition ‘on’ to express the object. The ungrammatical examples refer to impossible word-orders that deviate from the sole Q-V-NP order.
+
+
+#Q-V-NP
+Source: m:12, M.A Btoosh, attested
+Vetted: s
+Judgment: g
+Phenomena: {wh questions, word order}
+man     qara2-a 		    al-kitab-a
+who	    read-3.sg.masc. 	the book-acc.
+‘Who read the book?’
+
+#V-Q-NP
+Source: m:12, M.A Btoosh, attested
+Vetted: s
+Judgment: u
+Phenomena: {wh questions, word order}
+qara2-a 		man	    al-kitab-a
+read-3.sg.masc. who	    the-book-acc.
+intended: ‘Who read the book?’
+
+#V-NP-Q
+Source: m:12, M.A Btoosh, attested
+Vetted: s
+Judgment: u
+Phenomena: {wh questions, word order}
+qara2-a 		al-kitab-a 	    man
+read-3.sg.masc 	the-book-acc.	who
+intended: ‘Who read the book?
+
+#Q-NP-V
+Source: m:12, M.A Btoosh, attested
+Vetted: s
+Judgment: u
+Phenomena: {wh questions, word order}
+man  	al-kitab-a 	    qara2-a
+who  	the-book-acc	read-3.sg.masc
+intended: ‘Who read the book?
+
+#NP-Q-V
+Source: m:12, M.A Btoosh, attested
+Vetted: s
+Judgment: u
+Phenomena: {wh questions, word order}
+al-kitab-a      man  	qara2-a
+the-book-acc    who  	read-3.sg.masc
+intended: ‘Who read the book?
+
+#NP-V-Q
+Source: m:12, M.A Btoosh, attested
+Vetted: s
+Judgment: u
+Phenomena: {wh questions, word order}
+al-kitab-a      qara2-a         man
+the-book-acc    read-3.sg.masc  who
+intended: ‘Who read the book?
+
+
+For intransitive matrix-wh questions, only the Q-V order is possible
+
+#Q-V (intransitive)
+Source: m:12, M.A Btoosh, attested
+Vetted: s
+Judgment: g
+Phenomena: {wh questions, word order}
+man             wasal-a	 		    
+who             arrived-3sg.m
+‘Who arrived?’
+
+#V-Q (intransitive)
+Source: m:12, M.A Btoosh, attested
+Vetted: s
+Judgment: u
+wasal-a	 		    man
+arrived-3sg.m		who
+intended: ‘Who arrived?’
+
+
+'What' is indicated by 'madha', while 'when' is indicated by 'mata' and 'where' is indicated by '2ayna'.
+The word order possibilities are identical to those of 'who', where the only plausible word order is Q-V-NP.
+These word order possibilities are exemplified in the test suite.
+
+In yes/no questions, the interrogative element is indicated either by ‘hal’ or ‘2a’, as shown below. 
+
+#Yes/NoQ
+Source: m:10, M.A Btoosh, attested
+Vetted: s
+Judgment: g
+Phenomena: {wh questions, word order}
+hal 	namat		    al-bint-u 
+Q-did 	slept-3.sg.f 	the girl-nom.
+‘Did the girl sleep?’
+
+#Yes/NoQ
+Source: m:10, M.A Btoosh, attested
+Vetted: s
+Judgment: g
+Phenomena: {wh questions, word order}
+2a	    namat		    al-bint-u 
+Q-did 	slept-3.sg.f 	the girl-nom.
+‘Did the girl sleep?’
+
+However, the alternation between these two elements are conditioned by two specific constraints; whether the yes/no question is negated, and whether the NP that follows is (indefinite).
+
+The -hal variant can never be used when the yes/no question is negated (i.e negation is indicated by ‘lam’). 
+
+#Yes/NoQ negation
+Source: b:35, Mohammad, attested
+Vetted: s
+Judgment: g
+Phenomena: {wh questions, negation}
+2a       	lam 	namat		    al-bint-u 	
+Q-did		not	    slept-3.sg.f 	the girl-nom.
+Didn’t the girl sleep?	
+
+
+#Yes/NoQ negation
+Source: b:35, Mohammad, attested
+Vetted: s
+Judgment: u
+Phenomena: {wh questions, negation}
+hal 	    lam 	namat		    al-bint-u 	
+Q-did		not	    slept-3.sg.f 	the girl-nom.
+Didn’t the girl sleep?	
+
+
+As for the second constraint, if the NP immediately follows Q-did is definite (definiteness is marked by 'al' on NP), only the hal variant can be allowed.  When this definite article is absent, the NP is interpreted as indefinite, and in this context, only the ‘2a’ variant is allowed.
+
+
+#Yes/NoQ, definite NP, Q-NP-V
+Source: b:35, Mohammad, attested
+Vetted: s
+Judgment: g
+Phenomena: {wh questions, determiner}
+hal      	al-walad-u  		qadim-a
+Q-did		the-boy.3.sg.m-nom	came-3sg.m
+Did the boy come?
+
+#Yes/NoQ, definite NP, Q-NP-V
+Source: b:35, Mohammad, attested
+Vetted: s
+Judgment: u
+Phenomena: {wh questions,  determiner}
+2a 	        al-walad-u  		qadim-a
+Q-did		the-boy.3.sg.m-nom	came-3sg.m
+intended: Did the boy come?
+
+#Yes/NoQ, definiteness
+Source: b:35, Mohammad, attested
+Vetted: s
+Judgment: g
+Phenomena: {wh questions, determiner}
+2a      	walad-u  		qadim-a
+Q-did		boy.3.sg.m-nom	came-3sg.m
+Did a boy come?
+
+#Yes/NoQ, definiteness
+Source: b:35, Mohammad, attested
+Vetted: s
+Judgment: u
+hal 		al-walad-u  		qadim-a
+Q-did		the-boy.3.sg.m-nom	came-3sg.m
+intended: Did a boy come?
+
+
+
+
+
+
+
+####matrix wh-questions#############3
+
+In matrix wh-questions, the interrogative wh- element is sentence initial, followed by the verbal predicate. The verb is followed by either the object/subject of the verb depending on whether the wh-question is the subject or object respectively. Unlike in declarative sentences with ‘free-er’ word order possibilities, Q-V-NP is the only possible order of constituents (Mohammad, 2000) for matrix wh-questions when the Q is a wh-word. In yes/no questions, however, other word order possibilities are possible with additional constraints, which we will turn to at the end of this section.
+
+The wh- ‘who; is indicated by the word ‘man’. In the who-subject interrogative, “man” can be used independently to express the subject. But for the who-object. the wh-word ‘man’ can optionally  be used with a preposition ‘on’ to express the object. The ungrammatical examples refer to impossible word-orders that deviate from the sole Q-V-NP order.
+
+
+#Q-V-NP
+Source: m:12, M.A Btoosh, attested
+Vetted: s
+Judgment: g
+Phenomena: {wh questions, word order}
+man     qara2-a 		    al-kitab-a
+who	    read-3.sg.masc. 	the book-acc.
+‘Who read the book?’
+
+#V-Q-NP
+Source: m:12, M.A Btoosh, attested
+Vetted: s
+Judgment: u
+Phenomena: {wh questions, word order}
+qara2-a 		man	    al-kitab-a
+read-3.sg.masc. who	    the-book-acc.
+intended: ‘Who read the book?’
+
+#V-NP-Q
+Source: m:12, M.A Btoosh, attested
+Vetted: s
+Judgment: u
+Phenomena: {wh questions, word order}
+qara2-a 		al-kitab-a 	    man
+read-3.sg.masc 	the-book-acc.	who
+intended: ‘Who read the book?
+
+#Q-NP-V
+Source: m:12, M.A Btoosh, attested
+Vetted: s
+Judgment: u
+Phenomena: {wh questions, word order}
+man  	al-kitab-a 	    qara2-a
+who  	the-book-acc	read-3.sg.masc
+intended: ‘Who read the book?
+
+#NP-Q-V
+Source: m:12, M.A Btoosh, attested
+Vetted: s
+Judgment: u
+Phenomena: {wh questions, word order}
+al-kitab-a      man  	qara2-a
+the-book-acc    who  	read-3.sg.masc
+intended: ‘Who read the book?
+
+#NP-V-Q
+Source: m:12, M.A Btoosh, attested
+Vetted: s
+Judgment: u
+Phenomena: {wh questions, word order}
+al-kitab-a      qara2-a         man
+the-book-acc    read-3.sg.masc  who
+intended: ‘Who read the book?
+
+
+For intransitive matrix-wh questions, only the Q-V order is possible
+
+#Q-V (intransitive)
+Source: m:12, M.A Btoosh, attested
+Vetted: s
+Judgment: g
+Phenomena: {wh questions, word order}
+man             wasal-a	 		    
+who             arrived-3sg.m
+‘Who arrived?’
+
+#V-Q (intransitive)
+Source: m:12, M.A Btoosh, attested
+Vetted: s
+Judgment: u
+wasal-a	 		    man
+arrived-3sg.m		who
+intended: ‘Who arrived?’
+
+
+'What' is indicated by 'madha', while 'when' is indicated by 'mata' and 'where' is indicated by '2ayna'.
+The word order possibilities are identical to those of 'who', where the only plausible word order is Q-V-NP.
+These word order possibilities are exemplified in the test suite.
+
+In yes/no questions, the interrogative element is indicated either by ‘hal’ or ‘2a’, as shown below. 
+
+#Yes/NoQ
+Source: m:10, M.A Btoosh, attested
+Vetted: s
+Judgment: g
+Phenomena: {wh questions, word order}
+hal 	namat		    al-bint-u 
+Q-did 	slept-3.sg.f 	the girl-nom.
+‘Did the girl sleep?’
+
+#Yes/NoQ
+Source: m:10, M.A Btoosh, attested
+Vetted: s
+Judgment: g
+Phenomena: {wh questions, word order}
+2a	    namat		    al-bint-u 
+Q-did 	slept-3.sg.f 	the girl-nom.
+‘Did the girl sleep?’
+
+However, the alternation between these two elements are conditioned by two specific constraints; whether the yes/no question is negated, and whether the NP that follows is (indefinite).
+
+The -hal variant can never be used when the yes/no question is negated (i.e negation is indicated by ‘lam’). 
+
+#Yes/NoQ negation
+Source: b:35, Mohammad, attested
+Vetted: s
+Judgment: g
+Phenomena: {wh questions, negation}
+2a       	lam 	namat		    al-bint-u 	
+Q-did		not	    slept-3.sg.f 	the girl-nom.
+Didn’t the girl sleep?	
+
+
+#Yes/NoQ negation
+Source: b:35, Mohammad, attested
+Vetted: s
+Judgment: u
+Phenomena: {wh questions, negation}
+hal 	    lam 	namat		    al-bint-u 	
+Q-did		not	    slept-3.sg.f 	the girl-nom.
+Didn’t the girl sleep?	
+
+
+As for the second constraint, if the NP immediately follows Q-did is definite (definiteness is marked by 'al' on NP), only the hal variant can be allowed.  When this definite article is absent, the NP is interpreted as indefinite, and in this context, only the ‘2a’ variant is allowed.
+
+
+#Yes/NoQ, definite NP, Q-NP-V
+Source: b:35, Mohammad, attested
+Vetted: s
+Judgment: g
+Phenomena: {wh questions, determiner}
+hal      	al-walad-u  		qadim-a
+Q-did		the-boy.3.sg.m-nom	came-3sg.m
+Did the boy come?
+
+#Yes/NoQ, definite NP, Q-NP-V
+Source: b:35, Mohammad, attested
+Vetted: s
+Judgment: u
+Phenomena: {wh questions,  determiner}
+2a 	        walad-u  		qadim-a
+Q-did		boy.3.sg.m-nom	came-3sg.m
+intended: Did the boy come?
+
+#Yes/NoQ, definiteness
+Source: b:35, Mohammad, attested
+Vetted: s
+Judgment: g
+Phenomena: {wh questions, determiner}
+2a      	walad-u  		qadim-a
+Q-did		boy.3.sg.m-nom	came-3sg.m
+Did a boy come?
+
+#Yes/NoQ, definiteness
+Source: b:35, Mohammad, attested
+Vetted: s
+Judgment: u
+2a 		    al-walad-u  		qadim-a
+Q-did		the-boy.3.sg.m-nom	came-3sg.m
+intended: Did a boy come?
+
+
+
+
+
+
+
+						
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
