@@ -1,0 +1,2 @@
+(tsdb:tsdb  :home  "path-to-tsdb/home")
+(tsdb:tsdb  :skeleton  "path-to-tsdb/skeletons")

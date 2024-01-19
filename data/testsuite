@@ -1,0 +1,194 @@
+Language: Modern_Standard_Arabic
+Language code: arb
+Lines: translit-seg gloss translat
+Author: Benjamin Pong, Michael P. Pollack
+Date: 17/1/2024
+Source a: Ahmed, A. M. T. (2016). Case in Standard Arabic: A dependent case approach.
+Source b: Mohammad, M. A. (2000). Word order, agreement and pronominalization in Standard and Palestinian Arabic. Word Order, Agreement and Pronominalization in Standard and Palestinian Arabic, 1-213.
+Source c: Alonini, T. M. (2023). Unaccusative verbs in Modern Standard Arabic. Saudi Journal of Language Studies, 3(1), 47-58.
+
+#1-VS0 word order for transitive clauses with definite NP subjects
+Source: a:29, Amer Ahmed, attested
+Vetted: s
+Judgment: g
+Phenomena: {word order, determiner}
+hall-a 		l-talib-u 	l-mas2alat-a.
+solved-3.SG.M	the-student-NOM	the-problem-ACC
+'The student solved the problem.'
+
+#2-SVO word order for transitive clauses with definite NP subjects
+Source: a:29, Amer Ahmed, attested
+Vetted: s
+Judgment: g
+Phenomena: {word order, determiner}
+l-talib-u 	hall-a 		l-mas2alat-a.
+the-student-NOM	 solved-3.SG.M 	the-problem-ACC
+'The student solved the problem'
+
+#3-OVS word order for transitive clauses with definite NP subjects
+Source: a:29, Amer Ahmed, attested
+Vetted: s
+Judgment: g
+Phenomena: {word order, determiner}
+al-mas2alat-a	 	hall-a			al-talib-u.
+the-problem-ACC 	solved-3.SG.M	 	the-student-NOM
+‘It was the problem that the student solved.’
+
+#4-SOV word order for transitive clauses with definite NP subjects
+Source: a:29, b:3, Amer Ahmed, Mohammad A. Mohammad, attested
+Vetted: s
+Judgment: g
+Phenomena: {word order, determiner}
+al-talib-u al-mas2alat-a	 	hall-a.
+the-student-nom the-problem-ACC 	solved-3.SG.M
+'It was the problem that the student solved.'
+
+#5-VOS word order for transitive clauses with definite NP subjects
+Source: a:29, Amer Ahmed, attested
+Vetted: s
+Judgment: g
+Phenomena: {word order, determiner}
+hall-a 		al-mas2alat-a 		al-talib-u.
+solved-3.SG.M 	the-problem-ACC 	the-student-NOM
+'It was the problem that the student solved.'
+
+#6-OSV word order for transitive clauses with definite NP subjects
+Source: a:29,b:3 Amer Ahmed, Mohammad A. Mohammad, attested
+Vetted: s
+Judgment: g
+Phenomena: {word order, determiner}
+al-mas2alat-a  		al-talib-u 		hall-a
+the-problem-ACC 	the-student-NOM 	solved-3.SG.M
+'The problem, the student, he solved it.'
+
+
+#7-VS word order for intransitive clauses with definite NP subjects
+Source: b:2, Mohammad A. Mohammad, attested
+Vetted: s
+Judgment: g 
+Phenomena: {word order, determiner}
+wasal-a	 		al-walad-u
+arrived-3.SG.M		the-boy-NOM
+'The boy arrived.'
+
+#8-SV word order for intransitive clauses with definite NP subjects
+Source: b:2, Mohammad A. Mohammad, attested
+Vetted: s
+Judgment: g 
+Phenomena: {word order, determiner}
+al-walad-u		wasal-a	 
+the-boy-NOM		arrived-3.SG.M
+'The boy arrived.'
+
+#9-VSO word order for transitive clauses with indefinite NP subjects
+Source: b:9, Mohammad A. Mohammad, attested
+Vetted: s
+Judgment: g 
+Phenomena: {word order, determiner}
+qabal-a 	rajul-u 	al-walad-a
+met-3.SG.M	man-NOM		the-boy-ACC
+'A man met the boy.'
+
+#10-VOS word order for transitive clauses with indefinite NP subjects
+Source: b:9, Mohammad A. Mohammad, attested
+Vetted: s
+Judgment: g 
+Phenomena: {word order, determiner}
+qabal-a 	al-walad-a	rajul-u 
+met-3.SG.M	the-boy-ACC	man-NOM
+'A man met the boy.'
+
+#11-SVO word order for transitive clauses with indefinite NP subjects
+Source: b:9, Mohammad A. Mohammad, attested
+Vetted: s
+Judgment: u
+Phenomena: {word order, determiner}
+rajul-u 	qabal-a 	al-walad-a	
+man-NOM		met-3.sg.m	the-boy-ACC	
+'A man met the boy.'
+
+
+#12-SOV word order for transitive clauses with indefinite NP subjects
+Source: b:10, Mohammad A. Mohammad, attested
+Vetted: s
+Judgment: u
+Phenomena: {word order, determiner}
+rajul-u 	al-walad-a	qabal-a 		
+man-NOM		the-boy-ACC	met-3.SG.M	
+'A man met the boy.'
+
+#13-OSV word order for transitive clauses with indefinite NP subjects
+Source: b:10, Mohammad A. Mohammad, attested
+Vetted: s
+Judgment: u
+Phenomena: {word order, determiner}
+al-walad-a 	rajul-u		qabal-a 		
+the-boy-ACC 	man-NOM		met-3.SG.M	
+'A man met the boy.'
+
+
+#14-OVS word order for transitive clauses with indefinite NP subjects
+Source: b:10, Mohammad A. Mohammad, attested
+Vetted: s
+Judgment: u
+Phenomena: {word order, determiner}
+al-walad-a 	qabal-a 	rajul-u			
+the-boy-ACC 	met-3.SG.M	man-NOM	
+'A man met the boy.'
+
+#15-VS word order for intransitive clauses with indefinite NP subjects
+Source: b:9, Mohammad A. Mohammad, attested
+Vetted: s
+Judgment: u
+Phenomena: {word order, determiner}
+walad-u 	qadim-a 			
+boy-NOM 	came-3.SG.M	
+'A boy came.'
+
+#16-SV word order for intransitive clauses with indefinite NP subjects
+Source: b:9, Mohammad A. Mohammad, attested
+Vetted: s
+Judgment: g
+Phenomena: {word order, determiner}
+qadim-a 	walad-u 		
+ came-3.SG.M	boy-NOM	
+'A boy came.'
+
+#####Case############################
+
+#-case (basic transitive clauses)
+Source: b:7, Mohammad A. Mohammad, attested
+Vetted: s
+Judgment: g
+Phenomena: {case}
+gabal-a	 	    al-walad-u      		al-arnab-a
+met-3sg.m		the-boy-nom         	the-rabbit-acc
+'The boy met the rabbit.'
+
+
+#-case (basic transitive clause)
+Source: b:7, Mohammad A. Mohammad, attested
+Vetted: s
+Judgment: u
+Phenomena: {case}
+gabala-a	 	al-walad-a			al-arnab-u
+met-3sg.m		the-boy-acc	        the-rabbit-nom
+'The rabbit met the boy.'
+
+#-case (basic intransitive clause)
+Source: c:2, Alonini, attested
+Vetted: s
+Judgment: g
+Phenomena: {case}
+wasal-a	 		    al-walad-u
+arrived-3sg.m		the-boy-nom
+'The boy arrived.'
+
+#-case (basic intransitive clause)
+Source: c:2, Alonini, attested
+Vetted: s
+Judgment: u
+Phenomena: {case}
+wasal-a	 		    al-walad-a
+arrived-3sg.m		the-boy-acc
+'The boy arrived.'
