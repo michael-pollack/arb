@@ -1,183 +1,159 @@
 ;;; -*- Mode: TDL; Coding: utf-8 -*-
 ;;; Nouns
 
-waladu := common-3sgm-nom-noun-lex &
-  [ STEM < "waladu" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_boy_n_rel" ].
-
-talibu := common-3sgm-nom-noun-lex &
-  [ STEM < "talibu" >,
-    SYNSEM.LKEYS.KEYREL.PRED " _student_n_rel" ].
-
-kitabu := common-3sgm-nom-noun-lex &
-  [ STEM < "kitabu" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_book_n_rel" ].
-
-arnabu := common-3sgm-nom-noun-lex &
-  [ STEM < "arnabu" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_rabbit_n_rel" ].
-
-mas2alatu := common-3sgm-nom-noun-lex &
-  [ STEM < "mas2alatu" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_problem_n_rel" ].
-
-rajulu := common-3sgm-nom-noun-lex &
-  [ STEM < "rajulu" >,
+rajul := common_3sg_masc-noun-lex &
+  [ STEM < "rajul" >,
     SYNSEM.LKEYS.KEYREL.PRED "_man_n_rel" ].
 
-walada := common-3sg-acc-noun-lex &
-  [ STEM < "walada" >,
+maktab := common_3sg_masc-noun-lex &
+  [ STEM < "maktab" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_office_n_rel" ].
+
+dar := common_3sg_masc-noun-lex &
+  [ STEM < "dar" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_house_n_rel" ].
+
+bayt := common_3sg_masc-noun-lex &
+  [ STEM < "bayt" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_house_n_rel" ].
+
+safir := common_3sg_masc-noun-lex &
+  [ STEM < "safir" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_ambassador_n_rel" ].
+
+majlis := common_3sg_masc-noun-lex &
+  [ STEM < "majlis" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_council_n_rel" ].
+
+walad := common_3sg_masc-noun-lex &
+  [ STEM < "walad" >,
     SYNSEM.LKEYS.KEYREL.PRED "_boy_n_rel" ].
 
-taliba := common-3sg-acc-noun-lex &
-  [ STEM < "taliba" >,
+talib := common_3sg_masc-noun-lex &
+  [ STEM < "talib" >,
     SYNSEM.LKEYS.KEYREL.PRED "_student_n_rel" ].
 
-kitaba := common-3sg-acc-noun-lex &
-  [ STEM < "kitaba" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_book_n_rel" ].
+mas2alat := common_3sg_masc-noun-lex &
+  [ STEM < "mas2alat" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_problem_n_rel" ].
 
-arnaba := common-3sg-acc-noun-lex &
-  [ STEM < "arnaba" >,
+arnab := common_3sg_masc-noun-lex &
+  [ STEM < "arnab" >,
     SYNSEM.LKEYS.KEYREL.PRED "_rabbit_n_rel" ].
 
-mas2alata := common-3sg-acc-noun-lex &
-  [ STEM < "mas2alata" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_solve_n_1_rel" ].
+tuffahat := common_3sg_masc-noun-lex &
+  [ STEM < "tuffahat" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_apple_n_rel" ].
 
-rajula := common-3sg-acc-noun-lex &
-  [ STEM < "rajula" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_man_n_rel" ].
+Muhammad := proper-noun-lex &
+  [ STEM < "Muhammad" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_Muhammad_n_rel" ].
 
-tullaabu := common-3pl-nom-noun-lex &
-  [ STEM < "tullaabu" >,
+2anta := ind_subj_pn-noun-lex &
+  [ STEM < "2anta" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_2sg_masc_subj_rel" ].
+
+2iyyaaka := ind_obj_pn-noun-lex &
+  [ STEM < "2iyyaaka" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_2sg_masc_obj_rel" ].
+
+tullaab := common_3plmasc-noun-lex &
+  [ STEM < "tullaab" >,
     SYNSEM.LKEYS.KEYREL.PRED "_students_n_rel" ].
 
-2awladu := common-3pl-nom-noun-lex &
-  [ STEM < "2awladu" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_boys_n_rel" ].
+aranib := common_3plmasc-noun-lex &
+  [ STEM < "aranib" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_rabbits_n_rel" ].
 
-aranibu := common-3pl-nom-noun-lex &
-  [ STEM < "aranibu" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_rabbit_n_rel" ].
-
-katabu := common-3pl-nom-noun-lex &
-  [ STEM < "katabu" >,
+katab := common_3plmasc-noun-lex &
+  [ STEM < "katab" >,
     SYNSEM.LKEYS.KEYREL.PRED "_books_n_rel" ].
 
-mas2akilu := common-3pl-nom-noun-lex &
-  [ STEM < "mas2akilu" >,
+mas2akil := common_3plmasc-noun-lex &
+  [ STEM < "mas2akil" >,
     SYNSEM.LKEYS.KEYREL.PRED "_problems_n_rel" ].
 
-tullaaba := common-3pl-acc-noun-lex &
-  [ STEM < "tullaaba" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_students_n_rel" ].
+2jitam := common_3plmasc-noun-lex &
+  [ STEM < "2jitam" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_orphans_n_rel" ].
 
-2awlada := common-3pl-acc-noun-lex &
-  [ STEM < "2awlada" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_boys_n_rel" ].
-
-araniba := common-3pl-acc-noun-lex &
-  [ STEM < "araniba" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_rabbit_n_rel" ].
-
-kataba := common-3pl-acc-noun-lex &
-  [ STEM < "kataba" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_books_n_rel" ].
-
-mas2akila := common-3pl-acc-noun-lex &
-  [ STEM < "mas2akila" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_problems_n_rel" ].
-
-bintu := common-3sgf-nom-noun-lex &
-  [ STEM < "bintu" >,
+bint := common_3sgfem-noun-lex &
+  [ STEM < "bint" >,
     SYNSEM.LKEYS.KEYREL.PRED "_girl_n_rel" ].
 
-banatu := common-3plf-nom-noun-lex &
-  [ STEM < "banatu" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_bantu_n_rel" ].
+bant := common_3plfem-noun-lex &
+  [ STEM < "bant" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_girls_n_rel" ].
+
+bintani := common_3dual_fem-noun-lex &
+  [ STEM < "bintani" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_girls_dual_n_rel" ].
+
+waladan := common_3dual_masc-noun-lex &
+  [ STEM < "waladan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_boys_dual_n_rel" ].
 
 ;;; Adjectives
 
+tawel := common-adj-lex &
+  [ STEM < "tawel" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_tall_adj_rel" ].
+
+karim := common-adj-lex &
+  [ STEM < "karim" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_generous_adj_rel" ].
+
+mujtahid := common-adj-lex &
+  [ STEM < "mujtahid" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_assiduous_adj_rel" ].
+
 ;;; Verbs
 
-qara2a := tr-3sgm-verb-lex &
-  [ STEM < "qara2a" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_read_v_rel" ].
+wasal := intr-verb-lex &
+  [ STEM < "wasal" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_wasal_v_rel" ].
 
-halla := tr-3sgm-verb-lex &
-  [ STEM < "halla" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_solve_v_rel" ].
-
-qabala := tr-3sgm-verb-lex &
-  [ STEM < "qabala" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_met_v_rel" ].
-
-halluu := tr-3plm-verb-lex &
-  [ STEM < "halluu" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_solve_v_rel" ].
-
-qara2uu := tr-3plm-verb-lex &
-  [ STEM < "qara2uu" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_read_v_rel" ].
-
-qabaluu := tr-3plm-verb-lex &
-  [ STEM < "qabaluu" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_meet_v_rel" ].
-
-wasala := itr-3sgm-verb-lex &
-  [ STEM < "wasala" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_arrive_v_rel" ].
-
-qadima := itr-3sgm-verb-lex &
-  [ STEM < "qadima" >,
+qadim := intr-verb-lex &
+  [ STEM < "qadim" >,
     SYNSEM.LKEYS.KEYREL.PRED "_come_v_rel" ].
 
-wasaluu := itr-3plm-verb-lex &
-  [ STEM < "wasaluu" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_arrive_v_rel" ].
+ja2 := intr-verb-lex &
+  [ STEM < "ja2" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_came_v_rel" ].
 
-qadimuu := itr-3plm-verb-lex &
-  [ STEM < "qadimuu" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_come_v_rel" ].
-
-qara2at := tr-3sgf-verb-lex &
-  [ STEM < "qara2at" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_read_v_rel" ].
-
-hallat := tr-3sgf-verb-lex &
-  [ STEM < "hallat" >,
+hall := trans-verb-lex &
+  [ STEM < "hall" >,
     SYNSEM.LKEYS.KEYREL.PRED "_solve_v_rel" ].
 
-qabalat := tr-3sgf-verb-lex &
-  [ STEM < "qabalat" >,
+qabal := trans-verb-lex &
+  [ STEM < "qabal" >,
     SYNSEM.LKEYS.KEYREL.PRED "_met_v_rel" ].
 
-katabat := tr-3sgf-verb-lex &
-  [ STEM < "katabat" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_write_v_rel" ].
+daxal := trans-verb-lex &
+  [ STEM < "daxal" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_enter_v_rel" ].
 
-qabalna := tr-3plf-verb-lex &
-  [ STEM < "qabalna" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_meet_v_rel" ].
+zur := trans-verb-lex &
+  [ STEM < "zur" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_visit_v_rel" ].
 
-katabna := tr-3plf-verb-lex &
-  [ STEM < "katabna" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_write_v_rel" ].
+sallam := trans-verb-lex &
+  [ STEM < "sallam" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_greet_v_rel" ].
 
-namat := itr-3sgf-verb-lex &
-  [ STEM < "namat" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_sleep_v_rel" ].
+yakul := trans-verb-lex &
+  [ STEM < "yakul" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_eat_v_rel" ].
 
-jilesat := itr-3sgf-verb-lex &
-  [ STEM < "jilesat" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_sat_v_rel" ].
+;;; Auxiliaries
 
-;;; Determiners
+lam := neg_prog-aux-lex &
+  [ STEM < "lam" >,
+    SYNSEM.LKEYS.KEYREL.PRED "neg_imperf_rel" ].
 
-al := definite-determiner-lex &
-  [ STEM < "al" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_definite_q_rel" ].
+la := neg_perf-aux-lex &
+  [ STEM < "la" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_neg_perfective_v_rel" ].
 
 ;;; Adverbs
 
@@ -186,3 +162,8 @@ hal := q-particle1-lex &
 
 2a := q-particle2-lex &
   [ STEM < "2a" > ].
+
+wa := conj-lex &
+  [ STEM < "wa" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_and_coord_rel",
+    CFORM "1" ].

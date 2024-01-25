@@ -6,6 +6,9 @@ Date: 17/1/2024
 Source a: Ahmed, A. M. T. (2016). Case in Standard Arabic: A dependent case approach.
 Source b: Mohammad, M. A. (2000). Word order, agreement and pronominalization in Standard and Palestinian Arabic. Word Order, Agreement and Pronominalization in Standard and Palestinian Arabic, 1-213.
 Source c: Alonini, T. M. (2023). Unaccusative verbs in Modern Standard Arabic. Saudi Journal of Language Studies, 3(1), 47-58.
+Source d: AlQahtani, S. J. (2016). The Structure and Distribution of Determiner Phrases in Arabin: Standard Arabic and Saudi Dialects. Department of Linguistics, University of Ottowa. 
+Source e: Albuhayri, S. (2013). The Pronominal System in Standard Arabic: Stron, Clitic, and Affixal Pronouns. Arizona State University. 
+Source f: Alotaibi, Y. H (2022). Adjectives in Arabic. Taif University. 
 
 #1-VS0 word order for transitive clauses with definite NP subjects
 Source: a:29, Amer Ahmed, attested
@@ -93,7 +96,7 @@ Source: b:9, Mohammad A. Mohammad, attested
 Vetted: s
 Judgment: g 
 Phenomena: {word order, determiner}
-qabala 	rajulu 	walada
+qabala 		rajulu 	walada
 qabal-a 	rajul-u 	walad-a
 met-3.SG.M	man-NOM		boy-ACC
 'A man met a boy.'
@@ -145,7 +148,7 @@ Source: b:10, Mohammad A. Mohammad, attested
 Vetted: s
 Judgment: u
 Phenomena: {word order, determiner}
-walada 	    qabala 	    rajul-u	
+walada 	    	qabala 	    	rajulu	
 walad-a 	qabal-a 	rajul-u			
 boy-ACC 	met-3.SG.M	man-NOM	
 'A man met a boy.'
@@ -182,7 +185,7 @@ qabal-a	 	    al-walad-u      	al-arnab-a
 met-3sg.m		the-boy-nom         the-rabbit-acc
 'The boy met the rabbit.'
 
-#17-case (basic transitive clauses) indefinite NPs, V must be sentence-initial
+#18-case (basic transitive clauses) indefinite NPs, V must be sentence-initial
 Source: b:7, Mohammad A. Mohammad, attested
 Vetted: s
 Judgment: g
@@ -193,27 +196,27 @@ met-3sg.m		boy-nom     rabbit-acc
 'A boy met a rabbit.'
 
 
-#18-case (basic transitive clause)
+#19-case (basic transitive clause)
 Source: b:7, Mohammad A. Mohammad, attested
 Vetted: s
 Judgment: u
 Phenomena: {case}
 qabala	 	    alwalada			alarnabu
-qabala-a	 	al-walad-a			al-arnab-u
+qabala-a	 	al-walad-a		al-arnab-u
 met-3sg.m		the-boy-acc	        the-rabbit-nom
 'The boy met the rabbit.'
 
-#18-case (basic transitive clause) - indefinite NPs
+#20-case (basic transitive clause) - indefinite NPs
 Source: b:7, Mohammad A. Mohammad, attested
 Vetted: s
 Judgment: u
 Phenomena: {case}
-qabala	 	    walada			arnabu
+qabala	 	   	walada			arnabu
 qabala-a	 	walad-a			arnab-u
 met-3sg.m		boy-acc	        rabbit-nom
 'A boy met the rabbit.'
 
-#19-case (basic intransitive clause)
+#21-case (basic intransitive clause)
 Source: c:2, Alonini, attested
 Vetted: s
 Judgment: g
@@ -224,7 +227,7 @@ arrived-3sg.m		the-boy-nom
 'The boy arrived.'
 
 
-#20-case (basic intransitive clause)
+#22-case (basic intransitive clause)
 Source: c:2, Alonini, attested
 Vetted: s
 Judgment: u
@@ -235,7 +238,7 @@ arrived-3sg.m		the-boy-acc
 'The boy arrived.'
 
 
-#19-case (basic intransitive clause) - indefinite NPs
+#23-case (basic intransitive clause) - indefinite NPs
 Source: c:2, Alonini, attested
 Vetted: s
 Judgment: g
@@ -245,12 +248,383 @@ walad-u     wasal-a
 boy-nom     arrived-3sg.m		
 'A boy arrived.'
 
-#21-case (basic intransitive clause) - indefinite NPs
+#24-case (basic intransitive clause) - indefinite NPs
 Source: c:2, Alonini, attested
 Vetted: s
-Judgment: g
+Judgment: u
 Phenomena: {case}
 walada      wasala	 
 walad-a     wasal-a	 
 boy-ACC     arrived-3sg.m		
 'A boy arrived.'
+
+#######NP#######
+
+#22- Noun phrase, indefinite, adjective agreement
+Source: d:2, AlQahtani, attested
+Vetted: s
+Judgment: g
+Phenomena: {agr, det, adj}
+rajulun tawelun daxala 2almaktaba
+rajul-u-n tawel-u-n daxal-a 2al-maktab-a
+man-NOM-NUM tall-NOM-NUN entered-3sgmasc the-office-ACC
+'A tall man entered the office.'
+
+#22- Noun phrase, indefinite, adjective agreement
+Source: f:37, Alotaibi, attested
+Vetted: s
+Judgment: g
+Phenomena: {agr, adj}
+Ja2a rajulun tawelun
+Ja2-a rajul-un tawel-un
+came-PFV.3SGMASC man-NOM tall-NOM
+'A tall man came.'
+
+#22- Noun phrase, definite, adjective agreement
+Source: f:49, Alataibi, attested
+Vetted: s
+Judgment: g
+Phenomena: {agr, det, adj}
+ja2a alrajulu alkarimu
+ja2-a al-rajul-u al-karim-u
+came-PFV.3SGMASC the-man-NOM the-generous-NOM
+'The generous man came.'
+
+#22- Noun phrase, definite, adjective agreement (adjective does not agree with definite noun)
+Source: f:49, Alataibi, attested
+Vetted: f
+Judgment: u
+Phenomena: {agr}
+ja2a alrajulu alkarimu
+ja2-a al-rajul-u karim-u-n
+came-3sgmasc the-man-NOM generous-NOM-NUN
+'Intended: The generous man came.'
+
+
+
+
+#######PRONOUNS#######
+
+#22-pronouns, NPs, possession, word order
+Source: d:2, AlQahtani, attested
+Vetted: s
+Judgment: g
+Phenomena: {pn, poss, det}
+zurtu dara 2al2jitami
+zur-tu dar-a 2al-2jitam-i
+visited-I house-ACC the-orphans-GEN
+'I visited the orphans' house.'
+
+#23-pronouns, NPs, possession, word order (genetive must follow its reference)
+Source: d:2, AlQahtani, attested
+Vetted: s
+Judgment: u
+Phenomena: {wo}
+zurtu 2al2jitami dara
+zur-tu 2al-2jitam-i dar-a
+visited-I the-orphans-GEN house-ACC
+'Intended: I visited the orphans' house.'
+
+#23-pronouns
+Source: d:2, Albuhayri, attested
+Vetted: s
+Judgment: g
+Phenomena: {pn, wo}
+qabalnaaka
+qabal-naa-ka
+meet-1pl-2sgmasc
+'We met you.'
+
+#23-Pronouns, possessive
+Source: d:2, Albuhayri, attested
+Vetted: s
+Judgment: g
+Phenomena: {pn, poss}
+haa6aa baytuki 
+haa6aa bayt-u-ki 
+this house-NOM-2sgfem
+'This is your house.'
+
+#23-Pronoun attachment to preposition
+Source: d:2, Albuhayri, attested
+Vetted: s
+Judgment: g
+Phenomena: {pn}
+sallamtu 3alayhim 
+sallam-tu 3alay-him
+greeted-1sg on-3plmasc
+'I greeted them.'
+
+#23- Independent Pronouns, word order
+Source: d:2, Albuhayri, attested
+Vetted: s
+Judgment: g
+Phenomena: {pn, adj, wo}
+2iyyaaka qabalnaa
+2iyyaaka qabal-naa
+2sg.masc met-1pl
+'We met you.'
+
+#23- Independent Pronouns, word order (independent object pronouns must come first)
+Source: d:2, Albuhayri, attested
+Vetted: f
+Judgment: u
+Phenomena: {wo}
+qabalnaa 2iyyaaka 
+qabal-naa 2iyyaaka 
+met-1pl 2sg.masc 
+'Intended: We met you.'
+
+#######NON-VERBAL PREDICATES#######
+
+#23-Non-Verbal Predicates, Zero Copula, Independent Pronouns, adjectives
+Source: d:2, Albuhayri, attested
+Vetted: s
+Judgment: g
+Phenomena: {pn, adj, cop}
+2anta mujtahidun
+2anta mujtahid-un
+2sg.masc assiduous.nom
+'You are assiduous.'
+
+#23-Non-Verbal Predicates, Zero Copula, Independent Pronouns, adjectives
+Source: d:2, Albuhayri, attested
+Vetted: s
+Judgment: g
+Phenomena: {pn, adj, poss}
+Huwa safirunaa lada almajlisi
+Huwa safir-u-naa lada al-majlis-i
+3sg.masc ambassador-nom-1pl at the-council-gen
+'He is our ambassador at the council.'
+
+#23-Non-Verbal Predicates, Zero Copula, (the definite affix on the adjective is dropped in zero-copula and replaced with nunation)
+Source: g:49, Alotaibi, attested
+Vetted: s
+Judgment: g
+Phenomena: {adj, agr, cop}
+alrajulu karimun 
+al-rajul-u karim-u-n
+the-man-NOM generous-NOM-NUN
+'The man is generous.'
+
+
+#### Tense and Aspect##############
+
+
+
+#######Negation###########3
+
+
+#Negation lan perfective verb
+Source: b:13
+Vetted: s
+Judgment: g
+Phenomena: {negation}
+alwaladu		lan 		yakula			altuffahata
+al-walad-u		lan 		yakul-a			al-tuffahat-a
+DEF-boy-NOM		not		eat-3.SG.M.PERF	DEF-apple-ACC
+‘The boy will not eat the apple.’
+
+
+#Negation la + imperfective erb
+Source: b:13
+Vetted: s
+Judgment: g
+Phenomena: {negation}
+alwaladu		la 		yakulu			altuffahata
+al-walad-u		la 		yakul-u			al-tuffahat-a
+DEF-boy-NOM		not		eat-3.SG.M.PROG	DEF-apple-ACC
+‘The boy is not eating the apple.’
+
+#Negation lan perfective verb
+Source: b:13
+Vetted: s
+Judgment: u
+Phenomena: {negation}
+alwaladu		la 		yakula			altuffahata
+al-walad-u		la 		yakul-a			al-tuffahat-a
+DEF-boy-NOM		not		eat-3.SG.M.PERF	DEF-apple-ACC
+Intended: ‘The boy will not eat the apple.’
+
+
+#Negation lan perfective verb
+Source: b:13
+Vetted: s
+Judgment: u
+Phenomena: {negation}
+alwaladu		lam		yakulu			altuffahata
+al-walad-u		lam		yakul-u			al-tuffahat-a
+DEF-boy-NOM		not		eat-3.SG.M.PROG	DEF-apple-ACC
+Intended: ‘The boy is not eating the apple.’
+
+
+
+#agreement##############
+
+#(singular, gender agreement)
+Source: a
+Vetted: s
+Judgment: g 
+Phenomena: {agreement}
+wasala	 		alwaladu
+wasal-a	 		al-walad-u
+arrived-3.sg.m		the-boy.sg-nom
+‘The boy arrived.’
+
+#(singular, gender agreement)	
+Source: a
+Vetted: s					
+Judgment: g
+wasalat 		albintu
+wasal-at 		al-bint-u
+arrived-3.sg.f		DEF-girl.sg-nom
+‘The girl arrived.	
+
+#(plural, gender agreement)
+Source: a
+Vetted: s
+Judgment: g 
+Phenomena: {agreement}
+wasaluu	 	al2lwaladu
+wasal-uu	 	al-2lwalad-u
+arrived-3.pl.m		the-boy.pl-nom
+‘The boys arrived.’
+
+#(plural, gender agreement)	
+Source: a
+Vetted: s					
+Judgment: g 
+Phenomena: {agreement}
+wasalna 		albantu
+wasal-na 		al-bant-u
+arrived-3.pl.f		DEF-girl.pl-nom
+‘The girls arrived.
+
+
+#(mismatch in gender, number = singular)
+Source: a
+Vetted: s
+Judgment: u
+Phenomena: {agreement}
+ wasalat 		al-walad-u
+ wasal-at 		al-walad-u
+arrived-3.sg.f		the-boy.sg-nom
+‘The boy arrived.’
+
+# (mismatch in gender, number = singular)
+Source: a
+Vetted: s
+Judgment: u
+Phenomena: {agreement}
+wasala			albintu
+wasal-a			al-bint-u
+arrived-3.sg.m		the-girl.sg-nom
+‘The girl arrived.’
+
+#(mismatch in gender, number = pl)	
+Source: a
+Vetted: s
+Judgment: u 
+Phenomena: {agreement}
+wasalna	 	al2lwaladu
+wasal-na	 	al-2lwalad-u
+arrived-3.pl.f		the-boy.pl-nom
+intended:‘The boys arrived.’
+
+#(mismatch in gender, number = pl)	
+Source: a
+Vetted: s
+Judgment: u 	
+Phenomena: {agreement}	
+wasaluu 		albantu			
+wasal-uu 		al-bant-u
+arrived-3.pl.m		DEF-girl.pl-nom
+intended:‘The girls arrived.
+
+
+
+#(mismatch in number, gender kept constant)
+Source: a
+Vetted: s
+Judgment: u 
+Phenomena: {agreement}
+wasaluu		alwaladu
+wasal-uu		al-walad-u
+arrived-3.pl.m		the-boy.sg-nom
+Intended: ‘The boy arrived.’
+
+#(mismatch in number, gender kept constant)		
+Source: a
+Vetted: s				
+Judgment: u 
+Phenomena: {agreement}
+wasalna 		albintu
+wasal-na 		al-bint-u
+arrived-3.pl.f		DEF-girl.sg-nom
+Intended: ‘The girl arrived.	
+
+#(mismatch in number, gender kept constant)
+Source: a
+Vetted: s
+Judgment: u 
+Phenomena: {agreement}
+wasala	 		al2lwaladu
+wasal-a	 		al-2lwalad-u
+arrived-3.sg.m		the-boy.pl-nom
+Intended: ‘The boys arrived.’
+
+#(mismatch in number, gender kept constant)	
+Source: a
+Vetted: s					
+Judgment: u 
+Phenomena: {agreement}
+wasalat 		albantu
+wasal-at 		al-bant-u
+arrived-3.sg.f		DEF-girl.pl-nom
+intended: ‘The girls arrived.
+
+
+# (mismatch in both gender and number)
+Source: a
+Vetted: s
+Judgment: u
+Phenomena: {agreement}
+wasalna	 	alwaladu
+wasal-na	 	al-walad-u
+arrived-3.pl.f		the-boy.sg-nom
+Intended: ‘The boy arrived.’
+						
+# (mismatch in both gender and number)
+Source: a
+Vetted: s
+Judgment: u
+Phenomena: {agreement}
+wasaluu 		albintu
+wasal-uu 		al-bint-u
+arrived-3.pl.m		DEF-girl.sg-nom
+‘The girl arrived.
+
+# (mismatch in both gender and number)
+Source: a
+Vetted: s
+Judgment: u
+Phenomena: {agreement}
+wasalat	 		al2lwaladu
+wasal-at	 	al-2lwalad-u
+arrived-3.sg.f		the-boy.pl-nom
+Intended: ‘The boys arrived.’
+
+# (mismatch in both gender and number)
+Source: a
+Vetted: s						
+Judgment: u
+Phenomena: {agreement}
+wasala			albantu
+wasal-a			al-bant-u
+arrived-3.sg.m		DEF-girl.pl-nom
+‘The girls arrived.
+
+
+
+
+
