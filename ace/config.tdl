@@ -1,6 +1,6 @@
 ;;; files to load
 
-grammar-top               := "../modern standard arabic-pet.tdl".
+grammar-top               := "../modern_standard_arabic-pet.tdl".
 variable-property-mapping := "../semi.vpm".
 preprocessor              := "../repp/vanilla.rpp".
 ;generation-ignore-signs   := "generation.ignore".
