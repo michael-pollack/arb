@@ -384,7 +384,7 @@ Judgment: g
 Phenomena: {pn, adj, cop}
 2anta mujtahidun
 2anta mujtahid-un
-2sg.masc assiduous.nom
+2sg.masc assiduous-nom
 'You are assiduous.'
 
 #23-Non-Verbal Predicates, Zero Copula, Independent Pronouns, adjectives
@@ -475,6 +475,7 @@ arrived-3.sg.m		the-boy.sg-nom
 Source: a
 Vetted: s					
 Judgment: g
+Phenomena: {agreement}
 wasalat 		albintu
 wasal-at 		al-bint-u
 arrived-3.sg.f		DEF-girl.sg-nom
