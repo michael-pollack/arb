@@ -2,7 +2,7 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;; Grammar of Modern_Standard_Arabic
 ;;; created at:
-;;;     Fri Jan 26 21:44:55 UTC 2024
+;;;     Fri Jan 26 22:53:43 UTC 2024
 ;;; based on Matrix customization system version of:
 ;;;     Fri 27 Oct 2023 04:16:13 PM UTC
 ;;;
@@ -346,10 +346,10 @@ neg-adv-lex := basic-scopal-adverb-lex &
 
 ;;; Intermediate rule types
 
-caseagr-rule-dtr := word-or-lexrule.
-nunnation-rule-dtr := word-or-lexrule.
 case-rule-dtr := word-or-lexrule.
 det-rule-dtr := word-or-lexrule.
+caseagr-rule-dtr := word-or-lexrule.
+nunnation-rule-dtr := word-or-lexrule.
 
 ;;; Lexical rule types
 

@@ -410,7 +410,7 @@ the-man-NOM generous-NOM-NUN
 #### Tense and Aspect##############
 
 #perfective verb aspect -a
-Source: b:13
+Source: b:13, Mohammad, attested
 Vetted: s
 Judgment: g
 Phenomena: {aspect}
@@ -421,7 +421,7 @@ DEF-boy-NOM				    eat-PERF	DEF-apple-ACC
 
 
 #imperfective verb
-Source: b:13
+Source: b:13, Mohammad, attested
 Vetted: s
 Judgment: g
 Phenomena: {aspect}
@@ -431,7 +431,7 @@ DEF-boy-NOM				eat-PROG	DEF-apple-ACC
 ‘The boy is eating the apple.’
 
 #perfective verb aspect -a (cannot follow agreement marker)
-Source: b:13
+Source: b:13, Mohammad, attested
 Vetted: s
 Judgment: u
 Phenomena: {aspect}
@@ -442,7 +442,7 @@ DEF-boy-NOM				    eat-3sg.m-PERF	DEF-apple-ACC
 
 
 #imperfective verb (cannot follow agreement marker)
-Source: b:13
+Source: b:13, Mohammad, attested
 Vetted: s
 Judgment: u
 Phenomena: {aspect}
@@ -455,7 +455,7 @@ DEF-boy-NOM			eat-3sgm-PROG	DEF-apple-ACC
 
 
 #Negation lan perfective verb
-Source: b:13
+Source: b:13, Mohammad, attested
 Vetted: s
 Judgment: g
 Phenomena: {negation}
@@ -466,7 +466,7 @@ DEF-boy-NOM		not		    eat-PERF	DEF-apple-ACC
 
 
 #Negation la + imperfective verb
-Source: b:13
+Source: b:13, Mohammad, attested
 Vetted: s
 Judgment: g
 Phenomena: {negation}
@@ -476,7 +476,7 @@ DEF-boy-NOM		not		eat-PROG	DEF-apple-ACC
 ‘The boy is not eating the apple.’
 
 #Negation la perfective verb
-Source: b:13
+Source: b:13, Mohammad, attested
 Vetted: s
 Judgment: u
 Phenomena: {negation}
@@ -487,10 +487,10 @@ Intended: ‘The boy will not eat the apple.’
 
 
 #Negation la + prog verb
-Source: b:13
+Source: b:13, Mohammad, attested
 Vetted: s
 Judgment: u
-Phenomena: {negation}
+Phenomena: {negation}b:\13, Mohammad, attested
 alwaladu		lan		yakulu			altuffahata
 al-walad-u		lan		yakul-u			al-tuffahat-a
 DEF-boy-NOM		not		eat-PROG	DEF-apple-ACC
@@ -501,7 +501,7 @@ Intended: ‘The boy is not eating the apple.’
 #agreement##############
 
 #(singular, gender agreement)
-Source: a
+Source: a:29, Ahmed, attested
 Vetted: s
 Judgment: g 
 Phenomena: {agreement}
@@ -511,7 +511,7 @@ arrived-3.sg.m		the-boy.sg-nom
 ‘The boy arrived.’
 
 #(singular, gender agreement)	
-Source: a
+Source: a:29, Ahmed, attested
 Vetted: s					
 Judgment: g
 Phenomena: {agreement}
@@ -521,7 +521,7 @@ arrived-3.sg.f		DEF-girl.sg-nom
 ‘The girl arrived.	
 
 #(plural, gender agreement)
-Source: a
+Source: a:29, Ahmed, attested
 Vetted: s
 Judgment: g 
 Phenomena: {agreement}
@@ -531,7 +531,7 @@ arrived-3.pl.m		the-boy.pl-nom
 ‘The boys arrived.’
 
 #(plural, gender agreement)	
-Source: a
+Source: a:29, Ahmed, attested
 Vetted: s					
 Judgment: g 
 Phenomena: {agreement}
@@ -542,7 +542,7 @@ arrived-3.pl.f		DEF-girl.pl-nom
 
 
 #(mismatch in gender, number = singular)
-Source: a
+Source: a:29, Ahmed, attested
 Vetted: s
 Judgment: u
 Phenomena: {agreement}
@@ -552,7 +552,7 @@ arrived-3.sg.f		the-boy.sg-nom
 ‘The boy arrived.’
 
 # (mismatch in gender, number = singular)
-Source: a
+Source: a:29, Ahmed, attested
 Vetted: s
 Judgment: u
 Phenomena: {agreement}
@@ -562,7 +562,7 @@ arrived-3.sg.m		the-girl.sg-nom
 ‘The girl arrived.’
 
 #(mismatch in gender, number = pl)	
-Source: a
+Source: a:29, Ahmed, attested
 Vetted: s
 Judgment: u 
 Phenomena: {agreement}
@@ -572,7 +572,7 @@ arrived-3.pl.f		the-boy.pl-nom
 intended:‘The boys arrived.’
 
 #(mismatch in gender, number = pl)	
-Source: a
+Source: a:29, Ahmed, attested
 Vetted: s
 Judgment: u 	
 Phenomena: {agreement}	
@@ -584,7 +584,7 @@ intended:‘The girls arrived.
 
 
 #(mismatch in number, gender kept constant)
-Source: a
+Source: a:29, Ahmed, attested
 Vetted: s
 Judgment: u 
 Phenomena: {agreement}
@@ -594,7 +594,7 @@ arrived-3.pl.m		the-boy.sg-nom
 Intended: ‘The boy arrived.’
 
 #(mismatch in number, gender kept constant)		
-Source: a
+Source: a:29, Ahmed, attested
 Vetted: s				
 Judgment: u 
 Phenomena: {agreement}
@@ -604,7 +604,7 @@ arrived-3.pl.f		DEF-girl.sg-nom
 Intended: ‘The girl arrived.	
 
 #(mismatch in number, gender kept constant)
-Source: a
+Source: a:29, Ahmed, attested
 Vetted: s
 Judgment: u 
 Phenomena: {agreement}
@@ -614,7 +614,7 @@ arrived-3.sg.m		the-boy.pl-nom
 Intended: ‘The boys arrived.’
 
 #(mismatch in number, gender kept constant)	
-Source: a
+Source: a:29, Ahmed, attested
 Vetted: s					
 Judgment: u 
 Phenomena: {agreement}
@@ -625,7 +625,7 @@ intended: ‘The girls arrived.
 
 
 # (mismatch in both gender and number)
-Source: a
+Source: a:29, Ahmed, attested
 Vetted: s
 Judgment: u
 Phenomena: {agreement}
@@ -635,7 +635,7 @@ arrived-3.pl.f		the-boy.sg-nom
 Intended: ‘The boy arrived.’
 						
 # (mismatch in both gender and number)
-Source: a
+Source: a:29, Ahmed, attested
 Vetted: s
 Judgment: u
 Phenomena: {agreement}
@@ -645,7 +645,7 @@ arrived-3.pl.m		DEF-girl.sg-nom
 ‘The girl arrived.
 
 # (mismatch in both gender and number)
-Source: a
+Source: a:29, Ahmed, attested
 Vetted: s
 Judgment: u
 Phenomena: {agreement}
@@ -655,7 +655,7 @@ arrived-3.sg.f		the-boy.pl-nom
 Intended: ‘The boys arrived.’
 
 # (mismatch in both gender and number)
-Source: a
+Source: a:29, Ahmed, attested
 Vetted: s						
 Judgment: u
 Phenomena: {agreement}
@@ -686,7 +686,7 @@ DEF-girl-u		met-3.SG.M		DEF-boy-ACC
 
 ####Postverbal Subject Agreement Asymmetry##########
 #Postverbal plural subjects - agreement marker must be singular
-Source: a: 28
+Source: a:28, Ahmed, attested
 Vetted: s
 Judgment: g
 Phenomena: {word order, agreement}
@@ -696,7 +696,7 @@ solved-3.m.sg		 DEF-students.pl-NOM	 DEF-problem-acc
 ‘The students solved the problem.’ 
 
 #Postverbal plural subjects - agreement marker must be singular
-Source: a: 28
+Source: a:28, Ahmed, attested
 Vetted: s
 Judgment: u
 Phenomena: {word order, agreement}
@@ -706,7 +706,7 @@ solved-3.pl.m	the-students.pl-NOM	 the-problem-acc
 ‘The students solved the problem.’ 
 
 #Postverbal plural subjects - agreement marker must be singular
-Source: a: 28
+Source: a:28, Ahmed, attested
 Vetted: s
 Judgment: g
 Phenomena: {word order, agreement}
@@ -716,7 +716,7 @@ came-3.sg.f 		DEF-girls.pl-nom
 ‘The girls came.’
 
 #Postverbal plural subjects - agreement marker must be singular
-Source: a: 28
+Source: a:28, Ahmed, attested
 Vetted: s
 Judgment: u
 Phenomena: {word order, agreement}
@@ -724,12 +724,11 @@ qadimna 		albantu
 qadim-na 		al-bant-u 
 came-3.pl.f 	DEF-girls.pl-nom
 ‘The girls came.’	
-	
 
 ######coordination##############
 
 # 3rd-plural-masc NP and 3rd plural fem NP
-Source: i: 3, Johannessen 
+Source: i:3, Johannessen 
 Vetted: s
 Judgment: g
 Phenomena: {Coordination}
@@ -740,7 +739,7 @@ DEF-boy-NOM CONJ 		DEF-girl-NOM		arrive-3.pl.m
 
 
 # plural masc NP and singular fem NP
-Source: i: 3, Johannessen 
+Source: i:3, Johannessen, attested
 Vetted: s
 Judgment: g
 Phenomena: {Coordination}
@@ -750,7 +749,7 @@ DEF-boy-NOM 		CONJ 		DEF-girl-NOM		arrive-3.pl.m
 ‘The boys and the girl arrived.’
 
 # plural masc NP and first person plural pronoun
-Source: i: 3, Johannessen 
+Source: i:3, Johannessen, attested
 Vetted: s
 Judgment: g
 Phenomena: {Coordination}
@@ -760,7 +759,7 @@ DEF-boy-NOM 		CONJ 		we		arrive-3.pl.m
 ‘The boys and we arrived.’
 
 # plural masc NP and first person singular pronoun
-Source: i: 3, Johannessen 
+Source: i:3, Johannessen, attested 
 Vetted: s
 Judgment: g
 Phenomena: {Coordination}
@@ -770,7 +769,7 @@ DEF-boy-NOM 		CONJ 		I		arrive-3.pl.m
 ‘The boys and I arrived.’
 
 # 3rd dual masc NP and singular fem NP
-Source: i: 3, Johannessen 
+Source: i:3, Johannessen, attested 
 Vetted: s
 Judgment: g
 Phenomena: {Coordination}
@@ -780,7 +779,7 @@ DEF-boy-NOM 		CONJ 	DEF-girl-NOM	arrive-3.pl.m
 ‘The two boys and the girl arrived.’
 
 # 3rd dual masc NP and 3rd dual fem NP
-Source: i: 3, Johannessen 
+Source: i:3, Johannessen, attested 
 Vetted: s
 Judgment: g
 Phenomena: {Coordination}
@@ -811,7 +810,7 @@ Intended: 'The girl met the boy and arrived.'
 
 
 #Coordination of intransitive clauses with sgmasc, sgfem agreement
-Source: i: 3, Johannessen 
+Source: i:3, Johannessen, attested 
 Vetted: s
 Judgment: g
 Phenomena: {Coordination}
@@ -821,7 +820,7 @@ DEF-boy-NOM  came-3sg.m	CONJ	DEF-girl-NOM		arrive-3sg.f
 ‘The boy came and the girl arrived.’
 
 #Coordination of of intransitive clauses with sgmasc, plfem agreement.
-Source: i: 3, Johannessen 
+Source: i:3, Johannessen, attested 
 Vetted: s
 Judgment: g
 Phenomena: {Coordination}
@@ -834,7 +833,7 @@ DEF-boy-NOM came-3sg.m 	CONJ		DEF-girl-NOM		arrive-3pl.f
 
 ###coordination agreement###########
 #Subject is preverbal, masculine agreement
-Source: i: 3, Johannessen 
+Source: i:3, Johannessen, attested 
 Vetted: s
 Judgment: g
 Phenomena: {Coordination, agreement}
@@ -845,7 +844,7 @@ DEF-girl-NOM	CONJ 		DEF-boy-NOM		arrive-3.pl.m
 
 
 #Subject is preverbal, pl feminine agreement
-Source: i: 3, Johannessen 
+Source: i:3, Johannessen, attested 
 Vetted: s
 Judgment: u
 Phenomena: {Coordination, agreement}
@@ -855,7 +854,7 @@ DEF-girl-NOM	CONJ 		DEF-boy-NOM		arrive-3.pl.f
 ‘The boys and the girls arrived.’
 
 #Coordinated NPs are both feminine, feminine plural agreement
-Source: i: 3, Johannessen 
+Source: i:3, Johannessen, attested 
 Vetted: s
 Judgment: g
 Phenomena: {Coordination, agreement}
@@ -865,7 +864,7 @@ DEF-girl-NOM	CONJ 		DEF-women-NOM	arrive-3.pl.f
 ‘The girls and the women arrived.’
 
 #Coordinated NPs are both feminine, masculine plural agreement is incorrect
-Source: i: 3, Johannessen 
+Source: i:3, Johannessen, attested 
 Vetted: s
 Judgment: u
 Phenomena: {Coordination, agreement}
@@ -876,7 +875,7 @@ DEF-girl-NOM	CONJ 		DEF-women-NOM	arrive-3.pl.m
 
 
 #Coordination of 2 definite singular NPs (masc and fem)  - DUAL agreement marker
-Source: i: 3, Johannessen 
+Source: i:3, Johannessen, attested 
 Vetted: s
 Judgment: u
 Phenomena: {Coordination, agreement}
@@ -888,7 +887,7 @@ DEF-boy-NOM CONJ 		DEF-girl-NOM		arrive-DUAL.m
 
 
 #Coordination of 2 definite singular NPs - DUAL agreement marker
-Source: i: 3, Johannessen 
+Source: i:3, Johannessen, attested 
 Vetted: s
 Judgment: u
 Phenomena: {Coordination}
@@ -898,7 +897,7 @@ DEF-boy-NOM CONJ 		DEF-girl-NOM		arrive-3.sg.m
 ‘The boy and the girl arrived.’
 
 #Coordination of 2 definite singular feminine NPs - DUAL feminine agreement marker
-Source: i: 3, Johannessen 
+Source: i:3, Johannessen, attested 
 Vetted: s
 Judgment: g
 Phenomena: {Coordination}
@@ -908,7 +907,7 @@ DEF-girl-NOM CONJ 		DEF-woman-NOM	arrive-DUAL.f
 ‘The girl and the woman arrived.
 
 #Coordination of 2 definite singular NPs (fem and masc ordering)  - DUAL.m agreement marker
-Source: i: 3, Johannessen 
+Source: i:3, Johannessen, attested 
 Vetted: s
 Judgment: g
 Phenomena: {Coordination}
@@ -918,7 +917,7 @@ DEF-girl-NOM	CONJ 	DEF-boy-NOM 		arrive-DUAL.m
 ‘The boy and the girl arrived.’
 
 #Coordination of 2 definite singular NPs (fem and masc ordering)  - DUAL.f agreement marker
-Source: i: 3, Johannessen 
+Source: i:3, Johannessen, attested 
 Vetted: s
 Judgment: u
 Phenomena: {Coordination}
@@ -930,7 +929,7 @@ DEF-girl-NOM	CONJ 	DEF-boy-NOM 			arrive-DUAL.m
 
 ######### matrix wh-questions ################
 #wh-questions: Q-V-NP is the only possible order
-Source: p: 4, Btoosh
+Source: p:4, Btoosh, attested
 Vetted:s
 Judgment: g
 Phenomena: {wh}
@@ -940,7 +939,7 @@ who	 read-3.sg.masc. 	the-book-acc.
 ‘Who read the book?’ 	
 
 #wh-questions: Q-V-NP is the only possible order (V-Q-NP)
-Source: p: 4, Btoosh
+Source: p:4, Btoosh, attested
 Vetted:s
 Judgment: u
 Phenomena: {wh}			
@@ -950,7 +949,7 @@ read-3.sg.masc. 	who	 the-book-acc.
 ‘Who read the book?’			
 	
 #wh-questions: Q-V-NP is the only possible order (V-NP-Q)
-Source: p: 4, Btoosh
+Source: p:4, Btoosh, attested
 Vetted:s
 Judgment: u
 Phenomena: {wh}
@@ -960,7 +959,7 @@ read-3.sg.masc 	the-book-acc.	Who
 ‘Who read the book?’	 			
 
 #wh-questions: Q-V-NP is the only possible order (Q-NP-V)
-Source: p: 4, Btoosh
+Source: p:4, Btoosh, attested
 Vetted:s
 Judgment: u
 Phenomena: {wh}
@@ -970,7 +969,7 @@ who	the-book-acc	 read-3.sg.m
 ‘Who read the book?’	 		
 						
 #wh-questions: Q-V-NP is the only possible order (NP-Q-V)
-Source: p: 4, Btoosh
+Source: p:4, Btoosh, attested
 Vetted:s
 Judgment: u
 Phenomena: {wh}
@@ -980,7 +979,7 @@ The-book-acc	who		 read-3.sg.m
 ‘Who read the book?’	 
 
 #wh-questions: Q-V-NP is the only possible order (NP-V-Q)
-Source: p: 4, Btoosh
+Source: p:4, Btoosh, attested
 Vetted:s
 Judgment: u
 Phenomena: {wh}
@@ -991,7 +990,7 @@ The-book-acc	 read-3.sg.m	who
 
 
 #wh-questions: Q-V-NP is the only possible order (what)
-Source: p: 4, Btoosh
+Source: p:4, Btoosh, attested
 Vetted:s
 Judgment: g
 Phenomena: {wh}
@@ -1001,7 +1000,7 @@ who	 read-3.sg.masc. 	the-book-acc.
 ‘Who read the book?’ 	
 
 #wh-questions: Q-V-NP is the only possible order (what)
-Source: p: 4, Btoosh
+Source: p:4, Btoosh, attested
 Vetted:s
 Judgment: g
 Phenomena: {wh}	
