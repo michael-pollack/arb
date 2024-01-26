@@ -77,13 +77,25 @@ mas2akil := common_3plmasc-noun-lex &
   [ STEM < "2jitam" >,
     SYNSEM.LKEYS.KEYREL.PRED "_orphans_n_rel" ].
 
+2lwalad := common_3plmasc-noun-lex &
+  [ STEM < "2lwalad" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_boys_n_rel" ].
+
 bint := common_3sgfem-noun-lex &
   [ STEM < "bint" >,
     SYNSEM.LKEYS.KEYREL.PRED "_girl_n_rel" ].
 
+amra := common_3sgfem-noun-lex &
+  [ STEM < "amra" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_woman_n_rel" ].
+
 bant := common_3plfem-noun-lex &
   [ STEM < "bant" >,
     SYNSEM.LKEYS.KEYREL.PRED "_girls_n_rel" ].
+
+mara := common_3plfem-noun-lex &
+  [ STEM < "mara" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_women_n_rel" ].
 
 bintani := common_3dual_fem-noun-lex &
   [ STEM < "bintani" >,
@@ -92,6 +104,14 @@ bintani := common_3dual_fem-noun-lex &
 waladan := common_3dual_masc-noun-lex &
   [ STEM < "waladan" >,
     SYNSEM.LKEYS.KEYREL.PRED "_boys_dual_n_rel" ].
+
+2anaa := 1persgpronoun-noun-lex &
+  [ STEM < "2anaa" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_1stsgperoronoun_n_rel" ].
+
+nahnu := 1stperplural-noun-lex &
+  [ STEM < "nahnu" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_we_n_rel" ].
 
 ;;; Adjectives
 
@@ -151,9 +171,9 @@ lam := neg_prog-aux-lex &
   [ STEM < "lam" >,
     SYNSEM.LKEYS.KEYREL.PRED "neg_imperf_rel" ].
 
-la := neg_perf-aux-lex &
+la := neg_perf-aux-lex & neg-adv-lex &
   [ STEM < "la" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_neg_perfective_v_rel" ].
+    SYNSEM.LKEYS.KEYREL.PRED "_neg_perfective_v_rel" & "neg_rel" ].
 
 ;;; Adverbs
 

@@ -410,7 +410,47 @@ the-man-NOM generous-NOM-NUN
 
 #### Tense and Aspect##############
 
+#perfective verb aspect -a
+Source: b:13
+Vetted: s
+Judgment: g
+Phenomena: {aspect}
+alwaladu				    yakula			altuffahata
+al-walad-u				    yakul-a			al-tuffahat-a
+DEF-boy-NOM				    eat-PERF	DEF-apple-ACC
+‘The boy has eaten the apple.’
 
+
+#imperfective verb
+Source: b:13
+Vetted: s
+Judgment: g
+Phenomena: {aspect}
+alwaladu		 		yakulu			altuffahata
+al-walad-u				yakul-u			al-tuffahat-a
+DEF-boy-NOM				eat-PROG	DEF-apple-ACC
+‘The boy is eating the apple.’
+
+#perfective verb aspect -a (cannot follow agreement marker)
+Source: b:13
+Vetted: s
+Judgment: u
+Phenomena: {aspect}
+alwaladu				    yakulaa			altuffahata
+al-walad-u				    yakul-a-a		al-tuffahat-a
+DEF-boy-NOM				    eat-3sg.m-PERF	DEF-apple-ACC
+‘The boy has eaten the apple.’
+
+
+#imperfective verb (cannot follow agreement marker)
+Source: b:13
+Vetted: s
+Judgment: u
+Phenomena: {aspect}
+alwaladu		 		yakulau		altuffahata
+al-walad-u				yakul-a-u	al-tuffahat-a
+DEF-boy-NOM				eat-PROG	DEF-apple-ACC
+‘The boy is eating the apple.’
 
 #######Negation###########3
 
@@ -622,7 +662,7 @@ Judgment: u
 Phenomena: {agreement}
 wasala			albantu
 wasal-a			al-bant-u
-arrived-3.sg.m		DEF-girl.pl-nom
+arrived-3.sg.m	DEF-girl.pl-nom
 ‘The girls arrived.
 
 #9-No object agreement
@@ -687,6 +727,164 @@ came-3.pl.f 	DEF-girls.pl-nom
 ‘The girls came.’	
 	
 
+######coordination##############
+
+# 3rd-plural-masc NP and 3rd plural fem NP
+Source: i: 3, Johannessen 
+Vetted: s
+Judgment: g
+Phenomena: {Coordination}
+al2lwaladu 	wa 		albantu 		wasaluu
+al-2lwalad-u 	wa 		al-bant-u 		wasal-uu
+DEF-boy-NOM CONJ 		DEF-girl-NOM		arrive-3.pl.m
+‘The boys and the girls arrived.’
+
+
+# plural masc NP and singular fem NP
+Source: i: 3, Johannessen 
+Vetted: s
+Judgment: g
+Phenomena: {Coordination}
+al2lwaladu 		wa 		albintu 			wasaluu
+al-2lwalad-u 		wa 		al-bint-u 		wasal-uu
+DEF-boy-NOM 		CONJ 		DEF-girl-NOM		arrive-3.pl.m
+‘The boys and the girl arrived.’
+
+# plural masc NP and first person plural pronoun
+Source: i: 3, Johannessen 
+Vetted: s
+Judgment: g
+Phenomena: {Coordination}
+al2lwaladu 		wa 		    nahnu		wasaluu
+al-2lwalad-u 		wa 		nahnu 		wasal-uu
+DEF-boy-NOM 		CONJ 		we		arrive-3.pl.m
+‘The boys and we arrived.’
+
+# plural masc NP and first person singular pronoun
+Source: i: 3, Johannessen 
+Vetted: s
+Judgment: g
+Phenomena: {Coordination}
+al2lwaladu 		    wa 		2anaa		wasaluu
+al-2lwalad-u 		wa 		2anaa		wasal-uu
+DEF-boy-NOM 		CONJ 		I		arrive-3.pl.m
+‘The boys and I arrived.’
+
+# 3rd dual masc NP and singular fem NP
+Source: i: 3, Johannessen 
+Vetted: s
+Judgment: g
+Phenomena: {Coordination}
+al2lwaladanu		wa 		albintu			wasaluu
+al-2lwalad.DUAL-u	wa 		al-bint-u		wasal-uu
+DEF-boy-NOM 		CONJ 	DEF-girl-NOM	arrive-3.pl.m
+‘The two boys and the girl arrived.’
+
+# 3rd dual masc NP and 3rd dual fem NP
+Source: i: 3, Johannessen 
+Vetted: s
+Judgment: g
+Phenomena: {Coordination}
+al2lwaladanu		wa 		albintaniu			wasaluu
+al-2lwalad.DUAL-u	wa 		al-bintani-u			wasal-uu
+DEF-boy-NOM 		CONJ 		DEF-girl.DUAL-NOM		arrive-3.pl.m
+‘The two boys and the two girl arrived.’
+
+
+###coordination agreement###########
+#Subject is preverbal, masculine agreement
+Source: i: 3, Johannessen 
+Vetted: s
+Judgment: g
+Phenomena: {Coordination, agreement}
+albantu 	wa 		al2lwaladu		wasaluu
+al-bant-u 	wa 		al-2lwalad-u 		wasal-uu
+DEF-girl-NOM	CONJ 		DEF-boy-NOM		arrive-3.pl.m
+‘The girls and the boys arrived.’
+
+
+#Subject is preverbal, pl feminine agreement
+Source: i: 3, Johannessen 
+Vetted: s
+Judgment: u
+Phenomena: {Coordination, agreement}
+albantu 	wa 		al2lwaladu		wasalna
+al-bant-u 	wa 		al-2lwalad-u  		wasal-na
+DEF-girl-NOM	CONJ 		DEF-boy-NOM		arrive-3.pl.f
+‘The boys and the girls arrived.’
+
+#Coordinated NPs are both feminine, feminine plural agreement
+Source: i: 3, Johannessen 
+Vetted: s
+Judgment: g
+Phenomena: {Coordination, agreement}
+albantu 	wa 		almaratu		wasalna
+al-bant-u 	wa 		al-mara-u  		wasal-na
+DEF-girl-NOM	CONJ 		DEF-women-NOM	arrive-3.pl.f
+‘The girls and the women arrived.’
+
+#Coordinated NPs are both feminine, masculine plural agreement is incorrect
+Source: i: 3, Johannessen 
+Vetted: s
+Judgment: u
+Phenomena: {Coordination, agreement}
+albantu 	wa 		almaratu		wasaluu
+al-bant-u 	wa 		al-mara-u  		wasal-uu
+DEF-girl-NOM	CONJ 		DEF-women-NOM	arrive-3.pl.m
+‘The girls and the women arrived.’
+
+
+#Coordination of 2 definite singular NPs (masc and fem)  - DUAL agreement marker
+Source: i: 3, Johannessen 
+Vetted: s
+Judgment: u
+Phenomena: {Coordination, agreement}
+alwaladu 	wa 		albintu 			wasalala
+al-walad-u 	wa 		al-bint-u 		wasal-ala
+DEF-boy-NOM CONJ 		DEF-girl-NOM		arrive-DUAL.m
+‘The boy and the girl arrived.’
+
+
+
+#Coordination of 2 definite singular NPs - DUAL agreement marker
+Source: i: 3, Johannessen 
+Vetted: s
+Judgment: u
+Phenomena: {Coordination}
+al2lwaladu 	wa 		albintu 			wasala
+al-2lwalad-u 	wa 		al-bint-u 		wasal-a
+DEF-boy-NOM CONJ 		DEF-girl-NOM		arrive-3.sg.m
+‘The boy and the girl arrived.’
+
+#Coordination of 2 definite singular feminine NPs - DUAL feminine agreement marker
+Source: i: 3, Johannessen 
+Vetted: s
+Judgment: g
+Phenomena: {Coordination}
+albintu		wa 		alamrau 		wasalata
+al-bint-u 	wa 		al-amra-u 		wasal-ata
+DEF-girl-NOM CONJ 		DEF-woman-NOM	arrive-DUAL.f
+‘The girl and the woman arrived.
+
+#Coordination of 2 definite singular NPs (fem and masc ordering)  - DUAL.m agreement marker
+Source: i: 3, Johannessen 
+Vetted: s
+Judgment: g
+Phenomena: {Coordination}
+albintu 		wa 	al2lwaladu			wasalala
+al-bint-u 	wa 	al-2lwalad-u			wasal-ala
+DEF-girl-NOM	CONJ 	DEF-boy-NOM 			arrive-DUAL.m
+‘The boy and the girl arrived.’
+
+#Coordination of 2 definite singular NPs (fem and masc ordering)  - DUAL.f agreement marker
+Source: i: 3, Johannessen 
+Vetted: s
+Judgment: u
+Phenomena: {Coordination}
+albintu 		wa 	al2lwaladu			wasalata
+al-bint-u 	wa 	al-2lwalad-u			wasal-ata
+DEF-girl-NOM	CONJ 	DEF-boy-NOM 			arrive-DUAL.m
+‘The boy and the girl arrived.’
 
 
 

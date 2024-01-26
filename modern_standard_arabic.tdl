@@ -2,7 +2,7 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;; Grammar of Modern_Standard_Arabic
 ;;; created at:
-;;;     Wed Jan 24 21:55:40 UTC 2024
+;;;     Fri Jan 26 19:48:23 UTC 2024
 ;;; based on Matrix customization system version of:
 ;;;     Fri 27 Oct 2023 04:16:13 PM UTC
 ;;;
@@ -169,11 +169,22 @@ common_3dual_fem-noun-lex := noun-lex &
 
 common_3dual_masc-noun-lex := noun-lex.
 
+1persgpronoun-noun-lex := noun-lex &
+  [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG [ PER 1st,
+                                       NUM sg ] ].
+
+1stperplural-noun-lex := noun-lex.
+
 ;;; Verbs
 
+; verb-lex is HC-LIGHT - to allow us to pick out
+; 
+;   lexical Vs for V-level attachment of negative adverbs.
+
 verb-lex := non-mod-lex-item &
-  [ SYNSEM [ LOCAL.CAT.HEAD verb,
-             L-QUE - ] ].
+  [ SYNSEM [ L-QUE -,
+             LOCAL.CAT [ HEAD verb,
+                         HC-LIGHT - ] ] ].
 
 main-verb-lex := verb-lex & basic-verb-lex & basic-non-wh-word-lex &
   [ SYNSEM [ L-QUE -,
@@ -317,6 +328,21 @@ determiner-lex := basic-determiner-lex & basic-non-wh-word-lex & norm-zero-arg &
 
 ;;; Adverbs
 
+; Type for negative adverbs.
+; 
+; This adverb should go through a specialized phrase structure rule
+;                           included with this grammar.
+
+neg-adv-lex := basic-scopal-adverb-lex &
+  [ SYNSEM.LOCAL.CAT [ VAL [ SPR < >,
+                             COMPS < >,
+                             SUBJ < >,
+                             SPEC < > ],
+                       POSTHEAD -,
+                       HEAD.MOD < [ LOCAL.CAT [ HEAD verb,
+                                                VAL [ SUBJ cons,
+                                                      COMPS null ] ] ] > ] ].
+
 ;;;;;;;;;;;;;;;;;;;
 ;;; Lexical Rules
 ;;;;;;;;;;;;;;;;;;;
@@ -434,7 +460,11 @@ comp-head-phrase-2 := basic-head-2nd-comp-phrase & head-final-head-nexus.
 ; introduced to match the semantic effect of bare NPs in your language.
 
 bare-np-phrase := basic-bare-np-phrase &
-  [ C-CONT.RELS.LIST < [ PRED "exist_q_rel" ] > ].
+  [ C-CONT.RELS.LIST < [ PRED "exist_q_rel" ] >,
+    SYNSEM.LOCAL [ CAT.HEAD.CASE #case,
+                   CONT.HOOK.INDEX.PNG #png ],
+    HEAD-DTR.SYNSEM.LOCAL [ CAT.HEAD.CASE #case,
+                            CONT.HOOK.INDEX.PNG #png ] ].
 
 basic-filler-phrase :+ [ SYNSEM.NON-LOCAL.SLASH.LIST < >,
     ARGS < [ SYNSEM [ LOCAL #slash,
@@ -450,15 +480,253 @@ extracted-subj-phrase := basic-extracted-subj-phrase &
 ;;; Coordination
 ;;;;;;;;;;;;;;;;;;
 
+;;; Feature Resolution Rules
+
+sg-sg-dual-num-coord-rule := coord-phrase &
+  [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG.NUM dual,
+    LCOORD-DTR.SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG.NUM sg,
+    RCOORD-DTR.SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG.NUM sg ].
+
+dual-dual-pl-num-coord-rule := coord-phrase &
+  [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG.NUM pl,
+    LCOORD-DTR.SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG.NUM dual,
+    RCOORD-DTR.SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG.NUM dual ].
+
+pl-pl-pl-num-coord-rule := coord-phrase &
+  [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG.NUM pl,
+    LCOORD-DTR.SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG.NUM pl,
+    RCOORD-DTR.SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG.NUM pl ].
+
+sg-dual-pl-num-coord-rule := coord-phrase &
+  [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG.NUM pl,
+    LCOORD-DTR.SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG.NUM sg,
+    RCOORD-DTR.SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG.NUM dual ].
+
+sg-pl-pl-num-coord-rule := coord-phrase &
+  [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG.NUM pl,
+    LCOORD-DTR.SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG.NUM sg,
+    RCOORD-DTR.SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG.NUM pl ].
+
+dual-sg-pl-num-coord-rule := coord-phrase &
+  [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG.NUM pl,
+    LCOORD-DTR.SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG.NUM dual,
+    RCOORD-DTR.SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG.NUM sg ].
+
+dual-pl-pl-num-coord-rule := coord-phrase &
+  [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG.NUM pl,
+    LCOORD-DTR.SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG.NUM dual,
+    RCOORD-DTR.SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG.NUM pl ].
+
+pl-dual-pl-num-coord-rule := coord-phrase &
+  [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG.NUM pl,
+    LCOORD-DTR.SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG.NUM pl,
+    RCOORD-DTR.SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG.NUM dual ].
+
+pl-sg-pl-num-coord-rule := coord-phrase &
+  [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG.NUM pl,
+    LCOORD-DTR.SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG.NUM pl,
+    RCOORD-DTR.SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG.NUM sg ].
+
+pass-up-png-coord-rule := bottom-coord-phrase &
+  [ SYNSEM.LOCAL [ CAT.HEAD.CASE #case,
+                   CONT.HOOK.INDEX.PNG #png ],
+    NONCONJ-DTR.SYNSEM.LOCAL [ CAT.HEAD.CASE #case,
+                               CONT.HOOK.INDEX.PNG #png ] ].
+
+same-same-same-case-coord-rule := coord-phrase &
+  [ SYNSEM.LOCAL.CAT.HEAD.CASE #case,
+    LCOORD-DTR.SYNSEM.LOCAL.CAT.HEAD.CASE #case,
+    RCOORD-DTR.SYNSEM.LOCAL.CAT.HEAD.CASE #case ].
+
+masc-any-masc-gend-coord-rule := coord-phrase &
+  [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG.GEND masc,
+    LCOORD-DTR.SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG.GEND masc ].
+
+fem-fem-fem-gend-coord-rule := coord-phrase &
+  [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG.GEND fem,
+    LCOORD-DTR.SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG.GEND fem,
+    RCOORD-DTR.SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG.GEND fem ].
+
+any-masc-masc-gend-coord-rule := coord-phrase &
+  [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG.GEND masc,
+    RCOORD-DTR.SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG.GEND masc ].
+
 ;;; Coordination Strategy 1
 
-n1-top-coord-rule := basic-n-top-coord-rule & monopoly-top-coord-rule &
+n1-sg-sg-dual-same-same-same-masc-any-masc-top-coord-rule := basic-n-top-coord-rule & monopoly-top-coord-rule & sg-sg-dual-num-coord-rule & same-same-same-case-coord-rule & masc-any-masc-gend-coord-rule &
   [ SYNSEM.LOCAL.COORD-STRAT "1" ].
 
-n1-mid-coord-rule := basic-n-mid-coord-rule & monopoly-mid-coord-rule &
+n1-sg-sg-dual-same-same-same-masc-any-masc-mid-coord-rule := basic-n-mid-coord-rule & monopoly-mid-coord-rule & sg-sg-dual-num-coord-rule & same-same-same-case-coord-rule & masc-any-masc-gend-coord-rule &
   [ SYNSEM.LOCAL.COORD-STRAT "1" ].
 
-n1-bottom-coord-rule := conj-first-bottom-coord-rule & n-bottom-coord-phrase &
+n1-sg-sg-dual-same-same-same-fem-fem-fem-top-coord-rule := basic-n-top-coord-rule & monopoly-top-coord-rule & sg-sg-dual-num-coord-rule & same-same-same-case-coord-rule & fem-fem-fem-gend-coord-rule &
+  [ SYNSEM.LOCAL.COORD-STRAT "1" ].
+
+n1-sg-sg-dual-same-same-same-fem-fem-fem-mid-coord-rule := basic-n-mid-coord-rule & monopoly-mid-coord-rule & sg-sg-dual-num-coord-rule & same-same-same-case-coord-rule & fem-fem-fem-gend-coord-rule &
+  [ SYNSEM.LOCAL.COORD-STRAT "1" ].
+
+n1-sg-sg-dual-same-same-same-any-masc-masc-top-coord-rule := basic-n-top-coord-rule & monopoly-top-coord-rule & sg-sg-dual-num-coord-rule & same-same-same-case-coord-rule & any-masc-masc-gend-coord-rule &
+  [ SYNSEM.LOCAL.COORD-STRAT "1" ].
+
+n1-sg-sg-dual-same-same-same-any-masc-masc-mid-coord-rule := basic-n-mid-coord-rule & monopoly-mid-coord-rule & sg-sg-dual-num-coord-rule & same-same-same-case-coord-rule & any-masc-masc-gend-coord-rule &
+  [ SYNSEM.LOCAL.COORD-STRAT "1" ].
+
+n1-dual-dual-pl-same-same-same-masc-any-masc-top-coord-rule := basic-n-top-coord-rule & monopoly-top-coord-rule & dual-dual-pl-num-coord-rule & same-same-same-case-coord-rule & masc-any-masc-gend-coord-rule &
+  [ SYNSEM.LOCAL.COORD-STRAT "1" ].
+
+n1-dual-dual-pl-same-same-same-masc-any-masc-mid-coord-rule := basic-n-mid-coord-rule & monopoly-mid-coord-rule & dual-dual-pl-num-coord-rule & same-same-same-case-coord-rule & masc-any-masc-gend-coord-rule &
+  [ SYNSEM.LOCAL.COORD-STRAT "1" ].
+
+n1-dual-dual-pl-same-same-same-fem-fem-fem-top-coord-rule := basic-n-top-coord-rule & monopoly-top-coord-rule & dual-dual-pl-num-coord-rule & same-same-same-case-coord-rule & fem-fem-fem-gend-coord-rule &
+  [ SYNSEM.LOCAL.COORD-STRAT "1" ].
+
+n1-dual-dual-pl-same-same-same-fem-fem-fem-mid-coord-rule := basic-n-mid-coord-rule & monopoly-mid-coord-rule & dual-dual-pl-num-coord-rule & same-same-same-case-coord-rule & fem-fem-fem-gend-coord-rule &
+  [ SYNSEM.LOCAL.COORD-STRAT "1" ].
+
+n1-dual-dual-pl-same-same-same-any-masc-masc-top-coord-rule := basic-n-top-coord-rule & monopoly-top-coord-rule & dual-dual-pl-num-coord-rule & same-same-same-case-coord-rule & any-masc-masc-gend-coord-rule &
+  [ SYNSEM.LOCAL.COORD-STRAT "1" ].
+
+n1-dual-dual-pl-same-same-same-any-masc-masc-mid-coord-rule := basic-n-mid-coord-rule & monopoly-mid-coord-rule & dual-dual-pl-num-coord-rule & same-same-same-case-coord-rule & any-masc-masc-gend-coord-rule &
+  [ SYNSEM.LOCAL.COORD-STRAT "1" ].
+
+n1-pl-pl-pl-same-same-same-masc-any-masc-top-coord-rule := basic-n-top-coord-rule & monopoly-top-coord-rule & pl-pl-pl-num-coord-rule & same-same-same-case-coord-rule & masc-any-masc-gend-coord-rule &
+  [ SYNSEM.LOCAL.COORD-STRAT "1" ].
+
+n1-pl-pl-pl-same-same-same-masc-any-masc-mid-coord-rule := basic-n-mid-coord-rule & monopoly-mid-coord-rule & pl-pl-pl-num-coord-rule & same-same-same-case-coord-rule & masc-any-masc-gend-coord-rule &
+  [ SYNSEM.LOCAL.COORD-STRAT "1" ].
+
+n1-pl-pl-pl-same-same-same-fem-fem-fem-top-coord-rule := basic-n-top-coord-rule & monopoly-top-coord-rule & pl-pl-pl-num-coord-rule & same-same-same-case-coord-rule & fem-fem-fem-gend-coord-rule &
+  [ SYNSEM.LOCAL.COORD-STRAT "1" ].
+
+n1-pl-pl-pl-same-same-same-fem-fem-fem-mid-coord-rule := basic-n-mid-coord-rule & monopoly-mid-coord-rule & pl-pl-pl-num-coord-rule & same-same-same-case-coord-rule & fem-fem-fem-gend-coord-rule &
+  [ SYNSEM.LOCAL.COORD-STRAT "1" ].
+
+n1-pl-pl-pl-same-same-same-any-masc-masc-top-coord-rule := basic-n-top-coord-rule & monopoly-top-coord-rule & pl-pl-pl-num-coord-rule & same-same-same-case-coord-rule & any-masc-masc-gend-coord-rule &
+  [ SYNSEM.LOCAL.COORD-STRAT "1" ].
+
+n1-pl-pl-pl-same-same-same-any-masc-masc-mid-coord-rule := basic-n-mid-coord-rule & monopoly-mid-coord-rule & pl-pl-pl-num-coord-rule & same-same-same-case-coord-rule & any-masc-masc-gend-coord-rule &
+  [ SYNSEM.LOCAL.COORD-STRAT "1" ].
+
+n1-sg-dual-pl-same-same-same-masc-any-masc-top-coord-rule := basic-n-top-coord-rule & monopoly-top-coord-rule & sg-dual-pl-num-coord-rule & same-same-same-case-coord-rule & masc-any-masc-gend-coord-rule &
+  [ SYNSEM.LOCAL.COORD-STRAT "1" ].
+
+n1-sg-dual-pl-same-same-same-masc-any-masc-mid-coord-rule := basic-n-mid-coord-rule & monopoly-mid-coord-rule & sg-dual-pl-num-coord-rule & same-same-same-case-coord-rule & masc-any-masc-gend-coord-rule &
+  [ SYNSEM.LOCAL.COORD-STRAT "1" ].
+
+n1-sg-dual-pl-same-same-same-fem-fem-fem-top-coord-rule := basic-n-top-coord-rule & monopoly-top-coord-rule & sg-dual-pl-num-coord-rule & same-same-same-case-coord-rule & fem-fem-fem-gend-coord-rule &
+  [ SYNSEM.LOCAL.COORD-STRAT "1" ].
+
+n1-sg-dual-pl-same-same-same-fem-fem-fem-mid-coord-rule := basic-n-mid-coord-rule & monopoly-mid-coord-rule & sg-dual-pl-num-coord-rule & same-same-same-case-coord-rule & fem-fem-fem-gend-coord-rule &
+  [ SYNSEM.LOCAL.COORD-STRAT "1" ].
+
+n1-sg-dual-pl-same-same-same-any-masc-masc-top-coord-rule := basic-n-top-coord-rule & monopoly-top-coord-rule & sg-dual-pl-num-coord-rule & same-same-same-case-coord-rule & any-masc-masc-gend-coord-rule &
+  [ SYNSEM.LOCAL.COORD-STRAT "1" ].
+
+n1-sg-dual-pl-same-same-same-any-masc-masc-mid-coord-rule := basic-n-mid-coord-rule & monopoly-mid-coord-rule & sg-dual-pl-num-coord-rule & same-same-same-case-coord-rule & any-masc-masc-gend-coord-rule &
+  [ SYNSEM.LOCAL.COORD-STRAT "1" ].
+
+n1-sg-pl-pl-same-same-same-masc-any-masc-top-coord-rule := basic-n-top-coord-rule & monopoly-top-coord-rule & sg-pl-pl-num-coord-rule & same-same-same-case-coord-rule & masc-any-masc-gend-coord-rule &
+  [ SYNSEM.LOCAL.COORD-STRAT "1" ].
+
+n1-sg-pl-pl-same-same-same-masc-any-masc-mid-coord-rule := basic-n-mid-coord-rule & monopoly-mid-coord-rule & sg-pl-pl-num-coord-rule & same-same-same-case-coord-rule & masc-any-masc-gend-coord-rule &
+  [ SYNSEM.LOCAL.COORD-STRAT "1" ].
+
+n1-sg-pl-pl-same-same-same-fem-fem-fem-top-coord-rule := basic-n-top-coord-rule & monopoly-top-coord-rule & sg-pl-pl-num-coord-rule & same-same-same-case-coord-rule & fem-fem-fem-gend-coord-rule &
+  [ SYNSEM.LOCAL.COORD-STRAT "1" ].
+
+n1-sg-pl-pl-same-same-same-fem-fem-fem-mid-coord-rule := basic-n-mid-coord-rule & monopoly-mid-coord-rule & sg-pl-pl-num-coord-rule & same-same-same-case-coord-rule & fem-fem-fem-gend-coord-rule &
+  [ SYNSEM.LOCAL.COORD-STRAT "1" ].
+
+n1-sg-pl-pl-same-same-same-any-masc-masc-top-coord-rule := basic-n-top-coord-rule & monopoly-top-coord-rule & sg-pl-pl-num-coord-rule & same-same-same-case-coord-rule & any-masc-masc-gend-coord-rule &
+  [ SYNSEM.LOCAL.COORD-STRAT "1" ].
+
+n1-sg-pl-pl-same-same-same-any-masc-masc-mid-coord-rule := basic-n-mid-coord-rule & monopoly-mid-coord-rule & sg-pl-pl-num-coord-rule & same-same-same-case-coord-rule & any-masc-masc-gend-coord-rule &
+  [ SYNSEM.LOCAL.COORD-STRAT "1" ].
+
+n1-dual-sg-pl-same-same-same-masc-any-masc-top-coord-rule := basic-n-top-coord-rule & monopoly-top-coord-rule & dual-sg-pl-num-coord-rule & same-same-same-case-coord-rule & masc-any-masc-gend-coord-rule &
+  [ SYNSEM.LOCAL.COORD-STRAT "1" ].
+
+n1-dual-sg-pl-same-same-same-masc-any-masc-mid-coord-rule := basic-n-mid-coord-rule & monopoly-mid-coord-rule & dual-sg-pl-num-coord-rule & same-same-same-case-coord-rule & masc-any-masc-gend-coord-rule &
+  [ SYNSEM.LOCAL.COORD-STRAT "1" ].
+
+n1-dual-sg-pl-same-same-same-fem-fem-fem-top-coord-rule := basic-n-top-coord-rule & monopoly-top-coord-rule & dual-sg-pl-num-coord-rule & same-same-same-case-coord-rule & fem-fem-fem-gend-coord-rule &
+  [ SYNSEM.LOCAL.COORD-STRAT "1" ].
+
+n1-dual-sg-pl-same-same-same-fem-fem-fem-mid-coord-rule := basic-n-mid-coord-rule & monopoly-mid-coord-rule & dual-sg-pl-num-coord-rule & same-same-same-case-coord-rule & fem-fem-fem-gend-coord-rule &
+  [ SYNSEM.LOCAL.COORD-STRAT "1" ].
+
+n1-dual-sg-pl-same-same-same-any-masc-masc-top-coord-rule := basic-n-top-coord-rule & monopoly-top-coord-rule & dual-sg-pl-num-coord-rule & same-same-same-case-coord-rule & any-masc-masc-gend-coord-rule &
+  [ SYNSEM.LOCAL.COORD-STRAT "1" ].
+
+n1-dual-sg-pl-same-same-same-any-masc-masc-mid-coord-rule := basic-n-mid-coord-rule & monopoly-mid-coord-rule & dual-sg-pl-num-coord-rule & same-same-same-case-coord-rule & any-masc-masc-gend-coord-rule &
+  [ SYNSEM.LOCAL.COORD-STRAT "1" ].
+
+n1-dual-pl-pl-same-same-same-masc-any-masc-top-coord-rule := basic-n-top-coord-rule & monopoly-top-coord-rule & dual-pl-pl-num-coord-rule & same-same-same-case-coord-rule & masc-any-masc-gend-coord-rule &
+  [ SYNSEM.LOCAL.COORD-STRAT "1" ].
+
+n1-dual-pl-pl-same-same-same-masc-any-masc-mid-coord-rule := basic-n-mid-coord-rule & monopoly-mid-coord-rule & dual-pl-pl-num-coord-rule & same-same-same-case-coord-rule & masc-any-masc-gend-coord-rule &
+  [ SYNSEM.LOCAL.COORD-STRAT "1" ].
+
+n1-dual-pl-pl-same-same-same-fem-fem-fem-top-coord-rule := basic-n-top-coord-rule & monopoly-top-coord-rule & dual-pl-pl-num-coord-rule & same-same-same-case-coord-rule & fem-fem-fem-gend-coord-rule &
+  [ SYNSEM.LOCAL.COORD-STRAT "1" ].
+
+n1-dual-pl-pl-same-same-same-fem-fem-fem-mid-coord-rule := basic-n-mid-coord-rule & monopoly-mid-coord-rule & dual-pl-pl-num-coord-rule & same-same-same-case-coord-rule & fem-fem-fem-gend-coord-rule &
+  [ SYNSEM.LOCAL.COORD-STRAT "1" ].
+
+n1-dual-pl-pl-same-same-same-any-masc-masc-top-coord-rule := basic-n-top-coord-rule & monopoly-top-coord-rule & dual-pl-pl-num-coord-rule & same-same-same-case-coord-rule & any-masc-masc-gend-coord-rule &
+  [ SYNSEM.LOCAL.COORD-STRAT "1" ].
+
+n1-dual-pl-pl-same-same-same-any-masc-masc-mid-coord-rule := basic-n-mid-coord-rule & monopoly-mid-coord-rule & dual-pl-pl-num-coord-rule & same-same-same-case-coord-rule & any-masc-masc-gend-coord-rule &
+  [ SYNSEM.LOCAL.COORD-STRAT "1" ].
+
+n1-pl-dual-pl-same-same-same-masc-any-masc-top-coord-rule := basic-n-top-coord-rule & monopoly-top-coord-rule & pl-dual-pl-num-coord-rule & same-same-same-case-coord-rule & masc-any-masc-gend-coord-rule &
+  [ SYNSEM.LOCAL.COORD-STRAT "1" ].
+
+n1-pl-dual-pl-same-same-same-masc-any-masc-mid-coord-rule := basic-n-mid-coord-rule & monopoly-mid-coord-rule & pl-dual-pl-num-coord-rule & same-same-same-case-coord-rule & masc-any-masc-gend-coord-rule &
+  [ SYNSEM.LOCAL.COORD-STRAT "1" ].
+
+n1-pl-dual-pl-same-same-same-fem-fem-fem-top-coord-rule := basic-n-top-coord-rule & monopoly-top-coord-rule & pl-dual-pl-num-coord-rule & same-same-same-case-coord-rule & fem-fem-fem-gend-coord-rule &
+  [ SYNSEM.LOCAL.COORD-STRAT "1" ].
+
+n1-pl-dual-pl-same-same-same-fem-fem-fem-mid-coord-rule := basic-n-mid-coord-rule & monopoly-mid-coord-rule & pl-dual-pl-num-coord-rule & same-same-same-case-coord-rule & fem-fem-fem-gend-coord-rule &
+  [ SYNSEM.LOCAL.COORD-STRAT "1" ].
+
+n1-pl-dual-pl-same-same-same-any-masc-masc-top-coord-rule := basic-n-top-coord-rule & monopoly-top-coord-rule & pl-dual-pl-num-coord-rule & same-same-same-case-coord-rule & any-masc-masc-gend-coord-rule &
+  [ SYNSEM.LOCAL.COORD-STRAT "1" ].
+
+n1-pl-dual-pl-same-same-same-any-masc-masc-mid-coord-rule := basic-n-mid-coord-rule & monopoly-mid-coord-rule & pl-dual-pl-num-coord-rule & same-same-same-case-coord-rule & any-masc-masc-gend-coord-rule &
+  [ SYNSEM.LOCAL.COORD-STRAT "1" ].
+
+n1-pl-sg-pl-same-same-same-masc-any-masc-top-coord-rule := basic-n-top-coord-rule & monopoly-top-coord-rule & pl-sg-pl-num-coord-rule & same-same-same-case-coord-rule & masc-any-masc-gend-coord-rule &
+  [ SYNSEM.LOCAL.COORD-STRAT "1" ].
+
+n1-pl-sg-pl-same-same-same-masc-any-masc-mid-coord-rule := basic-n-mid-coord-rule & monopoly-mid-coord-rule & pl-sg-pl-num-coord-rule & same-same-same-case-coord-rule & masc-any-masc-gend-coord-rule &
+  [ SYNSEM.LOCAL.COORD-STRAT "1" ].
+
+n1-pl-sg-pl-same-same-same-fem-fem-fem-top-coord-rule := basic-n-top-coord-rule & monopoly-top-coord-rule & pl-sg-pl-num-coord-rule & same-same-same-case-coord-rule & fem-fem-fem-gend-coord-rule &
+  [ SYNSEM.LOCAL.COORD-STRAT "1" ].
+
+n1-pl-sg-pl-same-same-same-fem-fem-fem-mid-coord-rule := basic-n-mid-coord-rule & monopoly-mid-coord-rule & pl-sg-pl-num-coord-rule & same-same-same-case-coord-rule & fem-fem-fem-gend-coord-rule &
+  [ SYNSEM.LOCAL.COORD-STRAT "1" ].
+
+n1-pl-sg-pl-same-same-same-any-masc-masc-top-coord-rule := basic-n-top-coord-rule & monopoly-top-coord-rule & pl-sg-pl-num-coord-rule & same-same-same-case-coord-rule & any-masc-masc-gend-coord-rule &
+  [ SYNSEM.LOCAL.COORD-STRAT "1" ].
+
+n1-pl-sg-pl-same-same-same-any-masc-masc-mid-coord-rule := basic-n-mid-coord-rule & monopoly-mid-coord-rule & pl-sg-pl-num-coord-rule & same-same-same-case-coord-rule & any-masc-masc-gend-coord-rule &
+  [ SYNSEM.LOCAL.COORD-STRAT "1" ].
+
+n1-bottom-coord-rule := conj-first-bottom-coord-rule & n-bottom-coord-phrase & pass-up-png-coord-rule &
+  [ SYNSEM.LOCAL.COORD-STRAT "1" ].
+
+;;; Coordination Strategy 1
+
+s1-top-coord-rule := basic-s-top-coord-rule & monopoly-top-coord-rule &
+  [ SYNSEM.LOCAL.COORD-STRAT "1" ].
+
+s1-mid-coord-rule := basic-s-mid-coord-rule & monopoly-mid-coord-rule &
+  [ SYNSEM.LOCAL.COORD-STRAT "1" ].
+
+s1-bottom-coord-rule := conj-first-bottom-coord-rule & s-bottom-coord-phrase &
   [ SYNSEM.LOCAL.COORD-STRAT "1" ].
 
 clause :+ [ SYNSEM.NON-LOCAL.QUE.LIST < > ].

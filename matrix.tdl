@@ -34,37 +34,37 @@
 ; Types for Sign, Word, Phrase, and Lex-Entry
 
 sign-min := avm &
-  [ STEM list ]
-""" General type from which most types inherit.
-<features> 
-STEM: orthography 
-<notes> 
-The history of the term sign goes 
-back to the concept of language as a system of signs (Saussure, 1916). """.
+  [ STEM list ].
+;;; General type from which most types inherit.
+;<features> 
+;STEM: orthography 
+;<notes> 
+;The history of the term sign goes 
+;back to the concept of language as a system of signs (Saussure, 1916).
 
 basic-sign := sign-min &
-  [ KEY-ARG bool ]
-"""
-A general type introducing the KEY-ARG feature.
-<features>
-KEY-ARG: Which argument the parser should try to unify with first.
-""".
+  [ KEY-ARG bool ].
+
+;A general type introducing the KEY-ARG feature.
+;<features>
+;KEY-ARG: Which argument the parser should try to unify with first.
+
 
 sign := basic-sign &
   [ SYNSEM synsem,
     ARGS list,
-    INFLECTED inflected ]
-""" 
-A general type introducing the basic morphosyntactic structure.
-<features>
-SYNSEM: main structure for SYNtax and SEMantics. (Pollard and Sag 1994)
-ARGS: The daughters, such as daughters of a phrase-structure rule or the 
-daughter of a lexical rule.
-INFLECTED: a flag to determine whether or not the sign is already 
-inflected or still requires to go through a lexical rule.
-<history>
-SSH 2013-04-19 - removed PHON which was previously at the same level as SYNSEM. 
-""" .
+    INFLECTED inflected ].
+
+;A general type introducing the basic morphosyntactic structure.
+;<features>
+;SYNSEM: main structure for SYNtax and SEMantics. (Pollard and Sag 1994)
+;ARGS: The daughters, such as daughters of a phrase-structure rule or the 
+;daughter of a lexical rule.
+;INFLECTED: a flag to determine whether or not the sign is already 
+;inflected or still requires to go through a lexical rule.
+;<history>
+;SSH 2013-04-19 - removed PHON which was previously at the same level as SYNSEM. 
+
 
 ; C-CONT encodes the semantic contribution of the rule (phrasal
 ; or lexical).
@@ -72,46 +72,46 @@ SSH 2013-04-19 - removed PHON which was previously at the same level as SYNSEM.
 phrase-or-lexrule := sign &
   [ SYNSEM canonical-synsem &
 	   [ LOCAL.CONT.HOOK #hook],
-    C-CONT mrs-min & [ HOOK #hook] ]
-""" A general type for phrases and lexical rules identifying the semantic hook
-in the local substructure with the C-CONT hook. """.
+    C-CONT mrs-min & [ HOOK #hook] ].
+;;; A general type for phrases and lexical rules identifying the semantic hook
+;;;in the local substructure with the C-CONT hook.
 
-word-or-lexrule-min := sign-min
-"""A minimal supertype for words and lexical rules.""".
+word-or-lexrule-min := sign-min.
+;;A minimal supertype for words and lexical rules.
 
 word-or-lexrule := word-or-lexrule-min & sign &
   [ ALTS alts-min,
-    ARG-ST list ]
-"""
-<features>
-ALTS: allow lexical entries to block lexical rule application.
-ARG-ST: the argument structure list.  It appears only on lexical items 
-(words or lexical rules), not on phrases.
-""".
+    ARG-ST list ]. 
+
+;<features>
+;ALTS: allow lexical entries to block lexical rule application.
+;ARG-ST: the argument structure list.  It appears only on lexical items 
+;(words or lexical rules), not on phrases.
+
 
 nocoord := sign &
-  [ SYNSEM.LOCAL.COORD - ]
-"""A type which should cannot be daughter to any coordination rule.""".
+  [ SYNSEM.LOCAL.COORD - ].
+;A type which should cannot be daughter to any coordination rule.
 
-alts-min := avm
-"""A minimal supertype for alts, needed to block lexical rule application.""".
+alts-min := avm.
+;;;A minimal supertype for alts, needed to block lexical rule application.
 alts := alts-min &
-  [ PASSIVE bool ]
-"""
-<features>
-PASSIVE: A flag to indicate whether the type can undergo a passive lexical rule.
-""".
-no-alts := alts-min
-"""A subtype to prevent TODO """.
+  [ PASSIVE bool ].
+
+;<features>
+;PASSIVE: A flag to indicate whether the type can undergo a passive lexical rule.
+
+no-alts := alts-min.
+;;;A subtype to prevent TODO.
 
 ; Not all words have lex-synsem - e.g. lexical PPs like "tomorrow" are
 ; phr-synsem since they can be post-nominal modifiers.
 
-word := word-or-lexrule & nocoord
-""" A type for words, to differentiate them from lexical items. """.
+word := word-or-lexrule & nocoord.
+;;;A type for words, to differentiate them from lexical items. 
 
-lex-item := word-or-lexrule & nocoord
-""" A type for lexical items, to differentiate them from words.""".
+lex-item := word-or-lexrule & nocoord.
+;; A type for lexical items, to differentiate them from words.
 
 ;; Not all phrases have SYNSEM phr-synsem, since we need to allow the
 ;; head-comp rules to build signs which are still [ SYNSEM lex-synsem
@@ -119,8 +119,8 @@ lex-item := word-or-lexrule & nocoord
 ;; most phrases will assign the type phr-synsem to the value of
 ;; SYNSEM, but not all.
 
-phrase := phrase-or-lexrule
-""" A type for phrases, to differentiate the from words and lexical items.""".
+phrase := phrase-or-lexrule.
+;; A type for phrases, to differentiate the from words and lexical items.
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ; Affixation
@@ -128,35 +128,35 @@ phrase := phrase-or-lexrule
 
 non-affix-bearing := word-or-lexrule &
   [ INFLECTED infl-satisfied,
-    SYNSEM.LKEYS.KEYREL.WLINK cons ]
-"""Words or lexical rules that do not take affixes.""".
+    SYNSEM.LKEYS.KEYREL.WLINK cons ].
+;;Words or lexical rules that do not take affixes.
 
 ; Rule
 
 rule := sign &
-  [ RULE-NAME string ]
-"""A rule with a display name.""".
+  [ RULE-NAME string ].
+;;;A rule with a display name.
 
 ; LABEL-NAME and META used for labeling nodes in parse trees
 
 tree-node-label := *top* &
-  [ NODE sign ]
-"""Unused type for labeling nodes on trees.""".
+  [ NODE sign ].
+;;;Unused type for labeling nodes on trees.
 
 label := sign &
-  [ LABEL-NAME string ]
-"""User-friendly node labels, e.g., for labeled trees.
-<features>
-LABEL-NAME: The node label to display on the tree.""".
+  [ LABEL-NAME string ].
+;;;User-friendly node labels, e.g., for labeled trees.
+;;;<features>
+;;;LABEL-NAME: The node label to display on the tree.
 
 ; For complex node labels, like S/NP
 meta := sign &
   [ META-PREFIX string,
-    META-SUFFIX string ]
-"""Node labels with two parts, e.g., S/NP.
-<features>
-META-PREFIX: The first part of the node label.
-META-SUFFIX: The second part of the node label.""".
+    META-SUFFIX string ].
+;;;Node labels with two parts, e.g., S/NP.
+;;;<features>
+;;;META-PREFIX: The first part of the node label.
+;;;META-SUFFIX: The second part of the node label.
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ; SYNSEM values
@@ -446,29 +446,29 @@ semsort := sort.
 ;   HCONS append-list        ; Scope constraints: list of qeq's
 ;   ICONS append-list        ; Individual constraints: list of icons
 
-mrs-min := avm
-"""Supertype for mrs with no features to keep feature structures small""".
+mrs-min := avm.
+;;;Supertype for mrs with no features to keep feature structures small.
 
 mrs := mrs-min &
   [ HOOK hook,
     RELS append-list,
     HCONS append-list,
-    ICONS append-list ]
-"""Defines the mrs object, i.e. the grammar-internal representation of
-the semantics of a sign
+    ICONS append-list ].
+;;;Defines the mrs object, i.e. the grammar-internal representation of
+;;;the semantics of a sign
 
-<features>
-HOOK: information available for further semantic composition
-RELS: list of elementary predications, value is append-list to facilitate
-      append
-HCONS: list of handle constraints, used to model partial constraints
-       on scope, value is append-list to facilitate append
-ICONS: list of individual constraints, used in the implemtnation of
-       information structure; value is append-list to facilitate append
+;;;<features>
+;HOOK: information available for further semantic composition
+;RELS: list of elementary predications, value is append-list to facilitate
+      ;append
+;HCONS: list of handle constraints, used to model partial constraints
+      ; on scope, value is append-list to facilitate append
+;ICONS: list of individual constraints, used in the implemtnation of
+       ;information structure; value is append-list to facilitate append
 
-<history>
-ERB 2007-01-21 Removing feature MSG here (moving it to a feature--SF---of events).
-SSH 2012-02-16 ICONS (individual contraints)""".
+;<history>
+;ERB 2007-01-21 Removing feature MSG here (moving it to a feature--SF---of events).
+;SSH 2012-02-16 ICONS (individual contraints).
 
 
 hook := avm &
@@ -477,21 +477,21 @@ hook := avm &
     INDEX individual,
     XARG individual,
     ICONS-KEY icons,
-    CLAUSE-KEY event ]
-"""Sturcture that houses a collection of features used in semantic
-composition
+    CLAUSE-KEY event ].
+;Sturcture that houses a collection of features used in semantic
+;composition
 
-<features>
-GTOP: Global top handle
-LTOP: Local top handle
-INDEX: The salient nominal instance or event
-XARG: The external (controlled) argument of a phrase
-ICONS-KEY: Indexes for icons
-CLAUSE-KEY: A feature to mediate between the INDEX of the
-head and the CLAUSE value of the dependent
+;<features>
+;GTOP: Global top handle
+;LTOP: Local top handle
+;INDEX: The salient nominal instance or event
+;XARG: The external (controlled) argument of a phrase
+;ICONS-KEY: Indexes for icons
+;CLAUSE-KEY: A feature to mediate between the INDEX of the
+;head and the CLAUSE value of the dependent
 
-<history>
-SSH 2012-02-16 --ICONS""".
+;<history>
+;SSH 2012-02-16 --ICONS.
 
 ; MRSs are divided into psoas (with a distinguished event) and
 ; nom-objs (with a distinguished index).  We use a polymorphic
@@ -502,12 +502,12 @@ SSH 2012-02-16 --ICONS""".
 ; useful for coordination.
 
 psoa := mrs &
-  [ HOOK.INDEX event ]
-"""Type listed for deletion""".
+  [ HOOK.INDEX event ].
+;;;Type listed for deletion
 
 nom-obj := mrs &
-  [ HOOK.INDEX index ]
-"""Type listed for deletion""".
+  [ HOOK.INDEX index ].
+;;;Type listed for deletion
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ; LKEYS
@@ -516,28 +516,27 @@ lexkeys := avm &
   [ KEYREL relation,
     ALTKEYREL relation,
     --COMPKEY predsort,
-    --OCOMPKEY predsort ]
-"""Collection lf attributes which provides pointers to semantic relation
-and PRED value information in complements. Used in lexical types only.
+    --OCOMPKEY predsort ].
+;;;Collection lf attributes which provides pointers to semantic relation
+;;;and PRED value information in complements. Used in lexical types only.
 
-<features>
-KEYREL: Pointer to main relation in RELS
-ALTKEYREL: Pointer to an alternate relation in RELS
---COMPKEY: Pointer to the first complement's KEY predsort
---OCOMPKEY: Pointer to the oblique complement's KEY predsort
-""".
+;<features>
+;KEYREL: Pointer to main relation in RELS
+;ALTKEYREL: Pointer to an alternate relation in RELS
+;--COMPKEY: Pointer to the first complement's KEY predsort
+;--OCOMPKEY: Pointer to the oblique complement's KEY predsort.
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;  CTXT values
 
-ctxt-min := avm
-"""Supertype for ctxt with no features to keep feature structures small""".
+ctxt-min := avm.
+;;;Supertype for ctxt with no features to keep feature structures small
 
 ctxt := ctxt-min &
   [ ACTIVATED bool,
-    PRESUP append-list ]
-"""Location for information useful for pragmatics, not used in any detail
-as of 2022""".
+    PRESUP append-list ].
+;;;Location for information useful for pragmatics, not used in any detail
+;;;as of 2022
 
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -545,29 +544,29 @@ as of 2022""".
 
 qeq := avm &
   [ HARG handle,
-    LARG handle ]
-"""<name lang='en'>equal modulo quantifiers<EOL>
-Relates scopal argument positions to the elementary predications
-they outscope, leaving room for quantifiers to intervene.
+    LARG handle ].
+;;;<name lang='en'>equal modulo quantifiers<EOL>
+;Relates scopal argument positions to the elementary predications
+;they outscope, leaving room for quantifiers to intervene.
 
-<features>
-HARG: The scopable argument; the 'H' mnemonic for either 'higher'
-      or 'hole'
-LARG: The handle of the outscoped predication; the 'L' is mnemonic
-      for either 'lower' or 'label'
-""".
+;<features>
+;HARG: The scopable argument; the 'H' mnemonic for either 'higher'
+     ; or 'hole'
+;LARG: The handle of the outscoped predication; the 'L' is mnemonic
+;     for either 'lower' or 'label'
+
 
 semarg := avm &
-  [ INSTLOC string ]
-"""Supertype for handle and individual, the possible values of
-semantic features.
+  [ INSTLOC string ].
+;;;Supertype for handle and individual, the possible values of
+;semantic features.
 
-<features>
-INTLOC: used by generator to index input; the grammar should
-never need to make reference to it beyond this
+;<features>
+;INTLOC: used by generator to index input; the grammar should
+;never need to make reference to it beyond this
 
-<history>
-Value of INSTLOC changed from instloc to string in July 2004.""".
+;<history>
+;Value of INSTLOC changed from instloc to string in July 2004.
 
 handle := semarg.
 individual := semarg &
@@ -819,136 +818,136 @@ aboutness-topic := topic.
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;  Sorts for atomic values
 
-luk := sort
-"""Three-valued sort evoking Polish logician Jan Lukasiewicz.
-Its subtypes allow the statement of constraints (e.g., in
-subcategorization) of the form:  If you care, you must have
-the value + (-), but you don't have to care.  Useful for keeping
-down the number of constructions and subcategorization types.""".
+luk := sort.
+;Three-valued sort evoking Polish logician Jan Lukasiewicz.
+;Its subtypes allow the statement of constraints (e.g., in
+;subcategorization) of the form:  If you care, you must have
+;the value + (-), but you don't have to care.  Useful for keeping
+;down the number of constructions and subcategorization types.
 
-na-or-+ := luk
-"""not applicable or true""".
-na-or-- := luk
-"""not applicable or false""".
-bool := luk
-"""true or false""".
+na-or-+ := luk.
+;not applicable or true
+na-or-- := luk.
+;not applicable or false
+bool := luk.
+;true or false
 
-+-or-- := luk
-"""<todo> remove this type; redundant with bool""".
++-or-- := luk.
+;;;<todo> remove this type; redundant with bool
 
-na := na-or-+ & na-or--
-"""not applicable""".
-+ := bool & na-or-+ & +-or--
-"""true""".
-- := bool & na-or-- & +-or--
-"""false""".
+na := na-or-+ & na-or--.
+;;;not applicable
++ := bool & na-or-+ & +-or--.
+;;;true
+- := bool & na-or-- & +-or--.
+;;;false
 
 xmod := sort &
-  [ PERIPH luk ]
-"""Three-valued sort for distinguishing unmodified signs from both
-left-modified and right-modified signs.
+  [ PERIPH luk ].
+;;;Three-valued sort for distinguishing unmodified signs from both
+;left-modified and right-modified signs.
 
-<features>
-PERIPH: indicates whether this modifier is left- or right-peripheral
-in its phrase - e.g., "the IBM temporary employees" but
-"*the IBM five employees".""".
+;<features>
+;PERIPH: indicates whether this modifier is left- or right-peripheral
+;in its phrase - e.g., "the IBM temporary employees" but
+;"*the IBM five employee".
 
-notmod-or-rmod := xmod
-"""not modified or right-modified""".
-notmod-or-lmod := xmod
-"""not modified or left-modified""".
-notmod := notmod-or-rmod & notmod-or-lmod
-"""not modified""".
+notmod-or-rmod := xmod.
+;;;not modified or right-modified
+notmod-or-lmod := xmod.
+;;;not modified or left-modified
+notmod := notmod-or-rmod & notmod-or-lmod.
+;;;not modified
 
-hasmod := xmod
-"""modified""".
-lmod := hasmod & notmod-or-lmod
-"""left-modified""".
-rmod := hasmod & notmod-or-rmod
-"""right-modified""".
+hasmod := xmod.
+;;;modified
+lmod := hasmod & notmod-or-lmod.
+;;;left-modified
+rmod := hasmod & notmod-or-rmod.
+;;;right-modified
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;  Basic types
 
-sort := *top*
-"""supertype for atomic types""".
-predsort := sort
-"""semantic predicate""".
-atom := predsort
-"""supertype for special types (strings, integers)""".
-no-pred := predsort
-"""placeholder predicate (used in trigger rules)""".
-avm := *top*
-"""attribute-value matrix""".
+sort := *top*.
+;;;supertype for atomic types
+predsort := sort.
+;;;semantic predicate
+atom := predsort.
+;;;supertype for special types (strings, integers)
+no-pred := predsort.
+;;;placeholder predicate (used in trigger rules)
+avm := *top*.
+;;;attribute-value matrix
 
-list := avm
-"""an ordered sequence of elements""".
+list := avm.
+;;;an ordered sequence of elements
 
 cons := list &
   [ FIRST *top*,
-    REST list ]
-"""a non-empty list
+    REST list ].
+;;;a non-empty list
 
-<features>
-FIRST: the first element of the list
-REST: the rest of the list""".
+;<features>
+;FIRST: the first element of the list
+;REST: the rest of the list".
 
-0-1-list := list
-"""an underspecified list with 0 or 1 elements""".
+0-1-list := list.
+;;;an underspecified list with 0 or 1 elements
 1-list := 0-1-list & cons &
-  [ REST null ]
-"""a list with exactly 1 element""".
-null := 0-1-list
-"""an empty list""".
+  [ REST null ].
+;;;a list with exactly 1 element
+null := 0-1-list.
+;;;an empty list
 1-plus-list := cons &
-  [ REST cons ]
-"""a list with more than 1 element""".
+  [ REST cons ].
+;;;a list with more than 1 element
 
 list-wrapper := avm &
-  [ LIST list ]
-"""a wrapper type for lists""".
+  [ LIST list ].
+;;;a wrapper type for lists
 
 diff-list := list-wrapper &
-  [ LAST list ]
-"""a difference list, designed to be easy to append.
-<features>
-LAST: the notional end of the difference list.
-This is intended to be somewhere on the list,
-i.e. it is identified with LIST (a diff-list of length 0),
-or with LIST.REST (a diff-list of length 1),
-or with LIST.REST.REST (a diff-list of length 2), etc.""".
+  [ LAST list ].
+;;;a difference list, designed to be easy to append.
+;<features>
+;LAST: the notional end of the difference list.
+;This is intended to be somewhere on the list,
+;i.e. it is identified with LIST (a diff-list of length 0),
+;or with LIST.REST (a diff-list of length 1),
+;or with LIST.REST.REST (a diff-list of length 2), etc.
 
 0-1-dlist := diff-list &
-  [ LIST 0-1-list ]
-"""a diff-list of length 0 or 1""".
+  [ LIST 0-1-list ].
+;;;a diff-list of length 0 or 1
 0-dlist := 0-1-dlist &
   [ LIST #list,
-    LAST #list ]
-"""a diff-list of length 0""".
+    LAST #list ].
+;;;a diff-list of length 0
 1-dlist := 0-1-dlist &
   [ LIST 1-list &
 	 [ REST #rest ],
-    LAST #rest ]
-"""a diff-list of length 1""".
+    LAST #rest ].
+;;;a diff-list of length 1.
 
 dl-append := avm & [APPARG1 [LIST #first,
                              LAST #between],
                     APPARG2 [LIST #between,
                              LAST #last],
                     RESULT  [LIST #first,
-                             LAST #last]]
-"""This type shows the basic form for diff-list appends.
-It is not meant to be used as a supertype.  Actual instances
-of diff-list append will involve different features in different
-relationships to each other & the feature geometry.""".
+                             LAST #last]].
+;This type shows the basic form for diff-list appends.
+;It is not meant to be used as a supertype.  Actual instances
+;of diff-list append will involve different features in different
+;relationships to each other & the feature geometry.
 
-string := atom
-"""Supertype for strings (treated specially by processing engines).
-In TDL syntax, strings are indicated by double quotes,
-e.g. [ PRED "_example_n_of_rel" ].""".
+string := atom.
+;Supertype for strings (treated specially by processing engines).
+;In TDL syntax, strings are indicated by double quotes,
+;e.g. [ PRED "_example_n_of_rel" ].
 
-integer := atom
-"""Supertype for integers (possibly treated specially by processing engines)""".
+integer := atom.
+;Supertype for integers (possibly treated specially by processing engines).
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;  Wrapper types
@@ -1190,15 +1189,14 @@ lex-rule := phrase-or-lexrule & word-or-lexrule &
 	     HCONS #h2,
 	     ICONS #i2 ],
     ALTS #alts,
-    ARGS < #dtr > ]
-"""Base type for lexical rules.
-<features>
-NEEDS-AFFIX: A bool indicating whether the type requires affixation.
+    ARGS < #dtr > ].
+;Base type for lexical rules.
+;;<features>
+;NEEDS-AFFIX: A bool indicating whether the type requires affixation.
 
-<history>
-2012-03-03 SSH: ICONS is newly added in lex-rule.
-2020-05-19 OZ: Adding WH feature for handling embedded constituent questions.
-""".
+;<history>
+;2012-03-03 SSH: ICONS is newly added in lex-rule.
+;2020-05-19 OZ: Adding WH feature for handling embedded constituent questions.
 
 ; To model the morphotactics, we introduce a complex type on which we
 ; set or check flags. The flags (luk features) change value based on
@@ -1206,11 +1204,11 @@ NEEDS-AFFIX: A bool indicating whether the type requires affixation.
 ; forbidden from occurring. The actual features inside inflected will
 ; be defined in the language-specific grammar files.
 
-inflected := avm
-"""Multi-feature AVM for inflectional flags.""".
+inflected := avm.
+;Multi-feature AVM for inflectional flags.
 
-infl-satisfied := inflected
-"""Configuration of inflected where all constraints are satisfied.""".
+infl-satisfied := inflected.
+;Configuration of inflected where all constraints are satisfied.
 
 ; ERB 2005-04-14 But it's a bad idea to copy the whole synsem
 ; value, since that means identifying RELS and HCONS lists, breaking
@@ -1222,30 +1220,30 @@ infl-satisfied := inflected
 same-local-lex-rule := same-cat-lex-rule &
 		       same-cont-lex-rule &
 		       same-ctxt-lex-rule &
-		       same-agr-lex-rule
-"""Lexical rule that copies up most LOCAL features.""".
+		       same-agr-lex-rule.
+;Lexical rule that copies up most LOCAL features.
 
 same-non-local-lex-rule := lex-rule &
   [ SYNSEM.NON-LOCAL #nl,
-    DTR.SYNSEM.NON-LOCAL #nl ]
-"""Lexical rule that copies up NON-LOCAL.""".
+    DTR.SYNSEM.NON-LOCAL #nl ].
+;Lexical rule that copies up NON-LOCAL.
 
 ; ERB 2007-05-16 Not everything is inside LOCAL or NON-LOCAL.
 
 same-modified-lex-rule := lex-rule &
   [ SYNSEM.MODIFIED #mod,
-    DTR.SYNSEM.MODIFIED #mod ]
-"""Lexical rule that copies up MODIFIED.""".
+    DTR.SYNSEM.MODIFIED #mod ].
+;Lexical rule that copies up MODIFIED.
 
 same-light-lex-rule := lex-rule &
   [ SYNSEM.LIGHT #light,
-    DTR.SYNSEM.LIGHT #light ]
-"""Lexical rule that copies up LIGHT.""".
+    DTR.SYNSEM.LIGHT #light ].
+;Lexical rule that copies up LIGHT.
 
 same-ctxt-lex-rule := lex-rule &
   [ SYNSEM.LOCAL.CTXT #ctxt,
-    DTR.SYNSEM.LOCAL.CTXT #ctxt ]
-"""Lexical rule that copies up CTXT.""".
+    DTR.SYNSEM.LOCAL.CTXT #ctxt ].
+;Lexical rule that copies up CTXT.
 
 ; ERB 2005-04-14 Can't just identify CONT values,since
 ; that makes it impossible to add any RELS/HCONS through
@@ -1258,66 +1256,66 @@ same-ctxt-lex-rule := lex-rule &
 
 same-cont-lex-rule := lex-rule &
   [ C-CONT [ HOOK #hook ],
-    DTR.SYNSEM.LOCAL.CONT [ HOOK #hook ]]
-"""Lexical rule that copies up HOOK from CONT to C-CONT.""".
+    DTR.SYNSEM.LOCAL.CONT [ HOOK #hook ]].
+;Lexical rule that copies up HOOK from CONT to C-CONT.
 
 same-agr-lex-rule := lex-rule &
   [ SYNSEM.LOCAL.AGR #agr,
-    DTR.SYNSEM.LOCAL.AGR #agr ]
-"""Lexical rule that copies up AGR.""".
+    DTR.SYNSEM.LOCAL.AGR #agr ].
+;Lexical rule that copies up AGR.
 
 same-cat-lex-rule := lex-rule &
   [ SYNSEM.LOCAL.CAT #cat,
-    DTR.SYNSEM.LOCAL.CAT #cat ]
-"""Lexical rule that copies up CAT.""".
+    DTR.SYNSEM.LOCAL.CAT #cat ].
+;Lexical rule that copies up CAT.
 
 same-head-lex-rule := lex-rule &
   [ SYNSEM.LOCAL.CAT.HEAD #head,
-    DTR.SYNSEM.LOCAL.CAT.HEAD #head ]
-"""Lexical rule that copies up CAT.HEAD.""".
+    DTR.SYNSEM.LOCAL.CAT.HEAD #head ].
+;Lexical rule that copies up CAT.HEAD.
 
 same-val-lex-rule := lex-rule &
   [ SYNSEM.LOCAL.CAT.VAL #val,
-    DTR.SYNSEM.LOCAL.CAT.VAL #val ]
-"""Lexical rule that copies up CAT.VAL.""".
+    DTR.SYNSEM.LOCAL.CAT.VAL #val ].
+;Lexical rule that copies up CAT.VAL.
 
 ; CMC 2017-03-19 adding finer granularity for VAL
 
 same-subj-lex-rule := lex-rule &
   [ SYNSEM.LOCAL.CAT.VAL.SUBJ #subj,
-    DTR.SYNSEM.LOCAL.CAT.VAL.SUBJ #subj ]
-"""Lexical rule that copies up CAT.VAL.SUBJ.""".
+    DTR.SYNSEM.LOCAL.CAT.VAL.SUBJ #subj ].
+;Lexical rule that copies up CAT.VAL.SUBJ.
 
 
 same-spr-lex-rule := lex-rule &
   [ SYNSEM.LOCAL.CAT.VAL.SPR #spr,
-    DTR.SYNSEM.LOCAL.CAT.VAL.SPR #spr ]
-"""Lexical rule that copies up CAT.VAL.SPR.""".
+    DTR.SYNSEM.LOCAL.CAT.VAL.SPR #spr ].
+;Lexical rule that copies up CAT.VAL.SPR.
 
 same-spec-lex-rule := lex-rule &
   [ SYNSEM.LOCAL.CAT.VAL.SPEC #spec,
-    DTR.SYNSEM.LOCAL.CAT.VAL.SPEC #spec ]
-"""Lexical rule that copies up CAT.VAL.SPEC.""".
+    DTR.SYNSEM.LOCAL.CAT.VAL.SPEC #spec ].
+;Lexical rule that copies up CAT.VAL.SPEC.
 
 same-comps-lex-rule := lex-rule &
   [ SYNSEM.LOCAL.CAT.VAL.COMPS #comps,
-    DTR.SYNSEM.LOCAL.CAT.VAL.COMPS #comps ]
-"""Lexical rule that copies up CAT.VAL.COMPS.""".
+    DTR.SYNSEM.LOCAL.CAT.VAL.COMPS #comps ].
+;Lexical rule that copies up CAT.VAL.COMPS.
 
 same-hc-light-lex-rule := lex-rule &
   [ SYNSEM.LOCAL.CAT.HC-LIGHT #hcl,
-    DTR.SYNSEM.LOCAL.CAT.HC-LIGHT #hcl ]
-"""Lexical rule that copies up CAT.HC-LIGHT.""".
+    DTR.SYNSEM.LOCAL.CAT.HC-LIGHT #hcl ].
+;Lexical rule that copies up CAT.HC-LIGHT.
 
 same-posthead-lex-rule := lex-rule &
   [ SYNSEM.LOCAL.CAT.POSTHEAD #ph,
-    DTR.SYNSEM.LOCAL.CAT.POSTHEAD #ph ]
-"""Lexical rule that copies up CAT.POSTHEAD.""".
+    DTR.SYNSEM.LOCAL.CAT.POSTHEAD #ph ].
+;Lexical rule that copies up CAT.POSTHEAD.
 
 same-mc-lex-rule := lex-rule &
   [ SYNSEM.LOCAL.CAT.MC #mc,
-    DTR.SYNSEM.LOCAL.CAT.MC #mc ]
-"""Lexical rule that copies up CAT.VAL.MC.""".
+    DTR.SYNSEM.LOCAL.CAT.MC #mc ].
+;Lexical rule that copies up CAT.VAL.MC.
 
 ; SSH 2012-03-03
 no-rels-hcons-lex-rule := lex-rule &
