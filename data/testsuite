@@ -420,41 +420,41 @@ Source: b:13
 Vetted: s
 Judgment: g
 Phenomena: {negation}
-alwaladu		lan 		yakula			altuffahata
-al-walad-u		lan 		yakul-a			al-tuffahat-a
-DEF-boy-NOM		not		eat-3.SG.M.PERF	DEF-apple-ACC
+alwaladu		la 		    yakula			altuffahata
+al-walad-u		la 		    yakul-a			al-tuffahat-a
+DEF-boy-NOM		not		    eat-PERF	DEF-apple-ACC
 ‘The boy will not eat the apple.’
 
 
-#Negation la + imperfective erb
+#Negation la + imperfective verb
 Source: b:13
 Vetted: s
 Judgment: g
 Phenomena: {negation}
 alwaladu		la 		yakulu			altuffahata
 al-walad-u		la 		yakul-u			al-tuffahat-a
-DEF-boy-NOM		not		eat-3.SG.M.PROG	DEF-apple-ACC
+DEF-boy-NOM		not		eat-PROG	DEF-apple-ACC
 ‘The boy is not eating the apple.’
 
-#Negation lan perfective verb
+#Negation la perfective verb
 Source: b:13
 Vetted: s
 Judgment: u
 Phenomena: {negation}
 alwaladu		la 		yakula			altuffahata
 al-walad-u		la 		yakul-a			al-tuffahat-a
-DEF-boy-NOM		not		eat-3.SG.M.PERF	DEF-apple-ACC
+DEF-boy-NOM		not		eat-PERF	DEF-apple-ACC
 Intended: ‘The boy will not eat the apple.’
 
 
-#Negation lan perfective verb
+#Negation la + prog verb
 Source: b:13
 Vetted: s
 Judgment: u
 Phenomena: {negation}
-alwaladu		lam		yakulu			altuffahata
-al-walad-u		lam		yakul-u			al-tuffahat-a
-DEF-boy-NOM		not		eat-3.SG.M.PROG	DEF-apple-ACC
+alwaladu		la		yakulu			altuffahata
+al-walad-u		la		yakul-u			al-tuffahat-a
+DEF-boy-NOM		not		eat-PROG	DEF-apple-ACC
 Intended: ‘The boy is not eating the apple.’
 
 
@@ -624,6 +624,68 @@ wasala			albantu
 wasal-a			al-bant-u
 arrived-3.sg.m		DEF-girl.pl-nom
 ‘The girls arrived.
+
+#9-No object agreement
+Source: b:9, Mohammad A. Mohammad, attested
+Vetted: s
+Judgment: g 
+Phenomena: {agreement}
+albintu 		qabalat			al2lwalada			
+al-bint-u 		qabal-at		al-2lwalad-a		
+DEF-girl-u		met-3.SG.F		DEF-boy-ACC
+'The girl met the boy.'
+
+#10-No object agreement 
+Source: b:9, Mohammad A. Mohammad, attested
+Vetted: s
+Judgment: u
+Phenomena: {agreement}
+albintu 		qabala			al2lwalada			
+al-bint-u 		qabal-a 		al-2lwalad-a		
+DEF-girl-u		met-3.SG.M		DEF-boy-ACC
+'The girl met the boy.'
+
+####Postverbal Subject Agreement Asymmetry##########
+#Postverbal plural subjects - agreement marker must be singular
+Source: a: 28
+Vetted: s
+Judgment: g
+Phenomena: {word order, agreement}
+halla			altullaabu		 almas2alata.
+hall-a			al-tullaab-u		 al-mas2alat-a.
+solved-3.m.sg		 DEF-students.pl-NOM	 DEF-problem-acc
+‘The students solved the problem.’ 
+
+#Postverbal plural subjects - agreement marker must be singular
+Source: a: 28
+Vetted: s
+Judgment: u
+Phenomena: {word order, agreement}
+halluu 			altullaabu		 almas2alat-a.
+hall-uu 		al-tullaab-u		 al-mas2alat-a.
+solved-3.pl.m	the-students.pl-NOM	 the-problem-acc
+‘The students solved the problem.’ 
+
+#Postverbal plural subjects - agreement marker must be singular
+Source: a: 28
+Vetted: s
+Judgment: g
+Phenomena: {word order, agreement}
+qadimat			ɑlbantu 
+qadim-at		ɑl-bant-u 
+came-3.sg.f 		DEF-girls.pl-nom
+‘The girls came.’
+
+#Postverbal plural subjects - agreement marker must be singular
+Source: a: 28
+Vetted: s
+Judgment: u
+Phenomena: {word order, agreement}
+qadimna 		ɑlbantu
+qadim-na 		ɑl-bant-u 
+came-3.pl.f 	DEF-girls.pl-nom
+‘The girls came.’	
+	
 
 
 
