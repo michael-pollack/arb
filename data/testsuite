@@ -70,7 +70,6 @@ al-mas2alat-a  		al-talib-u 		hall-a
 the-problem-ACC 	the-student-NOM 	solved-3.SG.M
 'The problem, the student, he solved it.'
 
-
 #7-VS word order for intransitive clauses with definite NP subjects
 Source: b:2, Mohammad A. Mohammad, attested
 Vetted: s
@@ -383,8 +382,8 @@ Vetted: s
 Judgment: g
 Phenomena: {pn, adj, cop}
 2anta mujtahidun
-2anta mujtahid-un
-2sg.masc assiduous-nom
+2anta mujtahid-u-n
+2sg.masc assiduous-NOM-NUN
 'You are assiduous.'
 
 #23-Non-Verbal Predicates, Zero Copula, Independent Pronouns, adjectives
@@ -447,9 +446,9 @@ Source: b:13
 Vetted: s
 Judgment: u
 Phenomena: {aspect}
-alwaladu		 		yakulau		altuffahata
+alwaladu		 		yakulau	altuffahata
 al-walad-u				yakul-a-u	al-tuffahat-a
-DEF-boy-NOM				eat-PROG	DEF-apple-ACC
+DEF-boy-NOM			eat-3sgm-PROG	DEF-apple-ACC
 ‘The boy is eating the apple.’
 
 #######Negation###########3
@@ -460,8 +459,8 @@ Source: b:13
 Vetted: s
 Judgment: g
 Phenomena: {negation}
-alwaladu		la 		    yakula			altuffahata
-al-walad-u		la 		    yakul-a			al-tuffahat-a
+alwaladu		lan 		    yakula			altuffahata
+al-walad-u		lan		    yakul-a			al-tuffahat-a
 DEF-boy-NOM		not		    eat-PERF	DEF-apple-ACC
 ‘The boy will not eat the apple.’
 
@@ -492,8 +491,8 @@ Source: b:13
 Vetted: s
 Judgment: u
 Phenomena: {negation}
-alwaladu		la		yakulu			altuffahata
-al-walad-u		la		yakul-u			al-tuffahat-a
+alwaladu		lan		yakulu			altuffahata
+al-walad-u		lan		yakul-u			al-tuffahat-a
 DEF-boy-NOM		not		eat-PROG	DEF-apple-ACC
 Intended: ‘The boy is not eating the apple.’
 
@@ -711,8 +710,8 @@ Source: a: 28
 Vetted: s
 Judgment: g
 Phenomena: {word order, agreement}
-qadimat			ɑlbantu 
-qadim-at		ɑl-bant-u 
+qadimat			albantu 
+qadim-at		al-bant-u 
 came-3.sg.f 		DEF-girls.pl-nom
 ‘The girls came.’
 
@@ -721,8 +720,8 @@ Source: a: 28
 Vetted: s
 Judgment: u
 Phenomena: {word order, agreement}
-qadimna 		ɑlbantu
-qadim-na 		ɑl-bant-u 
+qadimna 		albantu
+qadim-na 		al-bant-u 
 came-3.pl.f 	DEF-girls.pl-nom
 ‘The girls came.’	
 	
@@ -765,8 +764,8 @@ Source: i: 3, Johannessen
 Vetted: s
 Judgment: g
 Phenomena: {Coordination}
-al2lwaladu 		    wa 		2anaa		wasaluu
-al-2lwalad-u 		wa 		2anaa		wasal-uu
+al2lwaladu 		    	wa 		2anaa		wasaluu
+al-2lwalad-u 			wa 		2anaa		wasal-uu
 DEF-boy-NOM 		CONJ 		I		arrive-3.pl.m
 ‘The boys and I arrived.’
 
@@ -789,6 +788,48 @@ al2lwaladanu		wa 		albintaniu			wasaluu
 al-2lwalad.DUAL-u	wa 		al-bintani-u			wasal-uu
 DEF-boy-NOM 		CONJ 		DEF-girl.DUAL-NOM		arrive-3.pl.m
 ‘The two boys and the two girl arrived.’
+
+#wa conjoins S, not VP
+Source: b:9, Mohammad A. Mohammad, attested
+Vetted: s
+Judgment: g 
+Phenomena: {coordination}
+albintu 			qabalat			al2lwalada	wa	alwaladu 	wasala	
+al-bint-u 		qabal-at		al-2lwalad-a	CONJ	al-walad-u 	wasal-a
+DEF-girl-u		met-3.SG.F		DEF-boy-ACC	and	DEF-boy-NOM	arrive-3.sg.m
+'The girl met the boy and the boy arrived.'
+
+#wa conjoins S, not VP
+Source: b:9, Mohammad A. Mohammad, attested
+Vetted: s
+Judgment: u 
+Phenomena: {coordination}
+albintu 			qabalat			al2lwalada	wa		wasalat	
+al-bint-u 		qabal-at		al-2lwalad-a	CONJ		wasal-at
+DEF-girl-u		met-3.SG.F		DEF-boy-ACC	and		arrive-3.sg.f
+Intended: 'The girl met the boy and arrived.'
+
+
+#Coordination of intransitive clauses with sgmasc, sgfem agreement
+Source: i: 3, Johannessen 
+Vetted: s
+Judgment: g
+Phenomena: {Coordination}
+alwaladu 	qadima		wa 		albintu 			wasalat
+al-walad-u 	qadim-a	wa 		al-bint-u 		wasal-at
+DEF-boy-NOM  came-3sg.m	CONJ	DEF-girl-NOM		arrive-3sg.f
+‘The boy came and the girl arrived.’
+
+#Coordination of of intransitive clauses with sgmasc, plfem agreement.
+Source: i: 3, Johannessen 
+Vetted: s
+Judgment: g
+Phenomena: {Coordination}
+alwaladu 	qadima		wa 		albintu 			wasalna
+al-walad-u 	qadim-a	wa 		al-bint-u 		wasal-na
+DEF-boy-NOM came-3sg.m 	CONJ		DEF-girl-NOM		arrive-3pl.f
+‘The boy came and the girls arrived.’
+
 
 
 ###coordination agreement###########
@@ -873,7 +914,7 @@ Judgment: g
 Phenomena: {Coordination}
 albintu 		wa 	al2lwaladu			wasalala
 al-bint-u 	wa 	al-2lwalad-u			wasal-ala
-DEF-girl-NOM	CONJ 	DEF-boy-NOM 			arrive-DUAL.m
+DEF-girl-NOM	CONJ 	DEF-boy-NOM 		arrive-DUAL.m
 ‘The boy and the girl arrived.’
 
 #Coordination of 2 definite singular NPs (fem and masc ordering)  - DUAL.f agreement marker
@@ -885,6 +926,94 @@ albintu 		wa 	al2lwaladu			wasalata
 al-bint-u 	wa 	al-2lwalad-u			wasal-ata
 DEF-girl-NOM	CONJ 	DEF-boy-NOM 			arrive-DUAL.m
 ‘The boy and the girl arrived.’
+
+
+######### matrix wh-questions ################
+#wh-questions: Q-V-NP is the only possible order
+Source: p: 4, Btoosh
+Vetted:s
+Judgment: g
+Phenomena: {wh}
+man 	qara2a 		alkitaba
+man 	qara2-a 		al-kitab-a
+who	 read-3.sg.masc. 	the-book-acc.
+‘Who read the book?’ 	
+
+#wh-questions: Q-V-NP is the only possible order (V-Q-NP)
+Source: p: 4, Btoosh
+Vetted:s
+Judgment: u
+Phenomena: {wh}			
+qara2a 		man	alkitaba							
+qara2-a 		man	al-kitab-a
+read-3.sg.masc. 	who	 the-book-acc.
+‘Who read the book?’			
+	
+#wh-questions: Q-V-NP is the only possible order (V-NP-Q)
+Source: p: 4, Btoosh
+Vetted:s
+Judgment: u
+Phenomena: {wh}
+qara2a 			alkitaba 	man
+qara2-a 		al-kitab-a 	man
+read-3.sg.masc 	the-book-acc.	Who
+‘Who read the book?’	 			
+
+#wh-questions: Q-V-NP is the only possible order (Q-NP-V)
+Source: p: 4, Btoosh
+Vetted:s
+Judgment: u
+Phenomena: {wh}
+Man	alkitaba 	qara2a 			
+Who	al-kitab-a 	qara2-a 
+who	the-book-acc	 read-3.sg.m	
+‘Who read the book?’	 		
+						
+#wh-questions: Q-V-NP is the only possible order (NP-Q-V)
+Source: p: 4, Btoosh
+Vetted:s
+Judgment: u
+Phenomena: {wh}
+alkitaba 	man		qara2a 			
+al-kitab-a 	who		qara2-a 
+The-book-acc	who		 read-3.sg.m	
+‘Who read the book?’	 
+
+#wh-questions: Q-V-NP is the only possible order (NP-V-Q)
+Source: p: 4, Btoosh
+Vetted:s
+Judgment: u
+Phenomena: {wh}
+alkitaba 	qara2a 		man	
+al-kitab-a 	qara2-a 	who
+The-book-acc	 read-3.sg.m	who			
+‘Who read the book?’	 
+
+
+#wh-questions: Q-V-NP is the only possible order (what)
+Source: p: 4, Btoosh
+Vetted:s
+Judgment: g
+Phenomena: {wh}
+man 	qara2a 		alkitaba
+madha 	qara2-a 		al-kitab-a
+who	 read-3.sg.masc. 	the-book-acc.
+‘Who read the book?’ 	
+
+#wh-questions: Q-V-NP is the only possible order (what)
+Source: p: 4, Btoosh
+Vetted:s
+Judgment: g
+Phenomena: {wh}	
+madha 	qara2a 			alwaladu
+what	qara2-a 		al-walad-u
+what	 read-3.sg.masc. 	DEF-boy-nom
+‘What did the boy read?’ 	
+					
+
+
+
+
 
 
 
