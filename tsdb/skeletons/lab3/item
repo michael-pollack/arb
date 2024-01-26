@@ -33,26 +33,63 @@
 33@d:2, albuhayri, attested@@@1@pn@sallamtu 3alayhim@@@@1@2@greeted-1sg on-3plmasc'I greeted them.'@benjamin pong, michael p. pollack@17/1/2024
 34@d:2, albuhayri, attested@@@1@pn,adj,wo@2iyyaaka qabalnaa@@@@1@2@2sg.masc met-1pl'We met you.'@benjamin pong, michael p. pollack@17/1/2024
 35@d:2, albuhayri, attested@@@1@wo@qabalnaa 2iyyaaka@@@@0@2@met-1pl 2sg.masc'Intended: We met you.'@benjamin pong, michael p. pollack@17/1/2024
-36@d:2, albuhayri, attested@@@1@pn,adj,cop@2anta mujtahidun@@@@1@2@2sg.masc assiduous-nom'You are assiduous.'@benjamin pong, michael p. pollack@17/1/2024
+36@d:2, albuhayri, attested@@@1@pn,adj,cop@2anta mujtahidun@@@@1@2@2sg.masc assiduous-NOM-NUN'You are assiduous.'@benjamin pong, michael p. pollack@17/1/2024
 37@d:2, albuhayri, attested@@@1@pn,adj,poss@Huwa safirunaa lada almajlisi@@@@1@4@3sg.masc ambassador-nom-1pl at the-council-gen'He is our ambassador at the council.'@benjamin pong, michael p. pollack@17/1/2024
 38@g:49, alotaibi, attested@@@1@adj,agr,cop@alrajulu karimun@@@@1@2@the-man-NOM generous-NOM-NUN'The man is generous.'@benjamin pong, michael p. pollack@17/1/2024
-39@b:13@@@1@neg@alwaladu		lan 		yakula			altuffahata@@@@1@4@DEF-boy-NOM		not		eat-3.SG.M.PERF	DEF-apple-ACC�The boy will not eat the apple.�@benjamin pong, michael p. pollack@17/1/2024
-40@b:13@@@1@neg@alwaladu		la 		yakulu			altuffahata@@@@1@4@DEF-boy-NOM		not		eat-3.SG.M.PROG	DEF-apple-ACC�The boy is not eating the apple.�@benjamin pong, michael p. pollack@17/1/2024
-41@b:13@@@1@neg@alwaladu		la 		yakula			altuffahata@@@@0@4@DEF-boy-NOM		not		eat-3.SG.M.PERF	DEF-apple-ACCIntended: �The boy will not eat the apple.�@benjamin pong, michael p. pollack@17/1/2024
-42@b:13@@@1@neg@alwaladu		lam		yakulu			altuffahata@@@@0@4@DEF-boy-NOM		not		eat-3.SG.M.PROG	DEF-apple-ACCIntended: �The boy is not eating the apple.�@benjamin pong, michael p. pollack@17/1/2024
-43@a@@@1@agr@wasala	 		alwaladu@@@@1@2@arrived-3.sg.m		the-boy.sg-nom�The boy arrived.�@benjamin pong, michael p. pollack@17/1/2024
-44@a@@@1@agr@wasalat 		albintu@@@@1@2@arrived-3.sg.f		DEF-girl.sg-nom�The girl arrived.@benjamin pong, michael p. pollack@17/1/2024
-45@a@@@1@agr@wasaluu	 	al2lwaladu@@@@1@2@arrived-3.pl.m		the-boy.pl-nom�The boys arrived.�@benjamin pong, michael p. pollack@17/1/2024
-46@a@@@1@agr@wasalna 		albantu@@@@1@2@arrived-3.pl.f		DEF-girl.pl-nom�The girls arrived.@benjamin pong, michael p. pollack@17/1/2024
-47@a@@@1@agr@wasalat 		al-walad-u@@@@0@2@arrived-3.sg.f		the-boy.sg-nom�The boy arrived.�@benjamin pong, michael p. pollack@17/1/2024
-48@a@@@1@agr@wasala			albintu@@@@0@2@arrived-3.sg.m		the-girl.sg-nom�The girl arrived.�@benjamin pong, michael p. pollack@17/1/2024
-49@a@@@1@agr@wasalna	 	al2lwaladu@@@@0@2@arrived-3.pl.f		the-boy.pl-nomintended:�The boys arrived.�@benjamin pong, michael p. pollack@17/1/2024
-50@a@@@1@agr@wasaluu 		albantu@@@@0@2@arrived-3.pl.m		DEF-girl.pl-nomintended:�The girls arrived.@benjamin pong, michael p. pollack@17/1/2024
-51@a@@@1@agr@wasaluu		alwaladu@@@@0@2@arrived-3.pl.m		the-boy.sg-nomIntended: �The boy arrived.�@benjamin pong, michael p. pollack@17/1/2024
-52@a@@@1@agr@wasalna 		albintu@@@@0@2@arrived-3.pl.f		DEF-girl.sg-nomIntended: �The girl arrived.@benjamin pong, michael p. pollack@17/1/2024
-53@a@@@1@agr@wasala	 		al2lwaladu@@@@0@2@arrived-3.sg.m		the-boy.pl-nomIntended: �The boys arrived.�@benjamin pong, michael p. pollack@17/1/2024
-54@a@@@1@agr@wasalat 		albantu@@@@0@2@arrived-3.sg.f		DEF-girl.pl-nomintended: �The girls arrived.@benjamin pong, michael p. pollack@17/1/2024
-55@a@@@1@agr@wasalna	 	alwaladu@@@@0@2@arrived-3.pl.f		the-boy.sg-nomIntended: �The boy arrived.�@benjamin pong, michael p. pollack@17/1/2024
-56@a@@@1@agr@wasaluu 		albintu@@@@0@2@arrived-3.pl.m		DEF-girl.sg-nom�The girl arrived.@benjamin pong, michael p. pollack@17/1/2024
-57@a@@@1@agr@wasalat	 		al2lwaladu@@@@0@2@arrived-3.sg.f		the-boy.pl-nomIntended: �The boys arrived.�@benjamin pong, michael p. pollack@17/1/2024
-58@a@@@1@agr@wasala			albantu@@@@0@2@arrived-3.sg.m		DEF-girl.pl-nom�The girls arrived.@benjamin pong, michael p. pollack@17/1/2024
+39@b:13@@@1@aspect@alwaladu				    yakula			altuffahata@@@@1@3@DEF-boy-NOM				    eat-PERF	DEF-apple-ACC�The boy has eaten the apple.�@benjamin pong, michael p. pollack@17/1/2024
+40@b:13@@@1@aspect@alwaladu		 		yakulu			altuffahata@@@@1@3@DEF-boy-NOM				eat-PROG	DEF-apple-ACC�The boy is eating the apple.�@benjamin pong, michael p. pollack@17/1/2024
+41@b:13@@@1@aspect@alwaladu				    yakulaa			altuffahata@@@@0@3@DEF-boy-NOM				    eat-3sg.m-PERF	DEF-apple-ACC�The boy has eaten the apple.�@benjamin pong, michael p. pollack@17/1/2024
+42@b:13@@@1@aspect@alwaladu		 		yakulau	altuffahata@@@@0@3@DEF-boy-NOM			eat-3sgm-PROG	DEF-apple-ACC�The boy is eating the apple.�@benjamin pong, michael p. pollack@17/1/2024
+43@b:13@@@1@neg@alwaladu		lan 		    yakula			altuffahata@@@@1@4@DEF-boy-NOM		not		    eat-PERF	DEF-apple-ACC�The boy will not eat the apple.�@benjamin pong, michael p. pollack@17/1/2024
+44@b:13@@@1@neg@alwaladu		la 		yakulu			altuffahata@@@@1@4@DEF-boy-NOM		not		eat-PROG	DEF-apple-ACC�The boy is not eating the apple.�@benjamin pong, michael p. pollack@17/1/2024
+45@b:13@@@1@neg@alwaladu		la 		yakula			altuffahata@@@@0@4@DEF-boy-NOM		not		eat-PERF	DEF-apple-ACCIntended: �The boy will not eat the apple.�@benjamin pong, michael p. pollack@17/1/2024
+46@b:13@@@1@neg@alwaladu		lan		yakulu			altuffahata@@@@0@4@DEF-boy-NOM		not		eat-PROG	DEF-apple-ACCIntended: �The boy is not eating the apple.�@benjamin pong, michael p. pollack@17/1/2024
+47@a@@@1@agr@wasala	 		alwaladu@@@@1@2@arrived-3.sg.m		the-boy.sg-nom�The boy arrived.�@benjamin pong, michael p. pollack@17/1/2024
+48@a@@@1@agr@wasalat 		albintu@@@@1@2@arrived-3.sg.f		DEF-girl.sg-nom�The girl arrived.@benjamin pong, michael p. pollack@17/1/2024
+49@a@@@1@agr@wasaluu	 	al2lwaladu@@@@1@2@arrived-3.pl.m		the-boy.pl-nom�The boys arrived.�@benjamin pong, michael p. pollack@17/1/2024
+50@a@@@1@agr@wasalna 		albantu@@@@1@2@arrived-3.pl.f		DEF-girl.pl-nom�The girls arrived.@benjamin pong, michael p. pollack@17/1/2024
+51@a@@@1@agr@wasalat 		al-walad-u@@@@0@2@arrived-3.sg.f		the-boy.sg-nom�The boy arrived.�@benjamin pong, michael p. pollack@17/1/2024
+52@a@@@1@agr@wasala			albintu@@@@0@2@arrived-3.sg.m		the-girl.sg-nom�The girl arrived.�@benjamin pong, michael p. pollack@17/1/2024
+53@a@@@1@agr@wasalna	 	al2lwaladu@@@@0@2@arrived-3.pl.f		the-boy.pl-nomintended:�The boys arrived.�@benjamin pong, michael p. pollack@17/1/2024
+54@a@@@1@agr@wasaluu 		albantu@@@@0@2@arrived-3.pl.m		DEF-girl.pl-nomintended:�The girls arrived.@benjamin pong, michael p. pollack@17/1/2024
+55@a@@@1@agr@wasaluu		alwaladu@@@@0@2@arrived-3.pl.m		the-boy.sg-nomIntended: �The boy arrived.�@benjamin pong, michael p. pollack@17/1/2024
+56@a@@@1@agr@wasalna 		albintu@@@@0@2@arrived-3.pl.f		DEF-girl.sg-nomIntended: �The girl arrived.@benjamin pong, michael p. pollack@17/1/2024
+57@a@@@1@agr@wasala	 		al2lwaladu@@@@0@2@arrived-3.sg.m		the-boy.pl-nomIntended: �The boys arrived.�@benjamin pong, michael p. pollack@17/1/2024
+58@a@@@1@agr@wasalat 		albantu@@@@0@2@arrived-3.sg.f		DEF-girl.pl-nomintended: �The girls arrived.@benjamin pong, michael p. pollack@17/1/2024
+59@a@@@1@agr@wasalna	 	alwaladu@@@@0@2@arrived-3.pl.f		the-boy.sg-nomIntended: �The boy arrived.�@benjamin pong, michael p. pollack@17/1/2024
+60@a@@@1@agr@wasaluu 		albintu@@@@0@2@arrived-3.pl.m		DEF-girl.sg-nom�The girl arrived.@benjamin pong, michael p. pollack@17/1/2024
+61@a@@@1@agr@wasalat	 		al2lwaladu@@@@0@2@arrived-3.sg.f		the-boy.pl-nomIntended: �The boys arrived.�@benjamin pong, michael p. pollack@17/1/2024
+62@a@@@1@agr@wasala			albantu@@@@0@2@arrived-3.sg.m	DEF-girl.pl-nom�The girls arrived.@benjamin pong, michael p. pollack@17/1/2024
+63@b:9, mohammad a. mohammad, attested@@@1@agr@albintu 		qabalat			al2lwalada@@@@1@3@DEF-girl-u		met-3.SG.F		DEF-boy-ACC'The girl met the boy.'@benjamin pong, michael p. pollack@17/1/2024
+64@b:9, mohammad a. mohammad, attested@@@1@agr@albintu 		qabala			al2lwalada@@@@0@3@DEF-girl-u		met-3.SG.M		DEF-boy-ACC'The girl met the boy.'@benjamin pong, michael p. pollack@17/1/2024
+65@a: 28@@@1@wo,agr@halla			altullaabu		 almas2alata.@@@@1@3@solved-3.m.sg		 DEF-students.pl-NOM	 DEF-problem-acc�The students solved the problem.�@benjamin pong, michael p. pollack@17/1/2024
+66@a: 28@@@1@wo,agr@halluu 			altullaabu		 almas2alat-a.@@@@0@3@solved-3.pl.m	the-students.pl-NOM	 the-problem-acc�The students solved the problem.�@benjamin pong, michael p. pollack@17/1/2024
+67@a: 28@@@1@wo,agr@qadimat			albantu@@@@1@2@came-3.sg.f 		DEF-girls.pl-nom�The girls came.�@benjamin pong, michael p. pollack@17/1/2024
+68@a: 28@@@1@wo,agr@qadimna 		albantu@@@@0@2@came-3.pl.f 	DEF-girls.pl-nom�The girls came.�@benjamin pong, michael p. pollack@17/1/2024
+69@i: 3, johannessen@@@1@crd@al2lwaladu 	wa 		albantu 		wasaluu@@@@1@4@DEF-boy-NOM CONJ 		DEF-girl-NOM		arrive-3.pl.m�The boys and the girls arrived.�@benjamin pong, michael p. pollack@17/1/2024
+70@i: 3, johannessen@@@1@crd@al2lwaladu 		wa 		albintu 			wasaluu@@@@1@4@DEF-boy-NOM 		CONJ 		DEF-girl-NOM		arrive-3.pl.m�The boys and the girl arrived.�@benjamin pong, michael p. pollack@17/1/2024
+71@i: 3, johannessen@@@1@crd@al2lwaladu 		wa 		    nahnu		wasaluu@@@@1@4@DEF-boy-NOM 		CONJ 		we		arrive-3.pl.m�The boys and we arrived.�@benjamin pong, michael p. pollack@17/1/2024
+72@i: 3, johannessen@@@1@crd@al2lwaladu 		    	wa 		2anaa		wasaluu@@@@1@4@DEF-boy-NOM 		CONJ 		I		arrive-3.pl.m�The boys and I arrived.�@benjamin pong, michael p. pollack@17/1/2024
+73@i: 3, johannessen@@@1@crd@al2lwaladanu		wa 		albintu			wasaluu@@@@1@4@DEF-boy-NOM 		CONJ 	DEF-girl-NOM	arrive-3.pl.m�The two boys and the girl arrived.�@benjamin pong, michael p. pollack@17/1/2024
+74@i: 3, johannessen@@@1@crd@al2lwaladanu		wa 		albintaniu			wasaluu@@@@1@4@DEF-boy-NOM 		CONJ 		DEF-girl.DUAL-NOM		arrive-3.pl.m�The two boys and the two girl arrived.�@benjamin pong, michael p. pollack@17/1/2024
+75@b:9, mohammad a. mohammad, attested@@@1@crd@albintu 			qabalat			al2lwalada	wa	alwaladu 	wasala@@@@1@6@DEF-girl-u		met-3.SG.F		DEF-boy-ACC	and	DEF-boy-NOM	arrive-3.sg.m'The girl met the boy and the boy arrived.'@benjamin pong, michael p. pollack@17/1/2024
+76@b:9, mohammad a. mohammad, attested@@@1@crd@albintu 			qabalat			al2lwalada	wa		wasalat@@@@0@5@DEF-girl-u		met-3.SG.F		DEF-boy-ACC	and		arrive-3.sg.fIntended: 'The girl met the boy and arrived.'@benjamin pong, michael p. pollack@17/1/2024
+77@i: 3, johannessen@@@1@crd@alwaladu 	qadima		wa 		albintu 			wasalat@@@@1@5@DEF-boy-NOM  came-3sg.m	CONJ	DEF-girl-NOM		arrive-3sg.f�The boy came and the girl arrived.�@benjamin pong, michael p. pollack@17/1/2024
+78@i: 3, johannessen@@@1@crd@alwaladu 	qadima		wa 		albintu 			wasalna@@@@1@5@DEF-boy-NOM came-3sg.m 	CONJ		DEF-girl-NOM		arrive-3pl.f�The boy came and the girls arrived.�@benjamin pong, michael p. pollack@17/1/2024
+79@i: 3, johannessen@@@1@crd,agr@albantu 	wa 		al2lwaladu		wasaluu@@@@1@4@DEF-girl-NOM	CONJ 		DEF-boy-NOM		arrive-3.pl.m�The girls and the boys arrived.�@benjamin pong, michael p. pollack@17/1/2024
+80@i: 3, johannessen@@@1@crd,agr@albantu 	wa 		al2lwaladu		wasalna@@@@0@4@DEF-girl-NOM	CONJ 		DEF-boy-NOM		arrive-3.pl.f�The boys and the girls arrived.�@benjamin pong, michael p. pollack@17/1/2024
+81@i: 3, johannessen@@@1@crd,agr@albantu 	wa 		almaratu		wasalna@@@@1@4@DEF-girl-NOM	CONJ 		DEF-women-NOM	arrive-3.pl.f�The girls and the women arrived.�@benjamin pong, michael p. pollack@17/1/2024
+82@i: 3, johannessen@@@1@crd,agr@albantu 	wa 		almaratu		wasaluu@@@@0@4@DEF-girl-NOM	CONJ 		DEF-women-NOM	arrive-3.pl.m�The girls and the women arrived.�@benjamin pong, michael p. pollack@17/1/2024
+83@i: 3, johannessen@@@1@crd,agr@alwaladu 	wa 		albintu 			wasalala@@@@0@4@DEF-boy-NOM CONJ 		DEF-girl-NOM		arrive-DUAL.m�The boy and the girl arrived.�@benjamin pong, michael p. pollack@17/1/2024
+84@i: 3, johannessen@@@1@crd@al2lwaladu 	wa 		albintu 			wasala@@@@0@4@DEF-boy-NOM CONJ 		DEF-girl-NOM		arrive-3.sg.m�The boy and the girl arrived.�@benjamin pong, michael p. pollack@17/1/2024
+85@i: 3, johannessen@@@1@crd@albintu		wa 		alamrau 		wasalata@@@@1@4@DEF-girl-NOM CONJ 		DEF-woman-NOM	arrive-DUAL.f�The girl and the woman arrived.@benjamin pong, michael p. pollack@17/1/2024
+86@i: 3, johannessen@@@1@crd@albintu 		wa 	al2lwaladu			wasalala@@@@1@4@DEF-girl-NOM	CONJ 	DEF-boy-NOM 		arrive-DUAL.m�The boy and the girl arrived.�@benjamin pong, michael p. pollack@17/1/2024
+87@i: 3, johannessen@@@1@crd@albintu 		wa 	al2lwaladu			wasalata@@@@0@4@DEF-girl-NOM	CONJ 	DEF-boy-NOM 			arrive-DUAL.m�The boy and the girl arrived.�@benjamin pong, michael p. pollack@17/1/2024
+88@p: 4, btoosh@@@1@wh@man 	qara2a 		alkitaba@@@@1@3@who	 read-3.sg.masc. 	the-book-acc.�Who read the book?�@benjamin pong, michael p. pollack@17/1/2024
+89@p: 4, btoosh@@@1@wh@qara2a 		man	alkitaba@@@@0@3@read-3.sg.masc. 	who	 the-book-acc.�Who read the book?�@benjamin pong, michael p. pollack@17/1/2024
+90@p: 4, btoosh@@@1@wh@qara2a 			alkitaba 	man@@@@0@3@read-3.sg.masc 	the-book-acc.	Who�Who read the book?�@benjamin pong, michael p. pollack@17/1/2024
+91@p: 4, btoosh@@@1@wh@Man	alkitaba 	qara2a@@@@0@3@who	the-book-acc	 read-3.sg.m�Who read the book?�@benjamin pong, michael p. pollack@17/1/2024
+92@p: 4, btoosh@@@1@wh@alkitaba 	man		qara2a@@@@0@3@The-book-acc	who		 read-3.sg.m�Who read the book?�@benjamin pong, michael p. pollack@17/1/2024
+93@p: 4, btoosh@@@1@wh@alkitaba 	qara2a 		man@@@@0@3@The-book-acc	 read-3.sg.m	who�Who read the book?�@benjamin pong, michael p. pollack@17/1/2024
+94@p: 4, btoosh@@@1@wh@man 	qara2a 		alkitaba@@@@1@3@who	 read-3.sg.masc. 	the-book-acc.�Who read the book?�@benjamin pong, michael p. pollack@17/1/2024
+95@p: 4, btoosh@@@1@wh@madha 	qara2a 			alwaladu@@@@1@3@what	 read-3.sg.masc. 	DEF-boy-nom�What did the boy read?�@benjamin pong, michael p. pollack@17/1/2024

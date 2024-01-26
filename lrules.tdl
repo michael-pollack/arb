@@ -1,1 +1,2 @@
 ;;; -*- Mode: TDL; Coding: utf-8 -*-
+defagrneg-lex := defagrneg-lex-rule.

@@ -2,7 +2,7 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;; Grammar of Modern_Standard_Arabic
 ;;; created at:
-;;;     Fri Jan 26 19:48:23 UTC 2024
+;;;     Fri Jan 26 21:44:55 UTC 2024
 ;;; based on Matrix customization system version of:
 ;;;     Fri 27 Oct 2023 04:16:13 PM UTC
 ;;;
@@ -18,20 +18,24 @@ non-mod-lex-item := lex-item &
 ;;; Matrix Type Addenda
 ;;;;;;;;;;;;;;;;;;;;;;;;;
 
+png :+ [ DEFINITION bool,
+    PER person,
+    NUM number,
+    GEND gender ].
+
 basic-head-comp-phrase :+ [ SYNSEM [ LIGHT #light,
              LOCAL.CAT [ HC-LIGHT #light,
                          MC #mc ] ],
     HEAD-DTR.SYNSEM.LOCAL.CAT.MC #mc ].
 
 head :+ [ PRON bool,
-    FORM form,
-    AUX bool ].
+    FORM form ].
 
 noun :+ [ CASE case ].
 
-png :+ [ PER person,
-    NUM number,
-    GEND gender ].
+inflected :+ [ DEFAGR-FLAG luk ].
+
+infl-satisfied :+ [ DEFAGR-FLAG na-or-+ ].
 
 basic-head-opt-subj-phrase :+ [ HEAD-DTR.SYNSEM.LOCAL.CAT.VAL.COMPS < > ].
 
@@ -63,6 +67,10 @@ synsem :+ [ ATTACH xmod ].
 
 head-mod-phrase :+ [ SYNSEM.ATTACH #attach,
     HEAD-DTR.SYNSEM.ATTACH #attach ].
+
+adj-head-int-phrase :+ [ HEAD-DTR.SYNSEM.NON-LOCAL.SLASH.LIST < > ].
+
+head-adj-int-phrase :+ [ NON-HEAD-DTR.SYNSEM.NON-LOCAL.QUE.LIST < > ].
 
 ;;;;;;;;;;;;;;
 ;;; Features
@@ -181,32 +189,22 @@ common_3dual_masc-noun-lex := noun-lex.
 ; 
 ;   lexical Vs for V-level attachment of negative adverbs.
 
-verb-lex := non-mod-lex-item &
-  [ SYNSEM [ L-QUE -,
-             LOCAL.CAT [ HEAD verb,
-                         HC-LIGHT - ] ] ].
-
-main-verb-lex := verb-lex & basic-verb-lex & basic-non-wh-word-lex &
-  [ SYNSEM [ L-QUE -,
-             LOCAL [ CAT [ HEAD.AUX -,
-                           VAL [ SPEC < >,
-                                 SUBJ < #subj > ] ],
-                     CONT.HOOK.XARG #xarg ] ],
-    ARG-ST.FIRST #subj &
+verb-lex := basic-verb-lex & non-mod-lex-item & basic-non-wh-word-lex &
+  [ ARG-ST.FIRST #subj &
                  [ LOCAL [ CAT cat-sat &
                                [ VAL [ SPR < >,
                                        COMPS < > ] ],
-                           CONT.HOOK.INDEX #xarg ] ] ].
+                           CONT.HOOK.INDEX #xarg ] ],
+    SYNSEM.LOCAL [ CONT.HOOK.XARG #xarg,
+                   CAT [ VAL [ SPEC < >,
+                               SUBJ < #subj > ],
+                         HC-LIGHT - ] ] ].
 
-aux-lex := verb-lex & basic-icons-lex-item &
-  [ SYNSEM [ LOCAL.CAT.HEAD.AUX +,
-             L-QUE - ] ].
-
-intransitive-verb-lex := main-verb-lex & intransitive-lex-item &
+intransitive-verb-lex := verb-lex & intransitive-lex-item &
   [ SYNSEM.LOCAL.CAT.VAL.COMPS < >,
     ARG-ST.FIRST.LOCAL.CAT.HEAD noun ].
 
-transitive-verb-lex := main-verb-lex & transitive-lex-item &
+transitive-verb-lex := verb-lex & transitive-lex-item &
   [ SYNSEM.LOCAL.CAT.VAL.COMPS < #comps >,
     ARG-ST < [ LOCAL.CAT.HEAD noun ],
              #comps &
@@ -229,46 +227,12 @@ intr-verb-lex := nom-intransitive-verb-lex.
 
 trans-verb-lex := nom-acc-transitive-verb-lex.
 
-;;; Auxiliaries
-
-subj-raise-aux := aux-lex & trans-first-arg-raising-lex-item &
-  [ SYNSEM.LOCAL [ CAT.VAL [ SPEC < >,
-                             COMPS < #comps >,
-                             SUBJ < #subj > ],
-                   CONT.HOOK.XARG #xarg ],
-    ARG-ST < #subj &
-             [ LOCAL [ CAT [ HEAD noun &
-                                  [ CASE #case ],
-                             VAL [ SUBJ < >,
-                                   SPR < >,
-                                   SPEC < >,
-                                   COMPS < > ] ],
-                       CONT.HOOK.INDEX #xarg ] ],
-             #comps &
-             [ LOCAL.CAT [ HEAD verb &
-                                [ AUX - ],
-                           VAL [ COMPS < >,
-                                 SPR < >,
-                                 SPEC < >,
-                                 SUBJ < unexpressed &
-                                        [ LOCAL.CAT.HEAD.CASE #case ] > ] ] ] > ].
-
-subj-raise-aux-with-pred := subj-raise-aux & norm-sem-lex-item & trans-first-arg-raising-lex-item-1.
-
-neg_prog-aux-lex := subj-raise-aux-with-pred &
-  [ SYNSEM.LOCAL.CAT.VAL.COMPS.FIRST.LOCAL [ CAT.HEAD.FORM nonfinite,
-                                             CONT.HOOK.INDEX.E.ASPECT imperfective ] ].
-
-neg_perf-aux-lex := subj-raise-aux-with-pred &
-  [ SYNSEM.LOCAL.CAT.VAL.COMPS.FIRST.LOCAL [ CONT.HOOK.INDEX.E.ASPECT perfective,
-                                             CAT.HEAD.FORM nonfinite ] ].
-
 ;;; Adjectives
 
-adj-lex := basic-intersective-adjective-lex & caseagr-rule-dtr.
+adj-lex := basic-intersective-adjective-lex & caseagr-rule-dtr & nunnation-rule-dtr.
 
-common-adj-lex := attr-adj-lex & stative-pred-adj-lex &
-  [ SYNSEM.LOCAL.CAT.HEAD.PRD - ].
+common-adj-lex := attr-only-adj-lex &
+  [ INFLECTED.DEFAGR-FLAG - ].
 
 ; Basic attributive adjective definition
 
@@ -276,14 +240,9 @@ attr-adj-lex := adj-lex & intersective-mod-lex &
   [ SYNSEM.LOCAL.CAT.HEAD.MOD < [ LOCAL.CAT [ HEAD noun,
                                               VAL.SPR cons ] ] > ].
 
-; Stative predicate adjective definition
-
-stative-pred-adj-lex := adj-lex &
-  [ SYNSEM.LOCAL [ CAT.VAL.SUBJ < [ LOCAL [ CONT.HOOK.INDEX #xarg,
-                                            CAT [ VAL [ SPR < >,
-                                                        COMPS < > ],
-                                                  HEAD noun ] ] ] >,
-                   CONT.HOOK.XARG #xarg ] ].
+attr-only-adj-lex := attr-adj-lex &
+  [ SYNSEM.LOCAL.CAT [ HEAD.PRD -,
+                       VAL.SUBJ < > ] ].
 
 ;;; Complementizers
 
@@ -328,6 +287,44 @@ determiner-lex := basic-determiner-lex & basic-non-wh-word-lex & norm-zero-arg &
 
 ;;; Adverbs
 
+adverb-lex-item := nonscop-adverb-lex &
+  [ SYNSEM [ LOCAL [ CAT [ VAL [ SUBJ < >,
+                                 SPEC < >,
+                                 SPR < >,
+                                 COMPS < > ],
+                           HEAD adv &
+                                [ MOD < [ LOCAL [ CAT.HEAD verb,
+                                                  CONT.HOOK [ CLAUSE-KEY #clause,
+                                                              LTOP #ltop ] ] ] > ] ],
+                     CONT [ RELS.LIST < [ LBL #ltop,
+                                          ARG0 event,
+                                          ARG1 #clause,
+                                          ARG2 #ind ],
+                                        [ PRED #pred,
+                                          ARG0 #ind,
+                                          LBL #larg ],
+                                        [ ARG0 #ind,
+                                          RSTR #harg ] >,
+                            HOOK.LTOP #ltop,
+                            HCONS.LIST < qeq &
+                                         [ HARG #harg,
+                                           LARG #larg ] > ] ],
+             LKEYS.KEYREL [ PRED #pred,
+                            ARG0 ref-ind & #ind,
+                            LBL #ltop ] ] ].
+
+manner-adverb-lex-item := adverb-lex-item &
+  [ SYNSEM.LOCAL.CONT.RELS.LIST.FIRST.PRED "manner_nonsp_rel" ].
+
+adverb-lex := basic-non-wh-word-lex & adverb-lex-item & norm-zero-arg &
+  [ SYNSEM.LOCAL.CONT.RELS.LIST < [ ],
+                                  [ ],
+                                  [ PRED "exist_q_rel" ] > ].
+
+perf_neg-adverb-lex := manner-adverb-lex-item & adverb-lex.
+
+prog_neg-adverb-lex := manner-adverb-lex-item & adverb-lex.
+
 ; Type for negative adverbs.
 ; 
 ; This adverb should go through a specialized phrase structure rule
@@ -349,14 +346,17 @@ neg-adv-lex := basic-scopal-adverb-lex &
 
 ;;; Intermediate rule types
 
+caseagr-rule-dtr := word-or-lexrule.
+nunnation-rule-dtr := word-or-lexrule.
 case-rule-dtr := word-or-lexrule.
 det-rule-dtr := word-or-lexrule.
-caseagr-rule-dtr := word-or-lexrule.
 
 ;;; Lexical rule types
 
 case-lex-rule-super := add-only-no-ccont-rule & det-rule-dtr & infl-lex-rule &
-  [ DTR case-rule-dtr ].
+  [ INFLECTED #infl,
+    DTR case-rule-dtr &
+        [ INFLECTED #infl ] ].
 
 subject-lex-rule := case-lex-rule-super &
   [ SYNSEM.LOCAL.CAT.HEAD.CASE nom ].
@@ -367,12 +367,16 @@ object-lex-rule := case-lex-rule-super &
 genitive-lex-rule := case-lex-rule-super.
 
 det-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule &
-  [ DTR det-rule-dtr ].
+  [ INFLECTED #infl,
+    DTR det-rule-dtr &
+        [ INFLECTED #infl ] ].
 
 the-lex-rule := det-lex-rule-super.
 
 verb_suffix-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule &
-  [ DTR verb-lex ].
+  [ INFLECTED #infl,
+    DTR verb-lex &
+        [ INFLECTED #infl ] ].
 
 imperf-lex-rule := verb_suffix-lex-rule-super &
   [ SYNSEM.LOCAL [ CONT.HOOK.INDEX.E.ASPECT imperfective,
@@ -412,19 +416,34 @@ perf-lex-rule := verb_suffix-lex-rule-super &
                                                                 PER 3rd,
                                                                 GEND masc ] ].
 
-detagr-lex-rule-super := add-only-no-ccont-rule & caseagr-rule-dtr & infl-lex-rule &
-  [ DTR common-adj-lex ].
+defagr-lex-rule-super := add-only-no-ccont-rule & caseagr-rule-dtr & nunnation-rule-dtr &
+  [ INFLECTED.DEFAGR-FLAG +,
+    DTR common-adj-lex ].
 
-detagrpos-lex-rule := detagr-lex-rule-super.
+defagrpos-lex-rule := defagr-lex-rule-super & infl-lex-rule &
+  [ SYNSEM.LOCAL.CONT.HOOK.XARG.PNG.DEFINITION + ].
 
-caseagr-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule &
-  [ DTR caseagr-rule-dtr ].
+defagrneg-lex-rule := const-lex-rule & defagr-lex-rule-super &
+  [ SYNSEM.LOCAL.CONT.HOOK.XARG.PNG.DEFINITION - ].
+
+caseagr-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule & nunnation-rule-dtr &
+  [ INFLECTED #infl,
+    DTR caseagr-rule-dtr &
+        [ INFLECTED #infl ] ].
 
 caseagrnom-lex-rule := caseagr-lex-rule-super &
-  [ SYNSEM.LOCAL.CAT.HEAD.CASE nom ].
+  [ SYNSEM.LOCAL.CAT.HEAD.MOD.FIRST.LOCAL.CAT.HEAD.CASE nom ].
 
 caseagracc-lex-rule := caseagr-lex-rule-super &
-  [ SYNSEM.LOCAL.CAT.HEAD.CASE acc ].
+  [ SYNSEM.LOCAL.CAT.HEAD.MOD.FIRST.LOCAL.CAT.HEAD.CASE acc ].
+
+nunnation-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule &
+  [ INFLECTED #infl,
+    DTR nunnation-rule-dtr &
+        [ INFLECTED #infl ] ].
+
+nonpos-lex-rule := nunnation-lex-rule-super &
+  [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG.DEFINITION - ].
 
 ;;;;;;;;;;;;;;;;;;;
 ;;; Phrasal Types
@@ -433,11 +452,11 @@ caseagracc-lex-rule := caseagr-lex-rule-super &
 ;Constraint on MC used to be part of matrix.tdl
 ;;it applies to all wo implementations, except for v2
 
-head-final-head-nexus := head-final &
+head-initial-head-nexus := head-initial &
   [ SYNSEM.ATTACH lmod,
     HEAD-DTR.SYNSEM.ATTACH notmod-or-lmod ].
 
-head-initial-head-nexus := head-initial &
+head-final-head-nexus := head-final &
   [ SYNSEM.ATTACH rmod ].
 
 head-subj-phrase := decl-head-subj-phrase & head-initial-head-nexus.
@@ -449,8 +468,7 @@ head-comp-phrase := basic-head-1st-comp-phrase & head-initial-head-nexus.
 ; The head of comp-head-phrase can't be: ['comp']
 
 comp-head-phrase := basic-head-1st-comp-phrase & head-final-head-nexus &
-  [ SYNSEM.LOCAL.CAT.HEAD +nvjrpdmo &
-                          [ AUX - ] ].
+  [ SYNSEM.LOCAL.CAT.HEAD +nvjrpdmo ].
 
 head-comp-phrase-2 := basic-head-2nd-comp-phrase & head-initial-head-nexus.
 
@@ -461,10 +479,15 @@ comp-head-phrase-2 := basic-head-2nd-comp-phrase & head-final-head-nexus.
 
 bare-np-phrase := basic-bare-np-phrase &
   [ C-CONT.RELS.LIST < [ PRED "exist_q_rel" ] >,
-    SYNSEM.LOCAL [ CAT.HEAD.CASE #case,
-                   CONT.HOOK.INDEX.PNG #png ],
     HEAD-DTR.SYNSEM.LOCAL [ CAT.HEAD.CASE #case,
-                            CONT.HOOK.INDEX.PNG #png ] ].
+                            CONT.HOOK.INDEX.PNG #png ],
+    SYNSEM [ LOCAL [ CAT.HEAD.CASE #case,
+                     CONT.HOOK.INDEX.PNG #png ],
+             LIGHT - ] ].
+
+;;; Head Adjunct rules
+
+; For intersective adjuncts with underspecified attachment locations:
 
 basic-filler-phrase :+ [ SYNSEM.NON-LOCAL.SLASH.LIST < >,
     ARGS < [ SYNSEM [ LOCAL #slash,
@@ -550,6 +573,15 @@ fem-fem-fem-gend-coord-rule := coord-phrase &
 any-masc-masc-gend-coord-rule := coord-phrase &
   [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG.GEND masc,
     RCOORD-DTR.SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG.GEND masc ].
+
+adv1-top-coord-rule := basic-adv-top-coord-rule & monopoly-top-coord-rule &
+  [ SYNSEM.LOCAL.COORD-STRAT "1" ].
+
+adv1-mid-coord-rule := basic-adv-mid-coord-rule & monopoly-mid-coord-rule &
+  [ SYNSEM.LOCAL.COORD-STRAT "1" ].
+
+adv1-bottom-coord-rule := conj-first-bottom-coord-rule & adv-bottom-coord-phrase &
+  [ SYNSEM.LOCAL.COORD-STRAT "1" ].
 
 ;;; Coordination Strategy 1
 

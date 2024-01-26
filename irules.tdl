@@ -49,14 +49,18 @@ perf-lex-rule.
 %suffix (* ala)
 3dualmasc-lex-rule.
 
-detagrpos-prefix :=
+defagrpos-prefix :=
 %prefix (* al)
-detagrpos-lex-rule.
+defagrpos-lex-rule.
 
-caseagrnom-prefix :=
-%prefix (* u)
+caseagrnom-suffix :=
+%suffix (* u)
 caseagrnom-lex-rule.
 
-caseagracc-prefix :=
-%prefix (* a)
+caseagracc-suffix :=
+%suffix (* a)
 caseagracc-lex-rule.
+
+nonpos-suffix :=
+%suffix (* n)
+nonpos-lex-rule.

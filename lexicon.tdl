@@ -165,17 +165,15 @@ yakul := trans-verb-lex &
   [ STEM < "yakul" >,
     SYNSEM.LKEYS.KEYREL.PRED "_eat_v_rel" ].
 
-;;; Auxiliaries
-
-lam := neg_prog-aux-lex &
-  [ STEM < "lam" >,
-    SYNSEM.LKEYS.KEYREL.PRED "neg_imperf_rel" ].
-
-la := neg_perf-aux-lex & neg-adv-lex &
-  [ STEM < "la" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_neg_perfective_v_rel" & "neg_rel" ].
-
 ;;; Adverbs
+
+lan := perf_neg-adverb-lex &
+  [ STEM < "lan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_neg_perf_a_rel" ].
+
+la := prog_neg-adverb-lex & neg-adv-lex &
+  [ STEM < "la" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_neg_prog_rel" & "neg_rel" ].
 
 hal := q-particle1-lex &
   [ STEM < "hal" > ].

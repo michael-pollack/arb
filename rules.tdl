@@ -28,6 +28,12 @@ head-spec := head-spec-phrase.
 
 bare-np := bare-np-phrase.
 
+adv1-bottom-coord := adv1-bottom-coord-rule.
+
+adv1-mid-coord := adv1-mid-coord-rule.
+
+adv1-top-coord := adv1-top-coord-rule.
+
 n1-sg-sg-dual-same-same-same-masc-any-masc-top-coord := n1-sg-sg-dual-same-same-same-masc-any-masc-top-coord-rule.
 
 n1-sg-sg-dual-same-same-same-masc-any-masc-mid-coord := n1-sg-sg-dual-same-same-same-masc-any-masc-mid-coord-rule.
