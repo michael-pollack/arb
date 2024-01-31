@@ -125,8 +125,10 @@ q-part=on
 q-part-order=before
   q-particle1_orth=hal
   q-particle1_main=on
+  q-particle1_wh=oblig
   q-particle2_orth=2a
   q-particle2_main=on
+  q-particle2_wh=oblig
 
 section=wh-q
 
@@ -137,6 +139,22 @@ section=arg-opt
 section=nominalclause
 
 section=clausal-comp
+  comps1_clause-pos-same=on
+  comps1_ques=prop
+  comps1_comp-pos-before=on
+  comps1_comp=oblig
+    comps1_stem3_orth=2an
+    comps1_feat1_name=aspect
+    comps1_feat1_value=perfective
+  comps2_clause-pos-same=on
+  comps2_ques=prop
+  comps2_comp-pos-before=on
+  comps2_comp=oblig
+    comps2_stem1_orth=2anna
+  comps2_cformvalue=form
+  comps3_clause-pos-same=on
+  comps3_ques=prop
+    comps3_stem1_orth=2inna
 
 section=clausalmods
 
@@ -285,6 +303,20 @@ section=lexicon
     verb2_stem5_pred=_greet_v_rel
     verb2_stem6_orth=yakul
     verb2_stem6_pred=_eat_v_rel
+  verb3_name=verb_S
+  verb3_valence=nominative,comps1
+    verb3_stem1_orth=qal
+    verb3_stem1_pred=_say_v_rel
+    verb3_stem2_orth=hasib
+    verb3_stem2_pred=_think_v_rel
+  verb4_name=verb_S2
+  verb4_valence=nominative,comps2
+    verb4_stem1_orth=hasib
+    verb4_stem1_pred=_think_v_rel
+  verb5_name=verb_S3
+  verb5_valence=nominative,comps3
+    verb5_stem1_orth=qal
+    verb5_stem1_pred=_say_v_rel
   adj1_name=common
   adj1_mod=attr
   adj1_modpos=either
@@ -303,6 +335,10 @@ section=lexicon
     adv2_stem1_orth=la
     adv2_stem1_pred=_neg_prog_rel
   adv2_type=manner
+  adv3_name=question_neg
+    adv3_stem1_orth=lam
+    adv3_stem1_pred=_negQ_a_rel
+  adv3_type=manner
 
 section=morphology
   noun-pc1_name=case

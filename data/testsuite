@@ -9,6 +9,7 @@ Source c: Alonini, T. M. (2023). Unaccusative verbs in Modern Standard Arabic. S
 Source d: AlQahtani, S. J. (2016). The Structure and Distribution of Determiner Phrases in Arabin: Standard Arabic and Saudi Dialects. Department of Linguistics, University of Ottowa. 
 Source e: Albuhayri, S. (2013). The Pronominal System in Standard Arabic: Stron, Clitic, and Affixal Pronouns. Arizona State University. 
 Source f: Alotaibi, Y. H (2022). Adjectives in Arabic. Taif University. 
+Source p:  Btoosh, M. (2010). Wh-Movement in Standard Arabic: An Optimality-Theoretic Account. Poznań Studies in Contemporary Linguistics, 46(1), 1-26. https://doi.org/10.2478/v10010-010-0001-y
 
 #1-VS0 word order for transitive clauses with definite NP subjects
 Source: a:29, Amer Ahmed, attested
@@ -259,7 +260,7 @@ boy-ACC     arrived-3sg.m
 
 #######NP#######
 
-#22- Noun phrase, indefinite, adjective agreement
+#25- Noun phrase, indefinite, adjective agreement
 Source: d:2, AlQahtani, attested
 Vetted: s
 Judgment: g
@@ -269,7 +270,7 @@ rajul-u-n tawel-u-n daxal-a 2al-maktab-a
 man-NOM-NUM tall-NOM-NUN entered-3sgmasc the-office-ACC
 'A tall man entered the office.'
 
-#22- Noun phrase, indefinite, adjective agreement
+#26- Noun phrase, indefinite, adjective agreement
 Source: f:37, Alotaibi, attested
 Vetted: s
 Judgment: g
@@ -279,7 +280,7 @@ Ja2-a rajul-un tawel-un
 came-PFV.3SGMASC man-NOM tall-NOM
 'A tall man came.'
 
-#22- Noun phrase, definite, adjective agreement
+#27- Noun phrase, definite, adjective agreement
 Source: f:49, Alataibi, attested
 Vetted: s
 Judgment: g
@@ -289,7 +290,7 @@ ja2-a al-rajul-u al-karim-u
 came-PFV.3SGMASC the-man-NOM the-generous-NOM
 'The generous man came.'
 
-#22- Noun phrase, definite, adjective agreement (adjective does not agree with definite noun)
+#28- Noun phrase, definite, adjective agreement (adjective does not agree with definite noun)
 Source: f:49, Alataibi, attested
 Vetted: f
 Judgment: u
@@ -304,7 +305,7 @@ came-3sgmasc the-man-NOM generous-NOM-NUN
 
 #######PRONOUNS#######
 
-#22-pronouns, NPs, possession, word order
+#29-pronouns, NPs, possession, word order
 Source: d:2, AlQahtani, attested
 Vetted: s
 Judgment: g
@@ -314,7 +315,7 @@ zur-tu dar-a 2al-2jitam-i
 visited-I house-ACC the-orphans-GEN
 'I visited the orphans' house.'
 
-#23-pronouns, NPs, possession, word order (genetive must follow its reference)
+#30-pronouns, NPs, possession, word order (genetive must follow its reference)
 Source: d:2, AlQahtani, attested
 Vetted: s
 Judgment: u
@@ -324,7 +325,7 @@ zur-tu 2al-2jitam-i dar-a
 visited-I the-orphans-GEN house-ACC
 'Intended: I visited the orphans' house.'
 
-#23-pronouns
+#31-pronouns
 Source: d:2, Albuhayri, attested
 Vetted: s
 Judgment: g
@@ -334,7 +335,7 @@ qabal-naa-ka
 meet-1pl-2sgmasc
 'We met you.'
 
-#23-Pronouns, possessive
+#32-Pronouns, possessive
 Source: d:2, Albuhayri, attested
 Vetted: s
 Judgment: g
@@ -344,7 +345,7 @@ haa6aa bayt-u-ki
 this house-NOM-2sgfem
 'This is your house.'
 
-#23-Pronoun attachment to preposition
+#33-Pronoun attachment to preposition
 Source: d:2, Albuhayri, attested
 Vetted: s
 Judgment: g
@@ -354,7 +355,7 @@ sallam-tu 3alay-him
 greeted-1sg on-3plmasc
 'I greeted them.'
 
-#23- Independent Pronouns, word order
+#34- Independent Pronouns, word order
 Source: d:2, Albuhayri, attested
 Vetted: s
 Judgment: g
@@ -364,7 +365,7 @@ Phenomena: {pn, adj, wo}
 2sg.masc met-1pl
 'We met you.'
 
-#23- Independent Pronouns, word order (independent object pronouns must come first)
+#35- Independent Pronouns, word order (independent object pronouns must come first)
 Source: d:2, Albuhayri, attested
 Vetted: f
 Judgment: u
@@ -376,7 +377,7 @@ met-1pl 2sg.masc
 
 #######NON-VERBAL PREDICATES#######
 
-#23-Non-Verbal Predicates, Zero Copula, Independent Pronouns, adjectives
+#36-Non-Verbal Predicates, Zero Copula, Independent Pronouns, adjectives
 Source: d:2, Albuhayri, attested
 Vetted: s
 Judgment: g
@@ -386,7 +387,7 @@ Phenomena: {pn, adj, cop}
 2sg.masc assiduous-NOM-NUN
 'You are assiduous.'
 
-#23-Non-Verbal Predicates, Zero Copula, Independent Pronouns, adjectives
+#37-Non-Verbal Predicates, Zero Copula, Independent Pronouns, adjectives
 Source: d:2, Albuhayri, attested
 Vetted: s
 Judgment: g
@@ -396,7 +397,7 @@ Huwa safir-u-naa lada al-majlis-i
 3sg.masc ambassador-nom-1pl at the-council-gen
 'He is our ambassador at the council.'
 
-#23-Non-Verbal Predicates, Zero Copula, (the definite affix on the adjective is dropped in zero-copula and replaced with nunation)
+#38-Non-Verbal Predicates, Zero Copula, (the definite affix on the adjective is dropped in zero-copula and replaced with nunation)
 Source: g:49, Alotaibi, attested
 Vetted: s
 Judgment: g
@@ -409,7 +410,7 @@ the-man-NOM generous-NOM-NUN
 
 #### Tense and Aspect##############
 
-#perfective verb aspect -a
+# 39 perfective verb aspect -a
 Source: b:13, Mohammad, attested
 Vetted: s
 Judgment: g
@@ -420,7 +421,7 @@ DEF-boy-NOM				    eat-PERF	DEF-apple-ACC
 ‘The boy has eaten the apple.’
 
 
-#imperfective verb
+#40 imperfective verb
 Source: b:13, Mohammad, attested
 Vetted: s
 Judgment: g
@@ -430,7 +431,7 @@ al-walad-u				yakul-u			al-tuffahat-a
 DEF-boy-NOM				eat-PROG	DEF-apple-ACC
 ‘The boy is eating the apple.’
 
-#perfective verb aspect -a (cannot follow agreement marker)
+#41 perfective verb aspect -a (cannot follow agreement marker)
 Source: b:13, Mohammad, attested
 Vetted: s
 Judgment: u
@@ -441,7 +442,7 @@ DEF-boy-NOM				    eat-3sg.m-PERF	DEF-apple-ACC
 ‘The boy has eaten the apple.’
 
 
-#imperfective verb (cannot follow agreement marker)
+#42 imperfective verb (cannot follow agreement marker)
 Source: b:13, Mohammad, attested
 Vetted: s
 Judgment: u
@@ -454,7 +455,7 @@ DEF-boy-NOM			eat-3sgm-PROG	DEF-apple-ACC
 #######Negation###########3
 
 
-#Negation lan perfective verb
+# 43 Negation lan perfective verb
 Source: b:13, Mohammad, attested
 Vetted: s
 Judgment: g
@@ -465,7 +466,7 @@ DEF-boy-NOM		not		    eat-PERF	DEF-apple-ACC
 ‘The boy will not eat the apple.’
 
 
-#Negation la + imperfective verb
+#44 Negation la + imperfective verb
 Source: b:13, Mohammad, attested
 Vetted: s
 Judgment: g
@@ -475,7 +476,7 @@ al-walad-u		la 		yakul-u			al-tuffahat-a
 DEF-boy-NOM		not		eat-PROG	DEF-apple-ACC
 ‘The boy is not eating the apple.’
 
-#Negation la perfective verb
+#45 Negation la perfective verb
 Source: b:13, Mohammad, attested
 Vetted: s
 Judgment: u
@@ -486,7 +487,7 @@ DEF-boy-NOM		not		eat-PERF	DEF-apple-ACC
 Intended: ‘The boy will not eat the apple.’
 
 
-#Negation la + prog verb
+#46 Negation la + prog verb
 Source: b:13, Mohammad, attested
 Vetted: s
 Judgment: u
@@ -498,7 +499,7 @@ Intended: ‘The boy is not eating the apple.’
 
 
 
-#agreement##############
+# 47 agreement##############
 
 #(singular, gender agreement)
 Source: a:29, Ahmed, attested
@@ -510,7 +511,7 @@ wasal-a	 		al-walad-u
 arrived-3.sg.m		the-boy.sg-nom
 ‘The boy arrived.’
 
-#(singular, gender agreement)	
+# 48 (singular, gender agreement)	
 Source: a:29, Ahmed, attested
 Vetted: s					
 Judgment: g
@@ -520,7 +521,7 @@ wasal-at 		al-bint-u
 arrived-3.sg.f		DEF-girl.sg-nom
 ‘The girl arrived.	
 
-#(plural, gender agreement)
+#49 (plural, gender agreement)
 Source: a:29, Ahmed, attested
 Vetted: s
 Judgment: g 
@@ -530,7 +531,7 @@ wasal-uu	 	al-2lwalad-u
 arrived-3.pl.m		the-boy.pl-nom
 ‘The boys arrived.’
 
-#(plural, gender agreement)	
+#50 (plural, gender agreement)	
 Source: a:29, Ahmed, attested
 Vetted: s					
 Judgment: g 
