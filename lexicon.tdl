@@ -45,9 +45,41 @@ tuffahat := common_3sg_masc-noun-lex &
   [ STEM < "tuffahat" >,
     SYNSEM.LKEYS.KEYREL.PRED "_apple_n_rel" ].
 
+sibaq := common_3sg_masc-noun-lex &
+  [ STEM < "sibaq" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_competition_n_rel" ].
+
+nazaahat := common_3sg_masc-noun-lex &
+  [ STEM < "nazaahat" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_honesty_n_rel" ].
+
+ntiqaad := common_3sg_masc-noun-lex &
+  [ STEM < "ntiqaad" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_criticism_n_rel" ].
+
+qalam := common_3sg_masc-noun-lex &
+  [ STEM < "qalam" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_pen_n_rel" ].
+
 Muhammad := proper-noun-lex &
   [ STEM < "Muhammad" >,
     SYNSEM.LKEYS.KEYREL.PRED "_Muhammad_n_rel" ].
+
+Ahmad := proper-noun-lex &
+  [ STEM < "Ahmad" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_Ahmad_n_rel" ].
+
+Zayd := proper-noun-lex &
+  [ STEM < "Zayd" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_Zayd_n_rel" ].
+
+Faris := proper-noun-lex &
+  [ STEM < "Faris" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_Faris_n_rel" ].
+
+Ali := proper-noun-lex &
+  [ STEM < "Ali" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_Ali_n_rel" ].
 
 2anta := ind_subj_pn-noun-lex &
   [ STEM < "2anta" >,
@@ -141,6 +173,22 @@ ja2 := intr-verb-lex &
   [ STEM < "ja2" >,
     SYNSEM.LKEYS.KEYREL.PRED "_came_v_rel" ].
 
+yanj := intr-verb-lex &
+  [ STEM < "yanj" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_succeed_v_rel" ].
+
+yafuz := intr-verb-lex &
+  [ STEM < "yafuz" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_win_v_rel" ].
+
+qum := intr-verb-lex &
+  [ STEM < "qum" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_stand_v_rel" ].
+
+dakar := intr-verb-lex &
+  [ STEM < "dakar" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_study_v_rel" ].
+
 hall := trans-verb-lex &
   [ STEM < "hall" >,
     SYNSEM.LKEYS.KEYREL.PRED "_solve_v_rel" ].
@@ -165,6 +213,34 @@ yakul := trans-verb-lex &
   [ STEM < "yakul" >,
     SYNSEM.LKEYS.KEYREL.PRED "_eat_v_rel" ].
 
+2aqlaq := trans-verb-lex &
+  [ STEM < "2aqlaq" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_annoy_v_rel" ].
+
+ra2ay := trans-verb-lex &
+  [ STEM < "ra2ay" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_saw_v_rel" ].
+
+2a3tay := trans-verb-lex &
+  [ STEM < "2a3tay" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_give_v_rel" ].
+
+qal_1 := verb_S-verb-lex &
+  [ STEM < "qal" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_say_v_rel" ].
+
+hasib_1 := verb_S-verb-lex &
+  [ STEM < "hasib" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_think_v_rel" ].
+
+hasib_2 := verb_S2-verb-lex &
+  [ STEM < "hasib" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_think_v_rel" ].
+
+qal_2 := verb_S3-verb-lex &
+  [ STEM < "qal" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_say_v_rel" ].
+
 ;;; Adverbs
 
 lan := perf_neg-adverb-lex &
@@ -174,6 +250,10 @@ lan := perf_neg-adverb-lex &
 la := prog_neg-adverb-lex & neg-adv-lex &
   [ STEM < "la" >,
     SYNSEM.LKEYS.KEYREL.PRED "_neg_prog_rel" & "neg_rel" ].
+
+lam := question_neg-adverb-lex &
+  [ STEM < "lam" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_negQ_a_rel" ].
 
 hal := q-particle1-lex &
   [ STEM < "hal" > ].
@@ -185,3 +265,14 @@ wa := conj-lex &
   [ STEM < "wa" >,
     SYNSEM.LKEYS.KEYREL.PRED "_and_coord_rel",
     CFORM "1" ].
+
+;;; Complementizers
+
+2an := comps1-complementizer-lex-item &
+  [ STEM < "2an" > ].
+
+2anna := comps2-complementizer-lex-item &
+  [ STEM < "2anna" > ].
+
+2inna := comps3-complementizer-lex-item &
+  [ STEM < "2inna" > ].

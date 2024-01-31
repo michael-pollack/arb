@@ -1,2 +1,10 @@
 ;;; -*- Mode: TDL; Coding: utf-8 -*-
+nonposs-lex := nonposs-lex-rule.
+
+genneg-lex := genneg-lex-rule.
+
+MC_plus-lex := MC_plus-lex-rule.
+
+MC_minus-lex := MC_minus-lex-rule.
+
 defagrneg-lex := defagrneg-lex-rule.

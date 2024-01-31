@@ -9,13 +9,29 @@ object-suffix :=
 %suffix (* a)
 object-lex-rule.
 
-genitive-suffix :=
-%suffix (* i)
-genitive-lex-rule.
-
 the-prefix :=
 %prefix (* al)
 the-lex-rule.
+
+posspn-suffix1 :=
+%suffix (* hu)
+posspn-lex-rule.
+
+posspn-suffix2 :=
+%suffix (* ki)
+posspn-lex-rule.
+
+posspn-suffix3 :=
+%suffix (* hi)
+posspn-lex-rule.
+
+posspn-suffix4 :=
+%suffix (* ii)
+posspn-lex-rule.
+
+genpos-suffix :=
+%suffix (* i)
+genpos-lex-rule.
 
 imperf-suffix :=
 %suffix (* u)
@@ -48,6 +64,42 @@ perf-lex-rule.
 3dualmasc-suffix :=
 %suffix (* ala)
 3dualmasc-lex-rule.
+
+1sg_v_subj-suffix1 :=
+%suffix (* tu)
+1sg_v_subj-lex-rule.
+
+1sg_v_subj-suffix2 :=
+%suffix (* nii)
+1sg_v_subj-lex-rule.
+
+1pl_v_subj-suffix :=
+%suffix (* naa)
+1pl_v_subj-lex-rule.
+
+3pl_v_masc_subj-suffix1 :=
+%suffix (* wa)
+3pl_v_masc_subj-lex-rule.
+
+3pl_v_masc_subj-suffix2 :=
+%suffix (* uu)
+3pl_v_masc_subj-lex-rule.
+
+1sg_pn_obj-suffix1 :=
+%suffix (* ya)
+1sg_pn_obj-lex-rule.
+
+1sg_pn_obj-suffix2 :=
+%suffix (* nii)
+1sg_pn_obj-lex-rule.
+
+2sg_masc_pn_obj-suffix :=
+%suffix (* ka)
+2sg_masc_pn_obj-lex-rule.
+
+3sg_masc_pn_obj-suffix :=
+%suffix (* hu)
+3sg_masc_pn_obj-lex-rule.
 
 defagrpos-prefix :=
 %prefix (* al)
