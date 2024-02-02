@@ -1,13 +1,21 @@
 ;;; -*- Mode: TDL; Coding: utf-8 -*-
 ;;; Inflecting Lexical Rule Instances
 
-subject-suffix :=
+subject-suffix1 :=
 %suffix (* u)
+subject-lex-rule.
+
+subject-suffix2 :=
+%suffix (* un)
 subject-lex-rule.
 
 object-suffix :=
 %suffix (* a)
 object-lex-rule.
+
+gencase-suffix :=
+%suffix (* i)
+gencase-lex-rule.
 
 the-prefix :=
 %prefix (* al)
@@ -29,9 +37,9 @@ posspn-suffix4 :=
 %suffix (* ii)
 posspn-lex-rule.
 
-genpos-suffix :=
-%suffix (* i)
-genpos-lex-rule.
+posspn-suffix5 :=
+%suffix (* tu)
+posspn-lex-rule.
 
 imperf-suffix :=
 %suffix (* u)

@@ -1,0 +1,239 @@
+Language: Modern_Standard_Arabic
+Language code: arb
+Lines: translit translit-seg gloss translat
+Author: Michael Pollack, edited by Benjamin Pong
+Date: 2/2/2024
+Source a: Ahmed, A. M. T. (2016). Case in Standard Arabic: A dependent case approach.
+Source b: Mohammad, M. A. (2000). Word order, agreement and pronominalization in Standard and Palestinian Arabic. Word Order, Agreement and Pronominalization in Standard and Palestinian Arabic, 1-213.
+Source c: Alonini, T. M. (2023). Unaccusative verbs in Modern Standard Arabic. Saudi Journal of Language Studies, 3(1), 47-58.
+Source d: AlQahtani, S. J. (2016). The Structure and Distribution of Determiner Phrases in Arabin: Standard Arabic and Saudi Dialects. Department of Linguistics, University of Ottowa. 
+Source e: Albuhayri, S. (2013). The Pronominal System in Standard Arabic: Stron, Clitic, and Affixal Pronouns. Arizona State University. 
+Source f: Alotaibi, Y. H (2022). Adjectives in Arabic. Taif University. 
+Source g: Obeidat, H, A (1984). Relative Clauses in Standard Arabic Resvisited. Studies in Linguistic Sciences, 14(2) 77-96
+Source h: Alotaibi, Y (2014) Conditional sentences in Modern Standard Arabic and the Taif Dialect. University of Essex. 
+Source p:  Btoosh, M. (2010). Wh-Movement in Standard Arabic: An Optimality-Theoretic 
+Source q: Alsager, Haroon N.. “The Syntax of Yes/No Questions in Modern Standard Arabic.” International Journal of English Linguistics 10 (2020): 179.
+
+##### INTRODUCTION ##########
+
+For lab 4, we focused on customizing our Arabic grammar to add Possessives, Declarative Clausal Components, Yes-No Questions, Clausal Modifiers, and Argument Optionality. We found in this lab several opportunities to address difficulties we were facing in labs 2 and 3, largely due to the pervasiveness of Argument Optionality in Arabic and the overlap of Possessives with phenomena that we had previously attempted to address with pronouns. We were able to achieve a fair amount of progress with our work this lab, though there is still more work to be done to address overgeneration and Clausal Modifiers, of which we struggled to find relevant examples for among our sources. 
+
+In this write-up, we first discuss the phenomena we added, including the Test Suite entries and Customization Preferences we chose to explore said phenomena. Then, we explore the results of our work and what yet needs to be accomplished. 
+
+~~~~~~~~~~ PHENOMENA & CUSTOMIZATION CHOICES ~~~~~~~~~~
+
+##### POSSESSIVES ##########
+
+In Arabic, possessives can be indicated using both a Genitive Case marker “-i” and a dependent pronoun, depending on the context. For example, when the possessor of something is not being referred to by name in the sentence, possession is expressed by a dependent pronoun on the possessum. In the sentence below the possessum is “criticism”. This nominative marked noun has a possessive marker “hu” that refers to a referent that is absent from the utterance.
+
+# Possession, Genitive Case
+Source: a:278, Ahmed, attested
+Vetted:s
+Judgment: g
+Phenomena: {yes-no questions}
+2aqlaqanii ntiqaaduhu Zaydan
+2aqlaq-a-nii ntiqaad-u-hu
+Annoyed-3sgm-me criticizing-NOM-his.GEN
+‘His criticism annoyed me’
+
+However, when the possessor has a specific referent in the utterance, possession is expressed by marking the Genitive case on the possessor. For instance, below,
+
+# Possession, Genitive Case
+Source: a:278, Ahmed, attested
+Vetted:s
+Judgment: g
+Phenomena: {yes-no questions}
+2aqlaqanii ntiqaadu Zaydin
+2aqlaq-a-nii ntiqaad-u Zayd-in
+Annoyed-3sgm-me criticizing-NOM Zayd-GEN
+‘Zayd’s criticism annoyed me’
+
+Furthermore, when the possessor is the subject of a sentence and therefore would be marked with the nominative case, both the genitive case marker and the dependent pronoun can be used in tandem to refer back to the possessor. 
+
+# Possession, Genitive Case, predicates
+Source: a:207, Ahmed, attested
+Vetted:s
+Judgment: g
+Phenomena: {yes-no questions}
+Zaydun ma3ruufun binazaahatihi
+Zayd-un ma3ruuf-un bi-nazaahat-i-hi
+Zayd-NOM known-NOM for-honesty-GEN-his
+‘Zayd is known for his honesty’
+
+In order to model this, we created two possessive strategies: one using the possessive pronoun system and the other using a possessive strategy working in tandem with our Genitive case. For the former, we marked that our grammar features possessive pronouns that appear as affixes on the possessum and do not agree with the possessum in person, number, or gender. We said that the possessum noun can still appear with a determiner when marked with these affixes, but we do not believe this would be relevant as Arabic does not have overt determiners. For the latter, we added a Genitive case to our grammar and made a possessive strategy that adds no morphemes, but states that the possessor must appear in the genetive case, following the possessum. We said that this possessor acts as a specifier. 
+
+##### DECLARATIVE CLAUSAL COMPONENTS ##########
+
+There are three types of complementizers in Modern Standard Arabic which introduce subordinate clauses; ‘2anna’, ‘2inna’ and ‘qan’. ‘qan’ introduces a subordinate clause headed by a verb is specified for perfective aspect “-a”.  On the other hand, 2anna introduces a finite clause and what follows must be an accusative case NP.  In this documentation, we focus on the distribution of “2inna” and “2anna” that can only be selected by certain verbs. The selecting verbs for 2inna is verbs of communication like ‘say’, while 2anna is selected by verbs of cognition like ‘thought’, ‘believe’ and ‘knew’. They cannot be interchanged. Furthermore, for 2anna and 2inna, the subject of the subordinate clause that they introduce must be in accusative case. To demonstrate this, consider the following examples: 
+
+For "2inna":
+Source: b:19, Mohammad, attested
+Vetted:s
+Judgment: g
+Phenomena: {clausal complement, case}
+qala	alrajulu 		2inna	albintu 		qabalat	al2lwalada	
+qal-a 	al-rajul-u		COMP	al-bint-u 	qabal-at	al-2lwalad-a	
+said-3sg.m DEF-man-NOM	that	DEF-girl-NOM	met-3.SG.F	DEF-boy-ACC
+'The man said that the girl met the boy.'
+
+For "2anna":
+Source: b:19, Mohammad, attested
+Vetted:s
+Judgment: u
+Phenomena: {clausal complement, case}
+Hasiba 	alrajulu 		2anna	albintu  	qabalat	al2lwalada	
+Hasib-a 	al-rajul-u		COMP	al-bint- u	qabal-at	al-2lwalad-a	
+Thought-3sg.m DEF-man-NOM	that	DEF-girl-NOM	met-3.SG.F	DEF-boy-ACC
+'The man thought that the girl met the boy.'
+
+For "qan":
+Source: b:19, Mohammad, attested
+Vetted:s
+Judgment: g
+Phenomena: {clausal complement}
+qala	alrajulu 		qan	alwaladu	yakula		altuffahata	
+qal-a 	al-rajul-u		COMP	al-walad-u	yakul-a		al-tuffahat-a
+said-3sg.m DEF-man-NOM	that	DEF-boy-u	ate-PERF	DEF-boy-ACC
+'The man said that the boy has eaten the apple.’
+
+In order to model this: - MC+/- for tdl editing, constraining certain verbs to select for specific FORMS of complementizers. We then added three verb types for each of these complementizers. Within each of those verb types, we added the verbs that would be able to take each of these complementizers as their complement. For example, "qal" was added to type trans_comp_2inna, "hasib" was added to type trans_comp_2inna, and both of these verbs were added again to trans_comp_qan. 
+
+##### MATRIX YES/NO QUESTIONS ##########
+For yes/no questions, the interrogative element is indicated either by ‘hal’ or ‘ʔa’.  However, the alternation between these two elements are conditioned by two specific constraints; whether the yes/no question is negated, and whether the NP that follows is (indefinite).
+
+The -hal variant can never be used when the yes/no question is negated (i.e negation is indicated by ‘lam’). Consider the following examples:
+
+Source: p:7, Btoosh, attested
+Vetted:s
+Judgment: g
+Phenomena: {yes-no questions}
+hal	namat		albintu 
+hal	nam-at		al-bint-u 
+Q.did 	slept-3.sg.f 	def-girl-nom.
+‘Did the girl sleep?’
+
+Source: p:7, Btoosh, attested
+Vetted:s
+Judgment: g
+Phenomena: {yes-no questions}
+2a	 	lam 	namat		al-bintu 
+2a	 	lam 	nam-at		al-bint-u 
+Q.did		not	slept-3.sg.f 	the-girl-nom.
+Didn’t the girl sleep?	
+
+As for the second constraint, it was initially mentioned that Q-V-NP was the canonical order. But it is also possible for this order Q-NP-V. However, if the NP immediately follows Q-did is definite, only the hal variant can be allowed. The definite article is indicated by the prefix ‘al-’ When this definite article is absent, the NP is interpreted as indefinite, and in this context, only the ‘2a’ variant is allowed. This is demonstrated in the following test suites:
+
+Source: p:7, Btoosh, attested
+Vetted:s
+Judgment: g
+Phenomena: {yes-no questions}
+hal 		alwaladu  		qadima
+hal 		al-walad-u  		qadim-a
+Q.did		the-boy.3.sg.m-nom	came-3sg.m
+Did the boy come?
+
+Source: p:7, Btoosh, attested
+Vetted:s
+Judgment: g
+Phenomena: {yes-no questions}
+2a		waladu  		qadima
+2a		walad-u  		qadim-a
+Q.did		boy.3.sg.m-nom	came-3sg.m
+Did a boy come?
+
+In order to model this behavior in our grammar we added both "hal" and "2a" as question particles in the Matrix Yes/No section of the questionaire. We marked both as obligatory and stated that they occur clause initially and only in the main clauses. However, we were unable to determine how to model the behavior that indicates that "hal" cannot be used to introduce clauses with indefinite subjects. We will focus on adjusting this feature in our .tdl editing.
+
+##### YES/NO QUESTIONS AS CLAUSAL COMPONENTS ##########
+Yes/No questions as clausal complements in Arabic use the particle "idha" instead of "hal" or "2a". The use of either of the two Yes/No question markers is, in fact, not permitted when the question is embedded. Additionally, "idha" must be placed at the beginning of the subordinate clause and the subject of that clause must be in the nominal case. Consider the example below: 
+
+Source: q:19, Alsager, attested
+Vetted:s
+Judgment: g
+Phenomena: {embedded questions}
+talab-a		alrajulu 		idha	albintu		qabalat	al2lwalada	
+talabl-a 	al-rajul-u		Q.if	al-bint-NOM	qabal-at	al-2lwalad-a	
+said-3sg.m DEF-man-NOM	that	DEF-girl-ACC		met-3.SG.F	DEF-boy-ACC
+'The man asked if the girl met the boy.'
+
+
+##### CLAUSAL MODIFIERS ##########
+
+A note on Clausal Modifiers: During this lab, we had a great deal of difficulty finding adequate examples of clausal modifiers such as those equivalent to "while" or "because" in academic texts. We were, however, able to find information on conditional statements. Because of this, our test suite and modifications focuses primarily on these conditonal statements. As we continue our work in subsequent labs, we will continue our search for sources that discuss further clausal modifiers. For the time being, however, we chose to model based on the sources we could find and we will continue to adjust this section in future labs.
+
+In Arabic, conditional clauses are marked by "2in", which is roughly equivalent to the English "if". Consider the sentence below:
+
+Source: g:86, Alotaibi attested
+Vetted:s
+Judgment: g
+Phenomena: {cl-mod}
+2in ja2a aliun yafuza
+2in ja2-a ali-un yafuz-a
+If come-pfv.3sgm ali-NOM win
+‘If Ali comes, he will win 
+
+This modifier, however, is often accompanied by an additional modifier "fa-" that takes the form of a prefix on the following clause, similar to the English "then". There are a few different times when this modifier is necessary. If the second clause lacks a verb (e.g. Zero Copula), if it begins with a preposition, auxiliary, or adverb, when the second clause is a imperative, or even if the speaker is attempting to negate the causal relationship between the two clauses. An example of a conditional statement featuring "fa-" is shown below:
+
+Source: g:120, Alotaibi attested
+Vetted:s
+Judgment: g
+Phenomena: {cl-mod}
+2in ja2a 2ahmadu faqum lahu
+2in ja2-a 2ahmad-u fa-qum la-hu
+If come-pfv.3sgm ahmad-NOM then-stand for-3sgm
+‘If Ahmad comes, then stand for him.’
+
+"fa-" can seemingly attach to anything but nouns. We were confused as to how to approach adding this feature to our grammar. After recieving clarification on Canvas that this "fa-" would not be considered a Clausal Modifier, we decided to omit it for this round, focusing only on sentences in its presence is unneccessary. 
+
+In order to model this behavior, we added a Clausal Modifier strategy to our grammar. We said that it is positioned before the matrix clause, that it modifies an S, and that it is contributed by a free subortinator morpheme "2in" that serves as the head and in the initial position of the S that it attaches to. 
+
+##### ARGUMENT OPTIONALITY ##########
+
+Arabic’s heavy use of dependent pronouns allows for a great deal of argument optionality. In most cases when a pronoun is used in Arabic, it will appear as a suffix on the noun, verb, or predicate that it is modifying. For example, consider the test suite below:
+
+Source: d:45, Albuhayri, attested
+Vetted: s
+Judgment: g
+Phenomena: {pn, wo}
+qabalanii Muhammadun
+qabal-a-nii Muhammad-un
+meet-PFV-1sg Muhammad-NOM
+'Muhammad met me.'
+
+In this case, the dependent object pronoun “nii” has been added to “qabala” to indicate that the object of the sentence is the speaker. Multiple forms of these pronouns can take place in one sentence, marking the subject, object, and possession, as shown below:
+
+Source: d:45, Albuhayri, attested
+Vetted: s
+Judgment: g
+Phenomena: {pn, wo}
+2a3taytuhu qalamii
+2a3tay-tu-hu qalam-ii
+Give-1sg-3sgm pen-1sg
+'I gave him my pen.'
+
+This pervasiveness of dependent pronouns can result in entire sentences being formed from a single word, as demonstrated in the examples below: 
+
+Source: d:45, Albuhayri, attested
+Vetted: s
+Judgment: g
+Phenomena: {pn, wo}
+ra2aytuhu
+ra2ay-tu-hu
+saw-1sg-3sgm
+'I saw him.'
+
+Source: d:2, Albuhayri, attested
+Vetted: s
+Judgment: g
+Phenomena: {pn, wo}
+qabalnaaka
+qabal-naa-ka
+meet-1pl-2sgmasc
+'We met you.'
+
+In order to model this behavior, we updated our argument optionality section to allow for both subject and object dropping to occur with any verb. We stated that the marker on the verb for both subject and object is required when the subject is dropped. We said that the marker is optional when the subject or object is overt, as we have observed some cases where this phenomenon occurs and we did not want to rule out that possibility. 
+
+Following this, we added the dependent pronouns for subjects and objects to our morphology section. We allowed for subject morphemes to attach to any verb, and object morphemes to attach to any transitive verbs, including those already modified by subject morphemes. We marked all of these morphemes with OVERT-ARG permitted, to indicate that they are required when the overt argument is dropped and optional when it is present.
+
+~~~~~~~~~~ OUR RESULTS ~~~~~~~~~~
+
+

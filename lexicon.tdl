@@ -177,7 +177,7 @@ yanj := intr-verb-lex &
   [ STEM < "yanj" >,
     SYNSEM.LKEYS.KEYREL.PRED "_succeed_v_rel" ].
 
-yafuz := intr-verb-lex &
+yafuz_1 := intr-verb-lex &
   [ STEM < "yafuz" >,
     SYNSEM.LKEYS.KEYREL.PRED "_win_v_rel" ].
 
@@ -188,6 +188,14 @@ qum := intr-verb-lex &
 dakar := intr-verb-lex &
   [ STEM < "dakar" >,
     SYNSEM.LKEYS.KEYREL.PRED "_study_v_rel" ].
+
+nam := intr-verb-lex &
+  [ STEM < "nam" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_sleep_v_rel" ].
+
+yafuz_2 := intr-verb-lex &
+  [ STEM < "yafuz" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_win_v_rel" ].
 
 hall := trans-verb-lex &
   [ STEM < "hall" >,
@@ -225,31 +233,31 @@ ra2ay := trans-verb-lex &
   [ STEM < "2a3tay" >,
     SYNSEM.LKEYS.KEYREL.PRED "_give_v_rel" ].
 
-qal_1 := verb_S-verb-lex &
-  [ STEM < "qal" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_say_v_rel" ].
-
-hasib_1 := verb_S-verb-lex &
+hasib_1 := trans_comp_2anna-verb-lex &
   [ STEM < "hasib" >,
     SYNSEM.LKEYS.KEYREL.PRED "_think_v_rel" ].
 
-hasib_2 := verb_S2-verb-lex &
-  [ STEM < "hasib" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_think_v_rel" ].
-
-qal_2 := verb_S3-verb-lex &
+qal_1 := trans_comp_2inna-verb-lex &
   [ STEM < "qal" >,
     SYNSEM.LKEYS.KEYREL.PRED "_say_v_rel" ].
+
+qal_2 := trans_comp_2an-verb-lex &
+  [ STEM < "qal" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_say_v_rel" ].
+
+hasib_2 := trans_comp_2an-verb-lex &
+  [ STEM < "hasib" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_think_v_rel" ].
 
 ;;; Adverbs
 
 lan := perf_neg-adverb-lex &
   [ STEM < "lan" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_neg_perf_a_rel" ].
+    SYNSEM.LKEYS.KEYREL.PRED "_neg_rel" ].
 
 la := prog_neg-adverb-lex & neg-adv-lex &
   [ STEM < "la" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_neg_prog_rel" & "neg_rel" ].
+    SYNSEM.LKEYS.KEYREL.PRED "_neg_rel" & "neg_rel" ].
 
 lam := question_neg-adverb-lex &
   [ STEM < "lam" >,
@@ -266,13 +274,17 @@ wa := conj-lex &
     SYNSEM.LKEYS.KEYREL.PRED "_and_coord_rel",
     CFORM "1" ].
 
+2in := shared-subject-clause-init-prehead-s-attach-perfective-subord-lex-item &
+  [ STEM < "2in" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_if_subord_rel" ].
+
 ;;; Complementizers
 
-2an := comps1-complementizer-lex-item &
-  [ STEM < "2an" > ].
-
-2anna := comps2-complementizer-lex-item &
+2anna := comps1-complementizer-lex-item &
   [ STEM < "2anna" > ].
 
-2inna := comps3-complementizer-lex-item &
+2inna := comps2-complementizer-lex-item &
   [ STEM < "2inna" > ].
+
+qan := comps3-complementizer-lex-item &
+  [ STEM < "qan" > ].

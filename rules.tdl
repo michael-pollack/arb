@@ -30,6 +30,8 @@ comp-head-2 := comp-head-phrase-2.
 
 head-adj-int := head-adj-int-phrase.
 
+poss-2 := poss-phrase-2.
+
 head-spec := head-spec-phrase.
 
 bare-np := bare-np-phrase.
@@ -155,5 +157,3 @@ s1-top-coord := s1-top-coord-rule.
 s1-mid-coord := s1-mid-coord-rule.
 
 s1-bottom-coord := s1-bottom-coord-rule.
-
-shared-subject-prehead-s-attach-modifying-clause-phrase := shared-subject-prehead-s-attach-modifying-clause-phrase.

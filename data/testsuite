@@ -12,6 +12,7 @@ Source f: Alotaibi, Y. H (2022). Adjectives in Arabic. Taif University.
 Source g: Obeidat, H, A (1984). Relative Clauses in Standard Arabic Resvisited. Studies in Linguistic Sciences, 14(2) 77-96
 Source h: Alotaibi, Y (2014) Conditional sentences in Modern Standard Arabic and the Taif Dialect. University of Essex. 
 Source p:  Btoosh, M. (2010). Wh-Movement in Standard Arabic: An Optimality-Theoretic 
+Source q: Alsager, Haroon N.. “The Syntax of Yes/No Questions in Modern Standard Arabic.” International Journal of English Linguistics 10 (2020): 179.
 
 #1-VS0 word order for transitive clauses with definite NP subjects
 Source: a:29, Amer Ahmed, attested
@@ -727,8 +728,8 @@ Source: i:3, Johannessen, attested
 Vetted: s
 Judgment: g
 Phenomena: {Coordination}
-al2lwaladanu		wa 		albintu			wasaluu
-al-2lwalad.DUAL-u	wa 		al-bint-u		wasal-uu
+al2lwaladanu			wa 		albintu			wasaluu
+al-2lwalad.DUAL-NOM	wa 		al-bint-u		wasal-uu
 DEF-boy-NOM 		CONJ 	DEF-girl-NOM	arrive-3.pl.m
 ‘The two boys and the girl arrived.’
 
@@ -738,7 +739,7 @@ Vetted: s
 Judgment: g
 Phenomena: {Coordination}
 al2lwaladanu		wa 		albintaniu			wasaluu
-al-2lwalad.DUAL-u	wa 		al-bintani-u			wasal-uu
+al-2lwalad.DUAL-NOM	wa 		al-bintani-u			wasal-uu
 DEF-boy-NOM 		CONJ 		DEF-girl.DUAL-NOM		arrive-3.pl.m
 ‘The two boys and the two girl arrived.’
 
@@ -747,9 +748,9 @@ Source: b:9, Mohammad A. Mohammad, attested
 Vetted: s
 Judgment: g 
 Phenomena: {coordination}
-albintu 		qabalat			al2lwalada	wa	alwaladu 	wasala	
-al-bint-u 		qabal-at		al-2lwalad-a	CONJ	al-walad-u 	wasal-a
-DEF-girl-u		met-3.SG.F		DEF-boy-ACC	and	DEF-boy-NOM	arrive-3.sg.m
+albintu 		qabalat	al2lwalada	wa	alwaladu 		wasala	
+al-bint-u 	qabal-at	al-2lwalad-a	CONJ	al-walad-u 		wasal-a
+DEF-girl-u	met-3.SG.F	DEF-boy-ACC	and	DEF-boy-NOM	arrive-3.sg.m
 'The girl met the boy and the boy arrived.'
 
 #76wa conjoins S, not VP
@@ -778,8 +779,8 @@ Source: i:3, Johannessen, attested
 Vetted: s
 Judgment: g
 Phenomena: {Coordination}
-alwaladu 	qadima		wa 		albintu 			wasalna
-al-walad-u 	qadim-a	wa 		al-bint-u 		wasal-na
+alwaladu 	qadima	wa 		albantu 		wasalna
+al-walad-u 	qadim-a	wa 		al-bant-u 		wasal-na
 DEF-boy-NOM came-3sg.m 	CONJ		DEF-girl-NOM		arrive-3pl.f
 ‘The boy came and the girls arrived.’
 
@@ -866,7 +867,7 @@ Source: i:3, Johannessen, attested
 Vetted: s
 Judgment: g
 Phenomena: {Coordination}
-albintu 	wa 	al2lwaladu			wasalala
+albintu 		wa 	alwaladu			wasalala
 al-bint-u 	wa 	al-2lwalad-u			wasal-ala
 DEF-girl-NOM	CONJ 	DEF-boy-NOM 		arrive-DUAL.m
 ‘The boy and the girl arrived.’
@@ -967,7 +968,7 @@ what	 read-3.sg.masc. 	DEF-boy-nom
 
 
 #### Possessives#############
-# Possession, Genetive Case, predicates
+#97 Possession, Genetive Case, predicates
 Source: a:207, Ahmed, attested
 Vetted:s
 Judgment: g
@@ -977,7 +978,7 @@ Zayd-un ma3ruuf-un bi-nazaahat-i-hi
 Zayd-NOM known-NOM for-honesty-GEN-his
 ‘Zayd is known for his honesty’
 
-# Possession, Genetive Case
+#98 Possession, Genetive Case
 Source: a:278, Ahmed, attested
 Vetted:s
 Judgment: g
@@ -987,7 +988,17 @@ Phenomena: {poss, pn}
 Annoyed-3sgm-me criticizing-NOM Zayd-GEN of-him.GEN
 ‘Zayd’s criticism of him annoyed me’
 
-# Possession, Genetive Case
+#98 Possession, Genetive Case
+Source: a:278, Ahmed, attested
+Vetted:f
+Judgment: g
+Phenomena: {poss, pn}
+2aqlaqanii ntiqaadu Zaydin 
+2aqlaq-a-nii ntiqaad-u Zayd-in
+Annoyed-3sgm-me criticizing-NOM Zayd-GEN
+‘Zayd’s criticism annoyed me’
+
+#99 Possession, Genetive Case
 Source: a:278, Ahmed, attested
 Vetted:s
 Judgment: g
@@ -996,6 +1007,16 @@ Phenomena: {poss, pn}
 2aqlaq-a-nii ntiqaad-u-hu Zayd-an
 Annoyed-3sgm-me criticizing-NOM-his.GEN Zayd-ACC
 ‘His criticism of Zayd annoyed me’
+
+# Possession, Genetive Case
+Source: a:278, Ahmed, attested
+Vetted:f
+Judgment: g
+Phenomena: {poss, pn}
+2aqlaqanii ntiqaaduhu Zaydan
+2aqlaq-a-nii ntiqaad-u-hu
+Annoyed-3sgm-me criticizing-NOM-his.GEN
+‘His criticism annoyed me’
 
 # Possession, Genetive Case, Genetive marker only occurs in teandem to genetive pronoun in subordinate clauses
 Source: a:278, Ahmed, attested
@@ -1022,14 +1043,44 @@ Source: d:2, AlQahtani, attested
 Vetted: s
 Judgment: g
 Phenomena: {pn, poss, det}
-zurtu dara 2al2jitami
+zuratu dara 2al2jitami
 zur-tu dar-a 2al-2jitam-i
 visited-I house-ACC the-orphans-GEN
 'I visited the orphans' house.'
 
+#29-pronouns, NPs, possession, word order
+Source: d:2, AlQahtani, attested
+Vetted: f
+Judgment: g
+Phenomena: {pn, poss, det}
+zurtu baytahu
+zur-tu bayt-a-hu
+visited-I house-ACC-his
+'I visited his house.'
+
+#29-pronouns, NPs, possession, word order
+Source: d:2, AlQahtani, attested
+Vetted: f
+Judgment: g
+Phenomena: {pn, poss, det}
+zurtu bayta muhammadi
+zur-tu bayt-a muhammad-i
+visited-I house-ACC muhammad-GEN
+'I visited Muhammad’s house.'
+
+#29-pronouns, NPs, possession, word order
+Source: d:2, AlQahtani, attested
+Vetted: f
+Judgment: u
+Phenomena: {wo}
+zurtu bayta muhammadi
+zur-tu bayt-a muhammad-i
+visited-I muhammad-GEN house-ACC
+'I visited Muhammad’s house.'
+
 #30-pronouns, NPs, possession, word order (genetive must follow its reference)
 Source: d:2, AlQahtani, attested
-Vetted: s
+Vetted: f
 Judgment: u
 Phenomena: {wo}
 zurtu 2al2jitami dara
@@ -1113,14 +1164,24 @@ said-3sg.m DEF-man-NOM	that	DEF-girl-NOM	met-3.SG.F	DEF-boy-ACC
 
 
 
-# clausal complements - 2an + perfective verb
+# clausal complements - qan + perfective verb, embedded subject NOM
 Source: b:19, Mohammad, attested
 Vetted:s
 Judgment: g
 Phenomena: {clausal complement}
-qala	alrajulu 		2an	alwaladu	yakula		altuffahata	
+qala	alrajulu 		qan	alwaladu	yakula		altuffahata	
 qal-a 	al-rajul-u		COMP	al-walad-u	yakul-a		al-tuffahat-a
 said-3sg.m DEF-man-NOM	that	DEF-boy-u	ate-PERF	DEF-boy-ACC
+'The man said that the boy has eaten the apple.’
+
+# clausal complements - qan + perfective verb, embedded subject ACC
+Source: b:19, Mohammad, attested
+Vetted:s
+Judgment: g
+Phenomena: {clausal complement}
+qala	alrajulu 		qan	alwalada	yakula		altuffahata	
+qal-a 	al-rajul-u		COMP	al-walad-a	yakul-a		al-tuffahat-a
+said-3sg.m DEF-man-NOM	that	DEF-boy-ACC	ate-PERF	DEF-boy-ACC
 'The man said that the boy has eaten the apple.’
 
 
@@ -1145,12 +1206,12 @@ qal-a 	al-rajul-u		COMP	al-walad-u	yakul-a		al-tuffahat-a
 said-3sg.m DEF-man-NOM	that	DEF-boy-u	ate-PERF	DEF-boy-ACC
 'The man said that the boy has eaten the apple.’
 
-# clausal complements - 2an + no perfective marker
+# clausal complements - qan + no perfective marker
 Source: b:19, Mohammad, attested
 Vetted:s
 Judgment: u
 Phenomena: {clausal complement}
-qala	alrajulu 		2an	alwaladu	yakul-a		altuffahata	
+qala	alrajulu 		qan	alwaladu	yakul-a		altuffahata	
 qal-a 	al-rajul-u		COMP	al-walad-u	yakul-a		al-tuffahat-a
 said-3sg.m DEF-man-NOM	that	DEF-boy-u	ate-3.sg.m	DEF-boy-ACC
 'The man said that the boy has eaten the apple.’
@@ -1302,26 +1363,90 @@ Q.did 	slept-3.sg.f 	the-girl-nom.
 
 #######yes-no questions as clausal complements(test-suite only0#######
 
-#######Clausal Modifiers###########
-#Clausal Modifiers, Conditional phrase without “fa”
-Source: g:86, Alotaibi attested
+# clausal complements - embedded yes-no , idha question marker, embedded subject NOM
+Source: q:19, Alsager, attested
 Vetted:s
 Judgment: g
-Phenomena: {cl-mod}
-2in dakara farisun yanjah2
-2in dakar-a faris-un yanj-a
-If study-pfv.3sgm faris-NOM succeed-pfv.3sgm
-‘If Faris studies, he will succeed’
+Phenomena: {embedded questions}
+talab-a		alrajulu 		idha	albintu		qabalat	al2lwalada	
+talabl-a 	al-rajul-u		Q.if	al-bint-NOM	qabal-at	al-2lwalad-a	
+said-3sg.m DEF-man-NOM	that	DEF-girl-ACC		met-3.SG.F	DEF-boy-ACC
+'The man asked if the girl met the boy.'
+
+
+# clausal complements - embedded yes-no , idha question marker, embedded subject ACC
+Source: q:19, Alsager, attested
+Vetted:s
+Judgment: u
+Phenomena: {embedded questions}
+talab-a		alrajulu 		idha	albinta		qabalat	al2lwalada	
+talabl-a 	al-rajul-u		Q.if	al-bint-a	qabal-at	al-2lwalad-a	
+said-3sg.m DEF-man-NOM	that	DEF-girl-ACC	met-3.SG.F	DEF-boy-ACC
+'The man asked if the girl met the boy.'
+
+# clausal complements - embedded yes-no , idha question marker, hal
+Source: q:19, Alsager, attested
+Vetted:s
+Judgment: u
+Phenomena: {embedded questions}
+talab-a		alrajulu 		hal	albintu		qabalat	al2lwalada	
+talabl-a 	al-rajul-u		Q.if	al-bint-u	qabal-at	al-2lwalad-a	
+said-3sg.m DEF-man-NOM	that	DEF-girl-NOM	met-3.SG.F	DEF-boy-ACC
+'The man asked if the girl met the boy.'
+
+# clausal complements - embedded yes-no , idha question marker, 2a
+Source: q:19, Alsager, attested
+Vetted:s
+Judgment: u
+Phenomena: {embedded questions}
+talab-a		alrajulu 		2a	albintu		qabalat	al2lwalada	
+talabl-a 	al-rajul-u		Q.if	al-bint-u	qabal-at	al-2lwalad-a	
+said-3sg.m DEF-man-NOM	that	DEF-girl-NOM	met-3.SG.F	DEF-boy-ACC
+'The man asked if the girl met the boy.'
+
+
+#######Clausal Modifiers###########
+
 
 #Clausal Modifiers, Conditional phrase without “fa”
 Source: g:86, Alotaibi attested
 Vetted:s
 Judgment: g
 Phenomena: {cl-mod}
-2in ja2a aliun yafuz fi alsibaqi
-2in ja2-a ali-un yafuz fi al-sibaq-i
-If come-pfv.3sgm ali-NOM win in the-competition-GEN
-‘If Ali comes, he will win the competition’
+2in ja2a aliun yafuz-a
+2in ja2-a ali-un yafuz-a
+If come-pfv.3sgm ali-NOM win-pfv.3sgm
+‘If Ali comes, he will win ’
+
+#Clausal Modifiers, Conditional phrase without “fa”
+Source: g:86, Alotaibi attested
+Vetted:f
+Judgment: g
+Phenomena: {cl-mod}
+2in ja2a aliun qabala muhammada
+2in ja2-a ali-un qabal-a muhammad-a
+If come-pfv.3sgm Ali-NOM meet-pfv.3sgm Muhammad-ACC
+‘If Ali comes, he will mee Muhammad ’
+
+#Clausal Modifiers, Conditional phrase without “fa”
+Source: g:86, Alotaibi attested
+Vetted:s
+Judgment: g
+Phenomena: {cl-mod}
+2in ja2a ahmadu dahab-a aliun
+2in ja2-a ahmad-u dahab-a ali-un
+If come-pfv.3sgm ahmad-NOM leave-PFV ali-NOM
+‘If Ahmad comes, Ali will honor him ’
+
+#Clausal Modifiers, Conditional phrase without “fa”
+Source: g:86, Alotaibi attested
+Vetted:f
+Judgment: u
+Phenomena: {wo}
+ja2a aliun 2in  yafuz-a
+ja2-a ali-un 2in yafuz-a
+come-pfv.3sgm ali-NOM if win-pfv.3sgm
+‘If Ali comes, he will win ’
 
 #Clausal Modifiers, Conditional phrase with fa
 Source: g:124, Alotaibi attested
@@ -1456,6 +1581,7 @@ ra2aytuhu
 ra2ay-tu-hu
 saw-1sg-3sgm
 'I saw him.'
+
 
 
 
