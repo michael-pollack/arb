@@ -993,8 +993,8 @@ Source: a:278, Ahmed, attested
 Vetted:f
 Judgment: g
 Phenomena: {poss, pn}
-2aqlaqanii ntiqaadu Zaydin 
-2aqlaq-a-nii ntiqaad-u Zayd-in
+2aqlaqanii ntiqaadu Zaydi
+2aqlaq-a-nii ntiqaad-u Zayd-i
 Annoyed-3sgm-me criticizing-NOM Zayd-GEN
 ‘Zayd’s criticism annoyed me’
 
@@ -1013,7 +1013,7 @@ Source: a:278, Ahmed, attested
 Vetted:f
 Judgment: g
 Phenomena: {poss, pn}
-2aqlaqanii ntiqaaduhu Zaydan
+2aqlaqanii ntiqaaduhu 
 2aqlaq-a-nii ntiqaad-u-hu
 Annoyed-3sgm-me criticizing-NOM-his.GEN
 ‘His criticism annoyed me’
@@ -1033,8 +1033,8 @@ Source: a:278, Ahmed, attested
 Vetted:s
 Judgment: u
 Phenomena: {poss}
-2aqlaqanii ntiqaaduhu Zaydin
-2aqlaqa-a-nii ntiqaad-u-hu Zayd-in
+2aqlaqanii ntiqaaduhu Zaydi
+2aqlaqa-a-nii ntiqaad-u-hu Zayd-i
 Annoyed-3sgm-me criticizing-NOM-his.GEN Zayd-GEN
 ‘Intended: His criticism of Zayd annoyed me’
 
@@ -1073,8 +1073,8 @@ Source: d:2, AlQahtani, attested
 Vetted: f
 Judgment: u
 Phenomena: {wo}
-zurtu bayta muhammadi
-zur-tu bayt-a muhammad-i
+zurtu muhammadi bayta
+zur-tu muhammad-i bayt-a
 visited-I muhammad-GEN house-ACC
 'I visited Muhammad’s house.'
 
@@ -1368,7 +1368,7 @@ Source: q:19, Alsager, attested
 Vetted:s
 Judgment: g
 Phenomena: {embedded questions}
-talab-a		alrajulu 		idha	albintu		qabalat	al2lwalada	
+talaba		alrajulu 		idha	albintu		qabalat	al2lwalada	
 talabl-a 	al-rajul-u		Q.if	al-bint-NOM	qabal-at	al-2lwalad-a	
 said-3sg.m DEF-man-NOM	that	DEF-girl-ACC		met-3.SG.F	DEF-boy-ACC
 'The man asked if the girl met the boy.'
@@ -1379,7 +1379,7 @@ Source: q:19, Alsager, attested
 Vetted:s
 Judgment: u
 Phenomena: {embedded questions}
-talab-a		alrajulu 		idha	albinta		qabalat	al2lwalada	
+talaba		alrajulu 		idha	albinta		qabalat	al2lwalada	
 talabl-a 	al-rajul-u		Q.if	al-bint-a	qabal-at	al-2lwalad-a	
 said-3sg.m DEF-man-NOM	that	DEF-girl-ACC	met-3.SG.F	DEF-boy-ACC
 'The man asked if the girl met the boy.'
@@ -1413,7 +1413,7 @@ Source: g:86, Alotaibi attested
 Vetted:s
 Judgment: g
 Phenomena: {cl-mod}
-2in ja2a aliun yafuz-a
+2in ja2a aliun yafuza
 2in ja2-a ali-un yafuz-a
 If come-pfv.3sgm ali-NOM win-pfv.3sgm
 ‘If Ali comes, he will win ’
@@ -1443,7 +1443,7 @@ Source: g:86, Alotaibi attested
 Vetted:f
 Judgment: u
 Phenomena: {wo}
-ja2a aliun 2in  yafuz-a
+ja2a aliun 2in yafuza
 ja2-a ali-un 2in yafuz-a
 come-pfv.3sgm ali-NOM if win-pfv.3sgm
 ‘If Ali comes, he will win ’
@@ -1551,6 +1551,16 @@ qabalnaaka
 qabal-naa-ka
 meet-1pl-2sgmasc
 'We met you.'
+
+#31-pronouns
+Source: d:2, Albuhayri, attested
+Vetted: s
+Judgment: g
+Phenomena: {pn, wo}
+qabalkanaa
+qabal-ka-naa
+meet-2sgmasc-1pl
+'Intended: We met you.'
 
 #31-pronouns
 Source: d:45, Albuhayri, attested

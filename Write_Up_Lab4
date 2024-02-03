@@ -143,18 +143,19 @@ Did a boy come?
 
 In order to model this behavior in our grammar we added both "hal" and "2a" as question particles in the Matrix Yes/No section of the questionaire. We marked both as obligatory and stated that they occur clause initially and only in the main clauses. However, we were unable to determine how to model the behavior that indicates that "hal" cannot be used to introduce clauses with indefinite subjects. We will focus on adjusting this feature in our .tdl editing.
 
-##### YES/NO QUESTIONS AS CLAUSAL COMPONENTS ##########
+##### YES/NO QUESTIONS AS CLAUSAL COMPONENTS (TEST SUITE ONLY) ##########
 Yes/No questions as clausal complements in Arabic use the particle "idha" instead of "hal" or "2a". The use of either of the two Yes/No question markers is, in fact, not permitted when the question is embedded. Additionally, "idha" must be placed at the beginning of the subordinate clause and the subject of that clause must be in the nominal case. Consider the example below: 
 
 Source: q:19, Alsager, attested
 Vetted:s
 Judgment: g
 Phenomena: {embedded questions}
-talab-a		alrajulu 		idha	albintu		qabalat	al2lwalada	
-talabl-a 	al-rajul-u		Q.if	al-bint-NOM	qabal-at	al-2lwalad-a	
+talaba		alrajulu 		idha	albintu		qabalat	al2lwalada	
+talab-a 	al-rajul-u		Q.if	al-bint-NOM	qabal-at	al-2lwalad-a	
 said-3sg.m DEF-man-NOM	that	DEF-girl-ACC		met-3.SG.F	DEF-boy-ACC
 'The man asked if the girl met the boy.'
 
+This phenomenon was not included in our grammar for this week, though we have included test suite examples that we hope to model in the future. 
 
 ##### CLAUSAL MODIFIERS ##########
 
@@ -236,4 +237,159 @@ Following this, we added the dependent pronouns for subjects and objects to our 
 
 ~~~~~~~~~~ OUR RESULTS ~~~~~~~~~~
 
+After running our test suite of 145 items, we found that our grammar had overall coverage of 59.3% of the sentences that we included, with 37.3% overgeneration. A great deal of the missed sentences fortunately had to do with additional items in our test suite that weren't covered in this lab. Most of the items that we meant to adress were indeed covered.
 
+##### POSSESSIVES ##########
+Our tests for possessives seemed to go well. Simple sentences such as the one below were able to pass easily:
+
+Source: d:2, AlQahtani, attested
+Vetted: f
+Judgment: g
+Phenomena: {pn, poss, det}
+zurtu baytahu
+zur-tu bayt-a-hu
+visited-I house-ACC-his
+'I visited his house.'
+
+Curiously though, the test suite seemed to have trouble with the genitive case, as it indicated that the following sentence did not parse:
+
+Source: d:2, AlQahtani, attested
+Vetted: f
+Judgment: g
+Phenomena: {pn, poss, det}
+zurtu bayta muhammadi
+zur-tu bayt-a muhammad-i
+visited-I house-ACC muhammad-GEN
+'I visited Muhammad’s house.'
+
+However, upon parsing this sentence individually in the LKB, there did not seem to be any issue here. It seems that the grammar is parsing this correctly, but there is some issue with our test suite example or with tsdb. 
+
+##### DECLARATIVE CLAUSAL COMPONENTS ##########
+This section was very successful for us. It appears that all of our examples in the test suite here passed. The grammar correctly predicted all of our grammatical examples such as the following:
+
+Source: b:19, Mohammad, attested
+Vetted:s
+Judgment: g
+Phenomena: {clausal complement}
+qala	alrajulu 		qan	alwalada	yakula		altuffahata	
+qal-a 	al-rajul-u		COMP	al-walad-a	yakul-a		al-tuffahat-a
+said-3sg.m DEF-man-NOM	that	DEF-boy-ACC	ate-PERF	DEF-boy-ACC
+'The man said that the boy has eaten the apple.’
+
+It also correctly rejected our ungrammatical tests, such as the following:
+
+Source: b:19, Mohammad, attested
+Vetted:s
+Judgment: u
+Phenomena: {clausal complement}
+qala	alrajulu 		2anna	alwaladu	yakula		altuffahata	
+qal-a 	al-rajul-u		COMP	al-walad-u	yakul-a		al-tuffahat-a
+said-3sg.m DEF-man-NOM	that	DEF-boy-u	ate-PERF	DEF-boy-ACC
+'The man said that the boy has eaten the apple.’
+
+In future labs, we will try adding additional test suite items for this phenomenon to push the limits of our grammar's accuracy.
+
+##### MATRIX YES/NO QUESTIONS ##########
+For our matrix yes/no questions, we encountered some expected overgeneration. Because we were unable to account for restrictions on "2a" being aplied to only indefinite nouns, we saw our grammar incorrectly parse examples such as the following: 
+
+Source: p:7, Btoosh, attested
+Vetted:s
+Judgment: u
+Phenomena: {yes-no questions}
+2a 		waladu  		qadima
+2a 		walad-u  		qadim-a
+Q.did		boy.3.sg.m-nom	came-3sg.m
+Intended: Did the boy come?
+
+However, the rest of our examples appeared to parse correctly. Similar to declaritive clausal components, we will attempt to push these tests further in future labs. 
+
+##### CLAUSAL MODIFIERS ##########
+We faced a puzzling issue with clausal modifiers. It appears that the grammar is correctly able to parse these sentences when there is only one subject, as in the case of the following example. 
+
+On one hand, we faced another example of what appears to be a mismatch between our test suite and the lkb. For example, the following test suite entry was marked as not correctly parsed, but it appears to parse just fine when put independently into the grammar:
+
+Source: g:86, Alotaibi attested
+Vetted:f
+Judgment: g
+Phenomena: {cl-mod}
+2in ja2a aliun qabala muhammada
+2in ja2-a ali-un qabal-a muhammad-a
+If come-pfv.3sgm Ali-NOM meet-pfv.3sgm Muhammad-ACC
+‘If Ali comes, he will mee Muhammad ’
+
+On the other hand, conditional sentences featuring two subject do not parse at all. For example, the following test suite did not parse in tsdb or the LKB:
+
+Source: g:86, Alotaibi attested
+Vetted:s
+Judgment: g
+Phenomena: {cl-mod}
+2in ja2a ahmadu dahab-a aliun
+2in ja2-a ahmad-u dahab-a ali-un
+If come-pfv.3sgm ahmad-NOM leave-PFV ali-NOM
+‘If Ahmad comes, Ali will honor him ’
+
+This makes sense when looking at the parse chart. "2in" wants to attach itself to a VP, which then forms a PP that modifies an S. So for "2in ja2-a ali-un qabal-a muhammad-a", "2in ja2a" forms a PP, while the rest of the sentence forms an S. That means that when there is an additional NP, the grammar doesn't know what to do with it, and so it does not parse. Our challenge moving forwards here will be to modify our implementation of Clausal Modifiers so that they can attach to an S as well as a VP to more accurately model their usage in Arabic. 
+
+##### ARGUMENT OPTIONALITY ##########
+
+The addition of Argument Optionality was possibly our biggest breakthrough for this lab. This phenomenon is so heavily used in Arabic that a great deal of our sentences likely would not parse without it. 
+
+The grammar is able to correctly add dependent pronouns to create shortened sentences such as the following: 
+
+Source: d:45, Albuhayri, attested
+Vetted: s
+Judgment: g
+Phenomena: {pn, wo}
+qabalanii Muhammadun
+qabal-a-nii Muhammad-un
+meet-PFV-1sg Muhammad-NOM
+'Muhammad met me.'
+
+Source: d:45, Albuhayri, attested
+Vetted: s
+Judgment: g
+Phenomena: {pn, wo}
+2a3taytuhu qalamii
+2a3tay-tu-hu qalam-ii
+Give-1sg-3sgm pen-1sg
+'I gave him my pen.'
+
+The grammar was also able to add these pronouns in the correct order depending on subject and object, correctly parsing the first example below and rejecting the second:
+
+Source: d:2, Albuhayri, attested
+Vetted: s
+Judgment: g
+Phenomena: {pn, wo}
+qabalnaaka
+qabal-naa-ka
+meet-1pl-2sgmasc
+'We met you.'
+
+Source: d:2, Albuhayri, attested
+Vetted: s
+Judgment: g
+Phenomena: {pn, wo}
+qabalkanaa
+qabal-ka-naa
+meet-2sgmasc-1pl
+'Intended: We met you.'
+
+There is still work to be done here, as additional sentences were rejected in our test suite due to the adjectives attaching to prepositions that have not yet been implemented, as is seen in the following example:
+
+Source: d:2, Albuhayri, attested
+Vetted: s
+Judgment: g
+Phenomena: {pn}
+sallamtu 3alayhim 
+sallam-tu 3alay-him
+greeted-1sg on-3plmasc
+'I greeted them.'
+
+We hope to address this in future labs. 
+
+~~~~~~~~~~ CONCLUSION ~~~~~~~~~~
+We're getting the hang of this! 
+
+This week featured a lot less of struggling with the software and a lot more of ironing out the phenomena we wanted to include. There were still a few bugs that we wanted to investigate further, namely the discrepancies between our LKB parsing and the TSDB results. Additonally, we hope to give Clausal Modifiers more attention in the future; we will work to find good sources for other modifiers, figure out how to get "2in" to attach to sentences, and eventually get the "fa-" modifier correctly attaching to the opposite clause. 
+
+We were happy to see that our grammar is seeming to parse most of the sentences that we expect it to. We will need to work a bit to curb some of the overgeneration, but overall we consider our progress this week to be successful. 
