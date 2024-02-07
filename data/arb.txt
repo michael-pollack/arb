@@ -1,74 +1,25 @@
-Dogs sleep
 kilab-u namat-uu
-
-Dogs chase cars
 kilab-u tutarid-uu sayaar-a
-
-I chase you
 tutarid-tu-ka
-
-Dogs eat
 kilab-u yakul-uu
-
-The dogs dont chase cars
 al-kilab-u lan tutarid-a sayaar-a
-
-I think that you know that dogs chase cars
 hasib-tu 2anna 2araf-ta 2anna kilab-u tutarid-uu sayaar-a
-
-I ask whether you know that dogs chase cars
 talab-tu idha 2araf-ta 2anna kilab-u tutarid-uu sayaar-a
-
-Cats and dogs chase cars
 qitat-u wa kulab-u tutarid-uu sayaar-a
-
-Dogs chase cars and cats chase dogs
 kilab-u tutarid-uu sayaar-a wa qitat-u tutarid-uu kilab-a
-
-Cats chase dogs and sleep
 qitat-u tutarid-uu kilab-a wa qitat-u namat-uu
-
-Do cats chase dogs
 2a qitat-u tutarid-uu kilab-a
-
-Hungry dogs eat
 yakul-uu kilab-un jay-un
-
-Dogs in the park eat
 kilab-u fi hadiq-i yakul-uu
-
-The dogs are hungry
 al-kilab-u jay-un
-
-The dogs are in the park
 al-kilab-u fi al-hadiq-i
-
-The dogs are the cats
 al-kilabu hi al-qitat-a
-
-The dog s car sleeps
 al-sayaar-u al-kalb-i namat-a
-
-My dogs sleep
 kilab-tu namat-uu
-
-Who sleeps
 man namat-a
-
-What do the dogs chase
 madha tutarid-uu al-kilab-u
-
-*What do you think the dogs chase
 madha hasib-ta tutarid-uu al-kilab-u
-
-*Who asked what the dogs chase
 man talab-a madha tutarid-uu al-kilab-u 
-
-I asked what the dogs chased
 talab-tu madha tutarid-uu al-kilab-u
-
-The dog sleeps because the cat sleeps
 li2ana al-qat-u namat-a al-kalb-u namat-a
-
-The dog sleeps after the cat sleeps
 bead2an al-qat-u namat-a al-kalb-u namat-a
