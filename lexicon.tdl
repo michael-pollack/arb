@@ -81,13 +81,13 @@ Ali := proper-noun-lex &
   [ STEM < "Ali" >,
     SYNSEM.LKEYS.KEYREL.PRED "_Ali_n_rel" ].
 
-2anta := ind_subj_pn-noun-lex &
+2anta := ind_subj_pn_2sg-noun-lex &
   [ STEM < "2anta" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_2sg_masc_subj_rel" ].
+    SYNSEM.LKEYS.KEYREL.PRED "pron_rel" ].
 
-2iyyaaka := ind_obj_pn-noun-lex &
+2iyyaaka := ind_obj_pn_2sg-noun-lex &
   [ STEM < "2iyyaaka" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_2sg_masc_obj_rel" ].
+    SYNSEM.LKEYS.KEYREL.PRED "pron_rel" ].
 
 tullaab := common_3plmasc-noun-lex &
   [ STEM < "tullaab" >,
@@ -113,6 +113,14 @@ mas2akil := common_3plmasc-noun-lex &
   [ STEM < "2lwalad" >,
     SYNSEM.LKEYS.KEYREL.PRED "_boys_n_rel" ].
 
+kilab := common_3plmasc-noun-lex &
+  [ STEM < "kilab" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_dog_n_rel" ].
+
+qitat := common_3plmasc-noun-lex &
+  [ STEM < "qitat" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_cat_n_rel" ].
+
 bint := common_3sgfem-noun-lex &
   [ STEM < "bint" >,
     SYNSEM.LKEYS.KEYREL.PRED "_girl_n_rel" ].
@@ -137,13 +145,25 @@ waladan := common_3dual_masc-noun-lex &
   [ STEM < "waladan" >,
     SYNSEM.LKEYS.KEYREL.PRED "_boys_dual_n_rel" ].
 
-2anaa := 1persgpronoun-noun-lex &
+2anaa := ind_subj_pn_1sg-noun-lex &
   [ STEM < "2anaa" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_1stsgperoronoun_n_rel" ].
+    SYNSEM.LKEYS.KEYREL.PRED "pron_rel" ].
 
-nahnu := 1stperplural-noun-lex &
+nahnu := ind_subj_pn_1pl-noun-lex &
   [ STEM < "nahnu" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_we_n_rel" ].
+    SYNSEM.LKEYS.KEYREL.PRED "pron_rel" ].
+
+2iyyaya := ind_obj_pn_1sg-noun-lex &
+  [ STEM < "2iyyaya" >,
+    SYNSEM.LKEYS.KEYREL.PRED "pron_rel" ].
+
+huwa := ind_subj_pn_3sgm-noun-lex &
+  [ STEM < "huwa" >,
+    SYNSEM.LKEYS.KEYREL.PRED "pron_rel" ].
+
+2iyyaahu := ind_obj_pn_3sgm-noun-lex &
+  [ STEM < "2iyyaahu" >,
+    SYNSEM.LKEYS.KEYREL.PRED "pron_rel" ].
 
 ;;; Adjectives
 
@@ -158,6 +178,10 @@ karim := common-adj-lex &
 mujtahid := common-adj-lex &
   [ STEM < "mujtahid" >,
     SYNSEM.LKEYS.KEYREL.PRED "_assiduous_adj_rel" ].
+
+fi := normadp1-norm-adposition-lex &
+  [ STEM < "fi" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_in_p_rel" ].
 
 ;;; Verbs
 
@@ -274,9 +298,17 @@ wa := conj-lex &
     SYNSEM.LKEYS.KEYREL.PRED "_and_coord_rel",
     CFORM "1" ].
 
-2in := shared-subject-clause-init-prehead-s-attach-perfective-subord-lex-item &
+2in := shared-subject-clause-init-prehead-perfective-subord-lex-item &
   [ STEM < "2in" >,
     SYNSEM.LKEYS.KEYREL.PRED "_if_subord_rel" ].
+
+baed2an := shared-subject-clause-init-prehead-perfective-subord-lex-item &
+  [ STEM < "baed2an" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_after_subord_rel" ].
+
+li2ana := shared-subject-clause-init-prehead-perfective-subord-lex-item &
+  [ STEM < "li2ana" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_because_subord_rel" ].
 
 ;;; Complementizers
 

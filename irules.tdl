@@ -1,126 +1,134 @@
 ;;; -*- Mode: TDL; Coding: utf-8 -*-
 ;;; Inflecting Lexical Rule Instances
 
-subject-suffix1 :=
-%suffix (* u)
-subject-lex-rule.
+subjectdef-suffix :=
+%suffix (* -u)
+subjectdef-lex-rule.
 
-subject-suffix2 :=
-%suffix (* un)
-subject-lex-rule.
-
-object-suffix :=
-%suffix (* a)
-object-lex-rule.
+objectdef-suffix :=
+%suffix (* -a)
+objectdef-lex-rule.
 
 gencase-suffix :=
-%suffix (* i)
+%suffix (* -i)
 gencase-lex-rule.
 
+subjectindef-suffix :=
+%suffix (* -un)
+subjectindef-lex-rule.
+
+objectindef-suffix :=
+%suffix (* -an)
+objectindef-lex-rule.
+
 the-prefix :=
-%prefix (* al)
+%prefix (* al-)
 the-lex-rule.
 
 posspn-suffix1 :=
-%suffix (* hu)
+%suffix (* -hu)
 posspn-lex-rule.
 
 posspn-suffix2 :=
-%suffix (* ki)
+%suffix (* -ki)
 posspn-lex-rule.
 
 posspn-suffix3 :=
-%suffix (* hi)
+%suffix (* -hi)
 posspn-lex-rule.
 
 posspn-suffix4 :=
-%suffix (* ii)
+%suffix (* -ii)
 posspn-lex-rule.
 
 posspn-suffix5 :=
-%suffix (* tu)
+%suffix (* -tu)
 posspn-lex-rule.
 
 imperf-suffix :=
-%suffix (* u)
+%suffix (* -u)
 imperf-lex-rule.
 
 perf-suffix :=
-%suffix (* a)
+%suffix (* -a)
 perf-lex-rule.
 
 3sgm-suffix :=
-%suffix (* a)
+%suffix (* -a)
 3sgm-lex-rule.
 
 3sgfem-suffix :=
-%suffix (* at)
+%suffix (* -at)
 3sgfem-lex-rule.
 
 3plm-suffix :=
-%suffix (* uu)
+%suffix (* -uu)
 3plm-lex-rule.
 
 3plfem-suffix :=
-%suffix (* na)
+%suffix (* -na)
 3plfem-lex-rule.
 
 3dualfem-suffix :=
-%suffix (* ata)
+%suffix (* -ata)
 3dualfem-lex-rule.
 
 3dualmasc-suffix :=
-%suffix (* ala)
+%suffix (* -ala)
 3dualmasc-lex-rule.
 
 1sg_v_subj-suffix1 :=
-%suffix (* tu)
+%suffix (* -tu)
 1sg_v_subj-lex-rule.
 
 1sg_v_subj-suffix2 :=
-%suffix (* nii)
+%suffix (* -nii)
 1sg_v_subj-lex-rule.
 
 1pl_v_subj-suffix :=
-%suffix (* naa)
+%suffix (* -naa)
 1pl_v_subj-lex-rule.
 
 3pl_v_masc_subj-suffix1 :=
-%suffix (* wa)
+%suffix (* -wa)
 3pl_v_masc_subj-lex-rule.
 
 3pl_v_masc_subj-suffix2 :=
-%suffix (* uu)
+%suffix (* -uu)
 3pl_v_masc_subj-lex-rule.
 
 1sg_pn_obj-suffix1 :=
-%suffix (* ya)
+%suffix (* -ya)
 1sg_pn_obj-lex-rule.
 
 1sg_pn_obj-suffix2 :=
-%suffix (* nii)
+%suffix (* -nii)
 1sg_pn_obj-lex-rule.
 
 2sg_masc_pn_obj-suffix :=
-%suffix (* ka)
+%suffix (* -ka)
 2sg_masc_pn_obj-lex-rule.
 
 3sg_masc_pn_obj-suffix :=
-%suffix (* hu)
+%suffix (* -hu)
 3sg_masc_pn_obj-lex-rule.
 
 defagrpos-prefix :=
-%prefix (* al)
+%prefix (* al-)
 defagrpos-lex-rule.
 
-caseagrnom-suffix :=
-%suffix (* u)
-caseagrnom-lex-rule.
+caseagrnomdef-suffix :=
+%suffix (* -u)
+caseagrnomdef-lex-rule.
 
-caseagracc-suffix :=
-%suffix (* a)
-caseagracc-lex-rule.
+caseagraccdef-suffix :=
+%suffix (* -a)
+caseagraccdef-lex-rule.
 
-nonpos-suffix :=
-%suffix (* n)
-nonpos-lex-rule.
+caseagrnomindef-suffix :=
+%suffix (* -un)
+caseagrnomindef-lex-rule.
+
+caseagraccindef-suffix :=
+%suffix (* -an)
+caseagraccindef-lex-rule.

@@ -1,6 +1,6 @@
 Language: Modern_Standard_Arabic
 Language code: arb
-Lines: translit translit-seg gloss translat
+Lines: translit-seg gloss translat
 Author: Benjamin Pong, Michael P. Pollack
 Date: 17/1/2024
 Source a: Ahmed, A. M. T. (2016). Case in Standard Arabic: A dependent case approach.
@@ -19,7 +19,6 @@ Source: a:29, Amer Ahmed, attested
 Vetted: s
 Judgment: g
 Phenomena: {word order, determiner}
-halla 		altalibu 	almas2alata.
 hall-a 		al-talib-u 	al-mas2alat-a.
 solved-3.SG.M	the-student-NOM	the-problem-ACC
 'The student solved the problem.'
@@ -29,7 +28,6 @@ Source: a:29, Amer Ahmed, attested
 Vetted: s
 Judgment: g
 Phenomena: {word order, determiner}
-altalibu 	halla 		almas2alata.
 al-talib-u 	hall-a 		al-mas2alat-a.
 the-student-NOM	 solved-3.SG.M 	the-problem-ACC
 'The student solved the problem'
@@ -39,7 +37,6 @@ Source: a:29, Amer Ahmed, attested
 Vetted: s
 Judgment: g
 Phenomena: {word order, determiner}
-almas2alata	 	    halla			altalibu.
 al-mas2alat-a	 	hall-a			al-talib-u.
 the-problem-ACC 	solved-3.SG.M	 the-student-NOM
 ‘It was the problem that the student solved.’
@@ -49,7 +46,6 @@ Source: a:29, b:3, Amer Ahmed, Mohammad A. Mohammad, attested
 Vetted: s
 Judgment: g
 Phenomena: {word order, determiner}
-altalibu    almas2alata	 	halla.
 al-talib-u al-mas2alat-a	 hall-a.
 the-student-nom the-problem-ACC 	solved-3.SG.M
 'It was the problem that the student solved.'
@@ -59,7 +55,6 @@ Source: a:29, Amer Ahmed, attested
 Vetted: s
 Judgment: g
 Phenomena: {word order, determiner}
-halla 		almas2alata 		altalibu.
 hall-a 		al-mas2alat-a 		al-talib-u.
 solved-3.SG.M 	the-problem-ACC 	the-student-NOM
 'It was the problem that the student solved.'
@@ -69,7 +64,6 @@ Source: a:29,b:3 Amer Ahmed, Mohammad A. Mohammad, attested
 Vetted: s
 Judgment: g
 Phenomena: {word order, determiner}
-almas2alata  		altalibu 		halla
 al-mas2alat-a  		al-talib-u 		hall-a
 the-problem-ACC 	the-student-NOM 	solved-3.SG.M
 'The problem, the student, he solved it.'
@@ -79,7 +73,6 @@ Source: b:2, Mohammad A. Mohammad, attested
 Vetted: s
 Judgment: g 
 Phenomena: {word order, determiner}
-wasala	 		alwaladu
 wasal-a	 		al-walad-u
 arrived-3.SG.M		the-boy-NOM
 'The boy arrived.'
@@ -89,7 +82,6 @@ Source: b:2, Mohammad A. Mohammad, attested
 Vetted: s
 Judgment: g 
 Phenomena: {word order, determiner}
-alwaladu		wasala	 
 al-walad-u		wasal-a	 
 the-boy-NOM		arrived-3.SG.M
 'The boy arrived.'
@@ -99,7 +91,6 @@ Source: b:9, Mohammad A. Mohammad, attested
 Vetted: s
 Judgment: g 
 Phenomena: {word order, determiner}
-qabala 		rajulu 	walada
 qabal-a 	rajul-u 	walad-a
 met-3.SG.M	man-NOM		boy-ACC
 'A man met a boy.'
@@ -109,7 +100,6 @@ Source: b:9, Mohammad A. Mohammad, attested
 Vetted: s
 Judgment: g 
 Phenomena: {word order, determiner}
-qabala 	walada	rajulu 
 qabal-a 	walad-a	rajul-u 
 met-3.SG.M	boy-ACC	man-NOM
 'A man met the boy.'
@@ -119,7 +109,6 @@ Source: b:9, Mohammad A. Mohammad, attested
 Vetted: s
 Judgment: u
 Phenomena: {word order, determiner}
-rajulu 	    qabala 	    walada
 rajul-u 	qabal-a 	walad-a	
 man-NOM		met-3.sg.m	boy-ACC	
 'A man met a boy.'
@@ -130,7 +119,6 @@ Source: b:10, Mohammad A. Mohammad, attested
 Vetted: s
 Judgment: u
 Phenomena: {word order, determiner}
-rajulu 	    walada	qabala 
 rajul-u 	walad-a	qabal-a 		
 man-NOM		boy-ACC	met-3.SG.M	
 'A man met a boy.'
@@ -140,7 +128,6 @@ Source: b:10, Mohammad A. Mohammad, attested
 Vetted: s
 Judgment: u
 Phenomena: {word order, determiner}
-walada 	rajulu		qabala 
 walad-a 	rajul-u		qabal-a 		
 boy-ACC man-NOM		met-3.SG.M	
 'A man met a boy.'
@@ -151,7 +138,6 @@ Source: b:10, Mohammad A. Mohammad, attested
 Vetted: s
 Judgment: u
 Phenomena: {word order, determiner}
-walada 	    	qabala 	    	rajulu	
 walad-a 	qabal-a 	rajul-u			
 boy-ACC 	met-3.SG.M	man-NOM	
 'A man met a boy.'
@@ -161,7 +147,6 @@ Source: b:9, Mohammad A. Mohammad, attested
 Vetted: s
 Judgment: g
 Phenomena: {word order, determiner}
-waladu 	    qadima 
 walad-u 	qadim-a 			
 boy-NOM 	came-3.SG.M	
 'A boy came.'
@@ -171,7 +156,6 @@ Source: b:9, Mohammad A. Mohammad, attested
 Vetted: s
 Judgment: u
 Phenomena: {word order, determiner}
-qadima 	    waladu 
 qadim-a 	walad-u 		
  came-3.SG.M	boy-NOM	
 'A boy came.'
@@ -183,7 +167,6 @@ Source: b:7, Mohammad A. Mohammad, attested
 Vetted: s
 Judgment: g
 Phenomena: {case}
-qabala	 	    alwaladu      		alarnaba
 qabal-a	 	    al-walad-u      	al-arnab-a
 met-3sg.m		the-boy-nom         the-rabbit-acc
 'The boy met the rabbit.'
@@ -193,7 +176,6 @@ Source: b:7, Mohammad A. Mohammad, attested
 Vetted: s
 Judgment: g
 Phenomena: {case}
-qabala	 	    waladu      	arnaba
 qabal-a	 	    walad-u      	arnab-a
 met-3sg.m		boy-nom     rabbit-acc
 'A boy met a rabbit.'
@@ -204,7 +186,6 @@ Source: b:7, Mohammad A. Mohammad, attested
 Vetted: s
 Judgment: u
 Phenomena: {case}
-qabala	 	    alwalada			alarnabu
 qabala-a	 	al-walad-a		al-arnab-u
 met-3sg.m		the-boy-acc	        the-rabbit-nom
 'The boy met the rabbit.'
@@ -214,7 +195,6 @@ Source: b:7, Mohammad A. Mohammad, attested
 Vetted: s
 Judgment: u
 Phenomena: {case}
-qabala	 	   	walada			arnabu
 qabala-a	 	walad-a			arnab-u
 met-3sg.m		boy-acc	        rabbit-nom
 'A boy met the rabbit.'
@@ -224,7 +204,6 @@ Source: c:2, Alonini, attested
 Vetted: s
 Judgment: g
 Phenomena: {case}
-wasala	 		    alwaladu
 wasal-a	 		    al-walad-u
 arrived-3sg.m		the-boy-nom
 'The boy arrived.'
@@ -235,7 +214,6 @@ Source: c:2, Alonini, attested
 Vetted: s
 Judgment: u
 Phenomena: {case}
-wasala	 		    alwalada
 wasal-a	 		    al-walad-a
 arrived-3sg.m		the-boy-acc
 'The boy arrived.'
@@ -245,8 +223,7 @@ arrived-3sg.m		the-boy-acc
 Source: c:2, Alonini, attested
 Vetted: s
 Judgment: g
-Phenomena: {case}
-waladu      wasala	 
+Phenomena: {case} 
 walad-u     wasal-a	 
 boy-nom     arrived-3sg.m		
 'A boy arrived.'
@@ -255,8 +232,7 @@ boy-nom     arrived-3sg.m
 Source: c:2, Alonini, attested
 Vetted: s
 Judgment: u
-Phenomena: {case}
-walada      wasala	 
+Phenomena: {case} 
 walad-a     wasal-a	 
 boy-ACC     arrived-3sg.m		
 'A boy arrived.'
@@ -268,7 +244,6 @@ Source: d:2, AlQahtani, attested
 Vetted: s
 Judgment: g
 Phenomena: {agr, det, adj}
-rajulun tawelun daxala 2almaktaba
 rajul-u-n tawel-u-n daxal-a 2al-maktab-a
 man-NOM-NUM tall-NOM-NUN entered-3sgmasc the-office-ACC
 'A tall man entered the office.'
@@ -278,7 +253,6 @@ Source: f:37, Alotaibi, attested
 Vetted: s
 Judgment: g
 Phenomena: {agr, adj}
-Ja2a rajulun tawelun
 Ja2-a rajul-un tawel-un
 came-PFV.3SGMASC man-NOM tall-NOM
 'A tall man came.'
@@ -288,7 +262,6 @@ Source: f:49, Alataibi, attested
 Vetted: s
 Judgment: g
 Phenomena: {agr, det, adj}
-ja2a alrajulu alkarimu
 ja2-a al-rajul-u al-karim-u
 came-PFV.3SGMASC the-man-NOM the-generous-NOM
 'The generous man came.'
@@ -298,13 +271,9 @@ Source: f:49, Alataibi, attested
 Vetted: f
 Judgment: u
 Phenomena: {agr}
-ja2a alrajulu alkarimu
 ja2-a al-rajul-u karim-u-n
 came-3sgmasc the-man-NOM generous-NOM-NUN
 'Intended: The generous man came.'
-
-
-
 
 #######PRONOUNS#######
 
@@ -313,7 +282,6 @@ Source: d:2, Albuhayri, attested
 Vetted: s
 Judgment: g
 Phenomena: {pn, adj, wo}
-2iyyaaka qabalnaa
 2iyyaaka qabal-naa
 2sg.masc met-1pl
 'We met you.'
@@ -323,7 +291,6 @@ Source: d:2, Albuhayri, attested
 Vetted: f
 Judgment: u
 Phenomena: {wo}
-qabalnaa 2iyyaaka 
 qabal-naa 2iyyaaka 
 met-1pl 2sg.masc 
 'Intended: We met you.'
@@ -335,7 +302,6 @@ Source: d:2, Albuhayri, attested
 Vetted: s
 Judgment: g
 Phenomena: {pn, adj, cop}
-2anta mujtahidun
 2anta mujtahid-u-n
 2sg.masc assiduous-NOM-NUN
 'You are assiduous.'
@@ -345,7 +311,6 @@ Source: d:2, Albuhayri, attested
 Vetted: s
 Judgment: g
 Phenomena: {pn, adj, poss}
-Huwa safirunaa lada almajlisi
 Huwa safir-u-naa lada al-majlis-i
 3sg.masc ambassador-nom-1pl at the-council-gen
 'He is our ambassador at the council.'
@@ -355,11 +320,9 @@ Source: g:49, Alotaibi, attested
 Vetted: s
 Judgment: g
 Phenomena: {adj, agr, cop}
-alrajulu karimun 
 al-rajul-u karim-u-n
 the-man-NOM generous-NOM-NUN
 'The man is generous.'
-
 
 #### Tense and Aspect##############
 
@@ -368,7 +331,6 @@ Source: b:13, Mohammad, attested
 Vetted: s
 Judgment: g
 Phenomena: {aspect}
-alwaladu				    yakula		altuffahata
 al-walad-u				    yakul-a		al-tuffahat-a
 DEF-boy-NOM			eat-PERF	DEF-apple-ACC
 ‘The boy has eaten the apple.’
@@ -379,7 +341,6 @@ Source: b:13, Mohammad, attested
 Vetted: s
 Judgment: g
 Phenomena: {aspect}
-alwaladu		 		yakulu		altuffahata
 al-walad-u				yakul-u		al-tuffahat-a
 DEF-boy-NOM				eat-PROG	DEF-apple-ACC
 ‘The boy is eating the apple.’
@@ -389,7 +350,6 @@ Source: b:13, Mohammad, attested
 Vetted: s
 Judgment: u
 Phenomena: {aspect}
-alwaladu				    yakulaa			altuffahata
 al-walad-u				    yakul-a-a		al-tuffahat-a
 DEF-boy-NOM				    eat-3sg.m-PERF	DEF-apple-ACC
 ‘The boy has eaten the apple.’
@@ -400,20 +360,17 @@ Source: b:13, Mohammad, attested
 Vetted: s
 Judgment: u
 Phenomena: {aspect}
-alwaladu		 		yakulau	altuffahata
 al-walad-u				yakul-a-u	al-tuffahat-a
 DEF-boy-NOM			eat-3sgm-PROG	DEF-apple-ACC
 ‘The boy is eating the apple.’
 
-#######Negation###########3
-
+#######Negation###########
 
 #43 Negation lan perfective verb
 Source: b:13, Mohammad, attested
 Vetted: s
 Judgment: g
 Phenomena: {negation}
-alwaladu		lan 		    yakula			altuffahata
 al-walad-u		lan		    yakul-a			al-tuffahat-a
 DEF-boy-NOM		not		    eat-PERF	DEF-apple-ACC
 ‘The boy will not eat the apple.’
@@ -424,7 +381,6 @@ Source: b:13, Mohammad, attested
 Vetted: s
 Judgment: g
 Phenomena: {negation}
-alwaladu		la 		yakulu			altuffahata
 al-walad-u		la 		yakul-u			al-tuffahat-a
 DEF-boy-NOM		not		eat-PROG	DEF-apple-ACC
 ‘The boy is not eating the apple.’
@@ -434,7 +390,6 @@ Source: b:13, Mohammad, attested
 Vetted: s
 Judgment: u
 Phenomena: {negation}
-alwaladu		la 		yakula			altuffahata
 al-walad-u		la 		yakul-a			al-tuffahat-a
 DEF-boy-NOM		not		eat-PERF	DEF-apple-ACC
 Intended: ‘The boy will not eat the apple.’
@@ -445,12 +400,9 @@ Source: b:13, Mohammad, attested
 Vetted: s
 Judgment: u
 Phenomena: {negation}b:\13, Mohammad, attested
-alwaladu		lan		yakulu			altuffahata
 al-walad-u		lan		yakul-u			al-tuffahat-a
 DEF-boy-NOM		not		eat-PROG	DEF-apple-ACC
 Intended: ‘The boy is not eating the apple.’
-
-
 
 #agreement##############
 
@@ -459,7 +411,6 @@ Source: a:29, Ahmed, attested
 Vetted: s
 Judgment: g 
 Phenomena: {agreement}
-wasala	 		alwaladu
 wasal-a	 		al-walad-u
 arrived-3.sg.m		the-boy.sg-nom
 ‘The boy arrived.’
@@ -469,7 +420,6 @@ Source: a:29, Ahmed, attested
 Vetted: s					
 Judgment: g
 Phenomena: {agreement}
-wasalat 		albintu
 wasal-at 		al-bint-u
 arrived-3.sg.f		DEF-girl.sg-nom
 ‘The girl arrived.	
@@ -479,7 +429,6 @@ Source: a:29, Ahmed, attested
 Vetted: s
 Judgment: g 
 Phenomena: {agreement}
-wasaluu	 	al2lwaladu
 wasal-uu	 	al-2lwalad-u
 arrived-3.pl.m		the-boy.pl-nom
 ‘The boys arrived.’
@@ -489,7 +438,6 @@ Source: a:29, Ahmed, attested
 Vetted: s					
 Judgment: g 
 Phenomena: {agreement}
-wasalna 		albantu
 wasal-na 		al-bant-u
 arrived-3.pl.f		DEF-girl.pl-nom
 ‘The girls arrived.
@@ -500,8 +448,7 @@ Source: a:29, Ahmed, attested
 Vetted: s
 Judgment: u
 Phenomena: {agreement}
- wasalat 		al-walad-u
- wasal-at 		al-walad-u
+wasal-at 		al-walad-u
 arrived-3.sg.f		the-boy.sg-nom
 ‘The boy arrived.’
 
@@ -510,7 +457,6 @@ Source: a:29, Ahmed, attested
 Vetted: s
 Judgment: u
 Phenomena: {agreement}
-wasala			albintu
 wasal-a			al-bint-u
 arrived-3.sg.m		the-girl.sg-nom
 ‘The girl arrived.’
@@ -520,7 +466,6 @@ Source: a:29, Ahmed, attested
 Vetted: s
 Judgment: u 
 Phenomena: {agreement}
-wasalna	 	al2lwaladu
 wasal-na	 	al-2lwalad-u
 arrived-3.pl.f		the-boy.pl-nom
 intended:‘The boys arrived.’
@@ -530,19 +475,15 @@ Source: a:29, Ahmed, attested
 Vetted: s
 Judgment: u 	
 Phenomena: {agreement}	
-wasaluu 		albantu			
 wasal-uu 		al-bant-u
 arrived-3.pl.m		DEF-girl.pl-nom
 intended:‘The girls arrived.
-
-
 
 #55(mismatch in number, gender kept constant)
 Source: a:29, Ahmed, attested
 Vetted: s
 Judgment: u 
 Phenomena: {agreement}
-wasaluu		alwaladu
 wasal-uu		al-walad-u
 arrived-3.pl.m		the-boy.sg-nom
 Intended: ‘The boy arrived.’
@@ -552,7 +493,6 @@ Source: a:29, Ahmed, attested
 Vetted: s				
 Judgment: u 
 Phenomena: {agreement}
-wasalna 		albintu
 wasal-na 		al-bint-u
 arrived-3.pl.f		DEF-girl.sg-nom
 Intended: ‘The girl arrived.	
@@ -562,7 +502,6 @@ Source: a:29, Ahmed, attested
 Vetted: s
 Judgment: u 
 Phenomena: {agreement}
-wasala	 		al2lwaladu
 wasal-a	 		al-2lwalad-u
 arrived-3.sg.m		the-boy.pl-nom
 Intended: ‘The boys arrived.’
@@ -572,7 +511,6 @@ Source: a:29, Ahmed, attested
 Vetted: s					
 Judgment: u 
 Phenomena: {agreement}
-wasalat 		albantu
 wasal-at 		al-bant-u
 arrived-3.sg.f		DEF-girl.pl-nom
 intended: ‘The girls arrived.
@@ -583,7 +521,6 @@ Source: a:29, Ahmed, attested
 Vetted: s
 Judgment: u
 Phenomena: {agreement}
-wasalna	 	alwaladu
 wasal-na	 	al-walad-u
 arrived-3.pl.f		the-boy.sg-nom
 Intended: ‘The boy arrived.’
@@ -593,7 +530,6 @@ Source: a:29, Ahmed, attested
 Vetted: s
 Judgment: u
 Phenomena: {agreement}
-wasaluu 		albintu
 wasal-uu 		al-bint-u
 arrived-3.pl.m		DEF-girl.sg-nom
 ‘The girl arrived.
@@ -603,7 +539,6 @@ Source: a:29, Ahmed, attested
 Vetted: s
 Judgment: u
 Phenomena: {agreement}
-wasalat	 		al2lwaladu
 wasal-at	 	al-2lwalad-u
 arrived-3.sg.f		the-boy.pl-nom
 Intended: ‘The boys arrived.’
@@ -613,7 +548,6 @@ Source: a:29, Ahmed, attested
 Vetted: s						
 Judgment: u
 Phenomena: {agreement}
-wasala			albantu
 wasal-a			al-bant-u
 arrived-3.sg.m	DEF-girl.pl-nom
 ‘The girls arrived.
@@ -622,8 +556,7 @@ arrived-3.sg.m	DEF-girl.pl-nom
 Source: b:9, Mohammad A. Mohammad, attested
 Vetted: s
 Judgment: g 
-Phenomena: {agreement}
-albintu 		qabalat			al2lwalada			
+Phenomena: {agreement}		
 al-bint-u 		qabal-at		al-2lwalad-a		
 DEF-girl-u		met-3.SG.F		DEF-boy-ACC
 'The girl met the boy.'
@@ -632,8 +565,7 @@ DEF-girl-u		met-3.SG.F		DEF-boy-ACC
 Source: b:9, Mohammad A. Mohammad, attested
 Vetted: s
 Judgment: u
-Phenomena: {agreement}
-albintu 		qabala			al2lwalada			
+Phenomena: {agreement}		
 al-bint-u 		qabal-a 		al-2lwalad-a		
 DEF-girl-u		met-3.SG.M		DEF-boy-ACC
 'The girl met the boy.'
@@ -645,7 +577,6 @@ Source: a:28, Ahmed, attested
 Vetted: s
 Judgment: g
 Phenomena: {word order, agreement}
-halla			altullaabu		 almas2alata.
 hall-a			al-tullaab-u		 al-mas2alat-a.
 solved-3.m.sg		 DEF-students.pl-NOM	 DEF-problem-acc
 ‘The students solved the problem.’ 
@@ -655,7 +586,6 @@ Source: a:28, Ahmed, attested
 Vetted: s
 Judgment: u
 Phenomena: {word order, agreement}
-halluu 			altullaabu		 almas2alat-a.
 hall-uu 		al-tullaab-u		 al-mas2alat-a.
 solved-3.pl.m	the-students.pl-NOM	 the-problem-acc
 ‘The students solved the problem.’ 
@@ -665,7 +595,6 @@ Source: a:28, Ahmed, attested
 Vetted: s
 Judgment: g
 Phenomena: {word order, agreement}
-qadimat			albantu 
 qadim-at		al-bant-u 
 came-3.sg.f 		DEF-girls.pl-nom
 ‘The girls came.’
@@ -675,7 +604,6 @@ Source: a:28, Ahmed, attested
 Vetted: s
 Judgment: u
 Phenomena: {word order, agreement}
-qadimna 		albantu
 qadim-na 		al-bant-u 
 came-3.pl.f 	DEF-girls.pl-nom
 ‘The girls came.’	
@@ -687,8 +615,7 @@ Source: i:3, Johannessen
 Vetted: s
 Judgment: g
 Phenomena: {Coordination}
-al2lwaladu 	wa 		albantu 		wasaluu
-al-2lwalad-u 	wa 		al-bant-u 		wasal-uu
+al-walad-u 	wa 		al-bant-u 		wasal-uu
 DEF-boy-NOM CONJ 		DEF-girl-NOM		arrive-3.pl.m
 ‘The boys and the girls arrived.’
 
@@ -698,8 +625,7 @@ Source: i:3, Johannessen, attested
 Vetted: s
 Judgment: g
 Phenomena: {Coordination}
-al2lwaladu 		wa 		albintu 			wasaluu
-al-2lwalad-u 		wa 		al-bint-u 		wasal-uu
+al-walad-u 		wa 		al-bint-u 		wasal-uu
 DEF-boy-NOM 		CONJ 		DEF-girl-NOM		arrive-3.pl.m
 ‘The boys and the girl arrived.’
 
@@ -708,8 +634,7 @@ Source: i:3, Johannessen, attested
 Vetted: s
 Judgment: g
 Phenomena: {Coordination}
-al2lwaladu 		wa 		    nahnu		wasaluu
-al-2lwalad-u 		wa 		nahnu 		wasal-uu
+al-walad-u 		wa 		nahnu 		wasal-uu
 DEF-boy-NOM 		CONJ 		we		arrive-3.pl.m
 ‘The boys and we arrived.’
 
@@ -718,8 +643,7 @@ Source: i:3, Johannessen, attested
 Vetted: s
 Judgment: g
 Phenomena: {Coordination}
-al2lwaladu 		    	wa 		2anaa		wasaluu
-al-2lwalad-u 			wa 		2anaa		wasal-uu
+al-walad-u 			wa 		2anaa		wasal-uu
 DEF-boy-NOM 		CONJ 		I		arrive-3.pl.m
 ‘The boys and I arrived.’
 
@@ -728,8 +652,7 @@ Source: i:3, Johannessen, attested
 Vetted: s
 Judgment: g
 Phenomena: {Coordination}
-al2lwaladanu			wa 		albintu			wasaluu
-al-2lwalad.DUAL-NOM	wa 		al-bint-u		wasal-uu
+al-waladan-u			wa 		al-bint-u			wasal-uu
 DEF-boy-NOM 		CONJ 	DEF-girl-NOM	arrive-3.pl.m
 ‘The two boys and the girl arrived.’
 
@@ -738,9 +661,8 @@ Source: i:3, Johannessen, attested
 Vetted: s
 Judgment: g
 Phenomena: {Coordination}
-al2lwaladanu		wa 		albintaniu			wasaluu
-al-2lwalad.DUAL-NOM	wa 		al-bintani-u			wasal-uu
-DEF-boy-NOM 		CONJ 		DEF-girl.DUAL-NOM		arrive-3.pl.m
+al-waladan-u 	wa 		al-bintani-u			wasal-uu
+DEF-boy.DUAL-NOM 		CONJ 		DEF-girl.DUAL-NOM		arrive-3.pl.m
 ‘The two boys and the two girl arrived.’
 
 #75 wa conjoins S, not VP
@@ -748,8 +670,7 @@ Source: b:9, Mohammad A. Mohammad, attested
 Vetted: s
 Judgment: g 
 Phenomena: {coordination}
-albintu 		qabalat	al2lwalada	wa	alwaladu 		wasala	
-al-bint-u 	qabal-at	al-2lwalad-a	CONJ	al-walad-u 		wasal-a
+al-bint-u 	qabal-at	al-2lwalad-a wa	al-walad-u 		wasal-a
 DEF-girl-u	met-3.SG.F	DEF-boy-ACC	and	DEF-boy-NOM	arrive-3.sg.m
 'The girl met the boy and the boy arrived.'
 
@@ -757,19 +678,16 @@ DEF-girl-u	met-3.SG.F	DEF-boy-ACC	and	DEF-boy-NOM	arrive-3.sg.m
 Source: b:9, Mohammad A. Mohammad, attested
 Vetted: s
 Judgment: u 
-Phenomena: {coordination}
-albintu 		qabalat			al2lwalada	wa		wasalat	
-al-bint-u 		qabal-at		al-2lwalad-a	CONJ		wasal-at
+Phenomena: {coordination}	
+al-bint-u 		qabal-at		al-walad-a	wa		wasal-at
 DEF-girl-u		met-3.SG.F		DEF-boy-ACC	and		arrive-3.sg.f
 Intended: 'The girl met the boy and arrived.'
-
 
 #77Coordination of intransitive clauses with sgmasc, sgfem agreement
 Source: i:3, Johannessen, attested 
 Vetted: s
 Judgment: g
 Phenomena: {Coordination}
-alwaladu 	qadima		wa 		albintu 			wasalat
 al-walad-u 	qadim-a	wa 		al-bint-u 		wasal-at
 DEF-boy-NOM  came-3sg.m	CONJ	DEF-girl-NOM		arrive-3sg.f
 ‘The boy came and the girl arrived.’
@@ -779,11 +697,9 @@ Source: i:3, Johannessen, attested
 Vetted: s
 Judgment: g
 Phenomena: {Coordination}
-alwaladu 	qadima	wa 		albantu 		wasalna
 al-walad-u 	qadim-a	wa 		al-bant-u 		wasal-na
 DEF-boy-NOM came-3sg.m 	CONJ		DEF-girl-NOM		arrive-3pl.f
 ‘The boy came and the girls arrived.’
-
 
 
 ###coordination agreement###########
@@ -793,8 +709,7 @@ Source: i:3, Johannessen, attested
 Vetted: s
 Judgment: g
 Phenomena: {Coordination, agreement}
-albantu 	wa 		al2lwaladu		wasaluu
-al-bant-u 	wa 		al-2lwalad-u 		wasal-uu
+al-bant-u 	wa 		al-walad-u 		wasal-uu
 DEF-girl-NOM	CONJ 		DEF-boy-NOM		arrive-3.pl.m
 ‘The girls and the boys arrived.’
 
@@ -804,8 +719,7 @@ Source: i:3, Johannessen, attested
 Vetted: s
 Judgment: u
 Phenomena: {Coordination, agreement}
-albantu 	wa 		al2lwaladu		wasalna
-al-bant-u 	wa 		al-2lwalad-u  		wasal-na
+al-bant-u 	wa 		al-walad-u  		wasal-na
 DEF-girl-NOM	CONJ 		DEF-boy-NOM		arrive-3.pl.f
 ‘The boys and the girls arrived.’
 
@@ -814,7 +728,6 @@ Source: i:3, Johannessen, attested
 Vetted: s
 Judgment: g
 Phenomena: {Coordination, agreement}
-albantu 	wa 		almaratu		wasalna
 al-bant-u 	wa 		al-mara-u  		wasal-na
 DEF-girl-NOM	CONJ 		DEF-women-NOM	arrive-3.pl.f
 ‘The girls and the women arrived.’
@@ -824,31 +737,25 @@ Source: i:3, Johannessen, attested
 Vetted: s
 Judgment: u
 Phenomena: {Coordination, agreement}
-albantu 	wa 		almaratu		wasaluu
 al-bant-u 	wa 		al-mara-u  		wasal-uu
 DEF-girl-NOM	CONJ 		DEF-women-NOM	arrive-3.pl.m
 ‘The girls and the women arrived.’
-
 
 #83Coordination of 2 definite singular NPs (masc and fem)  - DUAL agreement marker
 Source: i:3, Johannessen, attested 
 Vetted: s
 Judgment: g
 Phenomena: {Coordination, agreement}
-alwaladu 	wa 		albintu 			wasalala
 al-walad-u 	wa 		al-bint-u 		wasal-ala
 DEF-boy-NOM CONJ 		DEF-girl-NOM		arrive-DUAL.m
 ‘The boy and the girl arrived.’
-
-
 
 #84Coordination of 2 definite singular NPs - DUAL agreement marker
 Source: i:3, Johannessen, attested 
 Vetted: s
 Judgment: u
 Phenomena: {Coordination}
-al2lwaladu 	wa 		albintu 			wasala
-al-2lwalad-u 	wa 		al-bint-u 		wasal-a
+al-walad-u 	wa 		al-bint-u 		wasal-a
 DEF-boy-NOM CONJ 		DEF-girl-NOM		arrive-3.sg.m
 ‘The boy and the girl arrived.’
 
@@ -857,7 +764,6 @@ Source: i:3, Johannessen, attested
 Vetted: s
 Judgment: g
 Phenomena: {Coordination}
-albintu		wa 		alamrau 		wasalata
 al-bint-u 	wa 		al-amra-u 		wasal-ata
 DEF-girl-NOM CONJ 		DEF-woman-NOM	arrive-DUAL.f
 ‘The girl and the woman arrived.
@@ -867,8 +773,7 @@ Source: i:3, Johannessen, attested
 Vetted: s
 Judgment: g
 Phenomena: {Coordination}
-albintu 		wa 	alwaladu			wasalala
-al-bint-u 	wa 	al-2lwalad-u			wasal-ala
+al-bint-u 	wa 	al-walad-u			wasal-ala
 DEF-girl-NOM	CONJ 	DEF-boy-NOM 		arrive-DUAL.m
 ‘The boy and the girl arrived.’
 
@@ -877,11 +782,9 @@ Source: i:3, Johannessen, attested
 Vetted: s
 Judgment: u
 Phenomena: {Coordination}
-albintu 		wa 	al2lwaladu			wasalata
-al-bint-u 	wa 	al-2lwalad-u			wasal-ata
+al-bint-u 	wa 	al-walad-u			wasal-ata
 DEF-girl-NOM	CONJ 	DEF-boy-NOM 			arrive-DUAL.m
 ‘The boy and the girl arrived.’
-
 
 ######### matrix wh-questions ################
 #88 wh-questions: Q-V-NP is the only possible order
@@ -889,7 +792,6 @@ Source: p:4, Btoosh, attested
 Vetted:s
 Judgment: g
 Phenomena: {wh}
-man 	qara2a 		alkitaba
 man 	qara2-a 		al-kitab-a
 who	 read-3.sg.masc. 	the-book-acc.
 ‘Who read the book?’ 	
@@ -898,8 +800,7 @@ who	 read-3.sg.masc. 	the-book-acc.
 Source: p:4, Btoosh, attested
 Vetted:s
 Judgment: u
-Phenomena: {wh}			
-qara2a 		man	alkitaba							
+Phenomena: {wh}									
 qara2-a 		man	al-kitab-a
 read-3.sg.masc. 	who	 the-book-acc.
 ‘Who read the book?’			
@@ -909,7 +810,6 @@ Source: p:4, Btoosh, attested
 Vetted:s
 Judgment: u
 Phenomena: {wh}
-qara2a 			alkitaba 	man
 qara2-a 		al-kitab-a 	man
 read-3.sg.masc 	the-book-acc.	Who
 ‘Who read the book?’	 			
@@ -918,9 +818,8 @@ read-3.sg.masc 	the-book-acc.	Who
 Source: p:4, Btoosh, attested
 Vetted:s
 Judgment: u
-Phenomena: {wh}
-Man	alkitaba 	qara2a 			
-Who	al-kitab-a 	qara2-a 
+Phenomena: {wh}		
+Man	al-kitab-a 	qara2-a 
 who	the-book-acc	 read-3.sg.m	
 ‘Who read the book?’	 		
 						
@@ -928,8 +827,7 @@ who	the-book-acc	 read-3.sg.m
 Source: p:4, Btoosh, attested
 Vetted:s
 Judgment: u
-Phenomena: {wh}
-alkitaba 	man		qara2a 			
+Phenomena: {wh}			
 al-kitab-a 	who		qara2-a 
 The-book-acc	who		 read-3.sg.m	
 ‘Who read the book?’	 
@@ -939,7 +837,6 @@ Source: p:4, Btoosh, attested
 Vetted:s
 Judgment: u
 Phenomena: {wh}
-alkitaba 	qara2a 		man	
 al-kitab-a 	qara2-a 	who
 The-book-acc	 read-3.sg.m	who			
 ‘Who read the book?’	 
@@ -950,8 +847,7 @@ Source: p:4, Btoosh, attested
 Vetted:s
 Judgment: g
 Phenomena: {wh}
-man 	qara2a 		alkitaba
-madha 	qara2-a 		al-kitab-a
+man 	qara2-a 		al-kitab-a
 who	 read-3.sg.masc. 	the-book-acc.
 ‘Who read the book?’ 	
 
@@ -960,12 +856,9 @@ Source: p:4, Btoosh, attested
 Vetted:s
 Judgment: g
 Phenomena: {wh}	
-madha 	qara2a 			alwaladu
-what	qara2-a 		al-walad-u
+madha 	qara2-a 		al-walad-u
 what	 read-3.sg.masc. 	DEF-boy-nom
 ‘What did the boy read?’ 	
-
-
 
 #### Possessives#############
 #97 Possession, Genetive Case, predicates
@@ -973,7 +866,6 @@ Source: a:207, Ahmed, attested
 Vetted:s
 Judgment: g
 Phenomena: {poss, pn}
-Zaydun ma3ruufun binazaahatihi
 Zayd-un ma3ruuf-un bi-nazaahat-i-hi
 Zayd-NOM known-NOM for-honesty-GEN-his
 ‘Zayd is known for his honesty’
@@ -983,7 +875,6 @@ Source: a:278, Ahmed, attested
 Vetted:s
 Judgment: g
 Phenomena: {poss, pn}
-2aqlaqanii ntiqaadu Zaydin lahu
 2aqlaq-a-nii ntiqaad-u Zayd-in la-hu
 Annoyed-3sgm-me criticizing-NOM Zayd-GEN of-him.GEN
 ‘Zayd’s criticism of him annoyed me’
@@ -993,7 +884,6 @@ Source: a:278, Ahmed, attested
 Vetted:f
 Judgment: g
 Phenomena: {poss, pn}
-2aqlaqanii ntiqaadu Zaydi
 2aqlaq-a-nii ntiqaad-u Zayd-i
 Annoyed-3sgm-me criticizing-NOM Zayd-GEN
 ‘Zayd’s criticism annoyed me’
@@ -1003,7 +893,6 @@ Source: a:278, Ahmed, attested
 Vetted:s
 Judgment: g
 Phenomena: {poss, pn}
-2aqlaqanii ntiqaaduhu Zaydan
 2aqlaq-a-nii ntiqaad-u-hu Zayd-an
 Annoyed-3sgm-me criticizing-NOM-his.GEN Zayd-ACC
 ‘His criticism of Zayd annoyed me’
@@ -1013,7 +902,6 @@ Source: a:278, Ahmed, attested
 Vetted:f
 Judgment: g
 Phenomena: {poss, pn}
-2aqlaqanii ntiqaaduhu 
 2aqlaq-a-nii ntiqaad-u-hu
 Annoyed-3sgm-me criticizing-NOM-his.GEN
 ‘His criticism annoyed me’
@@ -1023,7 +911,6 @@ Source: a:278, Ahmed, attested
 Vetted:s
 Judgment: u
 Phenomena: {poss}
-2aqlaqanii ntiqaaduhu Zaydan
 2aqlaq-a-nii ntiqaad-i-hu Zayd-an
 Annoyed-3sgm-me criticizing-Gen-his.GEN Zayd-ACC
 ‘Intended His criticism of Zayd annoyed me’
@@ -1033,7 +920,6 @@ Source: a:278, Ahmed, attested
 Vetted:s
 Judgment: u
 Phenomena: {poss}
-2aqlaqanii ntiqaaduhu Zaydi
 2aqlaqa-a-nii ntiqaad-u-hu Zayd-i
 Annoyed-3sgm-me criticizing-NOM-his.GEN Zayd-GEN
 ‘Intended: His criticism of Zayd annoyed me’
@@ -1043,7 +929,6 @@ Source: d:2, AlQahtani, attested
 Vetted: s
 Judgment: g
 Phenomena: {pn, poss, det}
-zuratu dara 2al2jitami
 zur-tu dar-a 2al-2jitam-i
 visited-I house-ACC the-orphans-GEN
 'I visited the orphans' house.'
@@ -1053,7 +938,6 @@ Source: d:2, AlQahtani, attested
 Vetted: f
 Judgment: g
 Phenomena: {pn, poss, det}
-zurtu baytahu
 zur-tu bayt-a-hu
 visited-I house-ACC-his
 'I visited his house.'
@@ -1063,7 +947,6 @@ Source: d:2, AlQahtani, attested
 Vetted: f
 Judgment: g
 Phenomena: {pn, poss, det}
-zurtu bayta muhammadi
 zur-tu bayt-a muhammad-i
 visited-I house-ACC muhammad-GEN
 'I visited Muhammad’s house.'
@@ -1073,7 +956,6 @@ Source: d:2, AlQahtani, attested
 Vetted: f
 Judgment: u
 Phenomena: {wo}
-zurtu muhammadi bayta
 zur-tu muhammad-i bayt-a
 visited-I muhammad-GEN house-ACC
 'I visited Muhammad’s house.'
@@ -1083,8 +965,7 @@ Source: d:2, AlQahtani, attested
 Vetted: f
 Judgment: u
 Phenomena: {wo}
-zurtu 2al2jitami dara
-zur-tu 2al-2jitam-i dar-a
+zur-tu al-2jitam-i dar-a
 visited-I the-orphans-GEN house-ACC
 'Intended: I visited the orphans' house.'
 
@@ -1093,7 +974,6 @@ Source: d:2, Albuhayri, attested
 Vetted: s
 Judgment: g
 Phenomena: {pn, poss}
-haa6aa baytuki 
 haa6aa bayt-u-ki 
 this house-NOM-2sgfem
 'This is your house.'
@@ -1105,8 +985,7 @@ Source: b:19, Mohammad, attested
 Vetted:s
 Judgment: g
 Phenomena: {clausal complement}
-Hasiba 	alrajulu 		2anna	albintat  	qabalat	al2lwalada	
-Hasib-a 	al-rajul-u		COMP	al-bint-at  	qabal-at	al-2lwalad-a	
+Hasib-a 	al-rajul-u		2anna	al-bint-at  	qabal-at	al-walad-a	
 Thought-3sg.m DEF-man-NOM	that	DEF-girl-ACC	met-3.SG.F		DEF-boy-ACC
 'The man thought that the girl met the boy.'
 
@@ -1115,19 +994,16 @@ Source: b:19, Mohammad, attested
 Vetted:s
 Judgment: g
 Phenomena: {clausal complement}
-qala	alrajulu 		2inna	albintat 	qabalat	al2lwalada	
-qal-a 	al-rajul-u		COMP	al-bint-at 	qabal-at	al-2lwalad-a	
+qal-a 	al-rajul-u		2inna	al-bint-at 	qabal-at	al-walad-a	
 said-3sg.m DEF-man-NOM	that	DEF-girl-ACC	met-3.SG.F	DEF-boy-ACC
 'The man said that the girl met the boy.'
-
 
 # clausal complements - 2anna is selected ‘thought’, 2inna selected by thought is bad
 Source: b:19, Mohammad, attested
 Vetted:s
 Judgment: u
-Phenomena: {clausal complement}
-Hasiba 	alrajulu 		2inna	albintat  	qabalat	al2lwalada	
-Hasib-a 	al-rajul-u		COMP	al-bint-at  	qabal-at	al-2lwalad-a	
+Phenomena: {clausal complement}	
+Hasib-a 	al-rajul-u		2inna	al-bint-at  	qabal-at	al-walad-a	
 Thought-3sg.m DEF-man-NOM	that	DEF-girl-ACC	met-3.SG.F		DEF-boy-ACC
 'The man thought that the girl met the boy.'
 
@@ -1135,9 +1011,8 @@ Thought-3sg.m DEF-man-NOM	that	DEF-girl-ACC	met-3.SG.F		DEF-boy-ACC
 Source: b:19, Mohammad, attested
 Vetted:s
 Judgment: u
-Phenomena: {clausal complement}
-qala	alrajulu 		2anna	albintat 	qabalat	al2lwalada	
-qal-a 	al-rajul-u		COMP	al-bint-at 	qabal-at	al-2lwalad-a	
+Phenomena: {clausal complement}	
+qal-a 	al-rajul-u		2anna	al-bint-at 	qabal-at	al-walad-a	
 said-3sg.m DEF-man-NOM	that	DEF-girl-ACC	met-3.SG.F	DEF-boy-ACC
 'The man said that the girl met the boy.'
 
@@ -1146,8 +1021,7 @@ Source: b:19, Mohammad, attested
 Vetted:s
 Judgment: g
 Phenomena: {clausal complement, case}
-Hasiba 	alrajulu 		2anna	albintu  	qabalat	al2lwalada	
-Hasib-a 	al-rajul-u		COMP	al-bint-u	qabal-at	al-2lwalad-a	
+Hasib-a 	al-rajul-u		2anna	al-bint-u	qabal-at	al-walad-a	
 Thought-3sg.m DEF-man-NOM	that	DEF-girl-NOM	met-3.SG.F	DEF-boy-ACC
 'The man thought that the girl met the boy.'
 
@@ -1156,21 +1030,16 @@ Source: b:19, Mohammad, attested
 Vetted:s
 Judgment: g
 Phenomena: {clausal complement, case}
-qala	alrajulu 		2inna	albintu 		qabalat	al2lwalada	
-qal-a 	al-rajul-u		COMP	al-bint-u 	qabal-at	al-2lwalad-a	
+qal-a 	al-rajul-u		2inna	al-bint-u 	qabal-at	al-walad-a	
 said-3sg.m DEF-man-NOM	that	DEF-girl-NOM	met-3.SG.F	DEF-boy-ACC
 'The man said that the girl met the boy.'
-
-
-
 
 # clausal complements - qan + perfective verb, embedded subject NOM
 Source: b:19, Mohammad, attested
 Vetted:s
 Judgment: g
-Phenomena: {clausal complement}
-qala	alrajulu 		qan	alwaladu	yakula		altuffahata	
-qal-a 	al-rajul-u		COMP	al-walad-u	yakul-a		al-tuffahat-a
+Phenomena: {clausal complement}	
+qal-a 	al-rajul-u		qan	al-walad-u	yakul-a		al-tuffahat-a
 said-3sg.m DEF-man-NOM	that	DEF-boy-u	ate-PERF	DEF-boy-ACC
 'The man said that the boy has eaten the apple.’
 
@@ -1179,30 +1048,25 @@ Source: b:19, Mohammad, attested
 Vetted:s
 Judgment: g
 Phenomena: {clausal complement}
-qala	alrajulu 		qan	alwalada	yakula		altuffahata	
-qal-a 	al-rajul-u		COMP	al-walad-a	yakul-a		al-tuffahat-a
+qal-a 	al-rajul-u		qan	al-walad-a	yakul-a		al-tuffahat-a
 said-3sg.m DEF-man-NOM	that	DEF-boy-ACC	ate-PERF	DEF-boy-ACC
 'The man said that the boy has eaten the apple.’
-
 
 # clausal complements - 2anna + perfective verb
 Source: b:19, Mohammad, attested
 Vetted:s
 Judgment: u
 Phenomena: {clausal complement}
-qala	alrajulu 		2anna	alwaladu	yakula		altuffahata	
-qal-a 	al-rajul-u		COMP	al-walad-u	yakul-a		al-tuffahat-a
+qal-a 	al-rajul-u		2anna	al-walad-u	yakul-a		al-tuffahat-a
 said-3sg.m DEF-man-NOM	that	DEF-boy-u	ate-PERF	DEF-boy-ACC
 'The man said that the boy has eaten the apple.’
-
 
 # clausal complements - 2inna + perfective verb
 Source: b:19, Mohammad, attested
 Vetted:s
 Judgment: u
 Phenomena: {clausal complement}
-qala	alrajulu 		2inna	alwaladu	yakula		altuffahata	
-qal-a 	al-rajul-u		COMP	al-walad-u	yakul-a		al-tuffahat-a
+qal-a 	al-rajul-u		2inna	al-walad-u	yakul-a		al-tuffahat-a
 said-3sg.m DEF-man-NOM	that	DEF-boy-u	ate-PERF	DEF-boy-ACC
 'The man said that the boy has eaten the apple.’
 
@@ -1211,14 +1075,9 @@ Source: b:19, Mohammad, attested
 Vetted:s
 Judgment: u
 Phenomena: {clausal complement}
-qala	alrajulu 		qan	alwaladu	yakul-a		altuffahata	
-qal-a 	al-rajul-u		COMP	al-walad-u	yakul-a		al-tuffahat-a
+qal-a 	al-rajul-u		qan al-walad-u	yakul-a		al-tuffahat-a
 said-3sg.m DEF-man-NOM	that	DEF-boy-u	ate-3.sg.m	DEF-boy-ACC
 'The man said that the boy has eaten the apple.’
-
-
-
-
 
 ###### Matrix yes-no questions #########
 
@@ -1227,7 +1086,6 @@ Source: p:7, Btoosh, attested
 Vetted:s
 Judgment: g
 Phenomena: {yes-no questions}
-hal	namat		albintu 
 hal	nam-at		al-bint-u 
 Q.did 	slept-3.sg.f 	def-girl-nom.
 ‘Did the girl sleep?’
@@ -1237,7 +1095,6 @@ Source: p:7, Btoosh, attested
 Vetted:s
 Judgment: g
 Phenomena: {yes-no questions}
-2a	namat		albintu 
 2a	nam-at		al-bint-u 
 Q.did 	slept-3.sg.f 	the-girl-nom.
 ‘Did the girl sleep?’
@@ -1247,7 +1104,6 @@ Source: p:7, Btoosh, attested
 Vetted:s
 Judgment: g
 Phenomena: {yes-no questions}
-hal	namat		bintu 
 hal	nam-at		bint-u 
 Q.did 	slept-3.sg.f 	 girl-nom.
 ‘Did a girl sleep?’
@@ -1257,18 +1113,15 @@ Source: p:7, Btoosh, attested
 Vetted:s
 Judgment: g
 Phenomena: {yes-no questions}
-2a	namat		bintu 
 2a	nam-at		bint-u 
 Q.did 	slept-3.sg.f 	girl-nom.
 ‘Did a girl sleep?’
-
 
 #yes-no questions - V is sentence final, hal used only when  subject is definite
 Source: p:7, Btoosh, attested
 Vetted:s
 Judgment: g
 Phenomena: {yes-no questions}
-hal 		alwaladu  		qadima
 hal 		al-walad-u  		qadim-a
 Q.did		the-boy.3.sg.m-nom	came-3sg.m
 Did the boy come?
@@ -1278,7 +1131,6 @@ Source: p:7, Btoosh, attested
 Vetted:s
 Judgment: u
 Phenomena: {yes-no questions}
-2a 		waladu  		qadima
 2a 		walad-u  		qadim-a
 Q.did		boy.3.sg.m-nom	came-3sg.m
 Intended: Did the boy come?
@@ -1289,7 +1141,6 @@ Source: p:7, Btoosh, attested
 Vetted:s
 Judgment: g
 Phenomena: {yes-no questions}
-2a		waladu  		qadima
 2a		walad-u  		qadim-a
 Q.did		boy.3.sg.m-nom	came-3sg.m
 Did a boy come?
@@ -1299,7 +1150,6 @@ Source: p:7, Btoosh, attested
 Vetted:s
 Judgment: u
 Phenomena: {yes-no questions}
-hal 		waladu  		qadima
 hal 		walad-u  		qadim-a
 Q.did		boy.3.sg.m-nom	came-3sg.m
 Did a boy come?
@@ -1311,7 +1161,6 @@ Source: p:7, Btoosh, attested
 Vetted:s
 Judgment: g
 Phenomena: {yes-no questions}
-2a	 	lam 	namat		al-bintu 
 2a	 	lam 	nam-at		al-bint-u 
 Q.did		not	slept-3.sg.f 	the-girl-nom.
 Didn’t the girl sleep?	
@@ -1322,7 +1171,6 @@ Source: p:7, Btoosh, attested
 Vetted:s
 Judgment: u
 Phenomena: {yes-no questions}
-hal 		lam 	namat		albintu 
 hal 		lam 	nam-at		al-bint-u 
 Q.did		not	slept-3.sg.f 	the-girl-nom.
 Didn’t the girl sleep?		
@@ -1334,7 +1182,6 @@ Source: p:7, Btoosh, attested
 Vetted:s
 Judgment: u
 Phenomena: {yes-no questions}
-namat	 	hal	albintu 
 nam-at	 	hal	al-bint-u 
 slept-3.sg.f  	Q.did	the-girl-nom.
 ‘Did the girl sleep?’
@@ -1344,7 +1191,6 @@ Source: p:7, Btoosh, attested
 Vetted:s
 Judgment: u
 Phenomena: {yes-no questions}
-namat	 	albintu  	hal
 nam-at	 	al-bint-u  	hal
 slept-3.sg.f  	the-girl-nom Q.did
 ‘Did the girl sleep?’
@@ -1354,12 +1200,9 @@ Source: p:7, Btoosh, attested
 Vetted:s
 Judgment: u
 Phenomena: {yes-no questions}
-2a	namat		albintu 
 2a	nam-at		al-bint-u 
 Q.did 	slept-3.sg.f 	the-girl-nom.
 ‘Did the girl sleep?’
-
-
 
 #######yes-no questions as clausal complements(test-suite only0#######
 
@@ -1368,9 +1211,8 @@ Source: q:19, Alsager, attested
 Vetted:s
 Judgment: g
 Phenomena: {embedded questions}
-talaba		alrajulu 		idha	albintu		qabalat	al2lwalada	
-talabl-a 	al-rajul-u		Q.if	al-bint-NOM	qabal-at	al-2lwalad-a	
-said-3sg.m DEF-man-NOM	that	DEF-girl-ACC		met-3.SG.F	DEF-boy-ACC
+talab-a 	al-rajul-u		idha	al-bint-u	qabal-at	al-walad-a	
+said-3sg.m DEF-man-NOM	Q.if	DEF-girl-NOM		met-3.SG.F	DEF-boy-ACC
 'The man asked if the girl met the boy.'
 
 
@@ -1379,19 +1221,17 @@ Source: q:19, Alsager, attested
 Vetted:s
 Judgment: u
 Phenomena: {embedded questions}
-talaba		alrajulu 		idha	albinta		qabalat	al2lwalada	
-talabl-a 	al-rajul-u		Q.if	al-bint-a	qabal-at	al-2lwalad-a	
-said-3sg.m DEF-man-NOM	that	DEF-girl-ACC	met-3.SG.F	DEF-boy-ACC
+talab-a 	al-rajul-u		idha	al-bint-a	qabal-at	al-walad-a	
+said-3sg.m DEF-man-NOM	Q.if	DEF-girl-ACC	met-3.SG.F	DEF-boy-ACC
 'The man asked if the girl met the boy.'
 
 # clausal complements - embedded yes-no , idha question marker, hal
 Source: q:19, Alsager, attested
 Vetted:s
 Judgment: u
-Phenomena: {embedded questions}
-talab-a		alrajulu 		hal	albintu		qabalat	al2lwalada	
-talabl-a 	al-rajul-u		Q.if	al-bint-u	qabal-at	al-2lwalad-a	
-said-3sg.m DEF-man-NOM	that	DEF-girl-NOM	met-3.SG.F	DEF-boy-ACC
+Phenomena: {embedded questions}	
+talab-a 	al-rajul-u		hal	al-bint-u	qabal-at	al-walad-a	
+said-3sg.m DEF-man-NOM	Q.if	DEF-girl-NOM	met-3.SG.F	DEF-boy-ACC
 'The man asked if the girl met the boy.'
 
 # clausal complements - embedded yes-no , idha question marker, 2a
@@ -1399,21 +1239,17 @@ Source: q:19, Alsager, attested
 Vetted:s
 Judgment: u
 Phenomena: {embedded questions}
-talab-a		alrajulu 		2a	albintu		qabalat	al2lwalada	
-talabl-a 	al-rajul-u		Q.if	al-bint-u	qabal-at	al-2lwalad-a	
-said-3sg.m DEF-man-NOM	that	DEF-girl-NOM	met-3.SG.F	DEF-boy-ACC
+talab-a 	al-rajul-u		2a	al-bint-u	qabal-at	al-walad-a	
+said-3sg.m DEF-man-NOM	Q.if	DEF-girl-NOM	met-3.SG.F	DEF-boy-ACC
 'The man asked if the girl met the boy.'
 
-
 #######Clausal Modifiers###########
-
 
 #Clausal Modifiers, Conditional phrase without “fa”
 Source: g:86, Alotaibi attested
 Vetted:s
 Judgment: g
 Phenomena: {cl-mod}
-2in ja2a aliun yafuza
 2in ja2-a ali-un yafuz-a
 If come-pfv.3sgm ali-NOM win-pfv.3sgm
 ‘If Ali comes, he will win ’
@@ -1423,7 +1259,6 @@ Source: g:86, Alotaibi attested
 Vetted:f
 Judgment: g
 Phenomena: {cl-mod}
-2in ja2a aliun qabala muhammada
 2in ja2-a ali-un qabal-a muhammad-a
 If come-pfv.3sgm Ali-NOM meet-pfv.3sgm Muhammad-ACC
 ‘If Ali comes, he will mee Muhammad ’
@@ -1433,7 +1268,6 @@ Source: g:86, Alotaibi attested
 Vetted:s
 Judgment: g
 Phenomena: {cl-mod}
-2in ja2a ahmadu dahab-a aliun
 2in ja2-a ahmad-u dahab-a ali-un
 If come-pfv.3sgm ahmad-NOM leave-PFV ali-NOM
 ‘If Ahmad comes, Ali will honor him ’
@@ -1443,7 +1277,6 @@ Source: g:86, Alotaibi attested
 Vetted:f
 Judgment: u
 Phenomena: {wo}
-ja2a aliun 2in yafuza
 ja2-a ali-un 2in yafuz-a
 come-pfv.3sgm ali-NOM if win-pfv.3sgm
 ‘If Ali comes, he will win ’
@@ -1453,7 +1286,6 @@ Source: g:124, Alotaibi attested
 Vetted:s
 Judgment: g
 Phenomena: {cl-mod}
-2in ja2a aliun faqad yafuzu
 2in ja2-a ali-un fa-qad yafuz-u
 If come-pfv.3sgm ali-NOM then-might win-ipfv.3sgm
 ‘If Ali comes, then he might win  ’
@@ -1463,7 +1295,6 @@ Source: g:124, Alotaibi attested
 Vetted:s
 Judgment: u
 Phenomena: {cl-mod}
-2in ja2a aliun qad yafuzu
 2in ja2-a ali-un qad yafuz-u
 If come-pfv.3sgm ali-NOM might win-ipfv.3sgm
 ‘Intended: If Ali comes, then he might win  ’
@@ -1473,7 +1304,6 @@ Source: g:120, Alotaibi attested
 Vetted:s
 Judgment: g
 Phenomena: {cl-mod}
-2in ja2a 2ahmadu faqum lahu
 2in ja2-a 2ahmad-u fa-qum la-hu
 If come-pfv.3sgm ahmad-NOM then-stand for-3sgm
 ‘If Ahmad comes, then stand for him.’
@@ -1483,7 +1313,6 @@ Source: g:120, Alotaibi attested
 Vetted:s
 Judgment: u
 Phenomena: {cl-mod}
-2in ja2a 2ahmadu qum lahu
 2in ja2-a 2ahmad-u qum la-hu
 If come-pfv.3sgm ahmad-NOM stand for-3sgm
 ‘Intended: If Ahmad comes, then stand for him.’
@@ -1495,7 +1324,6 @@ Source: g:86, Obeidat attested
 Vetted:s
 Judgment: g
 Phenomena: {wh}
-Alwaladu alladi daraba albinta saafara
 Al-walad-u alladi darab-a al-bint-a saafar-a
 The-boy-NOM who hit-3sgm the-girl-ACC left-3sgm
 ‘The boy who hit the girl left’
@@ -1505,7 +1333,6 @@ Source: g:88, Obeidat, attested
 Vetted:s
 Judgment: g
 Phenomena: {wh}
-Qabaltu alwalada alladi darabahu Ali
 Qabal-tu al-walad-a alladi darab-a-hu Ali
 Met-I the-boy-ACC who hit-3sgm-him Ali
 ‘I met the boy whom Ali hit’
@@ -1515,7 +1342,6 @@ Source: g:88, Obeidat, attested
 Vetted:s
 Judgment: g
 Phenomena: {wh}
-Ra2aytu alwalada alladi daraba albinta
 Ra2ay-tu al-walad-a alladi darab-a al-bint-a
 saw-I the-boy-ACC who hit-3sgm the-girl-ACC
 ‘I saw the boy who hit the girl’
@@ -1525,7 +1351,6 @@ Source: g:91, Obeidat, attested
 Vetted:s
 Judgment: g
 Phenomena: {wh}
-Almaktabatu allati 2ista3artu alkitaba minhaa ba3iidah
 Al-maktabat-u allati 2ista3ar-tu al-kitab-a min-haa ba3iidah
 The-library-NOM which borrowed-I the-book-ACC from-it far
 ‘The library from which I borrowed the book is far’
@@ -1537,7 +1362,6 @@ Source: d:2, Albuhayri, attested
 Vetted: s
 Judgment: g
 Phenomena: {pn}
-sallamtu 3alayhim 
 sallam-tu 3alay-him
 greeted-1sg on-3plmasc
 'I greeted them.'
@@ -1547,7 +1371,6 @@ Source: d:2, Albuhayri, attested
 Vetted: s
 Judgment: g
 Phenomena: {pn, wo}
-qabalnaaka
 qabal-naa-ka
 meet-1pl-2sgmasc
 'We met you.'
@@ -1557,7 +1380,6 @@ Source: d:2, Albuhayri, attested
 Vetted: s
 Judgment: g
 Phenomena: {pn, wo}
-qabalkanaa
 qabal-ka-naa
 meet-2sgmasc-1pl
 'Intended: We met you.'
@@ -1567,7 +1389,6 @@ Source: d:45, Albuhayri, attested
 Vetted: s
 Judgment: g
 Phenomena: {pn, wo}
-qabalanii Muhammadun
 qabal-a-nii Muhammad-un
 meet-PFV-1sg Muhammad-NOM
 'Muhammad met me.'
@@ -1577,7 +1398,6 @@ Source: d:45, Albuhayri, attested
 Vetted: s
 Judgment: g
 Phenomena: {pn, wo}
-2a3taytuhu qalamii
 2a3tay-tu-hu qalam-ii
 Give-1sg-3sgm pen-1sg
 'I gave him my pen.'
@@ -1587,10 +1407,10 @@ Source: d:45, Albuhayri, attested
 Vetted: s
 Judgment: g
 Phenomena: {pn, wo}
-ra2aytuhu
 ra2ay-tu-hu
 saw-1sg-3sgm
 'I saw him.'
+
 
 
 
