@@ -1,4 +1,4 @@
-kilab-u namat-uu
+kilab-u nam-uu
 kilab-u tutarid-uu sayaar-a
 tutarid-tu-ka
 kilab-u yakul-uu
@@ -7,7 +7,7 @@ hasib-tu 2anna 2araf-ta 2anna kilab-u tutarid-uu sayaar-a
 talab-tu idha 2araf-ta 2anna kilab-u tutarid-uu sayaar-a
 qitat-u wa kulab-u tutarid-uu sayaar-a
 kilab-u tutarid-uu sayaar-a wa qitat-u tutarid-uu kilab-a
-qitat-u tutarid-uu kilab-a wa qitat-u namat-uu
+qitat-u tutarid-uu kilab-a wa qitat-u nam-uu
 2a qitat-u tutarid-uu kilab-a
 yakul-uu kilab-un jay-un
 kilab-u fi hadiq-i yakul-uu
@@ -16,10 +16,10 @@ al-kilab-u fi al-hadiq-i
 al-kilabu hi al-qitat-a
 al-sayaar-u al-kalb-i namat-a
 kilab-tu namat-uu
-man namat-a
+man nam-a
 madha tutarid-uu al-kilab-u
 madha hasib-ta tutarid-uu al-kilab-u
 man talab-a madha tutarid-uu al-kilab-u 
 talab-tu madha tutarid-uu al-kilab-u
-li2ana al-qat-u namat-a al-kalb-u namat-a
-bead2an al-qat-u namat-a al-kalb-u namat-a
+li2ana al-qat-u nam-a al-kalb-u nam-a
+bead2an al-qat-u nam-a al-kalb-u nam-a

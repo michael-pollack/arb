@@ -61,6 +61,18 @@ qalam := common_3sg_masc-noun-lex &
   [ STEM < "qalam" >,
     SYNSEM.LKEYS.KEYREL.PRED "_pen_n_rel" ].
 
+kalb := common_3sg_masc-noun-lex &
+  [ STEM < "kalb" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_dog_n_rel" ].
+
+qat := common_3sg_masc-noun-lex &
+  [ STEM < "qat" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_cat_n_rel" ].
+
+hadiq := common_3sg_masc-noun-lex &
+  [ STEM < "hadiq" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_park_n_rel" ].
+
 Muhammad := proper-noun-lex &
   [ STEM < "Muhammad" >,
     SYNSEM.LKEYS.KEYREL.PRED "_Muhammad_n_rel" ].
@@ -179,6 +191,10 @@ mujtahid := common-adj-lex &
   [ STEM < "mujtahid" >,
     SYNSEM.LKEYS.KEYREL.PRED "_assiduous_adj_rel" ].
 
+jay := common-adj-lex &
+  [ STEM < "jay" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_jay_a_rel" ].
+
 fi := normadp1-norm-adposition-lex &
   [ STEM < "fi" >,
     SYNSEM.LKEYS.KEYREL.PRED "_in_p_rel" ].
@@ -265,6 +281,10 @@ hasib_1 := trans_comp_2anna-verb-lex &
   [ STEM < "hasib" >,
     SYNSEM.LKEYS.KEYREL.PRED "_think_v_rel" ].
 
+2araf := trans_comp_2anna-verb-lex &
+  [ STEM < "2araf" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_know_v_rel" ].
+
 qal_1 := trans_comp_2inna-verb-lex &
   [ STEM < "qal" >,
     SYNSEM.LKEYS.KEYREL.PRED "_say_v_rel" ].
@@ -302,15 +322,15 @@ wa := conj-lex &
     SYNSEM.LKEYS.KEYREL.PRED "_and_coord_rel",
     CFORM "1" ].
 
-2in_1 := perfective-clause-init-prehead-s-attach-subord-lex-item &
+2in_1 := s-attach-clause-init-prehead-subord-lex-item &
   [ STEM < "2in" >,
     SYNSEM.LKEYS.KEYREL.PRED "_if_subord_rel" ].
 
-baed2an_1 := perfective-clause-init-prehead-s-attach-subord-lex-item &
+baed2an_1 := s-attach-clause-init-prehead-subord-lex-item &
   [ STEM < "baed2an" >,
     SYNSEM.LKEYS.KEYREL.PRED "_after_subord_rel" ].
 
-li2ana_1 := perfective-clause-init-prehead-s-attach-subord-lex-item &
+li2ana_1 := s-attach-clause-init-prehead-subord-lex-item &
   [ STEM < "li2ana" >,
     SYNSEM.LKEYS.KEYREL.PRED "_because_subord_rel" ].
 
