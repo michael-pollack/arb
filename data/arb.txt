@@ -1,14 +1,14 @@
-kilab-u nam-uu
-kilab-u tutarid-uu sayaar-a
+kilab-un nam-uu
+kilab-un tutarid-uu sayaar-a
 tutarid-tu-ka
-kilab-u yakul-uu
+kilab-un yakul-uu
 al-kilab-u lan tutarid-a sayaar-a
-hasib-tu 2anna 2araf-ta 2anna kilab-u tutarid-uu sayaar-a
-talab-tu idha 2araf-ta 2anna kilab-u tutarid-uu sayaar-a
-qitat-u wa kulab-u tutarid-uu sayaar-a
-kilab-u tutarid-uu sayaar-a wa qitat-u tutarid-uu kilab-a
-qitat-u tutarid-uu kilab-a wa qitat-u nam-uu
-2a qitat-u tutarid-uu kilab-a
+hasib-tu 2anna 2araf-ta 2anna kilab-un tutarid-uu sayaar-an
+talab-tu idha 2araf-ta 2anna kilab-un tutarid-uu sayaar-an
+qitat-u wa kilab-un tutarid-uu sayaar-an
+kilab-u tutarid-uu sayaar-an wa qitat-u tutarid-uu kilab-an
+qitat-un tutarid-uu kilab-an wa qitat-un nam-uu
+2a qitat-un tutarid-uu kilab-an
 yakul-uu kilab-un jay-un
 kilab-u fi hadiq-i yakul-uu
 al-kilab-u jay-un
