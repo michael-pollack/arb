@@ -2,7 +2,7 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;; Grammar of Modern_Standard_Arabic
 ;;; created at:
-;;;     Wed Feb 07 04:22:28 UTC 2024
+;;;     Wed Feb 07 17:52:06 UTC 2024
 ;;; based on Matrix customization system version of:
 ;;;     Fri 27 Oct 2023 04:16:13 PM UTC
 ;;;
@@ -38,13 +38,11 @@ noun :+ [ CASE case ].
 
 inflected :+ [ NOUNPOSS-FLAG luk,
     MC-FLAG luk,
-    VERB_SUFFIX-FLAG luk,
     CASE-FLAG luk,
     DEFAGR-FLAG luk ].
 
 infl-satisfied :+ [ NOUNPOSS-FLAG na-or-+,
     MC-FLAG na-or-+,
-    VERB_SUFFIX-FLAG na-or-+,
     CASE-FLAG na-or-+,
     DEFAGR-FLAG na-or-+ ].
 
@@ -359,16 +357,13 @@ clausal-nominative-verb-lex := clausal-verb-lex &
                                 [ CASE nom ] ].
 
 intr-verb-lex := nom-intransitive-verb-lex &
-  [ INFLECTED [ VERB_SUFFIX-FLAG -,
-                MC-FLAG - ] ].
+  [ INFLECTED.MC-FLAG - ].
 
 trans-verb-lex := nom-acc-transitive-verb-lex &
-  [ INFLECTED [ VERB_SUFFIX-FLAG -,
-                MC-FLAG - ] ].
+  [ INFLECTED.MC-FLAG - ].
 
 trans_comp_2anna-verb-lex := clausal-nominative-verb-lex & clausal-second-arg-trans-lex-item &
-  [ INFLECTED [ VERB_SUFFIX-FLAG -,
-                MC-FLAG - ],
+  [ INFLECTED.MC-FLAG -,
     SYNSEM [ LOCAL.CAT.VAL.COMPS < [ LOCAL [ CAT [ HEAD comp &
                                                         [ FORM complementizer_2anna ],
                                                    WH.BOOL - ],
@@ -376,8 +371,7 @@ trans_comp_2anna-verb-lex := clausal-nominative-verb-lex & clausal-second-arg-tr
              NON-LOCAL.QUE.LIST < > ] ].
 
 trans_comp_2inna-verb-lex := clausal-nominative-verb-lex & clausal-second-arg-trans-lex-item &
-  [ INFLECTED [ VERB_SUFFIX-FLAG -,
-                MC-FLAG - ],
+  [ INFLECTED.MC-FLAG -,
     SYNSEM [ LOCAL.CAT.VAL.COMPS < [ LOCAL [ CAT [ HEAD comp &
                                                         [ FORM complementizer_2inna ],
                                                    WH.BOOL - ],
@@ -385,8 +379,7 @@ trans_comp_2inna-verb-lex := clausal-nominative-verb-lex & clausal-second-arg-tr
              NON-LOCAL.QUE.LIST < > ] ].
 
 trans_comp_2an-verb-lex := clausal-nominative-verb-lex & clausal-second-arg-trans-lex-item &
-  [ INFLECTED [ VERB_SUFFIX-FLAG -,
-                MC-FLAG - ],
+  [ INFLECTED.MC-FLAG -,
     SYNSEM [ LOCAL.CAT.VAL.COMPS < [ LOCAL [ CAT [ HEAD comp &
                                                         [ FORM complementizer_qan ],
                                                    WH.BOOL - ],
@@ -443,14 +436,21 @@ subord-with-verbal-comp-lex := adposition-subord-lex-item &
              LKEYS.KEYREL [ ARG1 #h1,
                             ARG2 #h2 ] ] ].
 
-shared-subject-clause-init-prehead-perfective-subord-lex-item := subord-with-verbal-comp-lex &
+perfective-clause-init-prehead-s-attach-subord-lex-item := subord-with-verbal-comp-lex &
   [ SYNSEM.LOCAL [ CONT.HOOK.INDEX.E.ASPECT #feat,
-                   CAT [ VAL.COMPS < [ LOCAL [ CAT.VAL.SUBJ < unexpressed >,
-                                               CONT.HOOK [ XARG #xarg,
-                                                           INDEX.E.ASPECT #feat & perfective ] ] ] >,
+                   CAT [ VAL.COMPS < [ LOCAL [ CAT.VAL.SUBJ < >,
+                                               CONT.HOOK.INDEX.E.ASPECT #feat & perfective ] ] >,
                          POSTHEAD -,
-                         HEAD [ MOD < [ LOCAL.CONT.HOOK.XARG #xarg ] >,
+                         HEAD [ MOD < [ LOCAL.CAT.VAL.SUBJ < > ] >,
                                 INIT + ] ] ] ].
+
+shared-subject-clause-init-prehead-vp-attach-subord-lex-item := subord-with-verbal-comp-lex &
+  [ SYNSEM.LOCAL.CAT [ VAL.COMPS < [ LOCAL [ CAT.VAL.SUBJ < unexpressed >,
+                                             CONT.HOOK.XARG #xarg ] ] >,
+                       POSTHEAD -,
+                       HEAD [ MOD < [ LOCAL [ CONT.HOOK.XARG #xarg,
+                                              CAT.VAL.SUBJ < [ ] > ] ] >,
+                              INIT + ] ] ].
 
 ;;; Complementizers
 
@@ -603,13 +603,13 @@ neg-adv-lex := basic-scopal-adverb-lex &
 
 ;;; Intermediate rule types
 
-verb_pn_subj-rule-dtr := word-or-lexrule.
-case-rule-dtr := word-or-lexrule.
-MC-rule-dtr := word-or-lexrule.
-verb_pn_obj-rule-dtr := word-or-lexrule.
 det-rule-dtr := word-or-lexrule.
-caseagr-rule-dtr := word-or-lexrule.
 nounposs-rule-dtr := word-or-lexrule.
+MC-rule-dtr := word-or-lexrule.
+case-rule-dtr := word-or-lexrule.
+caseagr-rule-dtr := word-or-lexrule.
+verb_pn_subj-rule-dtr := word-or-lexrule.
+verb_pn_obj-rule-dtr := word-or-lexrule.
 verb_suffix-rule-dtr := word-or-lexrule.
 
 ;;; Lexical rule types
@@ -618,13 +618,11 @@ case-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule & nounposs-rule-dt
   [ INFLECTED [ CASE-FLAG +,
                 NOUNPOSS-FLAG #nounposs,
                 MC-FLAG #mc,
-                DEFAGR-FLAG #defagr,
-                VERB_SUFFIX-FLAG #verb_suffix ],
+                DEFAGR-FLAG #defagr ],
     DTR case-rule-dtr &
         [ INFLECTED [ NOUNPOSS-FLAG #nounposs,
                       MC-FLAG #mc,
-                      DEFAGR-FLAG #defagr,
-                      VERB_SUFFIX-FLAG #verb_suffix ] ] ].
+                      DEFAGR-FLAG #defagr ] ] ].
 
 subjectdef-lex-rule := case-lex-rule-super &
   [ SYNSEM.LOCAL [ CAT.HEAD.CASE nom,
@@ -655,14 +653,12 @@ the-lex-rule := det-lex-rule-super &
 
 nounposs-lex-rule-super := lex-rule &
   [ INFLECTED [ NOUNPOSS-FLAG +,
-                VERB_SUFFIX-FLAG #verb_suffix,
-                CASE-FLAG #case,
                 MC-FLAG #mc,
+                CASE-FLAG #case,
                 DEFAGR-FLAG #defagr ],
     DTR nounposs-rule-dtr &
-        [ INFLECTED [ VERB_SUFFIX-FLAG #verb_suffix,
+        [ INFLECTED [ MC-FLAG #mc,
                       CASE-FLAG #case,
-                      MC-FLAG #mc,
                       DEFAGR-FLAG #defagr ] ] ].
 
 posspn-lex-rule := infl-lex-rule & nounposs-lex-rule-super &
@@ -715,16 +711,9 @@ nonpossessive-lex-rule-1 := add-only-no-ccont-rule &
 nonposs-lex-rule := const-lex-rule & nonpossessive-lex-rule-1 & nounposs-lex-rule-super.
 
 verb_suffix-lex-rule-super := MC-rule-dtr & add-only-no-ccont-rule & infl-lex-rule & verb_pn_obj-rule-dtr & verb_pn_subj-rule-dtr &
-  [ INFLECTED [ VERB_SUFFIX-FLAG +,
-                NOUNPOSS-FLAG #nounposs,
-                CASE-FLAG #case,
-                MC-FLAG #mc,
-                DEFAGR-FLAG #defagr ],
+  [ INFLECTED #infl,
     DTR verb_suffix-rule-dtr &
-        [ INFLECTED [ NOUNPOSS-FLAG #nounposs,
-                      CASE-FLAG #case,
-                      MC-FLAG #mc,
-                      DEFAGR-FLAG #defagr ] ] ].
+        [ INFLECTED #infl ] ].
 
 imperf-lex-rule := verb_suffix-lex-rule-super &
   [ SYNSEM.LOCAL.CONT.HOOK.INDEX.E.ASPECT imperfective ].
@@ -783,7 +772,7 @@ verb_pn_subj-lex-rule-super := MC-rule-dtr & add-only-no-ccont-rule & verb_pn_ob
 verb_pn_subj-no-drop-lex-rule := const-lex-rule & verb_pn_subj-lex-rule-super &
   [ SYNSEM.LOCAL.CAT.VAL.SUBJ.FIRST.OPT - ].
 
-verb_pn_obj-lex-rule-super := add-only-no-ccont-rule &
+verb_pn_obj-lex-rule-super := MC-rule-dtr & add-only-no-ccont-rule &
   [ INFLECTED #infl,
     DTR verb_pn_obj-rule-dtr &
         [ INFLECTED #infl ] ].
@@ -814,13 +803,11 @@ MC-lex-rule-super := add-only-no-ccont-rule & const-lex-rule &
   [ INFLECTED [ MC-FLAG +,
                 NOUNPOSS-FLAG #nounposs,
                 CASE-FLAG #case,
-                DEFAGR-FLAG #defagr,
-                VERB_SUFFIX-FLAG #verb_suffix ],
+                DEFAGR-FLAG #defagr ],
     DTR MC-rule-dtr &
         [ INFLECTED [ NOUNPOSS-FLAG #nounposs,
                       CASE-FLAG #case,
-                      DEFAGR-FLAG #defagr,
-                      VERB_SUFFIX-FLAG #verb_suffix ] ] ].
+                      DEFAGR-FLAG #defagr ] ] ].
 
 MC_plus-lex-rule := MC-lex-rule-super.
 
@@ -829,14 +816,12 @@ MC_minus-lex-rule := MC-lex-rule-super.
 defagr-lex-rule-super := add-only-no-ccont-rule & caseagr-rule-dtr &
   [ INFLECTED [ DEFAGR-FLAG +,
                 NOUNPOSS-FLAG #nounposs,
-                CASE-FLAG #case,
                 MC-FLAG #mc,
-                VERB_SUFFIX-FLAG #verb_suffix ],
+                CASE-FLAG #case ],
     DTR common-adj-lex &
         [ INFLECTED [ NOUNPOSS-FLAG #nounposs,
-                      CASE-FLAG #case,
                       MC-FLAG #mc,
-                      VERB_SUFFIX-FLAG #verb_suffix ] ] ].
+                      CASE-FLAG #case ] ] ].
 
 defagrpos-lex-rule := defagr-lex-rule-super & infl-lex-rule &
   [ SYNSEM.LOCAL.CONT.HOOK.XARG.PNG.DEFINITION + ].

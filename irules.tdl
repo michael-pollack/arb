@@ -77,12 +77,8 @@ perf-lex-rule.
 %suffix (* -ala)
 3dualmasc-lex-rule.
 
-1sg_v_subj-suffix1 :=
+1sg_v_subj-suffix :=
 %suffix (* -tu)
-1sg_v_subj-lex-rule.
-
-1sg_v_subj-suffix2 :=
-%suffix (* -nii)
 1sg_v_subj-lex-rule.
 
 1pl_v_subj-suffix :=
