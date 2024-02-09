@@ -1417,7 +1417,7 @@ saw-1sg-3sgm
 Source: generation
 Vetted: s
 Judgment: g
-Phenomena: {agreement}
+Phenomena: {mmt}
 kilab-un nam-uu
 dogs-NOM sleep-3pl.masc
 ‘Dogs sleep’
@@ -1426,7 +1426,7 @@ dogs-NOM sleep-3pl.masc
 Source: generation
 Vetted: s
 Judgment: g
-Phenomena: {agreement, case}
+Phenomena: {mmt}
 kilab-un tutarid-uu sayaar-a
 dog.3plmasc-NOM chase-3pl.masc car.3pl.masc-ACC
 ‘Dogs chase cars’
@@ -1435,7 +1435,7 @@ dog.3plmasc-NOM chase-3pl.masc car.3pl.masc-ACC
 Source: generation
 Vetted: s
 Judgment: g
-Phenomena: {pronouns}
+Phenomena: {mmt}
 Tutarid-tu-ka
 chase-1sg-2sg
 ‘I chase you’

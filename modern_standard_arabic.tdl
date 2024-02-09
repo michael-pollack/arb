@@ -370,7 +370,7 @@ nom-acc-transitive-verb-lex := transitive-verb-lex &
 
 clausal-nominative-verb-lex := clausal-verb-lex &
   [ ARG-ST.FIRST.LOCAL.CAT.HEAD noun &
-                                [ CASE nominative ] ].
+                                [ CASE nom ] ].
 
 intr-verb-lex := nom-intransitive-verb-lex &
   [ INFLECTED [ VERB_PN_SUBJ-FLAG -,
