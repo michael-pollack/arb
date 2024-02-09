@@ -299,14 +299,6 @@ hasib_2 := trans_comp_2an-verb-lex &
 
 ;;; Adverbs
 
-lan := perf_neg-adverb-lex &
-  [ STEM < "lan" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_neg_rel" ].
-
-la := prog_neg-adverb-lex & neg-adv-lex &
-  [ STEM < "la" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_neg_rel" & "neg_rel" ].
-
 lam := question_neg-adverb-lex &
   [ STEM < "lam" >,
     SYNSEM.LKEYS.KEYREL.PRED "_negQ_a_rel" ].
@@ -316,6 +308,10 @@ hal := q-particle1-lex &
 
 2a := q-particle2-lex &
   [ STEM < "2a" > ].
+
+la := neg-adv-lex &
+  [ STEM < "la" >,
+    SYNSEM.LKEYS.KEYREL.PRED "neg_rel" ].
 
 wa := conj-lex &
   [ STEM < "wa" >,
