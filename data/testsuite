@@ -985,7 +985,7 @@ Source: b:19, Mohammad, attested
 Vetted:s
 Judgment: g
 Phenomena: {clausal complement}
-Hasib-a 	al-rajul-u		2anna	al-bint-at  	qabal-at	al-walad-a	
+Hasib-a 	al-rajul-u		2anna	al-bint-a  	qabal-at	al-walad-a	
 Thought-3sg.m DEF-man-NOM	that	DEF-girl-ACC	met-3.SG.F		DEF-boy-ACC
 'The man thought that the girl met the boy.'
 
@@ -994,7 +994,7 @@ Source: b:19, Mohammad, attested
 Vetted:s
 Judgment: g
 Phenomena: {clausal complement}
-qal-a 	al-rajul-u		2inna	al-bint-at 	qabal-at	al-walad-a	
+qal-a 	al-rajul-u		2inna	al-bint-a 	qabal-at	al-walad-a	
 said-3sg.m DEF-man-NOM	that	DEF-girl-ACC	met-3.SG.F	DEF-boy-ACC
 'The man said that the girl met the boy.'
 
@@ -1003,7 +1003,7 @@ Source: b:19, Mohammad, attested
 Vetted:s
 Judgment: u
 Phenomena: {clausal complement}	
-Hasib-a 	al-rajul-u		2inna	al-bint-at  	qabal-at	al-walad-a	
+Hasib-a 	al-rajul-u		2inna	al-bint-a  	qabal-at	al-walad-a	
 Thought-3sg.m DEF-man-NOM	that	DEF-girl-ACC	met-3.SG.F		DEF-boy-ACC
 'The man thought that the girl met the boy.'
 
@@ -1012,7 +1012,7 @@ Source: b:19, Mohammad, attested
 Vetted:s
 Judgment: u
 Phenomena: {clausal complement}	
-qal-a 	al-rajul-u		2anna	al-bint-at 	qabal-at	al-walad-a	
+qal-a 	al-rajul-u		2anna	al-bint-a 	qabal-at	al-walad-a	
 said-3sg.m DEF-man-NOM	that	DEF-girl-ACC	met-3.SG.F	DEF-boy-ACC
 'The man said that the girl met the boy.'
 
@@ -1048,7 +1048,7 @@ Source: b:19, Mohammad, attested
 Vetted:s
 Judgment: g
 Phenomena: {clausal complement}
-qal-a 	al-rajul-u		qan	al-walad-a	yakul-a		al-tuffahat-a
+qal-a 	al-rajul-u		qan	    al-walad-a	yakul-a		al-tuffahat-a
 said-3sg.m DEF-man-NOM	that	DEF-boy-ACC	ate-PERF	DEF-boy-ACC
 'The man said that the boy has eaten the apple.’
 
@@ -1204,7 +1204,7 @@ Phenomena: {yes-no questions}
 Q.did 	slept-3.sg.f 	the-girl-nom.
 ‘Did the girl sleep?’
 
-#######yes-no questions as clausal complements(test-suite only0#######
+#######yes-no questions as clausal complements (test-suite only)#######
 
 # clausal complements - embedded yes-no , idha question marker, embedded subject NOM
 Source: q:19, Alsager, attested
