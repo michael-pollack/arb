@@ -21,9 +21,9 @@ objectindef-suffix :=
 %suffix (* -an)
 objectindef-lex-rule.
 
-the-prefix :=
+def-prefix :=
 %prefix (* al-)
-the-lex-rule.
+def-lex-rule.
 
 posspn-suffix1 :=
 %suffix (* -hu)

@@ -1,4 +1,6 @@
 ;;; -*- Mode: TDL; Coding: utf-8 -*-
+indef-lex := indef-lex-rule.
+
 nonposs-lex := nonposs-lex-rule.
 
 verb_pn_subj-no-drop-lex := verb_pn_subj-no-drop-lex-rule.
