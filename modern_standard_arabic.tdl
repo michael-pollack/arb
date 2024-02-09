@@ -616,6 +616,11 @@ neg-adv-lex := basic-scopal-adverb-lex &
                        HEAD.MOD < [ LOCAL.CAT [ HEAD verb,
                                                 VAL [ SUBJ cons,
                                                       COMPS null ] ] ] > ] ].
+perf-neg-adverb-lex := neg-adv-lex &
+	[SYNSEM.LOCAL.CAT.HEAD.MOD < [LOCAL.CONT.HOOK.INDEX.E.ASPECT perfective]>].
+
+prog-neg-adverb-lex := neg-adv-lex &
+	[SYNSEM.LOCAL.CAT.HEAD.MOD < [LOCAL.CONT.HOOK.INDEX.E.ASPECT imperfective]>].
 
 ;;;;;;;;;;;;;;;;;;;
 ;;; Lexical Rules

@@ -5,6 +5,10 @@ rajul := common_3sg_masc-noun-lex &
   [ STEM < "rajul" >,
     SYNSEM.LKEYS.KEYREL.PRED "_man_n_rel" ].
 
+sayaar := common_3sg_masc-noun-lex &
+  [ STEM < "sayaar" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_car_n_rel" ].
+
 maktab := common_3sg_masc-noun-lex &
   [ STEM < "maktab" >,
     SYNSEM.LKEYS.KEYREL.PRED "_office_n_rel" ].
@@ -104,6 +108,10 @@ Ali := proper-noun-lex &
 tullaab := common_3plmasc-noun-lex &
   [ STEM < "tullaab" >,
     SYNSEM.LKEYS.KEYREL.PRED "_students_n_rel" ].
+
+sayaar := common_3plmasc-noun-lex &
+  [ STEM < "sayaar" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_car_n_rel" ].
 
 aranib := common_3plmasc-noun-lex &
   [ STEM < "aranib" >,
@@ -265,6 +273,10 @@ yakul := trans-verb-lex &
   [ STEM < "yakul" >,
     SYNSEM.LKEYS.KEYREL.PRED "_eat_v_rel" ].
 
+tutarid := trans-verb-lex &
+  [ STEM < "tutarid" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_chase_v_rel" ].
+
 2aqlaq := trans-verb-lex &
   [ STEM < "2aqlaq" >,
     SYNSEM.LKEYS.KEYREL.PRED "_annoy_v_rel" ].
@@ -309,8 +321,12 @@ hal := q-particle1-lex &
 2a := q-particle2-lex &
   [ STEM < "2a" > ].
 
-la := neg-adv-lex &
+la := prog-neg-adverb-lex &
   [ STEM < "la" >,
+    SYNSEM.LKEYS.KEYREL.PRED "neg_rel" ].
+
+lan := perf-neg-adverb-lex &
+  [ STEM < "lan" >,
     SYNSEM.LKEYS.KEYREL.PRED "neg_rel" ].
 
 wa := conj-lex &
