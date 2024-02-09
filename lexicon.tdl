@@ -322,27 +322,27 @@ wa := conj-lex &
     SYNSEM.LKEYS.KEYREL.PRED "_and_coord_rel",
     CFORM "1" ].
 
-2in_1 := s-attach-clause-init-prehead-subord-lex-item &
+2in_1 := shared-subject-clause-init-prehead-s-attach-subord-lex-item &
   [ STEM < "2in" >,
     SYNSEM.LKEYS.KEYREL.PRED "_if_subord_rel" ].
 
-baed2an_1 := s-attach-clause-init-prehead-subord-lex-item &
+baed2an_1 := shared-subject-clause-init-prehead-s-attach-subord-lex-item &
   [ STEM < "baed2an" >,
     SYNSEM.LKEYS.KEYREL.PRED "_after_subord_rel" ].
 
-li2ana_1 := s-attach-clause-init-prehead-subord-lex-item &
+li2ana_1 := shared-subject-clause-init-prehead-s-attach-subord-lex-item &
   [ STEM < "li2ana" >,
     SYNSEM.LKEYS.KEYREL.PRED "_because_subord_rel" ].
 
-2in_2 := shared-subject-clause-init-prehead-vp-attach-subord-lex-item &
+2in_2 := s-attach-clause-init-prehead-subord-lex-item &
   [ STEM < "2in" >,
     SYNSEM.LKEYS.KEYREL.PRED "_if_subord_rel" ].
 
-baed2an_2 := shared-subject-clause-init-prehead-vp-attach-subord-lex-item &
+baed2an_2 := s-attach-clause-init-prehead-subord-lex-item &
   [ STEM < "baed2an" >,
     SYNSEM.LKEYS.KEYREL.PRED "_after_subord_rel" ].
 
-li2ana_2 := shared-subject-clause-init-prehead-vp-attach-subord-lex-item &
+li2ana_2 := s-attach-clause-init-prehead-subord-lex-item &
   [ STEM < "li2ana" >,
     SYNSEM.LKEYS.KEYREL.PRED "_because_subord_rel" ].
 
