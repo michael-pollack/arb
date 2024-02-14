@@ -49,10 +49,6 @@ imperf-suffix :=
 %suffix (* -u)
 imperf-lex-rule.
 
-perf-suffix :=
-%suffix (* -a)
-perf-lex-rule.
-
 3sgm-suffix :=
 %suffix (* -a)
 3sgm-lex-rule.

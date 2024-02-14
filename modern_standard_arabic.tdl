@@ -817,49 +817,55 @@ perf-lex-rule := verb_suffix-lex-rule-super &
   [ INFLECTED [ NO_PN-FLAG -,
                 IMPERF-OR-PERF-FLAG #imperf-or-perf ],
     DTR.INFLECTED.IMPERF-OR-PERF-FLAG #imperf-or-perf,
-    SYNSEM.LOCAL.CAT.VAL.SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG [ NUM sg,
+    SYNSEM.LOCAL [ CAT.VAL.SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG [ NUM sg,
                                                                 PER 3rd,
-                                                                GEND masc ] ].
+                                                                GEND masc ],
+                    CONT.HOOK.INDEX.E.ASPECT perfective] ].
 
 3sgfem-lex-rule := verb_suffix-lex-rule-super &
   [ INFLECTED [ NO_PN-FLAG -,
                 IMPERF-OR-PERF-FLAG #imperf-or-perf ],
     DTR.INFLECTED.IMPERF-OR-PERF-FLAG #imperf-or-perf,
-    SYNSEM.LOCAL.CAT.VAL.SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG [ NUM sg,
+    SYNSEM.LOCAL [ CAT.VAL.SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG [ NUM sg,
                                                                 PER 3rd,
-                                                                GEND fem ] ].
+                                                                GEND fem ],
+                  CONT.HOOK.INDEX.E.ASPECT perfective] ].          
 
 3plm-lex-rule := verb_suffix-lex-rule-super &
   [ INFLECTED [ NO_PN-FLAG -,
                 IMPERF-OR-PERF-FLAG #imperf-or-perf ],
     DTR.INFLECTED.IMPERF-OR-PERF-FLAG #imperf-or-perf,
-    SYNSEM.LOCAL.CAT.VAL.SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG [ NUM pl,
+    SYNSEM.LOCAL [ CAT.VAL.SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG [ NUM pl,
                                                                 PER 3rd,
-                                                                GEND masc ] ].
+                                                                GEND masc ],
+                  CONT.HOOK.INDEX.E.ASPECT perfective] ].
 
 3plfem-lex-rule := verb_suffix-lex-rule-super &
   [ INFLECTED [ NO_PN-FLAG -,
                 IMPERF-OR-PERF-FLAG #imperf-or-perf ],
     DTR.INFLECTED.IMPERF-OR-PERF-FLAG #imperf-or-perf,
-    SYNSEM.LOCAL.CAT.VAL.SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG [ NUM pl,
+    SYNSEM.LOCAL [ CAT.VAL.SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG [ NUM pl,
                                                                 PER 3rd,
-                                                                GEND fem ] ].
+                                                                GEND fem ],
+                    CONT.HOOK.INDEX.E.ASPECT perfective] ].
 
 3dualfem-lex-rule := verb_suffix-lex-rule-super &
   [ INFLECTED [ NO_PN-FLAG -,
                 IMPERF-OR-PERF-FLAG #imperf-or-perf ],
     DTR.INFLECTED.IMPERF-OR-PERF-FLAG #imperf-or-perf,
-    SYNSEM.LOCAL.CAT.VAL.SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG [ NUM dual,
+    SYNSEM.LOCAL [ CAT.VAL.SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG [ NUM dual,
                                                                 PER 3rd,
-                                                                GEND fem ] ].
+                                                                GEND fem ],
+                  CONT.HOOK.INDEX.E.ASPECT perfective] ].
 
 3dualmasc-lex-rule := verb_suffix-lex-rule-super &
   [ INFLECTED [ NO_PN-FLAG -,
                 IMPERF-OR-PERF-FLAG #imperf-or-perf ],
     DTR.INFLECTED.IMPERF-OR-PERF-FLAG #imperf-or-perf,
-    SYNSEM.LOCAL.CAT.VAL.SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG [ NUM dual,
+    SYNSEM.LOCAL [ CAT.VAL.SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG [ NUM dual,
                                                                 PER 3rd,
-                                                                GEND masc ] ].
+                                                                GEND masc ],
+                  CONT.HOOK.INDEX.E.ASPECT perfective] ].
 
 verb_pn_subj-lex-rule-super := MC-rule-dtr & add-only-no-ccont-rule & verb_pn_obj-rule-dtr &
   [ INFLECTED [ VERB_PN_SUBJ-FLAG +,
