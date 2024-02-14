@@ -50,7 +50,7 @@ imperf-suffix :=
 imperf-lex-rule.
 
 3sgm-suffix :=
-%suffix (* -a)
+%suffix (* -a1)
 3sgm-lex-rule.
 
 3sgfem-suffix :=
