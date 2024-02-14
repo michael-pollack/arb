@@ -196,6 +196,7 @@ complementizer_qan := form.
 
 ;;; Aspect
 
+no-aspect := aspect.
 perfective := aspect.
 imperfective := aspect.
 

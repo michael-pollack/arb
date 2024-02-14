@@ -91,7 +91,7 @@ Source: b:9, Mohammad A. Mohammad, attested
 Vetted: s
 Judgment: g 
 Phenomena: {word order, determiner}
-qabal-a 	rajul-u 	walad-a
+qabal-a 	rajul-un 	walad-a
 met-3.SG.M	man-NOM		boy-ACC
 'A man met a boy.'
 
@@ -100,7 +100,7 @@ Source: b:9, Mohammad A. Mohammad, attested
 Vetted: s
 Judgment: g 
 Phenomena: {word order, determiner}
-qabal-a 	walad-a	rajul-u 
+qabal-a 	walad-an	rajul-un
 met-3.SG.M	boy-ACC	man-NOM
 'A man met the boy.'
 
@@ -109,7 +109,7 @@ Source: b:9, Mohammad A. Mohammad, attested
 Vetted: s
 Judgment: u
 Phenomena: {word order, determiner}
-rajul-u 	qabal-a 	walad-a	
+rajul-un 	qabal-a 	walad-an	
 man-NOM		met-3.sg.m	boy-ACC	
 'A man met a boy.'
 
@@ -119,7 +119,7 @@ Source: b:10, Mohammad A. Mohammad, attested
 Vetted: s
 Judgment: u
 Phenomena: {word order, determiner}
-rajul-u 	walad-a	qabal-a 		
+rajul-un 	walad-an	qabal-a 		
 man-NOM		boy-ACC	met-3.SG.M	
 'A man met a boy.'
 
@@ -128,7 +128,7 @@ Source: b:10, Mohammad A. Mohammad, attested
 Vetted: s
 Judgment: u
 Phenomena: {word order, determiner}
-walad-a 	rajul-u		qabal-a 		
+walad-an 	rajul-u		qabal-a 		
 boy-ACC man-NOM		met-3.SG.M	
 'A man met a boy.'
 
@@ -138,7 +138,7 @@ Source: b:10, Mohammad A. Mohammad, attested
 Vetted: s
 Judgment: u
 Phenomena: {word order, determiner}
-walad-a 	qabal-a 	rajul-u			
+walad-an 	qabal-a 	rajul-u			
 boy-ACC 	met-3.SG.M	man-NOM	
 'A man met a boy.'
 
@@ -176,7 +176,7 @@ Source: b:7, Mohammad A. Mohammad, attested
 Vetted: s
 Judgment: g
 Phenomena: {case}
-qabal-a	 	    walad-u      	arnab-a
+qabal-a	 	   walad-un      	arnab-a
 met-3sg.m		boy-nom     rabbit-acc
 'A boy met a rabbit.'
 
@@ -224,7 +224,7 @@ Source: c:2, Alonini, attested
 Vetted: s
 Judgment: g
 Phenomena: {case} 
-walad-u     wasal-a	 
+walad-un     wasal-a	 
 boy-nom     arrived-3sg.m		
 'A boy arrived.'
 
@@ -244,8 +244,8 @@ Source: d:2, AlQahtani, attested
 Vetted: s
 Judgment: g
 Phenomena: {agr, det, adj}
-rajul-u-n tawel-u-n daxal-a 2al-maktab-a
-man-NOM-NUM tall-NOM-NUN entered-3sgmasc the-office-ACC
+rajul-un tawel-un daxal-a 2al-maktab-a
+man-NOM tall-NOM entered-3sgmasc the-office-ACC
 'A tall man entered the office.'
 
 #26- Noun phrase, indefinite, adjective agreement
@@ -271,8 +271,8 @@ Source: f:49, Alataibi, attested
 Vetted: f
 Judgment: u
 Phenomena: {agr}
-ja2-a al-rajul-u karim-u-n
-came-3sgmasc the-man-NOM generous-NOM-NUN
+ja2-a al-rajul-u karim-un
+came-3sgmasc the-man-NOM generous-NOM
 'Intended: The generous man came.'
 
 #######PRONOUNS#######
@@ -302,8 +302,8 @@ Source: d:2, Albuhayri, attested
 Vetted: s
 Judgment: g
 Phenomena: {pn, adj, cop}
-2anta mujtahid-u-n
-2sg.masc assiduous-NOM-NUN
+2anta mujtahid-un
+2sg.masc assiduous-NOM
 'You are assiduous.'
 
 #37-Non-Verbal Predicates, Zero Copula, Independent Pronouns, adjectives
@@ -320,8 +320,8 @@ Source: g:49, Alotaibi, attested
 Vetted: s
 Judgment: g
 Phenomena: {adj, agr, cop}
-al-rajul-u karim-u-n
-the-man-NOM generous-NOM-NUN
+al-rajul-u karim-un
+the-man-NOM generous-NOM
 'The man is generous.'
 
 #### Tense and Aspect##############
@@ -875,7 +875,7 @@ Source: a:278, Ahmed, attested
 Vetted:s
 Judgment: g
 Phenomena: {poss, pn}
-2aqlaq-a-nii ntiqaad-u Zayd-in la-hu
+2aqlaq-a-nii ntiqaad-un Zayd-in la-hu
 Annoyed-3sgm-me criticizing-NOM Zayd-GEN of-him.GEN
 ‘Zayd’s criticism of him annoyed me’
 
@@ -884,7 +884,7 @@ Source: a:278, Ahmed, attested
 Vetted:f
 Judgment: g
 Phenomena: {poss, pn}
-2aqlaq-a-nii ntiqaad-u Zayd-i
+2aqlaq-a-nii ntiqaad-un Zayd-i
 Annoyed-3sgm-me criticizing-NOM Zayd-GEN
 ‘Zayd’s criticism annoyed me’
 
@@ -929,7 +929,7 @@ Source: d:2, AlQahtani, attested
 Vetted: s
 Judgment: g
 Phenomena: {pn, poss, det}
-zur-tu dar-a 2al-2jitam-i
+zur-tu dar-an 2al-2jitam-i
 visited-I house-ACC the-orphans-GEN
 'I visited the orphans' house.'
 
@@ -947,7 +947,7 @@ Source: d:2, AlQahtani, attested
 Vetted: f
 Judgment: g
 Phenomena: {pn, poss, det}
-zur-tu bayt-a muhammad-i
+zur-tu bayt-an muhammad-i
 visited-I house-ACC muhammad-GEN
 'I visited Muhammad’s house.'
 
@@ -1104,7 +1104,7 @@ Source: p:7, Btoosh, attested
 Vetted:s
 Judgment: g
 Phenomena: {yes-no questions}
-hal	nam-at		bint-u 
+hal	nam-at		bint-un 
 Q.did 	slept-3.sg.f 	 girl-nom.
 ‘Did a girl sleep?’
 
@@ -1113,7 +1113,7 @@ Source: p:7, Btoosh, attested
 Vetted:s
 Judgment: g
 Phenomena: {yes-no questions}
-2a	nam-at		bint-u 
+2a	nam-at		bint-un 
 Q.did 	slept-3.sg.f 	girl-nom.
 ‘Did a girl sleep?’
 
@@ -1131,7 +1131,7 @@ Source: p:7, Btoosh, attested
 Vetted:s
 Judgment: u
 Phenomena: {yes-no questions}
-2a 		walad-u  		qadim-a
+2a 		walad-un  		qadim-a
 Q.did		boy.3.sg.m-nom	came-3sg.m
 Intended: Did the boy come?
 
@@ -1141,7 +1141,7 @@ Source: p:7, Btoosh, attested
 Vetted:s
 Judgment: g
 Phenomena: {yes-no questions}
-2a		walad-u  		qadim-a
+2a		walad-un  		qadim-a
 Q.did		boy.3.sg.m-nom	came-3sg.m
 Did a boy come?
 
@@ -1150,7 +1150,7 @@ Source: p:7, Btoosh, attested
 Vetted:s
 Judgment: u
 Phenomena: {yes-no questions}
-hal 		walad-u  		qadim-a
+hal 		walad-un  		qadim-a
 Q.did		boy.3.sg.m-nom	came-3sg.m
 Did a boy come?
 
@@ -1268,7 +1268,7 @@ Source: g:86, Alotaibi attested
 Vetted:s
 Judgment: g
 Phenomena: {cl-mod}
-2in ja2-a ahmad-u dahab-a ali-un
+2in ja2-a ahmad-un dahab-a ali-un
 If come-pfv.3sgm ahmad-NOM leave-PFV ali-NOM
 ‘If Ahmad comes, Ali will honor him ’
 
@@ -1304,7 +1304,7 @@ Source: g:120, Alotaibi attested
 Vetted:s
 Judgment: g
 Phenomena: {cl-mod}
-2in ja2-a 2ahmad-u fa-qum la-hu
+2in ja2-a 2ahmad-un fa-qum la-hu
 If come-pfv.3sgm ahmad-NOM then-stand for-3sgm
 ‘If Ahmad comes, then stand for him.’
 
@@ -1313,7 +1313,7 @@ Source: g:120, Alotaibi attested
 Vetted:s
 Judgment: u
 Phenomena: {cl-mod}
-2in ja2-a 2ahmad-u qum la-hu
+2in ja2-a 2ahmad-un qum la-hu
 If come-pfv.3sgm ahmad-NOM stand for-3sgm
 ‘Intended: If Ahmad comes, then stand for him.’
 

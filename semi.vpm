@@ -37,28 +37,28 @@ COG-ST : COG-ST
   * <> *
 
 
-PNG.PER : PNG.PER
+PNG.PER : PER
   3rd <> 3rd
   2nd <> 2nd
   1st <> 1st
   * <> *
 
-PNG.NUM : PNG.NUM
+PNG.NUM : NUM
   pl <> pl
   dual <> dual
   sg <> sg
   * <> *
 
-PNG.GEND : PNG.GEND
+PNG.GEND : GEND
   fem <> fem
   masc <> masc
   * <> *
 
-E.TENSE : E.TENSE
+E.TENSE : TENSE
   * <> *
 
-E.ASPECT : E.ASPECT
+E.ASPECT : ASPECT
   * <> *
 
-E.MOOD : E.MOOD
+E.MOOD : MOOD
   * <> *

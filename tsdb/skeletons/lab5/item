@@ -6,31 +6,31 @@
 6@a:29,b:3 amer ahmed, mohammad a. mohammad, attested@@@1@wo,determiner@al-mas2alat-a  		al-talib-u 		hall-a@@@@1@3@the-problem-ACC 	the-student-NOM 	solved-3.SG.M'The problem, the student, he solved it.'@benjamin pong, michael p. pollack@17/1/2024
 7@b:2, mohammad a. mohammad, attested@@@1@wo,determiner@wasal-a	 		al-walad-u@@@@1@2@arrived-3.SG.M		the-boy-NOM'The boy arrived.'@benjamin pong, michael p. pollack@17/1/2024
 8@b:2, mohammad a. mohammad, attested@@@1@wo,determiner@al-walad-u		wasal-a@@@@1@2@the-boy-NOM		arrived-3.SG.M'The boy arrived.'@benjamin pong, michael p. pollack@17/1/2024
-9@b:9, mohammad a. mohammad, attested@@@1@wo,determiner@qabal-a 	rajul-u 	walad-a@@@@1@3@met-3.SG.M	man-NOM		boy-ACC'A man met a boy.'@benjamin pong, michael p. pollack@17/1/2024
-10@b:9, mohammad a. mohammad, attested@@@1@wo,determiner@qabal-a 	walad-a	rajul-u@@@@1@3@met-3.SG.M	boy-ACC	man-NOM'A man met the boy.'@benjamin pong, michael p. pollack@17/1/2024
-11@b:9, mohammad a. mohammad, attested@@@1@wo,determiner@rajul-u 	qabal-a 	walad-a@@@@0@3@man-NOM		met-3.sg.m	boy-ACC'A man met a boy.'@benjamin pong, michael p. pollack@17/1/2024
-12@b:10, mohammad a. mohammad, attested@@@1@wo,determiner@rajul-u 	walad-a	qabal-a@@@@0@3@man-NOM		boy-ACC	met-3.SG.M'A man met a boy.'@benjamin pong, michael p. pollack@17/1/2024
-13@b:10, mohammad a. mohammad, attested@@@1@wo,determiner@walad-a 	rajul-u		qabal-a@@@@0@3@boy-ACC man-NOM		met-3.SG.M'A man met a boy.'@benjamin pong, michael p. pollack@17/1/2024
-14@b:10, mohammad a. mohammad, attested@@@1@wo,determiner@walad-a 	qabal-a 	rajul-u@@@@0@3@boy-ACC 	met-3.SG.M	man-NOM'A man met a boy.'@benjamin pong, michael p. pollack@17/1/2024
+9@b:9, mohammad a. mohammad, attested@@@1@wo,determiner@qabal-a 	rajul-un 	walad-a@@@@1@3@met-3.SG.M	man-NOM		boy-ACC'A man met a boy.'@benjamin pong, michael p. pollack@17/1/2024
+10@b:9, mohammad a. mohammad, attested@@@1@wo,determiner@qabal-a 	walad-an	rajul-un@@@@1@3@met-3.SG.M	boy-ACC	man-NOM'A man met the boy.'@benjamin pong, michael p. pollack@17/1/2024
+11@b:9, mohammad a. mohammad, attested@@@1@wo,determiner@rajul-un 	qabal-a 	walad-an@@@@0@3@man-NOM		met-3.sg.m	boy-ACC'A man met a boy.'@benjamin pong, michael p. pollack@17/1/2024
+12@b:10, mohammad a. mohammad, attested@@@1@wo,determiner@rajul-un 	walad-an	qabal-a@@@@0@3@man-NOM		boy-ACC	met-3.SG.M'A man met a boy.'@benjamin pong, michael p. pollack@17/1/2024
+13@b:10, mohammad a. mohammad, attested@@@1@wo,determiner@walad-an 	rajul-u		qabal-a@@@@0@3@boy-ACC man-NOM		met-3.SG.M'A man met a boy.'@benjamin pong, michael p. pollack@17/1/2024
+14@b:10, mohammad a. mohammad, attested@@@1@wo,determiner@walad-an 	qabal-a 	rajul-u@@@@0@3@boy-ACC 	met-3.SG.M	man-NOM'A man met a boy.'@benjamin pong, michael p. pollack@17/1/2024
 15@b:9, mohammad a. mohammad, attested@@@1@wo,determiner@walad-u 	qadim-a@@@@1@2@boy-NOM 	came-3.SG.M'A boy came.'@benjamin pong, michael p. pollack@17/1/2024
 16@b:9, mohammad a. mohammad, attested@@@1@wo,determiner@qadim-a 	walad-u@@@@0@2@came-3.SG.M	boy-NOM'A boy came.'@benjamin pong, michael p. pollack@17/1/2024
 17@b:7, mohammad a. mohammad, attested@@@1@c@qabal-a	 	    al-walad-u      	al-arnab-a@@@@1@3@met-3sg.m		the-boy-nom         the-rabbit-acc'The boy met the rabbit.'@benjamin pong, michael p. pollack@17/1/2024
-18@b:7, mohammad a. mohammad, attested@@@1@c@qabal-a	 	    walad-u      	arnab-a@@@@1@3@met-3sg.m		boy-nom     rabbit-acc'A boy met a rabbit.'@benjamin pong, michael p. pollack@17/1/2024
+18@b:7, mohammad a. mohammad, attested@@@1@c@qabal-a	 	   walad-un      	arnab-a@@@@1@3@met-3sg.m		boy-nom     rabbit-acc'A boy met a rabbit.'@benjamin pong, michael p. pollack@17/1/2024
 19@b:7, mohammad a. mohammad, attested@@@1@c@qabala-a	 	al-walad-a		al-arnab-u@@@@0@3@met-3sg.m		the-boy-acc	        the-rabbit-nom'The boy met the rabbit.'@benjamin pong, michael p. pollack@17/1/2024
 20@b:7, mohammad a. mohammad, attested@@@1@c@qabala-a	 	walad-a			arnab-u@@@@0@3@met-3sg.m		boy-acc	        rabbit-nom'A boy met the rabbit.'@benjamin pong, michael p. pollack@17/1/2024
 21@c:2, alonini, attested@@@1@c@wasal-a	 		    al-walad-u@@@@1@2@arrived-3sg.m		the-boy-nom'The boy arrived.'@benjamin pong, michael p. pollack@17/1/2024
 22@c:2, alonini, attested@@@1@c@wasal-a	 		    al-walad-a@@@@0@2@arrived-3sg.m		the-boy-acc'The boy arrived.'@benjamin pong, michael p. pollack@17/1/2024
-23@c:2, alonini, attested@@@1@c@walad-u     wasal-a@@@@1@2@boy-nom     arrived-3sg.m'A boy arrived.'@benjamin pong, michael p. pollack@17/1/2024
+23@c:2, alonini, attested@@@1@c@walad-un     wasal-a@@@@1@2@boy-nom     arrived-3sg.m'A boy arrived.'@benjamin pong, michael p. pollack@17/1/2024
 24@c:2, alonini, attested@@@1@c@walad-a     wasal-a@@@@0@2@boy-ACC     arrived-3sg.m'A boy arrived.'@benjamin pong, michael p. pollack@17/1/2024
-25@d:2, alqahtani, attested@@@1@agr,det,adj@rajul-u-n tawel-u-n daxal-a 2al-maktab-a@@@@1@4@man-NOM-NUM tall-NOM-NUN entered-3sgmasc the-office-ACC'A tall man entered the office.'@benjamin pong, michael p. pollack@17/1/2024
+25@d:2, alqahtani, attested@@@1@agr,det,adj@rajul-un tawel-un daxal-a 2al-maktab-a@@@@1@4@man-NOM tall-NOM entered-3sgmasc the-office-ACC'A tall man entered the office.'@benjamin pong, michael p. pollack@17/1/2024
 26@f:37, alotaibi, attested@@@1@agr,adj@Ja2-a rajul-un tawel-un@@@@1@3@came-PFV.3SGMASC man-NOM tall-NOM'A tall man came.'@benjamin pong, michael p. pollack@17/1/2024
 27@f:49, alataibi, attested@@@1@agr,det,adj@ja2-a al-rajul-u al-karim-u@@@@1@3@came-PFV.3SGMASC the-man-NOM the-generous-NOM'The generous man came.'@benjamin pong, michael p. pollack@17/1/2024
-28@f:49, alataibi, attested@@@1@agr@ja2-a al-rajul-u karim-u-n@@@@0@3@came-3sgmasc the-man-NOM generous-NOM-NUN'Intended: The generous man came.'@benjamin pong, michael p. pollack@17/1/2024
+28@f:49, alataibi, attested@@@1@agr@ja2-a al-rajul-u karim-un@@@@0@3@came-3sgmasc the-man-NOM generous-NOM'Intended: The generous man came.'@benjamin pong, michael p. pollack@17/1/2024
 29@d:2, albuhayri, attested@@@1@pn,adj,wo@2iyyaaka qabal-naa@@@@1@2@2sg.masc met-1pl'We met you.'@benjamin pong, michael p. pollack@17/1/2024
 30@d:2, albuhayri, attested@@@1@wo@qabal-naa 2iyyaaka@@@@0@2@met-1pl 2sg.masc'Intended: We met you.'@benjamin pong, michael p. pollack@17/1/2024
-31@d:2, albuhayri, attested@@@1@pn,adj,cop@2anta mujtahid-u-n@@@@1@2@2sg.masc assiduous-NOM-NUN'You are assiduous.'@benjamin pong, michael p. pollack@17/1/2024
+31@d:2, albuhayri, attested@@@1@pn,adj,cop@2anta mujtahid-un@@@@1@2@2sg.masc assiduous-NOM'You are assiduous.'@benjamin pong, michael p. pollack@17/1/2024
 32@d:2, albuhayri, attested@@@1@pn,adj,poss@Huwa safir-u-naa lada al-majlis-i@@@@1@4@3sg.masc ambassador-nom-1pl at the-council-gen'He is our ambassador at the council.'@benjamin pong, michael p. pollack@17/1/2024
-33@g:49, alotaibi, attested@@@1@adj,agr,cop@al-rajul-u karim-u-n@@@@1@2@the-man-NOM generous-NOM-NUN'The man is generous.'@benjamin pong, michael p. pollack@17/1/2024
+33@g:49, alotaibi, attested@@@1@adj,agr,cop@al-rajul-u karim-un@@@@1@2@the-man-NOM generous-NOM'The man is generous.'@benjamin pong, michael p. pollack@17/1/2024
 34@b:13, mohammad, attested@@@1@aspect@al-walad-u				    yakul-a		al-tuffahat-a@@@@1@3@DEF-boy-NOM			eat-PERF	DEF-apple-ACC�The boy has eaten the apple.�@benjamin pong, michael p. pollack@17/1/2024
 35@b:13, mohammad, attested@@@1@aspect@al-walad-u				yakul-u		al-tuffahat-a@@@@1@3@DEF-boy-NOM				eat-PROG	DEF-apple-ACC�The boy is eating the apple.�@benjamin pong, michael p. pollack@17/1/2024
 36@b:13, mohammad, attested@@@1@aspect@al-walad-u				    yakul-a-a		al-tuffahat-a@@@@0@3@DEF-boy-NOM				    eat-3sg.m-PERF	DEF-apple-ACC�The boy has eaten the apple.�@benjamin pong, michael p. pollack@17/1/2024
@@ -89,15 +89,15 @@
 89@p:4, btoosh, attested@@@1@wh@man 	qara2-a 		al-kitab-a@@@@1@3@who	 read-3.sg.masc. 	the-book-acc.�Who read the book?�@benjamin pong, michael p. pollack@17/1/2024
 90@p:4, btoosh, attested@@@1@wh@madha 	qara2-a 		al-walad-u@@@@1@3@what	 read-3.sg.masc. 	DEF-boy-nom�What did the boy read?�@benjamin pong, michael p. pollack@17/1/2024
 91@a:207, ahmed, attested@@@1@poss,pn@Zayd-un ma3ruuf-un bi-nazaahat-i-hi@@@@1@3@Zayd-NOM known-NOM for-honesty-GEN-his�Zayd is known for his honesty�@benjamin pong, michael p. pollack@17/1/2024
-92@a:278, ahmed, attested@@@1@poss,pn@2aqlaq-a-nii ntiqaad-u Zayd-in la-hu@@@@1@4@Annoyed-3sgm-me criticizing-NOM Zayd-GEN of-him.GEN�Zayd�s criticism of him annoyed me�@benjamin pong, michael p. pollack@17/1/2024
-93@a:278, ahmed, attested@@@1@poss,pn@2aqlaq-a-nii ntiqaad-u Zayd-i@@@@1@3@Annoyed-3sgm-me criticizing-NOM Zayd-GEN�Zayd�s criticism annoyed me�@benjamin pong, michael p. pollack@17/1/2024
+92@a:278, ahmed, attested@@@1@poss,pn@2aqlaq-a-nii ntiqaad-un Zayd-in la-hu@@@@1@4@Annoyed-3sgm-me criticizing-NOM Zayd-GEN of-him.GEN�Zayd�s criticism of him annoyed me�@benjamin pong, michael p. pollack@17/1/2024
+93@a:278, ahmed, attested@@@1@poss,pn@2aqlaq-a-nii ntiqaad-un Zayd-i@@@@1@3@Annoyed-3sgm-me criticizing-NOM Zayd-GEN�Zayd�s criticism annoyed me�@benjamin pong, michael p. pollack@17/1/2024
 94@a:278, ahmed, attested@@@1@poss,pn@2aqlaq-a-nii ntiqaad-u-hu Zayd-an@@@@1@3@Annoyed-3sgm-me criticizing-NOM-his.GEN Zayd-ACC�His criticism of Zayd annoyed me�@benjamin pong, michael p. pollack@17/1/2024
 95@a:278, ahmed, attested@@@1@poss,pn@2aqlaq-a-nii ntiqaad-u-hu@@@@1@2@Annoyed-3sgm-me criticizing-NOM-his.GEN�His criticism annoyed me�@benjamin pong, michael p. pollack@17/1/2024
 96@a:278, ahmed, attested@@@1@poss@2aqlaq-a-nii ntiqaad-i-hu Zayd-an@@@@0@3@Annoyed-3sgm-me criticizing-Gen-his.GEN Zayd-ACC�Intended His criticism of Zayd annoyed me�@benjamin pong, michael p. pollack@17/1/2024
 97@a:278, ahmed, attested@@@1@poss@2aqlaqa-a-nii ntiqaad-u-hu Zayd-i@@@@0@3@Annoyed-3sgm-me criticizing-NOM-his.GEN Zayd-GEN�Intended: His criticism of Zayd annoyed me�@benjamin pong, michael p. pollack@17/1/2024
-98@d:2, alqahtani, attested@@@1@pn,poss,det@zur-tu dar-a 2al-2jitam-i@@@@1@3@visited-I house-ACC the-orphans-GEN'I visited the orphans' house.'@benjamin pong, michael p. pollack@17/1/2024
+98@d:2, alqahtani, attested@@@1@pn,poss,det@zur-tu dar-an 2al-2jitam-i@@@@1@3@visited-I house-ACC the-orphans-GEN'I visited the orphans' house.'@benjamin pong, michael p. pollack@17/1/2024
 99@d:2, alqahtani, attested@@@1@pn,poss,det@zur-tu bayt-a-hu@@@@1@2@visited-I house-ACC-his'I visited his house.'@benjamin pong, michael p. pollack@17/1/2024
-100@d:2, alqahtani, attested@@@1@pn,poss,det@zur-tu bayt-a muhammad-i@@@@1@3@visited-I house-ACC muhammad-GEN'I visited Muhammad�s house.'@benjamin pong, michael p. pollack@17/1/2024
+100@d:2, alqahtani, attested@@@1@pn,poss,det@zur-tu bayt-an muhammad-i@@@@1@3@visited-I house-ACC muhammad-GEN'I visited Muhammad�s house.'@benjamin pong, michael p. pollack@17/1/2024
 101@d:2, alqahtani, attested@@@1@wo@zur-tu muhammad-i bayt-a@@@@0@3@visited-I muhammad-GEN house-ACC'I visited Muhammad�s house.'@benjamin pong, michael p. pollack@17/1/2024
 102@d:2, alqahtani, attested@@@1@wo@zur-tu al-2jitam-i dar-a@@@@0@3@visited-I the-orphans-GEN house-ACC'Intended: I visited the orphans' house.'@benjamin pong, michael p. pollack@17/1/2024
 103@d:2, albuhayri, attested@@@1@pn,poss@haa6aa bayt-u-ki@@@@1@2@this house-NOM-2sgfem'This is your house.'@benjamin pong, michael p. pollack@17/1/2024
@@ -114,12 +114,12 @@
 114@b:19, mohammad, attested@@@1@clausalcomplement@qal-a 	al-rajul-u		qan al-walad-u	yakul-a		al-tuffahat-a@@@@0@6@said-3sg.m DEF-man-NOM	that	DEF-boy-u	ate-3.sg.m	DEF-boy-ACC'The man said that the boy has eaten the apple.�@benjamin pong, michael p. pollack@17/1/2024
 115@p:7, btoosh, attested@@@1@q@hal	nam-at		al-bint-u@@@@1@3@Q.did 	slept-3.sg.f 	def-girl-nom.�Did the girl sleep?�@benjamin pong, michael p. pollack@17/1/2024
 116@p:7, btoosh, attested@@@1@q@2a	nam-at		al-bint-u@@@@1@3@Q.did 	slept-3.sg.f 	the-girl-nom.�Did the girl sleep?�@benjamin pong, michael p. pollack@17/1/2024
-117@p:7, btoosh, attested@@@1@q@hal	nam-at		bint-u@@@@1@3@Q.did 	slept-3.sg.f 	 girl-nom.�Did a girl sleep?�@benjamin pong, michael p. pollack@17/1/2024
-118@p:7, btoosh, attested@@@1@q@2a	nam-at		bint-u@@@@1@3@Q.did 	slept-3.sg.f 	girl-nom.�Did a girl sleep?�@benjamin pong, michael p. pollack@17/1/2024
+117@p:7, btoosh, attested@@@1@q@hal	nam-at		bint-un@@@@1@3@Q.did 	slept-3.sg.f 	 girl-nom.�Did a girl sleep?�@benjamin pong, michael p. pollack@17/1/2024
+118@p:7, btoosh, attested@@@1@q@2a	nam-at		bint-un@@@@1@3@Q.did 	slept-3.sg.f 	girl-nom.�Did a girl sleep?�@benjamin pong, michael p. pollack@17/1/2024
 119@p:7, btoosh, attested@@@1@q@hal 		al-walad-u  		qadim-a@@@@1@3@Q.did		the-boy.3.sg.m-nom	came-3sg.mDid the boy come?@benjamin pong, michael p. pollack@17/1/2024
-120@p:7, btoosh, attested@@@1@q@2a 		walad-u  		qadim-a@@@@0@3@Q.did		boy.3.sg.m-nom	came-3sg.mIntended: Did the boy come?@benjamin pong, michael p. pollack@17/1/2024
-121@p:7, btoosh, attested@@@1@q@2a		walad-u  		qadim-a@@@@1@3@Q.did		boy.3.sg.m-nom	came-3sg.mDid a boy come?@benjamin pong, michael p. pollack@17/1/2024
-122@p:7, btoosh, attested@@@1@q@hal 		walad-u  		qadim-a@@@@0@3@Q.did		boy.3.sg.m-nom	came-3sg.mDid a boy come?@benjamin pong, michael p. pollack@17/1/2024
+120@p:7, btoosh, attested@@@1@q@2a 		walad-un  		qadim-a@@@@0@3@Q.did		boy.3.sg.m-nom	came-3sg.mIntended: Did the boy come?@benjamin pong, michael p. pollack@17/1/2024
+121@p:7, btoosh, attested@@@1@q@2a		walad-un  		qadim-a@@@@1@3@Q.did		boy.3.sg.m-nom	came-3sg.mDid a boy come?@benjamin pong, michael p. pollack@17/1/2024
+122@p:7, btoosh, attested@@@1@q@hal 		walad-un  		qadim-a@@@@0@3@Q.did		boy.3.sg.m-nom	came-3sg.mDid a boy come?@benjamin pong, michael p. pollack@17/1/2024
 123@p:7, btoosh, attested@@@1@q@2a	 	lam 	nam-at		al-bint-u@@@@1@4@Q.did		not	slept-3.sg.f 	the-girl-nom.Didn�t the girl sleep?@benjamin pong, michael p. pollack@17/1/2024
 124@p:7, btoosh, attested@@@1@q@hal 		lam 	nam-at		al-bint-u@@@@0@4@Q.did		not	slept-3.sg.f 	the-girl-nom.Didn�t the girl sleep?@benjamin pong, michael p. pollack@17/1/2024
 125@p:7, btoosh, attested@@@1@q@nam-at	 	hal	al-bint-u@@@@0@3@slept-3.sg.f  	Q.did	the-girl-nom.�Did the girl sleep?�@benjamin pong, michael p. pollack@17/1/2024
@@ -131,12 +131,12 @@
 131@q:19, alsager, attested@@@1@emb-q@talab-a 	al-rajul-u		2a	al-bint-u	qabal-at	al-walad-a@@@@0@6@said-3sg.m DEF-man-NOM	Q.if	DEF-girl-NOM	met-3.SG.F	DEF-boy-ACC'The man asked if the girl met the boy.'@benjamin pong, michael p. pollack@17/1/2024
 132@g:86, alotaibi attested@@@1@cl-mod@2in ja2-a ali-un yafuz-a@@@@1@4@If come-pfv.3sgm ali-NOM win-pfv.3sgm�If Ali comes, he will win �@benjamin pong, michael p. pollack@17/1/2024
 133@g:86, alotaibi attested@@@1@cl-mod@2in ja2-a ali-un qabal-a muhammad-a@@@@1@5@If come-pfv.3sgm Ali-NOM meet-pfv.3sgm Muhammad-ACC�If Ali comes, he will mee Muhammad �@benjamin pong, michael p. pollack@17/1/2024
-134@g:86, alotaibi attested@@@1@cl-mod@2in ja2-a ahmad-u dahab-a ali-un@@@@1@5@If come-pfv.3sgm ahmad-NOM leave-PFV ali-NOM�If Ahmad comes, Ali will honor him �@benjamin pong, michael p. pollack@17/1/2024
+134@g:86, alotaibi attested@@@1@cl-mod@2in ja2-a ahmad-un dahab-a ali-un@@@@1@5@If come-pfv.3sgm ahmad-NOM leave-PFV ali-NOM�If Ahmad comes, Ali will honor him �@benjamin pong, michael p. pollack@17/1/2024
 135@g:86, alotaibi attested@@@1@wo@ja2-a ali-un 2in yafuz-a@@@@0@4@come-pfv.3sgm ali-NOM if win-pfv.3sgm�If Ali comes, he will win �@benjamin pong, michael p. pollack@17/1/2024
 136@g:124, alotaibi attested@@@1@cl-mod@2in ja2-a ali-un fa-qad yafuz-u@@@@1@5@If come-pfv.3sgm ali-NOM then-might win-ipfv.3sgm�If Ali comes, then he might win  �@benjamin pong, michael p. pollack@17/1/2024
 137@g:124, alotaibi attested@@@1@cl-mod@2in ja2-a ali-un qad yafuz-u@@@@0@5@If come-pfv.3sgm ali-NOM might win-ipfv.3sgm�Intended: If Ali comes, then he might win  �@benjamin pong, michael p. pollack@17/1/2024
-138@g:120, alotaibi attested@@@1@cl-mod@2in ja2-a 2ahmad-u fa-qum la-hu@@@@1@5@If come-pfv.3sgm ahmad-NOM then-stand for-3sgm�If Ahmad comes, then stand for him.�@benjamin pong, michael p. pollack@17/1/2024
-139@g:120, alotaibi attested@@@1@cl-mod@2in ja2-a 2ahmad-u qum la-hu@@@@0@5@If come-pfv.3sgm ahmad-NOM stand for-3sgm�Intended: If Ahmad comes, then stand for him.�@benjamin pong, michael p. pollack@17/1/2024
+138@g:120, alotaibi attested@@@1@cl-mod@2in ja2-a 2ahmad-un fa-qum la-hu@@@@1@5@If come-pfv.3sgm ahmad-NOM then-stand for-3sgm�If Ahmad comes, then stand for him.�@benjamin pong, michael p. pollack@17/1/2024
+139@g:120, alotaibi attested@@@1@cl-mod@2in ja2-a 2ahmad-un qum la-hu@@@@0@5@If come-pfv.3sgm ahmad-NOM stand for-3sgm�Intended: If Ahmad comes, then stand for him.�@benjamin pong, michael p. pollack@17/1/2024
 140@g:86, obeidat attested@@@1@wh@Al-walad-u alladi darab-a al-bint-a saafar-a@@@@1@5@The-boy-NOM who hit-3sgm the-girl-ACC left-3sgm�The boy who hit the girl left�@benjamin pong, michael p. pollack@17/1/2024
 141@g:88, obeidat, attested@@@1@wh@Qabal-tu al-walad-a alladi darab-a-hu Ali@@@@1@5@Met-I the-boy-ACC who hit-3sgm-him Ali�I met the boy whom Ali hit�@benjamin pong, michael p. pollack@17/1/2024
 142@g:88, obeidat, attested@@@1@wh@Ra2ay-tu al-walad-a alladi darab-a al-bint-a@@@@1@5@saw-I the-boy-ACC who hit-3sgm the-girl-ACC�I saw the boy who hit the girl�@benjamin pong, michael p. pollack@17/1/2024
