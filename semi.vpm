@@ -45,7 +45,7 @@ PNG.PER : PER
 
 PNG.NUM : NUM
   pl <> pl
-  dual <> dual
+  dual <> pl
   sg <> sg
   * <> *
 
@@ -58,7 +58,7 @@ E.TENSE : TENSE
   * <> *
 
 E.ASPECT : ASPECT
-  * <> *
+perfective << [e]
 
 E.MOOD : MOOD
   * <> *
