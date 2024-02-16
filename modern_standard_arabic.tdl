@@ -443,7 +443,7 @@ attr-only-adj-lex := attr-adj-lex &
 ;;;;;;;;;;;;;;;;;;;
 
 adposition-subord-lex-item := single-rel-lex-item & norm-ltop-lex-item & basic-icons-lex-item &
-  [ SYNSEM.LOCAL.CAT [ MC -,
+  [ SYNSEM.LOCAL.CAT [ MC +,
                        HEAD adp &
                             [ MOD < [ LOCAL scopal-mod &
                                             [ CAT [ HEAD verb,
@@ -490,16 +490,6 @@ s-attach-clause-init-prehead-subord-lex-item := subord-with-verbal-comp-lex &
 ; We treat question particles as complementizers.
 ; Here is the lexical type for complementizers.
 
-
-acc-intransitive-verb-lex := intransitive-verb-lex &
-  [ ARG-ST.FIRST.LOCAL.CAT.HEAD noun &
-                                [ CASE acc ] ].
-
-acc-acc-transitive-verb-lex := transitive-verb-lex &
-  [ ARG-ST < [ LOCAL.CAT.HEAD noun &
-                              [ CASE acc ] ],
-             [ LOCAL.CAT.HEAD noun &
-                              [ CASE acc ] ] > ].
 
 
 complementizer-lex-item := raise-sem-lex-item & non-local-none-lex-item & basic-icons-lex-item &
@@ -1004,7 +994,24 @@ MC-lex-rule-super := cat-change-only-lex-rule & const-lex-rule &
 MC_plus-lex-rule := MC-lex-rule-super & add-only-no-ccont-rule &
   [ SYNSEM.LOCAL.CAT.MC + ].
 
-MC_minus-lex-rule := MC-lex-rule-super &
+
+
+;MC_minus-lex-rule := MC-lex-rule-super &
+ ; [ SYNSEM.LOCAL.CAT.VAL [ SUBJ < [ LOCAL [ CAT cat-sat & [ HEAD.CASE acc ],
+  ;                                          CONT.HOOK #hook ] ] >,
+;		           SPR #spr,
+;			   SPEC #spec,
+;			   COMPS #comps ],
+ ;   DTR.SYNSEM.LOCAL.CAT.VAL [ SUBJ < [ LOCAL.CONT.HOOK #hook ] >,
+;			       SPR #spr,
+;			       SPEC #spec,
+;			       COMPS #comps ] ].
+
+MC_minus-lex:= MC-lex-rule-super &
+ [ SYNSEM.LOCAL.CAT.MC - ].
+
+
+MC_minus-lex-rule := MC_minus-lex &
   [ SYNSEM.LOCAL.CAT.VAL [ SUBJ < [ LOCAL [ CAT cat-sat & [ HEAD.CASE acc ],
                                             CONT.HOOK #hook ] ] >,
 		           SPR #spr,
@@ -1101,6 +1108,7 @@ comp-head-phrase := basic-head-1st-comp-phrase & head-final-head-nexus &
 head-comp-phrase-2 := basic-head-2nd-comp-phrase & head-initial-head-nexus.
 
 comp-head-phrase-2 := basic-head-2nd-comp-phrase & head-final-head-nexus.
+
 
 possessum-mod-rule := basic-head-mod-phrase-simple &
   [ NON-HEAD-DTR.SYNSEM.LOCAL.CAT.HEAD.MOD.FIRST.LOCAL.CAT.POSSESSUM #poss,
