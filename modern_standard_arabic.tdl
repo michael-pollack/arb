@@ -103,8 +103,14 @@ synsem :+ [ ATTACH xmod ].
 head-mod-phrase :+ [ SYNSEM.ATTACH #attach,
     HEAD-DTR.SYNSEM.ATTACH #attach ].
 
-adj-head-scop-phrase :+ [ NON-HEAD-DTR.SYNSEM.LOCAL.CAT [ HEAD.POSSESSOR nonpossessive,
+adj-head-scop-phrase :+ [ NON-HEAD-DTR.SYNSEM.LOCAL.CAT [ HEAD.POSSESSOR nonpossessive, 
                                     POSSESSUM nonpossessive ] ].
+
+;attempt
+;adj-head-scop-phrase :+ [SYNSEM.LOCAL.CAT.MC+, HEAD-DTR.SYNSEM.LOCAL.CAT.MC+,
+;[ NON-HEAD-DTR.SYNSEM.LOCAL.CAT [ HEAD.POSSESSOR nonpossessive, 
+;                                    POSSESSUM nonpossessive ] ]].
+
 
 top-coord-rule :+ [ SYNSEM.LOCAL.CAT [ HEAD.POSSESSOR #possessor,
                        POSSESSUM #possessum ],
@@ -196,7 +202,6 @@ complementizer_qan := form.
 
 ;;; Aspect
 
-no-aspect := aspect.
 perfective := aspect.
 imperfective := aspect.
 
@@ -389,6 +394,7 @@ trans_comp_2anna-verb-lex := clausal-nominative-verb-lex & clausal-second-arg-tr
   [ INFLECTED [ VERB_PN_SUBJ-FLAG -,
                 VERB_PN_OBJ-FLAG -,
                 MC-FLAG - ],
+
     SYNSEM [ LOCAL.CAT.VAL.COMPS < [ LOCAL [ CAT [ HEAD comp &
                                                         [ FORM complementizer_2anna ],
                                                    WH.BOOL - ],
@@ -437,7 +443,7 @@ attr-only-adj-lex := attr-adj-lex &
 ;;;;;;;;;;;;;;;;;;;
 
 adposition-subord-lex-item := single-rel-lex-item & norm-ltop-lex-item & basic-icons-lex-item &
-  [ SYNSEM.LOCAL.CAT [ MC -,
+  [ SYNSEM.LOCAL.CAT [ MC +,
                        HEAD adp &
                             [ MOD < [ LOCAL scopal-mod &
                                             [ CAT [ HEAD verb,
@@ -446,7 +452,7 @@ adposition-subord-lex-item := single-rel-lex-item & norm-ltop-lex-item & basic-i
                              SPR < >,
                              SPEC < >,
                              COMPS < [ OPT -,
-                                       LOCAL.CAT [ MC -,
+                                       LOCAL.CAT [ MC +,
                                                    VAL.COMPS < > ] ] > ] ] ].
 
 subord-with-verbal-comp-lex := adposition-subord-lex-item &
@@ -483,6 +489,8 @@ s-attach-clause-init-prehead-subord-lex-item := subord-with-verbal-comp-lex &
 
 ; We treat question particles as complementizers.
 ; Here is the lexical type for complementizers.
+
+
 
 complementizer-lex-item := raise-sem-lex-item & non-local-none-lex-item & basic-icons-lex-item &
   [ SYNSEM.LOCAL.CAT [ HEAD comp &
@@ -960,7 +968,7 @@ verb_pn_obj-lex-rule-super := MC-rule-dtr & add-only-no-ccont-rule &
 verb_pn_obj-no-drop-lex-rule := const-lex-rule & verb_pn_obj-lex-rule-super &
   [ SYNSEM.LOCAL.CAT.VAL.COMPS.FIRST.OPT - ].
 
-MC-lex-rule-super := add-only-no-ccont-rule & const-lex-rule &
+MC-lex-rule-super := cat-change-only-lex-rule & const-lex-rule &
   [ INFLECTED [ MC-FLAG +,
                 VERB_PN_SUBJ-FLAG #verb_pn_subj,
                 NO_PN-FLAG #no_pn,
@@ -983,11 +991,37 @@ MC-lex-rule-super := add-only-no-ccont-rule & const-lex-rule &
                       NOUNPOSS-FLAG #nounposs ] ] ].
 
 
-MC_plus-lex-rule := MC-lex-rule-super &
+MC_plus-lex-rule := MC-lex-rule-super & add-only-no-ccont-rule &
   [ SYNSEM.LOCAL.CAT.MC + ].
 
-MC_minus-lex-rule := MC-lex-rule-super &
-  [ SYNSEM.LOCAL.CAT.MC - ].
+
+
+;MC_minus-lex-rule := MC-lex-rule-super &
+ ; [ SYNSEM.LOCAL.CAT.VAL [ SUBJ < [ LOCAL [ CAT cat-sat & [ HEAD.CASE acc ],
+  ;                                          CONT.HOOK #hook ] ] >,
+;		           SPR #spr,
+;			   SPEC #spec,
+;			   COMPS #comps ],
+ ;   DTR.SYNSEM.LOCAL.CAT.VAL [ SUBJ < [ LOCAL.CONT.HOOK #hook ] >,
+;			       SPR #spr,
+;			       SPEC #spec,
+;			       COMPS #comps ] ].
+
+MC_minus-lex:= MC-lex-rule-super &
+ [ SYNSEM.LOCAL.CAT.MC - ].
+
+
+MC_minus-lex-rule := MC_minus-lex &
+  [ SYNSEM.LOCAL.CAT.VAL [ SUBJ < [ LOCAL [ CAT cat-sat & [ HEAD.CASE acc ],
+                                            CONT.HOOK #hook ] ] >,
+		           SPR #spr,
+			   SPEC #spec,
+			   COMPS #comps ],
+    DTR.SYNSEM.LOCAL.CAT.VAL [ SUBJ < [ LOCAL.CONT.HOOK #hook ] >,
+			       SPR #spr,
+			       SPEC #spec,
+			       COMPS #comps ] ].
+
 
 defagr-lex-rule-super := add-only-no-ccont-rule & caseagr-rule-dtr &
   [ INFLECTED [ DEFAGR-FLAG +,
@@ -1058,7 +1092,9 @@ head-subj-phrase := decl-head-subj-phrase & head-initial-head-nexus &
     HEAD-DTR.SYNSEM.LOCAL.CAT.MC #mc ].
 
 
-subj-head-phrase := decl-head-subj-phrase & head-final-head-nexus.
+subj-head-phrase := decl-head-subj-phrase & head-final-head-nexus &
+  [ SYNSEM.LOCAL.CAT.MC #mc,
+    HEAD-DTR.SYNSEM.LOCAL.CAT.MC #mc ].
 
 head-comp-phrase := basic-head-1st-comp-phrase & head-initial-head-nexus &
   [ HEAD-DTR.SYNSEM.LOCAL.CAT.HEAD.INIT + ].
@@ -1072,6 +1108,7 @@ comp-head-phrase := basic-head-1st-comp-phrase & head-final-head-nexus &
 head-comp-phrase-2 := basic-head-2nd-comp-phrase & head-initial-head-nexus.
 
 comp-head-phrase-2 := basic-head-2nd-comp-phrase & head-final-head-nexus.
+
 
 possessum-mod-rule := basic-head-mod-phrase-simple &
   [ NON-HEAD-DTR.SYNSEM.LOCAL.CAT.HEAD.MOD.FIRST.LOCAL.CAT.POSSESSUM #poss,
