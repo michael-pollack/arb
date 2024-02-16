@@ -38,9 +38,9 @@ COG-ST : COG-ST
 
 
 PNG.PER : PER
-  3rd <> 3rd
-  2nd <> 2nd
-  1st <> 1st
+  3rd <> third 
+  2nd <> second 
+  1st <> first 
   * <> *
 
 PNG.NUM : NUM
@@ -55,7 +55,10 @@ PNG.GEND : GEND
   * <> *
 
 E.TENSE : TENSE
-  * <> *
+  [e] << present
+  [e] << past
+  [e] << future
+  [e] << non-future
 
 E.ASPECT : ASPECT
 perfective << [e]

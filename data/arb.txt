@@ -3,8 +3,8 @@ kilab-un tutarid-uu sayaar-a
 tutarid-tu-ka
 kilab-un yakul-uu
 al-kilab-u lan tutarid-a sayaar-a
-hasib-tu 2anna 2araf-ta 2anna kilab-un tutarid-uu sayaar-an
-talab-tu idha 2araf-ta 2anna kilab-un tutarid-uu sayaar-an
+hasib-tu 2anna 2araf-ta 2anna kilab-an tutarid-uu sayaar-an
+talab-tu idha 2araf-ta 2anna kilab-an tutarid-uu sayaar-an
 qitat-u wa kilab-un tutarid-uu sayaar-an
 kilab-u tutarid-uu sayaar-an wa qitat-u tutarid-uu kilab-an
 qitat-un tutarid-uu kilab-an wa qitat-un nam-uu
