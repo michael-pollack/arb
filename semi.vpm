@@ -62,6 +62,7 @@ E.TENSE : TENSE
 
 E.ASPECT : ASPECT
 perfective << [e]
+imperfective << prog
 
 E.MOOD : MOOD
   * <> *

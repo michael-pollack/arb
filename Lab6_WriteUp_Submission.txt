@@ -1,0 +1,535 @@
+Language: Modern_Standard_Arabic
+Language code: arb
+Lines: translit translit-seg gloss translat
+Author: Michael Pollack, edited by Benjamin Pong
+Date: 2/16/2024
+Source a: Ahmed, A. M. T. (2016). Case in Standard Arabic: A dependent case approach.
+Source b: Mohammad, M. A. (2000). Word order, agreement and pronominalization in Standard and Palestinian Arabic. Word Order, Agreement and Pronominalization in Standard and Palestinian Arabic, 1-213.
+Source c: Alonini, T. M. (2023). Unaccusative verbs in Modern Standard Arabic. Saudi Journal of Language Studies, 3(1), 47-58.
+Source d: AlQahtani, S. J. (2016). The Structure and Distribution of Determiner Phrases in Arabin: Standard Arabic and Saudi Dialects. Department of Linguistics, University of Ottowa. 
+Source e: Albuhayri, S. (2013). The Pronominal System in Standard Arabic: Stron, Clitic, and Affixal Pronouns. Arizona State University. 
+Source f: Alotaibi, Y. H (2022). Adjectives in Arabic. Taif University. 
+Source g: Obeidat, H, A (1984). Relative Clauses in Standard Arabic Resvisited. Studies in Linguistic Sciences, 14(2) 77-96
+Source h: Alotaibi, Y (2014) Conditional sentences in Modern Standard Arabic and the Taif Dialect. University of Essex. 
+Source p:  Btoosh, M. (2010). Wh-Movement in Standard Arabic: An Optimality-Theoretic 
+Source q: Alsager, Haroon N.. “The Syntax of Yes/No Questions in Modern Standard Arabic.” International Journal of English Linguistics 10 (2020): 179.
+
+#################### INTRODUCTION ####################
+
+In this Lab, we document the processes we went through this week in improving our semi.vpm file, cleaning up our clausal complements implementation, and adding clarity to our morphology. Following this, we examine the performance of our grammar this week and the improvements that we observed based off of our edits to the grammar and our semi.vpm file. Overall, we illustrate how we were able to clean-up our grammar's accuracy and reduce overgeneration. We also take note of new phenomena of Arabic that we were not previously aware of, and comment on improvements that we will be able to add to our grammar as our knowledge improves. 
+
+#################### EDITS TO SEMI.VPM ####################
+
+This week, we made some edits to the semi.vpm file that helped curb the amount of translations that we were previously seeing. These edits are as follows.
+
+First, we renamed the PER values to correspond to what we were seeing in the eng semi.vpm file:
+
+PNG.PER : PER
+  3rd <> third 
+  2nd <> second 
+  1st <> first 
+  * <> *
+
+Then, we made sure that the dual feature in our grammar mapped to plural:
+
+PNG.NUM : NUM
+  pl <> pl
+  dual <> pl
+  sg <> sg
+  * <> *
+
+Then, due to the absence of tense in Arabic, we mapped the values we were seeing in the eng semi.vpn file to [e]. We had originally tried just inserting "* <> *" in this line, but we were repeatedly getting errors saying that there was no value for "present". These errors went away with the following mapping:
+
+E.TENSE : TENSE
+  [e] << present
+  [e] << past
+  [e] << future
+  [e] << non-future
+
+Finally, for aspect, we mapped prog values to imperfect and all other values to perfective. We did this because, seeing what was available in the eng semi.vpm file, it seems that the progressive aspect in English is the closest approximation of the imperfective aspect in Arabic. Both of them align to cases where an action is continual instead of discrete. We know that this correlation is not 1:1, however, and we would be open to feedback on how to improve this mapping. 
+
+E.ASPECT : ASPECT
+perfective << [e]
+imperfective << prog
+
+#################### Morphology clean-up to address ambiguity ####################
+
+This week, we focused on reducing the ambiguity in our grammar by focusing on three morphological implementations: the MC+/- zero affixes, the fact that we implemented the -a suffix as both perfective and 3sg markers, and that we did not constrain the application of no_pn rule. These three sources of ambiguity were identified from lab5's grammar performance.
+
+We use these three sentences as case-studies to reduce ambiguity by addressing the two sources of ambiguity mentioned above. The number of trees that each of these sentences had from lab5's grammar is included below
+
+A: 12 parses
+Source: d:45, Albuhayri, attested
+Vetted: s
+Judgment: g
+Phenomena: {pn, wo}
+qabal-a-nii Muhammad-un
+meet-PFV-1sg Muhammad-NOM
+'Muhammad met me.'
+
+
+B: 72 parses
+Source: g:86, Alotaibi attested
+Vetted:s
+Judgment: g
+Phenomena: {cl-mod}
+2in ja2-a ali-un yafuz-a
+If come-pfv.3sgm ali-NOM win-pfv.3sgm
+‘If Ali comes, he will win ’
+
+
+
+C: 12 parses 
+Source: b:19, Mohammad, attested
+Vetted:s
+Judgment: u
+Phenomena: {clausal complement, case}
+Hasib-a     al-rajul-u        2anna    al-bint-u    qabal-at    al-walad-a
+Thought-3sg.m DEF-man-NOM    that    DEF-girl-NOM    met-3.SG.F    DEF-boy-ACC
+'The man thought that the girl met the boy.'
+(We cleaned up the morphology before address
+
+~~~~~~~~~~ MC+/- ~~~~~~~~~~
+
+One main source of ambiguity is the MC+/- feature that shows up on all verbs. We have previously created an inflection slot for MC- and MC+ to model complement clauses with embedded acc case. However, they are unconstrained, and are showing up on both simple matrix verbs, and embedded verbs. 
+
+With guidance, we found that it was because there were no lexical types that enforced MC- and MC+ features. We added these two lexical types, based on the suggestions given in lab 3 and lab 5:
+
+~~~~~
+MC_plus-lex-rule := MC-lex-rule-super &
+  [ SYNSEM.LOCAL.CAT.MC + ].
+
+MC_minus-lex-rule := MC-lex-rule-super &
+  [ SYNSEM.LOCAL.CAT.MC - ].
+
+
+head-subj-phrase := decl-head-subj-phrase & head-initial-head-nexus &
+  [ SYNSEM.LOCAL.CAT.MC #mc,
+    HEAD-DTR.SYNSEM.LOCAL.CAT.MC #mc ].
+~~~~~
+
+This helped to reduce the number of trees:
+A: 12 --> 6
+B: 72->36
+C: 12->6
+
+At this point we observed that for sentence A, which is a simple declarative clause, all the possible parses contain verbs with MC+, which is exactly what we wanted. However for sentence B, the embedded verb and matrix verb continue to have MC- and MC+ possibilities. For sentence C, the embedded VPs continue to be unconstrained while the  Upon looking at the parse trees, we found out that the issue was not subordination, but the fact that we had two head-subj/subj head rules. The subj-head is licensing the S nodes in B and the embedded S in C.  We had to add the following constraint to the subj-head rule as shown below, to  MC features to be passed up so that the complementizer and subordinator can correctly select for a MC-minus-headed S.
+
+~~~~~
+subj-head-phrase := decl-head-subj-phrase & head-final-head-nexus &
+  [ SYNSEM.LOCAL.CAT.MC #mc,
+    HEAD-DTR.SYNSEM.LOCAL.CAT.MC #mc ].
+
+comps1-complementizer-lex-item := complementizer-lex-item & basic-non-wh-word-lex &
+  [ SYNSEM.LOCAL [ CAT [ VAL.COMPS.FIRST.LOCAL.CAT.MC -,
+                         MC na-or--,
+                         HEAD.FORM complementizer_2anna ],
+                   CONT.HOOK.INDEX.SF prop ] ].		
+
+							(MC- headed COMPS required by complementizer)
+
+
+adposition-subord-lex-item := single-rel-lex-item & norm-ltop-lex-item & basic-icons-lex-item &
+  [ SYNSEM.LOCAL.CAT [ MC -,
+                       HEAD adp &
+                            [ MOD < [ LOCAL scopal-mod &
+                                            [ CAT [ HEAD verb,
+                                                    VAL.COMPS < > ] ] ] > ],
+                       VAL [ SUBJ < >,
+                             SPR < >,
+                             SPEC < >,
+                             COMPS < [ OPT -,
+                                       LOCAL.CAT [ MC -,
+                                                   VAL.COMPS < > ] ] > ] ] ].
+
+							(MC- headed COMPS required by subordinator morpheme)
+~~~~~
+
+By doing so, we reduced the number of trees:
+B: 36-->18
+C: 6-->3
+
+We would like to leave a note that our documentaton of our MC+/- is not finished at this point as we wanted to ensure that the zero affixes for MC+/- were appearing at the right places before completing our implementation of clausal complements. Hence, the MC rules tdls that the reader sees in our modern_standard_arabic file is different from what we have reported above as it was a process throughout the week. We continue our documentation of the MC+/- and how we arrived at the final product in the phenomena section
+
+~~~~~~~~~~ Aspect ~~~~~~~~~~
+Another source of ambiguity was the fact that the -a suffix was modelled as 3sg or perfective. We were encouraged to look more into the behavior of perfective aspect and we did. As we had previously mentioned in our post to Canvas this past Tuesday (added in an appendix below for reference), our initial understanding of how aspect works in Arabic was flawed. To summarize, we had assumed that the suffixes "-a" and "-u" marked perfective and imperfective verb conjugations, respectively. We had furthermore assumed that verbs were marked for either aspect or agreement, but not both. We had therefore added two suffixes "-a" and "-u" to our grammar in addition to a series of agreement suffixes. One of these agreement suffixes was also "-a", which agreed to 3sgm (it turns out "-a" indicates BOTH 3SGM and PFV). This was causing a lot of overgeneration in the parses of any phrase containing the "-a" suffix, as our grammar would account for both the pfv and 3sgm possibilities. 
+
+Because the full resolution to this issue would have required a complete overhaul of our grammar (see Appendix), we decided to partially resolve this issue in a manner that would reduce the ambiguity that we were seeing and lay the foundations for further improvements. 
+
+To do this, we first removed the "-a" suffix that was marking only PFV. Then, we went through and added the perfective aspect feature to all of our agreement suffixes (which were, as in the case of "-a", already the perfective agreement markers). The edits are shown below:
+
+~~~~~
+3sgm-lex-rule := verb_suffix-lex-rule-super &
+  [ INFLECTED [ NO_PN-FLAG -,
+                IMPERF-OR-PERF-FLAG #imperf-or-perf ],
+    DTR.INFLECTED.IMPERF-OR-PERF-FLAG #imperf-or-perf,
+    SYNSEM.LOCAL [ CAT.VAL.SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG [ NUM sg,
+                                                                PER 3rd,
+                                                                GEND masc ],
+                    CONT.HOOK.INDEX.E.ASPECT perfective] ].
+
+3sgfem-lex-rule := verb_suffix-lex-rule-super &
+  [ INFLECTED [ NO_PN-FLAG -,
+                IMPERF-OR-PERF-FLAG #imperf-or-perf ],
+    DTR.INFLECTED.IMPERF-OR-PERF-FLAG #imperf-or-perf,
+    SYNSEM.LOCAL [ CAT.VAL.SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG [ NUM sg,
+                                                                PER 3rd,
+                                                                GEND fem ],
+                  CONT.HOOK.INDEX.E.ASPECT perfective] ].          
+
+3plm-lex-rule := verb_suffix-lex-rule-super &
+  [ INFLECTED [ NO_PN-FLAG -,
+                IMPERF-OR-PERF-FLAG #imperf-or-perf ],
+    DTR.INFLECTED.IMPERF-OR-PERF-FLAG #imperf-or-perf,
+    SYNSEM.LOCAL [ CAT.VAL.SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG [ NUM pl,
+                                                                PER 3rd,
+                                                                GEND masc ],
+                  CONT.HOOK.INDEX.E.ASPECT perfective] ].
+
+3plfem-lex-rule := verb_suffix-lex-rule-super &
+  [ INFLECTED [ NO_PN-FLAG -,
+                IMPERF-OR-PERF-FLAG #imperf-or-perf ],
+    DTR.INFLECTED.IMPERF-OR-PERF-FLAG #imperf-or-perf,
+    SYNSEM.LOCAL [ CAT.VAL.SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG [ NUM pl,
+                                                                PER 3rd,
+                                                                GEND fem ],
+                    CONT.HOOK.INDEX.E.ASPECT perfective] ].
+
+3dualfem-lex-rule := verb_suffix-lex-rule-super &
+  [ INFLECTED [ NO_PN-FLAG -,
+                IMPERF-OR-PERF-FLAG #imperf-or-perf ],
+    DTR.INFLECTED.IMPERF-OR-PERF-FLAG #imperf-or-perf,
+    SYNSEM.LOCAL [ CAT.VAL.SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG [ NUM dual,
+                                                                PER 3rd,
+                                                                GEND fem ],
+                  CONT.HOOK.INDEX.E.ASPECT perfective] ].
+
+3dualmasc-lex-rule := verb_suffix-lex-rule-super &
+  [ INFLECTED [ NO_PN-FLAG -,
+                IMPERF-OR-PERF-FLAG #imperf-or-perf ],
+    DTR.INFLECTED.IMPERF-OR-PERF-FLAG #imperf-or-perf,
+    SYNSEM.LOCAL [ CAT.VAL.SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG [ NUM dual,
+                                                                PER 3rd,
+                                                                GEND masc ],
+                  CONT.HOOK.INDEX.E.ASPECT perfective] ].
+~~~~~
+
+With this change, we managed to reduce the number of trees as such:
+A: 6-->3
+B: 18-->6
+C: 3-->2
+
+Meanwhile, we have left the "-u" marker to model imperfective agreement, leaving the number, gender, and person constraints on this morpheme unspecified for the time being. 
+
+~~~~~~~~~~~~~~ No_pn ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+In addition, we modified the no_pn-lex-rule to forbid attaching to only perf markers. This helped tamp down on ambiguity being caused by this rule optionally appearing on only agreement markers. The updated rule is below:
+
+~~~~~
+no_pn-lex-rule := const-lex-rule & verb_pn_subj-lex-rule-super &
+  [ DTR.INFLECTED.IMPERF-OR-PERF-FLAG na,
+    INFLECTED.NO_PN-FLAG +,
+    SYNSEM.LOCAL.CAT.VAL.SUBJ.FIRST.OPT - ].
+~~~~~
+
+With this change, the number of trees for our sentences remain:
+A: 3-->2
+B: 6-->2
+C: 2
+
+Ultimately, this means that our current grammar can accurately parse perfective verbs, but currently marks imperfective verbs by placing a "-u" suffix on a perfective stem. We plan to continue to work on this resolution in future labs, adding in the additional imperfect agreement marking suffixes and the "ya-" and "ta-" prefixes that correspond to gender on imperfect verbs. The only remaining issue that we have not yet worked out is how to address the changing stems between these affixes. Because of the inconsistency of the rules that govern this morphology and particularly the second vowel therein (see Appendix) we have considered adding imperfect verb roots to our lexicon and marking the existing verbs as perfect. This would at least allow us to parse a more accurate transliteration of these verbs, but it still would not demonstrate the full morphology that is occurring. We will be considering this further. 
+
+############### Phenomena: Getting clausal complements to work #####################################3
+
+Arabic grammar requires that subjects of embedded clauses selected by the complementizer 2anna be in the accusative case. Nominative subjects are not allowed.  
+
+Source: b:19, Mohammad, attested
+Vetted:s
+Judgment: u
+Phenomena: {clausal complement, case}
+Hasib-a     al-rajul-u        2anna    al-bint-u    qabal-at    al-walad-a
+Thought-3sg.m DEF-man-NOM    that    DEF-girl-NOM    met-3.SG.F    DEF-boy-ACC
+'The man thought that the girl met the boy.'
+
+In this case, the "al-bint-u" is the subject of the subordinate clause, which means that it should not feature the "-u" suffix that marks NOM, but should only be allowed to feature the "-a" suffix which marks ACC, as shown below:
+
+Source: b:19, Mohammad, attested
+Vetted:s
+Judgment: g
+Phenomena: {clausal complement}
+Hasib-a     al-rajul-u        2anna    al-bint-a      qabal-at    al-walad-a
+Thought-3sg.m DEF-man-NOM    that    DEF-girl-ACC    met-3.SG.F        DEF-boy-ACC
+'The man thought that the girl met the boy.'
+
+
+We implemented the suggestions given from lab 3 by updating our MC_plus-lex-rule and MC_minus lex-rules to the following:
+
+
+~~~~~
+MC_plus-lex-rule := MC-lex-rule-super & add-only-no-ccont-rule &
+  [ SYNSEM.LOCAL.CAT.MC + ].
+
+MC_minus-lex-rule := MC-lex-rule-super &
+  [ SYNSEM.LOCAL.CAT.VAL [ SUBJ < [ LOCAL [ CAT cat-sat & [ HEAD.CASE acc ],
+                                            CONT.HOOK #hook ] ] >,
+                   SPR #spr,
+               SPEC #spec,
+               COMPS #comps ],
+    DTR.SYNSEM.LOCAL.CAT.VAL [ SUBJ < [ LOCAL.CONT.HOOK #hook ] >,
+                   SPR #spr,
+                   SPEC #spec,
+                   COMPS #comps ] ].
+~~~~~
+
+The MC_plus-lex-rule now has an addtional supertype add-only-no-ccont-lex-rule, and the while MC_minus-lex-rule changes the CASE on the subject and the subject shares its HOOK with the SUBJ value on the daughter. This rule also has to copy up the other valence values.
+
+After implementing this rule, the sentences with embedded accusative subjects parsed, and those with embedded nominatives parsed. 
+
+Additionally, to ensure that the MC_minus-lex-rule does not apply to clausal modifiers, which can only take nominative embedded subjects, we modified the adposition-subord-lex-item, and required the 1st element of the subordinator's COMPS list to be MC+
+
+~~~~~
+adposition-subord-lex-item := single-rel-lex-item & norm-ltop-lex-item & basic-icons-lex-item &
+  [ SYNSEM.LOCAL.CAT [ MC +,
+                       HEAD adp &
+                            [ MOD < [ LOCAL scopal-mod &
+                                            [ CAT [ HEAD verb,
+                                                    VAL.COMPS < > ] ] ] > ],
+                       VAL [ SUBJ < >,
+                             SPR < >,
+                             SPEC < >,
+                             COMPS < [ OPT -,
+                                       LOCAL.CAT [ MC +,
+                                                   VAL.COMPS < > ] ] > ] ] ].
+~~~~~
+
+
+However, another issue surfaced. When parsing sentence B (clausal modifier), we found that the verbs in the clausal modifiers started to become unconstrained in the appearance of MC+/-, creating ambiguity.  We realized that it was because the following rule was overwritten by the current MC_minus rule with the case constraint.
+
+~~~~~
+MC_minus-lex-rule := MC-lex-rule-super &
+  [ SYNSEM.LOCAL.CAT.MC - ].
+
+
+To build this back in, we created a new type like the following:
+
+MC_minus-lex:= MC-lex-rule-super &
+ [ SYNSEM.LOCAL.CAT.MC - ].
+~~~~~
+
+And then, we allowed our MC_minus-lex-rule to inherit MC_minus-lex instead of the MC-lex-super-rule.
+
+~~~~~
+MC_minus-lex-rule := MC_minus-lex &
+  [ SYNSEM.LOCAL.CAT.VAL [ SUBJ < [ LOCAL [ CAT cat-sat & [ HEAD.CASE acc ],
+                                            CONT.HOOK #hook ] ] >,
+                   SPR #spr,
+               SPEC #spec,
+               COMPS #comps ],
+    DTR.SYNSEM.LOCAL.CAT.VAL [ SUBJ < [ LOCAL.CONT.HOOK #hook ] >,
+                   SPR #spr,
+                   SPEC #spec,
+                   COMPS #comps ] ].
+~~~~~
+
+Our clausal complements are now working with the guidance from comments from lab3, lab 5 and the demo in class.
+
+#################### GRAMMAR PERFORMANCE ####################
+
+~~~~~~~~~~ Coverage and Overgeneration ~~~~~~~~~~
+Our coverage and overgeneration yielded some interesting and unexpected results. Though we were able to dramatically reduce the amount of trees being created for our sentences, we actually saw the coverage of our test suite decrease from 62.6% to 61.5%. 
+
+The main culprit of this decrease seemed to be a rule governing verb forms in sentence order. If a verb is sentence-initial, it must have singular agreement regardless of its subject. For example, consider the test suite item below: 
+
+Source: a:28, Ahmed, attested
+Vetted: s
+Judgment: g
+Phenomena: {word order, agreement}
+hall-a			al-tullaab-u		 al-mas2alat-a.
+solved-3SGM.PFV	 DEF-students.pl-NOM	 DEF-problem-acc
+‘The students solved the problem.’ 
+
+This grammatical sentence was accepted by our previous grammar, but not for the correct reasons. This was able to parse before because the "-a" suffix could be PFV or 3SGM. Therefore, the grammar marked this verb as PFV and let it parse. Because "-a" is now 3SGM.PFV, the new grammar did not let this sentence get through. We will need to work on how we can get sentence-initial verbs to conjugate correctly, as this was not a phenomena that we chose to focus on this week. At least, however, this sentence is not passing through for the wrong reasons. We choose to think of that as kind of tough-love improvement. 
+
+Our overgeneration also decreased from 27.9% to 18%, mostly due to the edits that we made. For example, the following sentence, which was able to parse in our previous grammar (and produce no less than 12 trees), no longer parses now that we have constrained subordinate clauses to use the accusative case. 
+
+Source: b:19, Mohammad, attested
+Vetted:s
+Judgment: u
+Phenomena: {case}	
+Hasib-a al-rajul-u		2anna	al-bint-u	qabal-at	al-2lwalad-a	
+Thought-3SGM.PFV DEF-man-NOM	that	DEF-girl-NOM	met-3SGF.PFV	DEF-boy-ACC
+'The man thought that the girl met the boy.'
+
+The rejection of the previous sentence lies in contrast to the following grammatical sentence:
+
+Source: b:19, Mohammad, attested
+Vetted:s
+Judgment: g
+Phenomena: {case}	
+Hasib-a al-rajul-u		2anna	al-bint-a	qabal-at	al-walad-a	
+Thought-3SGM.PFV DEF-man-NOM	that	DEF-girl-NOM	met-3SGF.PFV	DEF-boy-ACC
+'The man thought that the girl met the boy.'
+
+This sentence does not parse with the Lab 5 grammar due to "al-bint-a" being in case ACC instead of NOM. However, it does parse now and with only 2 trees! (We know that's double what we should be getting but it's much less than 12!) The remaining ambiguity appears to lie in the BARE-NP rule, which optionally applies to "al-bint-a". At the moment, we are not entirely sure why this is happening. We believe that it has something to do with the interaction between our MC modifications and the ACC case, as this optionality does not appear to be applying to "al-rajul-u" in the same sentence. 
+
+This observation is further reinforced by the following, similar sentence:
+
+Source: b:19, Mohammad, attested
+Vetted:s
+Judgment: g
+Phenomena: {clausal complement}
+qal-a 	al-rajul-u		2inna	al-bint-a 	qabal-at	al-walad-a	
+said-3SGM.PFV  DEF-man-NOM	that	DEF-girl-ACC	met-3SGF.PFV	DEF-boy-ACC
+'The man said that the girl met the boy.'
+
+This sentence is producing the same error, showing trees with and without the BARE-NP rule. This will be a topic of further investigation in subsequent labs. 
+
+~~~~~~~~~~ Main Clause ~~~~~~~~~~
+
+Our embedded accusative subjects are now parsing, and the nominative versions are not parsing, which is what we wanted. As for the following sentence, we are still getting 2 parses. We observed that in one of the trees, the embedded subject is not projecting to an NP by the bare NP phrase. And we are not sure why this is so.
+
+Source: b:19, Mohammad, attested
+Vetted:s
+Judgment: g
+Phenomena: {case}	
+Hasib-a al-rajul-u		2anna	al-bint-a	qabal-at	al-walad-a	
+Thought-3SGM.PFV DEF-man-NOM	that	DEF-girl-NOM	met-3SGF.PFV	DEF-boy-ACC
+'The man thought that the girl met the boy.'
+
+~~~~~~~~~~ Aspect ~~~~~~~~~~~
+The edits that we made to the aspect feature also did a great deal to reduce the ambiguity of our grammar. For example, consider the following test suite entries which both feature the previously ambiguous "-a" suffix.
+
+This entry previously produced 12 trees, and is now reduced to 2. However, there is a strange parse which we could not figure out its existence. There is an unwanted parse where 'qabalanii' combines with the NP to form a V, licensed by the head-subject rule, before projecting to an S by the Basic Head Opt Comp rule. We will investigate this for future labs.
+
+Source: d:45, Albuhayri, attested
+Vetted: s
+Judgment: g
+Phenomena: {pn, wo}
+qabal-a-nii Muhammad-un
+meet-PFV.3SGM-1SG Muhammad-NOM
+'Muhammad met me.'
+
+This entry previously produced 72 trees, reduced to 2.
+
+Source: g:86, Alotaibi attested
+Vetted:s
+Judgment: g
+Phenomena: {cl-mod}
+2in ja2-a ali-un yafuz-a
+If come-PFV.3SGM ali-NOM win-PFV.3SGM
+‘If Ali comes, he will win ’
+
+Interestingly, the two trees in this latter example appear to be identical, with all nodes created using the same rule. When using the Parse Compare feature in the LKB, no rules come up to explain why both trees exist or to reduce them down to one. It would seem therefore that the grammar is generating only one true parse of this sentence but is for some reason showing two trees. 
+
+~~~~~~~~~~ VPM Edits ~~~~~~~~~~
+The semi.vpm edits that we made also did a great deal to reduce the amount of translations that we were seeing. For the English sentence "dogs sleep", we were previously seeing over 70 different Arabic phrases being produced. Following our edits, we now see 10 phrases. In addition to the correct "kilab-un nam-uu" we see:
+
+al-kilab-u nam
+al-kilab-u nam-uu
+kilab-un nam
+nam al-kilab-u
+nam kilab-un
+nam-uu al-kilab-u
+nam-uu kilab-un
+nam-wa al-kilab-u
+al-kilab-u nam-wa
+
+It is worth noting as well that each of these phrases containg "-uu" or "nam" without a suffix appears to be produced multiple times. Obviously, there remains some ambiguity that still needs to be worked out, but we are happy to observe that progress has been made. The remaining sources of ambiguity are as follows. 
+
+First, the translation still does not make the distinction between definite and indefinite nouns. So, while we should only be seeing "dogs" translated as the indefinite "kilab-un", we are still seeing the definite "al-kilab-u" as well. 
+
+Second, of course, is word order. Technically only "kilab-un nam-uu" should be correct, as sentence initial verbs should have singular agreement. This means we could see "nam-a kilab-un" but not "nam-uu kilab-un". We have not been able to fix solidify this rule in our grammar yet, however, and therefore this inversion is to be expected. 
+
+Third, there are two actualizations of 3PLM.PFV agreement. This morpheme can surface as either "-uu" or "-wa". There are examples of both in the test suite, and therefore both have been included as possible suffixes in this case. The correct suffix for "nam" in this case should be "-uu", but this is due to agreement with "nam" ending in an "m" and not any sort of broader syntactic or semantic agreement. Due to our inability to constrain this particular rule, we see both "nam-uu" and "nam-wa" in our translations, and both are technically correct. 
+
+Fourth, a remaining source of ambiguity comes from translations where "nam" has no suffix. This is another example of our continuing evolution of understanding Arabic grammar. The reason why this is allowed is because we have seen several examples among our IGT where the suffix is excluded from the verb altogether. This has been a point of confusion for us that we largely tabled as we delved into other phenomena. We did not understand the rules and we largely were not dealing with examples that exhibited this phenomenon, so we had decided to leave the verb_suffix as optional and resolve the issue later. The translation exercise has revealed the flaw with this strategy, as we now see this being a major source of ambiguity for us moving forwards. Furthermore, after searching to find an example of this phenomenon for your consideration, we realized that we had not actually included any of the examples that we had seen in our test suite. We believe, therefore, that this phenomenon is an edge-case that we will need to investigate more next week, both in finding adequate examples and in understanding and enforcing the rules that govern them. This error remains in our grammar for this week, but we hope to resolve it in our next lab.
+
+Finally, there is the issue with sentences being produced twice. For the "-uu" suffix, this comes down to another case of redundancy, similar to what we were seeing with the "-a" suffix before. The "-uu" suffix can serve both as an agreement marker and a dependent pronoun. Verbs in Arabic are allowed to feature dependent pronouns instead of agreement. That means that "kilab-un nam-uu" could be interpreted as both "dogs sleep" and "dogs, they sleep". Both of these are technically correct translations, as they do not differ semantically (also we triple checked to make sure that this is actually a case where two morphemes are the same and not one where we assume one morpheme is actually two different ones, as we did with "-a"). For the cases with "nam", this largely has to do with the explanation above. The optionality of the verb_suffix rule is causing multiple redundancies. This is another reason why we'll need to examine this feature more thoroughly for next lab. 
+
+#################### CONCLUSION ####################
+
+This was a week of both traveling far and seeing more of the long road ahead. As we tampered down our overgeneration, we noticed multiple issues that we will need to be paying attention to in future labs. These include, but are not limited to:
+- Further clarification of perfective vs. imperfective verb conjugations
+- Enforcement of the rule requiring that sentence-initial verbs have singular conjugation
+- Re-examination of the optionality of verb_suffix, and enforcement of this rule. 
+- Resolution of the optionality of the BARE_NP rule in MC - ACC NPs
+
+We continue to move forwards! 
+
+##########################################################################################
+######################################## APPENDIX ########################################
+##########################################################################################
+
+~~~~~~~~~~ Canvas Post about Aspect ~~~~~~~~~~
+
+Team Arabic here!
+
+Apologies for a bit of a novel, but we've run into a problem regarding aspect representations for verbs in Arabic. Namely, our understanding of them has been incomplete, and we now see how that understanding could create problems for us in modeling aspect as we move forwards. We wanted to seek some advice on how to proceed. To do that, we will first present our previous understanding and current implementation of aspect, then we will explain how we now understand aspect to work, and finally we will share some thoughts as to what we might do to resolve this for your consideration. 
+
+CURRENT IMPLEMENTATION: 
+
+While we have broadly understood that Arabic follows root-and-pattern morphology, nearly all of the sources that we have used, including the original source that we used to research aspect in Arabic, did not separate out the patterns that are built into the root itself. Instead, we have thus far only seen sources separate out morphemic affixes to the root. 
+
+The lack of morphemic separation here caused us to incorrectly assume that the marker for perfect and imperfect aspect was a suffix, namely "-a" for perfect and "-u" for imperfect. We furthermore assumed, based on our synthesis of knowledge with other texts, that a verb could feature either an aspectal suffix or an agreement marker, but not both. (Looking back with the knowledge we have gained, the inconsistency in morphemic separation in this source should have been cause for raised eyebrows. We made unsubstantiated morphological assumptions here that we should not have. Alas, hindsight is 20/20.) 
+
+After noticing that an overlap between the agreement marker "-a" and what we thought was the perfective aspect marker "-a" causing overgeneration in some of our trees, we started to question our understanding of aspect. Further research confirmed that we were, indeed, quite incorrect. 
+
+HOW ASPECT ACTUALLY WORKS:
+
+Aspect in Arabic is actually a key example of the root-and-pattern morphology. In examining a much more comprehensive description of aspect in Arabic published in this 1994 dissertation from CornellLinks to an external site., (specifically pages 47-70) we have come to understand that aspect is modeled as follows:
+
+Most Arabic verbs have a stem that contains 1-5 consonants, with 3 consonants being the most common. From here, most verbs will then adhere to the following patterns inserting three vowels. 
+
+For Perfect:
+1. The first vowel is placed between the first two consonants. This vowel is normally either /a/ or /u/, representing active or passive voice respectively. For example: 
+
+kataba al-walad-u risaalat-an
+write.PFV.ACT.3SGM DEF-boy-NOM letter-ACC
+The boy wrote the letter
+
+kutibat risaalat-un
+write.PFV.PASS.3SGF letter-NOM
+A letter was written
+
+2. The second vowel is placed between the second and third consonants. This vowel varies between /a/, /i/, and /u/, depending entirely on the semantic meaning of the verb itself. Insertion of /a/ typically represents active verbs (e.g. to hit), insertion of /u/ typically represents stative verbs (e.g. to grow), and insertion of /i/ typically represents mental verbs (e.g. to think). These rules are not consistent though, and vary from verb to verb. If the verb is passive, this vowel will always be /i/ (as represented in the IGT above). 
+
+3. The third vowel actually does form a morphemic suffix representing agreement. This is what we had already included as our agreement for verbs. For example, in the IGT above, "-a" represents 3sgm, and "-at" represents 3sgf. In our current implementation, they would be represented as follows:
+
+katab-a 
+write-3SGM.AGR
+
+kutib-at 
+write-3SGF.AGR
+
+For Imperfect:
+
+1. The first vowel comes before the root in a morphemic prefix. This takes the form of "ya-" or "ta-" for male and female agreement, respectively. 
+
+2. The second vowel comes between the second and third consonants. This is entirely dependent on the word itself, with no correlation to the broad semantic themes seen in the perfective conjugation. It is often different from the vowel used in the perfective aspect, and that difference is not consistent. 
+
+3. The final vowel, like in perfective, is agreement. This agreement varies from that found in the perfective form, generating the "-a" vs. "-u" difference that we had previously believed to be the sole aspect marker. 
+
+Here is an example of the verb "to write" in perfective and imperfective form. 
+
+kataba (PFV.3SGM) -> yaktubu (IPFV.3SGM)
+
+NEXT STEPS:
+
+This is where we were hoping to get some guidance as to how to proceed. We know that at this point we are supposed to be moving beyond the questionnaire and focusing on cleaning up our morphemes in .tdl editing. However, we now know that the way we had modeled aspect was innacurate, and therefore we are reluctant to further reinforce incorrect grammar. 
+
+It would be possible for us to follow the model that you had suggested in one of your comments last week. Namely, we could reduce the lexical entries for our verbs to their roots. Then we could add all the inserted vowels (or at least the ones that follow clear syntactic rules) around that root. For example:
+
+ktb-a-a
+write-ACT-3SGM
+
+ya-ktb-u
+PFV.M-write-PFV.3SGM
+
+This, however, would require a complete overhaul of our lexicon, our verb morphemes, and our test suite. It would also require us to deviate from all of the other IGT sources we have seen, which kept all of this variation within the root. We are worried that this process would then consume the time that we have to edit any other phenomena this week and potentially induce a cascade of other difficulties as a result. We are not confident that we could finish this work within the timeframe of this lab. 
+
+We were wondering what other options we might have to approach this. Thus far we have thought of the following:
+
+- We could have some sort of additional marker to manage aspect in verbs. For example, replacing our current "-a" and "-u" with numbers such as "-1" or "-2". We understand that this would not wholly represent Arabic morphology, but it could at least be a way of managing aspect in the Arabic language building off the grammar we have built thus far.
+- We could include the imperfective suffixes and then use those to model the differences between PFV and IPFV
+- We could add in imperfective verbs to our lexicon that align with the examples of imperfectives in our test suite. We could then mark these as lexically imperfective and move forwards from there.
+
+Apologies again for the prolonged description, but we just wanted to make sure that we were approaching this problem correctly now that we have a better understanding of this Arabic phenomenon than we had previously. We also want to make sure that we are able to move forwards with our grammar sustainably, and not topple all of the work on surrounding phenomena that we have done thus far.
