@@ -249,6 +249,10 @@ qabal := trans-verb-lex &
   [ STEM < "qabal" >,
     SYNSEM.LKEYS.KEYREL.PRED "_met_v_rel" ].
 
+kan := trans-verb-lex &
+  [ STEM < "kan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_be_v_id_rel" ].
+
 tutarid := trans-verb-lex &
   [ STEM < "tutarid" >,
     SYNSEM.LKEYS.KEYREL.PRED "_chase_v_rel" ].
