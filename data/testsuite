@@ -91,7 +91,7 @@ Source: b:9, Mohammad A. Mohammad, attested
 Vetted: s
 Judgment: g 
 Phenomena: {word order, determiner}
-qabal-a 	rajul-un 	walad-a
+qabal-a 	rajul-u 	walad-a
 met-3.SG.M	man-NOM		boy-ACC
 'A man met a boy.'
 
@@ -100,7 +100,7 @@ Source: b:9, Mohammad A. Mohammad, attested
 Vetted: s
 Judgment: g 
 Phenomena: {word order, determiner}
-qabal-a 	walad-an	rajul-un
+qabal-a 	walad-a	rajul-u 
 met-3.SG.M	boy-ACC	man-NOM
 'A man met the boy.'
 
@@ -109,7 +109,7 @@ Source: b:9, Mohammad A. Mohammad, attested
 Vetted: s
 Judgment: u
 Phenomena: {word order, determiner}
-rajul-un 	qabal-a 	walad-an	
+rajul-u 	qabal-a 	walad-a	
 man-NOM		met-3.sg.m	boy-ACC	
 'A man met a boy.'
 
@@ -119,7 +119,7 @@ Source: b:10, Mohammad A. Mohammad, attested
 Vetted: s
 Judgment: u
 Phenomena: {word order, determiner}
-rajul-un 	walad-an	qabal-a 		
+rajul-u 	walad-a	qabal-a 		
 man-NOM		boy-ACC	met-3.SG.M	
 'A man met a boy.'
 
@@ -128,7 +128,7 @@ Source: b:10, Mohammad A. Mohammad, attested
 Vetted: s
 Judgment: u
 Phenomena: {word order, determiner}
-walad-an 	rajul-u		qabal-a 		
+walad-a 	rajul-u		qabal-a 		
 boy-ACC man-NOM		met-3.SG.M	
 'A man met a boy.'
 
@@ -138,7 +138,7 @@ Source: b:10, Mohammad A. Mohammad, attested
 Vetted: s
 Judgment: u
 Phenomena: {word order, determiner}
-walad-an 	qabal-a 	rajul-u			
+walad-a 	qabal-a 	rajul-u			
 boy-ACC 	met-3.SG.M	man-NOM	
 'A man met a boy.'
 
@@ -176,7 +176,7 @@ Source: b:7, Mohammad A. Mohammad, attested
 Vetted: s
 Judgment: g
 Phenomena: {case}
-qabal-a	 	   walad-un      	arnab-a
+qabal-a	 	    walad-u      	arnab-a
 met-3sg.m		boy-nom     rabbit-acc
 'A boy met a rabbit.'
 
@@ -224,7 +224,7 @@ Source: c:2, Alonini, attested
 Vetted: s
 Judgment: g
 Phenomena: {case} 
-walad-un     wasal-a	 
+walad-u     wasal-a	 
 boy-nom     arrived-3sg.m		
 'A boy arrived.'
 
@@ -244,8 +244,8 @@ Source: d:2, AlQahtani, attested
 Vetted: s
 Judgment: g
 Phenomena: {agr, det, adj}
-rajul-un tawel-un daxal-a 2al-maktab-a
-man-NOM tall-NOM entered-3sgmasc the-office-ACC
+rajul-u-n tawel-u-n daxal-a 2al-maktab-a
+man-NOM-NUM tall-NOM-NUN entered-3sgmasc the-office-ACC
 'A tall man entered the office.'
 
 #26- Noun phrase, indefinite, adjective agreement
@@ -271,8 +271,8 @@ Source: f:49, Alataibi, attested
 Vetted: f
 Judgment: u
 Phenomena: {agr}
-ja2-a al-rajul-u karim-un
-came-3sgmasc the-man-NOM generous-NOM
+ja2-a al-rajul-u karim-u-n
+came-3sgmasc the-man-NOM generous-NOM-NUN
 'Intended: The generous man came.'
 
 #######PRONOUNS#######
@@ -297,6 +297,64 @@ met-1pl 2sg.masc
 
 #######NON-VERBAL PREDICATES#######
 
+##### Predicative NPs############
+#Predicative NPs - copular 'kan' + ACC NP predicate --> perfective interpretation
+Source: d:45, Albuhayri, attested
+Vetted: s
+Judgment: g
+Phenomena: {non-verbal predicate}
+Muhammad-un kan-a walad-an
+Muhammad-NOM BE.pfv-3.SGM boy-ACC
+Muhammad was a boy
+
+#Predicative NPs - copular 'kan + NOM NP predicate is not grammatical --> perfective interpretation
+Source: d:45, Albuhayri, attested
+Vetted: s
+Judgment: u
+Phenomena: {non-verbal predicate}
+Muhammad-un kan-a walad-un
+Muhammad-NOM BE.pfv-3SGM boy-NOM
+'Muhammad was a boy'
+
+#Predicative NPs - zero copular , NOM NP predicate 
+Source: d:45, Albuhayri, attested
+Vetted: s
+Judgment: g
+Phenomena: {non-verbal predicate}
+Muhammad-un walad-un
+Muhammad-NOM boy-NOM
+'Muhammad is a boy'
+
+#Predicative NPs - zero copular , ACC NP predicate  is ungrammatical
+Source: d:45, Albuhayri, attested
+Vetted: s
+Judgment: u
+Phenomena: {non-verbal predicate}
+Muhammad-un walad-an
+Muhammad-NOM boy-ACC
+'Muhammad is a boy'
+
+#Predicative NPs - zero copular , NOM NP predicate 
+Source: d:45, Albuhayri, attested
+Vetted: s
+Judgment: g
+Phenomena: {non-verbal predicate}
+Al-rajul-u kan-a walad-an
+DEF-man-NOM be.PFV-3SGM boy-NOM
+'The man was a boy'
+
+#Predicative NPs - zero copular , NOM NP predicate 
+Source: d:45, Albuhayri, attested
+Vetted: s
+Judgment: g
+Phenomena: {non-verbal predicate}
+Al-rajul-u walad-an
+DEF-man-NOM boy-NOM
+'The man is a boy'
+
+
+####Predicative APs###########
+
 #36-Non-Verbal Predicates, Zero Copula, Independent Pronouns, adjectives
 Source: d:2, Albuhayri, attested
 Vetted: s
@@ -306,15 +364,6 @@ Phenomena: {pn, adj, cop}
 2sg.masc assiduous-NOM
 'You are assiduous.'
 
-#37-Non-Verbal Predicates, Zero Copula, Independent Pronouns, adjectives
-Source: d:2, Albuhayri, attested
-Vetted: s
-Judgment: g
-Phenomena: {pn, adj, poss}
-Huwa safir-u-naa lada al-majlis-i
-3sg.masc ambassador-nom-1pl at the-council-gen
-'He is our ambassador at the council.'
-
 #38-Non-Verbal Predicates, Zero Copula, (the definite affix on the adjective is dropped in zero-copula and replaced with nunation)
 Source: g:49, Alotaibi, attested
 Vetted: s
@@ -323,6 +372,62 @@ Phenomena: {adj, agr, cop}
 al-rajul-u karim-un
 the-man-NOM generous-NOM
 'The man is generous.'
+
+#Predicative adjectives do not agree with definiteness
+Source: g:49, Alotaibi, attested
+Vetted: s
+Judgment: u
+Phenomena: {agr}
+al-rajul-u al-karim-u
+DEF-man-NOM DEF-generous-NOM
+Intended: 'The man is generous.'
+
+######### Predicative PPs ####################
+
+#38-PP predicates - P + NP-gen
+Source: g:49, Alotaibi, attested
+Vetted: s
+Judgment: g
+Phenomena: {non-verbal predicate}
+Walad-un fi 	al-hadiq-i
+boy-NOM in	DEF-park-GEN
+‘A boy is in the park’
+
+#38-PP predicates - P + NP-acc
+Source: g:49, Alotaibi, attested
+Vetted: s
+Judgment: u
+Phenomena: {non-verbal predicate}
+Walad-un fi 	al-hadiq-a
+boy-NOM in	DEF-park-ACC
+‘A boy is in the park.’
+
+#38-PP predicates - P + NP-nom
+Source: g:49, Alotaibi, attested
+Vetted: s
+Judgment: u
+Phenomena: {non-verbal predicate}
+Walad-un fi 	al-hadiq-u
+boy-NOM in	DEF-park-NOM
+‘A boy is in the park’
+
+#38-PP predicates - P + NP-gen
+Source: g:49, Alotaibi, attested
+Vetted: s
+Judgment: g
+Phenomena: {non-verbal predicate}
+Al-walad-u al-karim-u fi 	al-hadiq-i
+DEF-boy-NOM DEF-generous-NOM in	DEF-park-GEN
+‘The generous boy is in the park’
+
+#38-PP predicates - P + NP-gen
+Source: g:49, Alotaibi, attested
+Vetted: s
+Judgment: u
+Phenomena: {non-verbal predicate}
+Al-walad-u karim-un fi 	al-hadiq-i
+DEF-boy-NOM generous-NOM in	DEF-park-GEN
+Intended: ‘The generous boy is in the park’
 
 #### Tense and Aspect##############
 
@@ -875,7 +980,7 @@ Source: a:278, Ahmed, attested
 Vetted:s
 Judgment: g
 Phenomena: {poss, pn}
-2aqlaq-a-nii ntiqaad-un Zayd-in la-hu
+2aqlaq-a-nii ntiqaad-u Zayd-in la-hu
 Annoyed-3sgm-me criticizing-NOM Zayd-GEN of-him.GEN
 ‘Zayd’s criticism of him annoyed me’
 
@@ -884,7 +989,7 @@ Source: a:278, Ahmed, attested
 Vetted:f
 Judgment: g
 Phenomena: {poss, pn}
-2aqlaq-a-nii ntiqaad-un Zayd-i
+2aqlaq-a-nii ntiqaad-u Zayd-i
 Annoyed-3sgm-me criticizing-NOM Zayd-GEN
 ‘Zayd’s criticism annoyed me’
 
@@ -929,7 +1034,7 @@ Source: d:2, AlQahtani, attested
 Vetted: s
 Judgment: g
 Phenomena: {pn, poss, det}
-zur-tu dar-an 2al-2jitam-i
+zur-tu dar-a 2al-2jitam-i
 visited-I house-ACC the-orphans-GEN
 'I visited the orphans' house.'
 
@@ -947,7 +1052,7 @@ Source: d:2, AlQahtani, attested
 Vetted: f
 Judgment: g
 Phenomena: {pn, poss, det}
-zur-tu bayt-an muhammad-i
+zur-tu bayt-a muhammad-i
 visited-I house-ACC muhammad-GEN
 'I visited Muhammad’s house.'
 
@@ -985,7 +1090,7 @@ Source: b:19, Mohammad, attested
 Vetted:s
 Judgment: g
 Phenomena: {clausal complement}
-Hasib-a 	al-rajul-u		2anna	al-bint-a  	qabal-at	al-walad-a	
+Hasib-a 	al-rajul-u		2anna	al-bint-at  	qabal-at	al-walad-a	
 Thought-3sg.m DEF-man-NOM	that	DEF-girl-ACC	met-3.SG.F		DEF-boy-ACC
 'The man thought that the girl met the boy.'
 
@@ -994,7 +1099,7 @@ Source: b:19, Mohammad, attested
 Vetted:s
 Judgment: g
 Phenomena: {clausal complement}
-qal-a 	al-rajul-u		2inna	al-bint-a 	qabal-at	al-walad-a	
+qal-a 	al-rajul-u		2inna	al-bint-at 	qabal-at	al-walad-a	
 said-3sg.m DEF-man-NOM	that	DEF-girl-ACC	met-3.SG.F	DEF-boy-ACC
 'The man said that the girl met the boy.'
 
@@ -1003,7 +1108,7 @@ Source: b:19, Mohammad, attested
 Vetted:s
 Judgment: u
 Phenomena: {clausal complement}	
-Hasib-a 	al-rajul-u		2inna	al-bint-a  	qabal-at	al-walad-a	
+Hasib-a 	al-rajul-u		2inna	al-bint-at  	qabal-at	al-walad-a	
 Thought-3sg.m DEF-man-NOM	that	DEF-girl-ACC	met-3.SG.F		DEF-boy-ACC
 'The man thought that the girl met the boy.'
 
@@ -1012,7 +1117,7 @@ Source: b:19, Mohammad, attested
 Vetted:s
 Judgment: u
 Phenomena: {clausal complement}	
-qal-a 	al-rajul-u		2anna	al-bint-a 	qabal-at	al-walad-a	
+qal-a 	al-rajul-u		2anna	al-bint-at 	qabal-at	al-walad-a	
 said-3sg.m DEF-man-NOM	that	DEF-girl-ACC	met-3.SG.F	DEF-boy-ACC
 'The man said that the girl met the boy.'
 
@@ -1048,7 +1153,7 @@ Source: b:19, Mohammad, attested
 Vetted:s
 Judgment: g
 Phenomena: {clausal complement}
-qal-a 	al-rajul-u		qan	    al-walad-a	yakul-a		al-tuffahat-a
+qal-a 	al-rajul-u		qan	al-walad-a	yakul-a		al-tuffahat-a
 said-3sg.m DEF-man-NOM	that	DEF-boy-ACC	ate-PERF	DEF-boy-ACC
 'The man said that the boy has eaten the apple.’
 
@@ -1104,7 +1209,7 @@ Source: p:7, Btoosh, attested
 Vetted:s
 Judgment: g
 Phenomena: {yes-no questions}
-hal	nam-at		bint-un 
+hal	nam-at		bint-u 
 Q.did 	slept-3.sg.f 	 girl-nom.
 ‘Did a girl sleep?’
 
@@ -1113,7 +1218,7 @@ Source: p:7, Btoosh, attested
 Vetted:s
 Judgment: g
 Phenomena: {yes-no questions}
-2a	nam-at		bint-un 
+2a	nam-at		bint-u 
 Q.did 	slept-3.sg.f 	girl-nom.
 ‘Did a girl sleep?’
 
@@ -1131,7 +1236,7 @@ Source: p:7, Btoosh, attested
 Vetted:s
 Judgment: u
 Phenomena: {yes-no questions}
-2a 		walad-un  		qadim-a
+2a 		walad-u  		qadim-a
 Q.did		boy.3.sg.m-nom	came-3sg.m
 Intended: Did the boy come?
 
@@ -1141,7 +1246,7 @@ Source: p:7, Btoosh, attested
 Vetted:s
 Judgment: g
 Phenomena: {yes-no questions}
-2a		walad-un  		qadim-a
+2a		walad-u  		qadim-a
 Q.did		boy.3.sg.m-nom	came-3sg.m
 Did a boy come?
 
@@ -1150,7 +1255,7 @@ Source: p:7, Btoosh, attested
 Vetted:s
 Judgment: u
 Phenomena: {yes-no questions}
-hal 		walad-un  		qadim-a
+hal 		walad-u  		qadim-a
 Q.did		boy.3.sg.m-nom	came-3sg.m
 Did a boy come?
 
@@ -1204,7 +1309,7 @@ Phenomena: {yes-no questions}
 Q.did 	slept-3.sg.f 	the-girl-nom.
 ‘Did the girl sleep?’
 
-#######yes-no questions as clausal complements (test-suite only)#######
+#######yes-no questions as clausal complements(test-suite only0#######
 
 # clausal complements - embedded yes-no , idha question marker, embedded subject NOM
 Source: q:19, Alsager, attested
@@ -1268,7 +1373,7 @@ Source: g:86, Alotaibi attested
 Vetted:s
 Judgment: g
 Phenomena: {cl-mod}
-2in ja2-a ahmad-un dahab-a ali-un
+2in ja2-a ahmad-u dahab-a ali-un
 If come-pfv.3sgm ahmad-NOM leave-PFV ali-NOM
 ‘If Ahmad comes, Ali will honor him ’
 
@@ -1277,8 +1382,8 @@ Source: g:86, Alotaibi attested
 Vetted:f
 Judgment: u
 Phenomena: {wo}
-ja2-a ali-un 2in yafuz-a
-come-pfv.3sgm ali-NOM if win-pfv.3sgm
+2in ja2-a ali-un yafuz-a
+If come-pfv.3sgm ali-NOM win-pfv.3sgm
 ‘If Ali comes, he will win ’
 
 #Clausal Modifiers, Conditional phrase with fa
@@ -1304,7 +1409,7 @@ Source: g:120, Alotaibi attested
 Vetted:s
 Judgment: g
 Phenomena: {cl-mod}
-2in ja2-a 2ahmad-un fa-qum la-hu
+2in ja2-a 2ahmad-u fa-qum la-hu
 If come-pfv.3sgm ahmad-NOM then-stand for-3sgm
 ‘If Ahmad comes, then stand for him.’
 
@@ -1313,7 +1418,7 @@ Source: g:120, Alotaibi attested
 Vetted:s
 Judgment: u
 Phenomena: {cl-mod}
-2in ja2-a 2ahmad-un qum la-hu
+2in ja2-a 2ahmad-u qum la-hu
 If come-pfv.3sgm ahmad-NOM stand for-3sgm
 ‘Intended: If Ahmad comes, then stand for him.’
 
@@ -1411,13 +1516,14 @@ ra2ay-tu-hu
 saw-1sg-3sgm
 'I saw him.'
 
+
 ### Test items for generation #############
 
 #Generation
 Source: generation
 Vetted: s
 Judgment: g
-Phenomena: {mmt}
+Phenomena: {agreement}
 kilab-un nam-uu
 dogs-NOM sleep-3pl.masc
 ‘Dogs sleep’
@@ -1426,7 +1532,7 @@ dogs-NOM sleep-3pl.masc
 Source: generation
 Vetted: s
 Judgment: g
-Phenomena: {mmt}
+Phenomena: {agreement, case}
 kilab-un tutarid-uu sayaar-a
 dog.3plmasc-NOM chase-3pl.masc car.3pl.masc-ACC
 ‘Dogs chase cars’
@@ -1435,14 +1541,7 @@ dog.3plmasc-NOM chase-3pl.masc car.3pl.masc-ACC
 Source: generation
 Vetted: s
 Judgment: g
-Phenomena: {mmt}
+Phenomena: {pronouns}
 Tutarid-tu-ka
 chase-1sg-2sg
 ‘I chase you’
-
-
-
-
-
-
-
