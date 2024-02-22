@@ -674,22 +674,22 @@ case-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule & nounposs-rule-dt
 
 subjectdef-lex-rule := case-lex-rule-super &
   [ SYNSEM.LOCAL [ CAT.HEAD.CASE nom,
-                   CONT.HOOK.INDEX.PNG.DEFINITION + ] ].
+                   CONT.HOOK.INDEX.COG-ST uniq+fam+act ] ].
 
 objectdef-lex-rule := case-lex-rule-super &
   [ SYNSEM.LOCAL [ CAT.HEAD.CASE acc,
-                   CONT.HOOK.INDEX.PNG.DEFINITION + ] ].
+                   CONT.HOOK.INDEX.COG-ST uniq+fam+act ] ].
 
 gencase-lex-rule := case-lex-rule-super &
   [ SYNSEM.LOCAL.CAT.HEAD.CASE gen ].
 
 subjectindef-lex-rule := case-lex-rule-super &
   [ SYNSEM.LOCAL [ CAT.HEAD.CASE nom,
-                   CONT.HOOK.INDEX.PNG.DEFINITION - ] ].
+                   CONT.HOOK.INDEX.COG-ST type-id ] ].
 
 objectindef-lex-rule := case-lex-rule-super &
   [ SYNSEM.LOCAL [ CAT.HEAD.CASE acc,
-                   CONT.HOOK.INDEX.PNG.DEFINITION - ] ].
+                   CONT.HOOK.INDEX.COG-ST type-id ] ].
 
 det-lex-rule-super := add-only-no-ccont-rule & case-rule-dtr & nounposs-rule-dtr &
   [ INFLECTED [ DET-FLAG +,
@@ -714,10 +714,10 @@ det-lex-rule-super := add-only-no-ccont-rule & case-rule-dtr & nounposs-rule-dtr
                       NOUNPOSS-FLAG #nounposs ] ] ].
 
 def-lex-rule := det-lex-rule-super & infl-lex-rule &
-  [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG.DEFINITION + ].
+  [ SYNSEM.LOCAL.CONT.HOOK.INDEX.COG-ST uniq+fam+act].
 
 indef-lex-rule := const-lex-rule & det-lex-rule-super &
-  [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG.DEFINITION - ].
+  [ SYNSEM.LOCAL.CONT.HOOK.INDEX.COG-ST type-id].
 
 nounposs-lex-rule-super := lex-rule &
   [ INFLECTED [ NOUNPOSS-FLAG +,
@@ -1046,10 +1046,10 @@ defagr-lex-rule-super := add-only-no-ccont-rule & caseagr-rule-dtr &
                       NOUNPOSS-FLAG #nounposs ] ] ].
 
 defagrpos-lex-rule := defagr-lex-rule-super & infl-lex-rule &
-  [ SYNSEM.LOCAL.CONT.HOOK.XARG.PNG.DEFINITION + ].
+  [ SYNSEM.LOCAL.CONT.HOOK.XARG.COG-ST uniq+fam+act ].
 
 defagrneg-lex-rule := const-lex-rule & defagr-lex-rule-super &
-  [ SYNSEM.LOCAL.CONT.HOOK.XARG.PNG.DEFINITION - ].
+  [ SYNSEM.LOCAL.CONT.HOOK.XARG.COG-ST type-id ].
 
 caseagr-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule &
   [ INFLECTED #infl,
@@ -1058,19 +1058,19 @@ caseagr-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule &
 
 caseagrnomdef-lex-rule := caseagr-lex-rule-super &
   [ SYNSEM.LOCAL [ CAT.HEAD.MOD.FIRST.LOCAL.CAT.HEAD.CASE nom,
-                   CONT.HOOK.XARG.PNG.DEFINITION + ] ].
+                                              CONT.HOOK.XARG.COG-ST uniq+fam+act ] ].
 
 caseagraccdef-lex-rule := caseagr-lex-rule-super &
   [ SYNSEM.LOCAL [ CAT.HEAD.MOD.FIRST.LOCAL.CAT.HEAD.CASE acc,
-                   CONT.HOOK.XARG.PNG.DEFINITION + ] ].
+                                              CONT.HOOK.XARG.COG-ST uniq+fam+act ] ].
 
 caseagrnomindef-lex-rule := caseagr-lex-rule-super &
   [ SYNSEM.LOCAL [ CAT.HEAD.MOD.FIRST.LOCAL.CAT.HEAD.CASE nom,
-                   CONT.HOOK.XARG.PNG.DEFINITION - ] ].
+                                              CONT.HOOK.XARG.COG-ST type-id ] ].
 
 caseagraccindef-lex-rule := caseagr-lex-rule-super &
   [ SYNSEM.LOCAL [ CAT.HEAD.MOD.FIRST.LOCAL.CAT.HEAD.CASE acc,
-                   CONT.HOOK.XARG.PNG.DEFINITION - ] ].
+                                              CONT.HOOK.XARG.COG-ST type-id ] ].
 
 ;;;;;;;;;;;;;;;;;;;
 ;;; Phrasal Types
