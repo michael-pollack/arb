@@ -214,7 +214,7 @@ imperfective := aspect.
 noun-lex := basic-noun-lex & basic-non-wh-word-lex & non-local-none-lex-item & no-hcons-lex-item & non-mod-lex-item &
   [ ARG-ST < #spr >,
     SYNSEM.LOCAL.CAT.VAL [ COMPS < >,
-                           SUBJ < >,
+                           SUBJ <  >,
                            SPEC < >,
                            SPR < #spr &
                                  [ LOCAL.CAT.HEAD det,
@@ -434,9 +434,53 @@ attr-adj-lex := adj-lex & intersective-mod-lex &
   [ SYNSEM.LOCAL.CAT.HEAD.MOD < [ LOCAL.CAT [ HEAD noun,
                                               VAL.SPR cons ] ] > ].
 
+
+
+;attr-only-adj-lex := attr-adj-lex &
+ ; [ SYNSEM.LOCAL.CAT [ HEAD.PRD -,
+  ;                     VAL.SUBJ < > ] ].
+
+
+
 attr-only-adj-lex := attr-adj-lex &
-  [ SYNSEM.LOCAL.CAT [ HEAD.PRD -,
-                       VAL.SUBJ < > ] ].
+  [ SYNSEM[LOCAL[CAT [ HEAD.PRD -,
+                       VAL.SUBJ < #subj & [LOCAL[CAT[HEAD noun & [CASE nom]], CONT.HOOK.INDEX #psub]]> ] ,
+
+		  CONT.HOOK.XARG #psub],
+			
+             LKEYS.KEYREL [ARG1 #psub]],
+           
+    ARG-ST < #subj > ].
+
+; NPs as standalone predicates
+
+n-bar-predicate-rule := unary-phrase & nocoord &
+  [ SYNSEM [ LOCAL.CAT [ HEAD verb,
+	  	         VAL [ COMPS < >,
+			       SUBJ < [ LOCAL [ CONT.HOOK.INDEX #arg1,
+					         CAT [ HEAD noun & [CASE nom],
+				      VAL.SPR < > ] ] ] > ] ],
+             NON-LOCAL #nl ],
+    C-CONT [ HOOK [ LTOP #ltop,
+		    INDEX #index,
+		    XARG #arg1 ],
+	     RELS.LIST < arg12-ev-relation &
+		   [ PRED "_be_v_id_rel",
+		     LBL #ltop,
+		     ARG0 #index,
+		     ARG1 #arg1,
+		     ARG2 #arg2 ],
+		   quant-relation &
+		   [ PRED "exist_q_rel",
+		     ARG0 #arg2,
+		     RSTR #harg ] >,
+	     HCONS.LIST < qeq & [ HARG #harg, LARG #larg ] > ],
+    ARGS < [ SYNSEM [ LOCAL [ CAT [ HEAD noun & [CASE nom],
+		 		    VAL.SPR cons ],
+			      CONT.HOOK [ INDEX #arg2,
+	                                  LTOP #larg ]],
+	              NON-LOCAL #nl ]] > ].
+
 
 ;;;;;;;;;;;;;;;;;;;
 ;;; Subordinators
@@ -548,7 +592,8 @@ norm-adposition-lex := norm-sem-lex-item & no-hcons-lex-item & basic-intersectiv
                            WH.BOOL -,
                            VAL [ SPR < >,
                                  SPEC < >,
-                                 SUBJ < >,
+                                 SUBJ <#subj & [LOCAL [CAT [ HEAD noun & [CASE nom]],
+								CONT.HOOK.INDEX #psub]] >,
                                  COMPS < #comp &
                                          [ L-QUE #lque,
                                            LOCAL [ CAT [ HEAD noun,
@@ -556,12 +601,14 @@ norm-adposition-lex := norm-sem-lex-item & no-hcons-lex-item & basic-intersectiv
                                                    CONT.HOOK.INDEX #ind ] ] > ] ],
                      CONT.RELS.LIST < [ PRED #pred,
                                         ARG0 event,
-                                        ARG1 event-or-ref-index ] > ],
+                                        ARG1 event-or-ref-index ] > , CONT.HOOK.XARG #psub],
+			
              LKEYS.KEYREL arg12-ev-relation &
                           [ PRED #pred,
+				ARG1 #psub,
                             ARG2 #ind ],
              L-QUE #lque ],
-    ARG-ST < #comp > ].
+    ARG-ST < #subj, #comp > ].
 
 normadp1-norm-adposition-lex := norm-adposition-lex &
   [ SYNSEM.LOCAL.CAT [ VAL.COMPS.FIRST.LOCAL.CAT.HEAD.CASE gen,
