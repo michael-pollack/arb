@@ -36,27 +36,31 @@ head :+ [ PRON bool,
 
 noun :+ [ CASE case ].
 
-inflected :+ [ MC-FLAG luk,
-    VERB_PN_SUBJ-FLAG luk,
-    NO_PN-FLAG luk,
-    VERB_PN_OBJ-FLAG luk,
+inflected :+ [ NO_PN-FLAG luk,
     DEFAGR-FLAG luk,
+    CASEAGR-FLAG luk,
+    MC-FLAG luk,
     INTR-VERB-FLAG luk,
-    DET-FLAG luk,
     IMPERF-OR-PERF-FLAG luk,
+    PRED_OR_ATTR_AGR-FLAG luk,
+    VERB_PN_OBJ-FLAG luk,
+    DET-FLAG luk,
+    NOUNPOSS-FLAG luk,
     CASE-FLAG luk,
-    NOUNPOSS-FLAG luk ].
+    VERB_PN_SUBJ-FLAG luk ].
 
-infl-satisfied :+ [ MC-FLAG na-or-+,
-    VERB_PN_SUBJ-FLAG na-or-+,
-    NO_PN-FLAG na-or-+,
-    VERB_PN_OBJ-FLAG na-or-+,
+infl-satisfied :+ [ NO_PN-FLAG na-or-+,
     DEFAGR-FLAG na-or-+,
+    CASEAGR-FLAG na-or-+,
+    MC-FLAG na-or-+,
     INTR-VERB-FLAG na-or-+,
-    DET-FLAG na-or-+,
     IMPERF-OR-PERF-FLAG na-or-+,
+    PRED_OR_ATTR_AGR-FLAG na-or-+,
+    VERB_PN_OBJ-FLAG na-or-+,
+    DET-FLAG na-or-+,
+    NOUNPOSS-FLAG na-or-+,
     CASE-FLAG na-or-+,
-    NOUNPOSS-FLAG na-or-+ ].
+    VERB_PN_SUBJ-FLAG na-or-+ ].
 
 cat :+ [ POSSESSUM poss ].
 
