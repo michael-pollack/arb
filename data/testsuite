@@ -39,7 +39,7 @@ Judgment: g
 Phenomena: {word order, determiner}
 al-mas2alat-a	 	hall-a			al-talib-u.
 the-problem-ACC 	solved-3.SG.M	 the-student-NOM
-‘It was the problem that the student solved.’
+'It was the problem that the student solved.'
 
 #4-SOV word order for transitive clauses with definite NP subjects
 Source: a:29, b:3, Amer Ahmed, Mohammad A. Mohammad, attested
@@ -391,7 +391,7 @@ Judgment: g
 Phenomena: {non-verbal predicate}
 Walad-un fi 	al-hadiq-i
 boy-NOM in	DEF-park-GEN
-‘A boy is in the park’
+'A boy is in the park'
 
 #38-PP predicates - P + NP-acc
 Source: g:49, Alotaibi, attested
@@ -400,7 +400,7 @@ Judgment: u
 Phenomena: {non-verbal predicate}
 Walad-un fi 	al-hadiq-a
 boy-NOM in	DEF-park-ACC
-‘A boy is in the park.’
+'A boy is in the park.'
 
 #38-PP predicates - P + NP-nom
 Source: g:49, Alotaibi, attested
@@ -409,7 +409,7 @@ Judgment: u
 Phenomena: {non-verbal predicate}
 Walad-un fi 	al-hadiq-u
 boy-NOM in	DEF-park-NOM
-‘A boy is in the park’
+'A boy is in the park'
 
 #38-PP predicates - P + NP-gen
 Source: g:49, Alotaibi, attested
@@ -418,7 +418,7 @@ Judgment: g
 Phenomena: {non-verbal predicate}
 Al-walad-u al-karim-u fi 	al-hadiq-i
 DEF-boy-NOM DEF-generous-NOM in	DEF-park-GEN
-‘The generous boy is in the park’
+'The generous boy is in the park'
 
 #38-PP predicates - P + NP-gen
 Source: g:49, Alotaibi, attested
@@ -427,7 +427,7 @@ Judgment: u
 Phenomena: {non-verbal predicate}
 Al-walad-u karim-un fi 	al-hadiq-i
 DEF-boy-NOM generous-NOM in	DEF-park-GEN
-Intended: ‘The generous boy is in the park’
+Intended: 'The generous boy is in the park'
 
 #### Tense and Aspect##############
 
@@ -438,7 +438,7 @@ Judgment: g
 Phenomena: {aspect}
 al-walad-u				    yakul-a		al-tuffahat-a
 DEF-boy-NOM			eat-PERF	DEF-apple-ACC
-‘The boy has eaten the apple.’
+'The boy has eaten the apple.'
 
 
 #40 imperfective verb
@@ -448,7 +448,7 @@ Judgment: g
 Phenomena: {aspect}
 al-walad-u				yakul-u		al-tuffahat-a
 DEF-boy-NOM				eat-PROG	DEF-apple-ACC
-‘The boy is eating the apple.’
+'The boy is eating the apple.'
 
 #41 perfective verb aspect -a (cannot follow agreement marker)
 Source: b:13, Mohammad, attested
@@ -457,7 +457,7 @@ Judgment: u
 Phenomena: {aspect}
 al-walad-u				    yakul-a-a		al-tuffahat-a
 DEF-boy-NOM				    eat-3sg.m-PERF	DEF-apple-ACC
-‘The boy has eaten the apple.’
+'The boy has eaten the apple.'
 
 
 #42 imperfective verb (cannot follow agreement marker)
@@ -467,7 +467,7 @@ Judgment: u
 Phenomena: {aspect}
 al-walad-u				yakul-a-u	al-tuffahat-a
 DEF-boy-NOM			eat-3sgm-PROG	DEF-apple-ACC
-‘The boy is eating the apple.’
+'The boy is eating the apple.'
 
 #######Negation###########
 
@@ -478,7 +478,7 @@ Judgment: g
 Phenomena: {negation}
 al-walad-u		lan		    yakul-a			al-tuffahat-a
 DEF-boy-NOM		not		    eat-PERF	DEF-apple-ACC
-‘The boy will not eat the apple.’
+'The boy will not eat the apple.'
 
 
 #44 Negation la + imperfective verb
@@ -488,7 +488,7 @@ Judgment: g
 Phenomena: {negation}
 al-walad-u		la 		yakul-u			al-tuffahat-a
 DEF-boy-NOM		not		eat-PROG	DEF-apple-ACC
-‘The boy is not eating the apple.’
+'The boy is not eating the apple.'
 
 #45 Negation la perfective verb
 Source: b:13, Mohammad, attested
@@ -497,7 +497,7 @@ Judgment: u
 Phenomena: {negation}
 al-walad-u		la 		yakul-a			al-tuffahat-a
 DEF-boy-NOM		not		eat-PERF	DEF-apple-ACC
-Intended: ‘The boy will not eat the apple.’
+Intended: 'The boy will not eat the apple.'
 
 
 #46 Negation la + prog verb
@@ -507,7 +507,7 @@ Judgment: u
 Phenomena: {negation}b:\13, Mohammad, attested
 al-walad-u		lan		yakul-u			al-tuffahat-a
 DEF-boy-NOM		not		eat-PROG	DEF-apple-ACC
-Intended: ‘The boy is not eating the apple.’
+Intended: 'The boy is not eating the apple.'
 
 #agreement##############
 
@@ -518,7 +518,7 @@ Judgment: g
 Phenomena: {agreement}
 wasal-a	 		al-walad-u
 arrived-3.sg.m		the-boy.sg-nom
-‘The boy arrived.’
+'The boy arrived.'
 
 #48(singular, gender agreement)	
 Source: a:29, Ahmed, attested
@@ -527,7 +527,7 @@ Judgment: g
 Phenomena: {agreement}
 wasal-at 		al-bint-u
 arrived-3.sg.f		DEF-girl.sg-nom
-‘The girl arrived.	
+'The girl arrived.	
 
 #49(plural, gender agreement)
 Source: a:29, Ahmed, attested
@@ -536,7 +536,7 @@ Judgment: g
 Phenomena: {agreement}
 wasal-uu	 	al-2lwalad-u
 arrived-3.pl.m		the-boy.pl-nom
-‘The boys arrived.’
+'The boys arrived.'
 
 #50(plural, gender agreement)	
 Source: a:29, Ahmed, attested
@@ -545,7 +545,7 @@ Judgment: g
 Phenomena: {agreement}
 wasal-na 		al-bant-u
 arrived-3.pl.f		DEF-girl.pl-nom
-‘The girls arrived.
+'The girls arrived.
 
 
 #51(mismatch in gender, number = singular)
@@ -555,7 +555,7 @@ Judgment: u
 Phenomena: {agreement}
 wasal-at 		al-walad-u
 arrived-3.sg.f		the-boy.sg-nom
-‘The boy arrived.’
+'The boy arrived.'
 
 #52(mismatch in gender, number = singular)
 Source: a:29, Ahmed, attested
@@ -564,7 +564,7 @@ Judgment: u
 Phenomena: {agreement}
 wasal-a			al-bint-u
 arrived-3.sg.m		the-girl.sg-nom
-‘The girl arrived.’
+'The girl arrived.'
 
 #53(mismatch in gender, number = pl)	
 Source: a:29, Ahmed, attested
@@ -573,7 +573,7 @@ Judgment: u
 Phenomena: {agreement}
 wasal-na	 	al-2lwalad-u
 arrived-3.pl.f		the-boy.pl-nom
-intended:‘The boys arrived.’
+intended:'The boys arrived.'
 
 #54(mismatch in gender, number = pl)	
 Source: a:29, Ahmed, attested
@@ -582,7 +582,7 @@ Judgment: u
 Phenomena: {agreement}	
 wasal-uu 		al-bant-u
 arrived-3.pl.m		DEF-girl.pl-nom
-intended:‘The girls arrived.
+intended:'The girls arrived.
 
 #55(mismatch in number, gender kept constant)
 Source: a:29, Ahmed, attested
@@ -591,7 +591,7 @@ Judgment: u
 Phenomena: {agreement}
 wasal-uu		al-walad-u
 arrived-3.pl.m		the-boy.sg-nom
-Intended: ‘The boy arrived.’
+Intended: 'The boy arrived.'
 
 #56(mismatch in number, gender kept constant)		
 Source: a:29, Ahmed, attested
@@ -600,7 +600,7 @@ Judgment: u
 Phenomena: {agreement}
 wasal-na 		al-bint-u
 arrived-3.pl.f		DEF-girl.sg-nom
-Intended: ‘The girl arrived.	
+Intended: 'The girl arrived.	
 
 #57(mismatch in number, gender kept constant)
 Source: a:29, Ahmed, attested
@@ -609,7 +609,7 @@ Judgment: u
 Phenomena: {agreement}
 wasal-a	 		al-2lwalad-u
 arrived-3.sg.m		the-boy.pl-nom
-Intended: ‘The boys arrived.’
+Intended: 'The boys arrived.'
 
 #58(mismatch in number, gender kept constant)	
 Source: a:29, Ahmed, attested
@@ -618,7 +618,7 @@ Judgment: u
 Phenomena: {agreement}
 wasal-at 		al-bant-u
 arrived-3.sg.f		DEF-girl.pl-nom
-intended: ‘The girls arrived.
+intended: 'The girls arrived.
 
 
 # 59(mismatch in both gender and number)
@@ -628,7 +628,7 @@ Judgment: u
 Phenomena: {agreement}
 wasal-na	 	al-walad-u
 arrived-3.pl.f		the-boy.sg-nom
-Intended: ‘The boy arrived.’
+Intended: 'The boy arrived.'
 						
 #60 (mismatch in both gender and number)
 Source: a:29, Ahmed, attested
@@ -637,7 +637,7 @@ Judgment: u
 Phenomena: {agreement}
 wasal-uu 		al-bint-u
 arrived-3.pl.m		DEF-girl.sg-nom
-‘The girl arrived.
+'The girl arrived.
 
 #61(mismatch in both gender and number)
 Source: a:29, Ahmed, attested
@@ -646,7 +646,7 @@ Judgment: u
 Phenomena: {agreement}
 wasal-at	 	al-2lwalad-u
 arrived-3.sg.f		the-boy.pl-nom
-Intended: ‘The boys arrived.’
+Intended: 'The boys arrived.'
 
 #62(mismatch in both gender and number)
 Source: a:29, Ahmed, attested
@@ -655,7 +655,7 @@ Judgment: u
 Phenomena: {agreement}
 wasal-a			al-bant-u
 arrived-3.sg.m	DEF-girl.pl-nom
-‘The girls arrived.
+'The girls arrived.
 
 #63-No object agreement
 Source: b:9, Mohammad A. Mohammad, attested
@@ -684,7 +684,7 @@ Judgment: g
 Phenomena: {word order, agreement}
 hall-a			al-tullaab-u		 al-mas2alat-a.
 solved-3.m.sg		 DEF-students.pl-NOM	 DEF-problem-acc
-‘The students solved the problem.’ 
+'The students solved the problem.' 
 
 #66Postverbal plural subjects - agreement marker must be singular
 Source: a:28, Ahmed, attested
@@ -693,7 +693,7 @@ Judgment: u
 Phenomena: {word order, agreement}
 hall-uu 		al-tullaab-u		 al-mas2alat-a.
 solved-3.pl.m	the-students.pl-NOM	 the-problem-acc
-‘The students solved the problem.’ 
+'The students solved the problem.' 
 
 #67Postverbal plural subjects - agreement marker must be singular
 Source: a:28, Ahmed, attested
@@ -702,7 +702,7 @@ Judgment: g
 Phenomena: {word order, agreement}
 qadim-at		al-bant-u 
 came-3.sg.f 		DEF-girls.pl-nom
-‘The girls came.’
+'The girls came.'
 
 #68 Postverbal plural subjects - agreement marker must be singular
 Source: a:28, Ahmed, attested
@@ -711,7 +711,7 @@ Judgment: u
 Phenomena: {word order, agreement}
 qadim-na 		al-bant-u 
 came-3.pl.f 	DEF-girls.pl-nom
-‘The girls came.’	
+'The girls came.'	
 
 ######coordination##############
 
@@ -722,7 +722,7 @@ Judgment: g
 Phenomena: {Coordination}
 al-walad-u 	wa 		al-bant-u 		wasal-uu
 DEF-boy-NOM CONJ 		DEF-girl-NOM		arrive-3.pl.m
-‘The boys and the girls arrived.’
+'The boys and the girls arrived.'
 
 
 #70 plural masc NP and singular fem NP
@@ -732,7 +732,7 @@ Judgment: g
 Phenomena: {Coordination}
 al-walad-u 		wa 		al-bint-u 		wasal-uu
 DEF-boy-NOM 		CONJ 		DEF-girl-NOM		arrive-3.pl.m
-‘The boys and the girl arrived.’
+'The boys and the girl arrived.'
 
 #71 plural masc NP and first person plural pronoun
 Source: i:3, Johannessen, attested
@@ -741,7 +741,7 @@ Judgment: g
 Phenomena: {Coordination}
 al-walad-u 		wa 		nahnu 		wasal-uu
 DEF-boy-NOM 		CONJ 		we		arrive-3.pl.m
-‘The boys and we arrived.’
+'The boys and we arrived.'
 
 # 72plural masc NP and first person singular pronoun
 Source: i:3, Johannessen, attested 
@@ -750,7 +750,7 @@ Judgment: g
 Phenomena: {Coordination}
 al-walad-u 			wa 		2anaa		wasal-uu
 DEF-boy-NOM 		CONJ 		I		arrive-3.pl.m
-‘The boys and I arrived.’
+'The boys and I arrived.'
 
 #73 3rd dual masc NP and singular fem NP
 Source: i:3, Johannessen, attested 
@@ -759,7 +759,7 @@ Judgment: g
 Phenomena: {Coordination}
 al-waladan-u			wa 		al-bint-u			wasal-uu
 DEF-boy-NOM 		CONJ 	DEF-girl-NOM	arrive-3.pl.m
-‘The two boys and the girl arrived.’
+'The two boys and the girl arrived.'
 
 #74 3rd dual masc NP and 3rd dual fem NP
 Source: i:3, Johannessen, attested 
@@ -768,7 +768,7 @@ Judgment: g
 Phenomena: {Coordination}
 al-waladan-u 	wa 		al-bintani-u			wasal-uu
 DEF-boy.DUAL-NOM 		CONJ 		DEF-girl.DUAL-NOM		arrive-3.pl.m
-‘The two boys and the two girl arrived.’
+'The two boys and the two girl arrived.'
 
 #75 wa conjoins S, not VP
 Source: b:9, Mohammad A. Mohammad, attested
@@ -795,7 +795,7 @@ Judgment: g
 Phenomena: {Coordination}
 al-walad-u 	qadim-a	wa 		al-bint-u 		wasal-at
 DEF-boy-NOM  came-3sg.m	CONJ	DEF-girl-NOM		arrive-3sg.f
-‘The boy came and the girl arrived.’
+'The boy came and the girl arrived.'
 
 #78 Coordination of of intransitive clauses with sgmasc, plfem agreement.
 Source: i:3, Johannessen, attested 
@@ -804,7 +804,7 @@ Judgment: g
 Phenomena: {Coordination}
 al-walad-u 	qadim-a	wa 		al-bant-u 		wasal-na
 DEF-boy-NOM came-3sg.m 	CONJ		DEF-girl-NOM		arrive-3pl.f
-‘The boy came and the girls arrived.’
+'The boy came and the girls arrived.'
 
 
 ###coordination agreement###########
@@ -816,7 +816,7 @@ Judgment: g
 Phenomena: {Coordination, agreement}
 al-bant-u 	wa 		al-walad-u 		wasal-uu
 DEF-girl-NOM	CONJ 		DEF-boy-NOM		arrive-3.pl.m
-‘The girls and the boys arrived.’
+'The girls and the boys arrived.'
 
 
 #80Subject is preverbal, pl feminine agreement
@@ -826,7 +826,7 @@ Judgment: u
 Phenomena: {Coordination, agreement}
 al-bant-u 	wa 		al-walad-u  		wasal-na
 DEF-girl-NOM	CONJ 		DEF-boy-NOM		arrive-3.pl.f
-‘The boys and the girls arrived.’
+'The boys and the girls arrived.'
 
 #81Coordinated NPs are both feminine, feminine plural agreement
 Source: i:3, Johannessen, attested 
@@ -835,7 +835,7 @@ Judgment: g
 Phenomena: {Coordination, agreement}
 al-bant-u 	wa 		al-mara-u  		wasal-na
 DEF-girl-NOM	CONJ 		DEF-women-NOM	arrive-3.pl.f
-‘The girls and the women arrived.’
+'The girls and the women arrived.'
 
 #82Coordinated NPs are both feminine, masculine plural agreement is incorrect
 Source: i:3, Johannessen, attested 
@@ -844,7 +844,7 @@ Judgment: u
 Phenomena: {Coordination, agreement}
 al-bant-u 	wa 		al-mara-u  		wasal-uu
 DEF-girl-NOM	CONJ 		DEF-women-NOM	arrive-3.pl.m
-‘The girls and the women arrived.’
+'The girls and the women arrived.'
 
 #83Coordination of 2 definite singular NPs (masc and fem)  - DUAL agreement marker
 Source: i:3, Johannessen, attested 
@@ -853,7 +853,7 @@ Judgment: g
 Phenomena: {Coordination, agreement}
 al-walad-u 	wa 		al-bint-u 		wasal-ala
 DEF-boy-NOM CONJ 		DEF-girl-NOM		arrive-DUAL.m
-‘The boy and the girl arrived.’
+'The boy and the girl arrived.'
 
 #84Coordination of 2 definite singular NPs - DUAL agreement marker
 Source: i:3, Johannessen, attested 
@@ -862,7 +862,7 @@ Judgment: u
 Phenomena: {Coordination}
 al-walad-u 	wa 		al-bint-u 		wasal-a
 DEF-boy-NOM CONJ 		DEF-girl-NOM		arrive-3.sg.m
-‘The boy and the girl arrived.’
+'The boy and the girl arrived.'
 
 #85Coordination of 2 definite singular feminine NPs - DUAL feminine agreement marker
 Source: i:3, Johannessen, attested 
@@ -871,7 +871,7 @@ Judgment: g
 Phenomena: {Coordination}
 al-bint-u 	wa 		al-amra-u 		wasal-ata
 DEF-girl-NOM CONJ 		DEF-woman-NOM	arrive-DUAL.f
-‘The girl and the woman arrived.
+'The girl and the woman arrived.
 
 #86 Coordination of 2 definite singular NPs (fem and masc ordering)  - DUAL.m agreement marker
 Source: i:3, Johannessen, attested 
@@ -880,7 +880,7 @@ Judgment: g
 Phenomena: {Coordination}
 al-bint-u 	wa 	al-walad-u			wasal-ala
 DEF-girl-NOM	CONJ 	DEF-boy-NOM 		arrive-DUAL.m
-‘The boy and the girl arrived.’
+'The boy and the girl arrived.'
 
 #87 Coordination of 2 definite singular NPs (fem and masc ordering)  - DUAL.f agreement marker
 Source: i:3, Johannessen, attested 
@@ -889,7 +889,7 @@ Judgment: u
 Phenomena: {Coordination}
 al-bint-u 	wa 	al-walad-u			wasal-ata
 DEF-girl-NOM	CONJ 	DEF-boy-NOM 			arrive-DUAL.m
-‘The boy and the girl arrived.’
+'The boy and the girl arrived.'
 
 ######### matrix wh-questions ################
 #88 wh-questions: Q-V-NP is the only possible order
@@ -899,7 +899,7 @@ Judgment: g
 Phenomena: {wh}
 man 	qara2-a 		al-kitab-a
 who	 read-3.sg.masc. 	the-book-acc.
-‘Who read the book?’ 	
+'Who read the book?' 	
 
 # 89wh-questions: Q-V-NP is the only possible order (V-Q-NP)
 Source: p:4, Btoosh, attested
@@ -908,7 +908,7 @@ Judgment: u
 Phenomena: {wh}									
 qara2-a 		man	al-kitab-a
 read-3.sg.masc. 	who	 the-book-acc.
-‘Who read the book?’			
+'Who read the book?'			
 	
 #90 wh-questions: Q-V-NP is the only possible order (V-NP-Q)
 Source: p:4, Btoosh, attested
@@ -917,7 +917,7 @@ Judgment: u
 Phenomena: {wh}
 qara2-a 		al-kitab-a 	man
 read-3.sg.masc 	the-book-acc.	Who
-‘Who read the book?’	 			
+'Who read the book?'	 			
 
 #91 wh-questions: Q-V-NP is the only possible order (Q-NP-V)
 Source: p:4, Btoosh, attested
@@ -926,7 +926,7 @@ Judgment: u
 Phenomena: {wh}		
 Man	al-kitab-a 	qara2-a 
 who	the-book-acc	 read-3.sg.m	
-‘Who read the book?’	 		
+'Who read the book?'	 		
 						
 #92 wh-questions: Q-V-NP is the only possible order (NP-Q-V)
 Source: p:4, Btoosh, attested
@@ -935,7 +935,7 @@ Judgment: u
 Phenomena: {wh}			
 al-kitab-a 	who		qara2-a 
 The-book-acc	who		 read-3.sg.m	
-‘Who read the book?’	 
+'Who read the book?'	 
 
 #93 wh-questions: Q-V-NP is the only possible order (NP-V-Q)
 Source: p:4, Btoosh, attested
@@ -944,7 +944,7 @@ Judgment: u
 Phenomena: {wh}
 al-kitab-a 	qara2-a 	who
 The-book-acc	 read-3.sg.m	who			
-‘Who read the book?’	 
+'Who read the book?'	 
 
 
 #95wh-questions: Q-V-NP is the only possible order (what)
@@ -954,7 +954,7 @@ Judgment: g
 Phenomena: {wh}
 man 	qara2-a 		al-kitab-a
 who	 read-3.sg.masc. 	the-book-acc.
-‘Who read the book?’ 	
+'Who read the book?' 	
 
 #96wh-questions: Q-V-NP is the only possible order (what)
 Source: p:4, Btoosh, attested
@@ -963,7 +963,7 @@ Judgment: g
 Phenomena: {wh}	
 madha 	qara2-a 		al-walad-u
 what	 read-3.sg.masc. 	DEF-boy-nom
-‘What did the boy read?’ 	
+'What did the boy read?' 	
 
 #### Possessives#############
 #97 Possession, Genetive Case, predicates
@@ -973,7 +973,7 @@ Judgment: g
 Phenomena: {poss, pn}
 Zayd-un ma3ruuf-un bi-nazaahat-i-hi
 Zayd-NOM known-NOM for-honesty-GEN-his
-‘Zayd is known for his honesty’
+'Zayd is known for his honesty'
 
 #98 Possession, Genetive Case
 Source: a:278, Ahmed, attested
@@ -982,7 +982,7 @@ Judgment: g
 Phenomena: {poss, pn}
 2aqlaq-a-nii ntiqaad-u Zayd-in la-hu
 Annoyed-3sgm-me criticizing-NOM Zayd-GEN of-him.GEN
-‘Zayd’s criticism of him annoyed me’
+'Zayd's criticism of him annoyed me'
 
 #98 Possession, Genetive Case
 Source: a:278, Ahmed, attested
@@ -991,7 +991,7 @@ Judgment: g
 Phenomena: {poss, pn}
 2aqlaq-a-nii ntiqaad-u Zayd-i
 Annoyed-3sgm-me criticizing-NOM Zayd-GEN
-‘Zayd’s criticism annoyed me’
+'Zayd's criticism annoyed me'
 
 #99 Possession, Genetive Case
 Source: a:278, Ahmed, attested
@@ -1000,7 +1000,7 @@ Judgment: g
 Phenomena: {poss, pn}
 2aqlaq-a-nii ntiqaad-u-hu Zayd-an
 Annoyed-3sgm-me criticizing-NOM-his.GEN Zayd-ACC
-‘His criticism of Zayd annoyed me’
+'His criticism of Zayd annoyed me'
 
 # Possession, Genetive Case
 Source: a:278, Ahmed, attested
@@ -1009,7 +1009,7 @@ Judgment: g
 Phenomena: {poss, pn}
 2aqlaq-a-nii ntiqaad-u-hu
 Annoyed-3sgm-me criticizing-NOM-his.GEN
-‘His criticism annoyed me’
+'His criticism annoyed me'
 
 # Possession, Genetive Case, Genetive marker only occurs in teandem to genetive pronoun in subordinate clauses
 Source: a:278, Ahmed, attested
@@ -1018,7 +1018,7 @@ Judgment: u
 Phenomena: {poss}
 2aqlaq-a-nii ntiqaad-i-hu Zayd-an
 Annoyed-3sgm-me criticizing-Gen-his.GEN Zayd-ACC
-‘Intended His criticism of Zayd annoyed me’
+'Intended His criticism of Zayd annoyed me'
 
 # Possession, Genetive Case
 Source: a:278, Ahmed, attested
@@ -1027,7 +1027,7 @@ Judgment: u
 Phenomena: {poss}
 2aqlaqa-a-nii ntiqaad-u-hu Zayd-i
 Annoyed-3sgm-me criticizing-NOM-his.GEN Zayd-GEN
-‘Intended: His criticism of Zayd annoyed me’
+'Intended: His criticism of Zayd annoyed me'
 
 #29-pronouns, NPs, possession, word order
 Source: d:2, AlQahtani, attested
@@ -1054,7 +1054,7 @@ Judgment: g
 Phenomena: {pn, poss, det}
 zur-tu bayt-a muhammad-i
 visited-I house-ACC muhammad-GEN
-'I visited Muhammad’s house.'
+'I visited Muhammad's house.'
 
 #29-pronouns, NPs, possession, word order
 Source: d:2, AlQahtani, attested
@@ -1063,7 +1063,7 @@ Judgment: u
 Phenomena: {wo}
 zur-tu muhammad-i bayt-a
 visited-I muhammad-GEN house-ACC
-'I visited Muhammad’s house.'
+'I visited Muhammad's house.'
 
 #30-pronouns, NPs, possession, word order (genetive must follow its reference)
 Source: d:2, AlQahtani, attested
@@ -1085,7 +1085,7 @@ this house-NOM-2sgfem
 
 #### Declarative clausal complements#######
 
-# clausal complements - 2anna is selected by ‘thought’
+# clausal complements - 2anna is selected by 'thought'
 Source: b:19, Mohammad, attested
 Vetted:s
 Judgment: g
@@ -1094,7 +1094,7 @@ Hasib-a 	al-rajul-u		2anna	al-bint-at  	qabal-at	al-walad-a
 Thought-3sg.m DEF-man-NOM	that	DEF-girl-ACC	met-3.SG.F		DEF-boy-ACC
 'The man thought that the girl met the boy.'
 
-# clausal complements - 2inna is selected by ‘say’
+# clausal complements - 2inna is selected by 'say'
 Source: b:19, Mohammad, attested
 Vetted:s
 Judgment: g
@@ -1103,7 +1103,7 @@ qal-a 	al-rajul-u		2inna	al-bint-at 	qabal-at	al-walad-a
 said-3sg.m DEF-man-NOM	that	DEF-girl-ACC	met-3.SG.F	DEF-boy-ACC
 'The man said that the girl met the boy.'
 
-# clausal complements - 2anna is selected ‘thought’, 2inna selected by thought is bad
+# clausal complements - 2anna is selected 'thought', 2inna selected by thought is bad
 Source: b:19, Mohammad, attested
 Vetted:s
 Judgment: u
@@ -1112,7 +1112,7 @@ Hasib-a 	al-rajul-u		2inna	al-bint-at  	qabal-at	al-walad-a
 Thought-3sg.m DEF-man-NOM	that	DEF-girl-ACC	met-3.SG.F		DEF-boy-ACC
 'The man thought that the girl met the boy.'
 
-# clausal complements - 2inna is selected by ‘say’, 2anna selected by say is ungrammatical
+# clausal complements - 2inna is selected by 'say', 2anna selected by say is ungrammatical
 Source: b:19, Mohammad, attested
 Vetted:s
 Judgment: u
@@ -1121,7 +1121,7 @@ qal-a 	al-rajul-u		2anna	al-bint-at 	qabal-at	al-walad-a
 said-3sg.m DEF-man-NOM	that	DEF-girl-ACC	met-3.SG.F	DEF-boy-ACC
 'The man said that the girl met the boy.'
 
-# clausal complements - 2anna is selected by ‘thought’, post-COMP NP must be accusative
+# clausal complements - 2anna is selected by 'thought', post-COMP NP must be accusative
 Source: b:19, Mohammad, attested
 Vetted:s
 Judgment: g
@@ -1130,7 +1130,7 @@ Hasib-a 	al-rajul-u		2anna	al-bint-u	qabal-at	al-walad-a
 Thought-3sg.m DEF-man-NOM	that	DEF-girl-NOM	met-3.SG.F	DEF-boy-ACC
 'The man thought that the girl met the boy.'
 
-# clausal complements - 2inna is selected by ‘say’
+# clausal complements - 2inna is selected by 'say'
 Source: b:19, Mohammad, attested
 Vetted:s
 Judgment: g
@@ -1146,7 +1146,7 @@ Judgment: g
 Phenomena: {clausal complement}	
 qal-a 	al-rajul-u		qan	al-walad-u	yakul-a		al-tuffahat-a
 said-3sg.m DEF-man-NOM	that	DEF-boy-u	ate-PERF	DEF-boy-ACC
-'The man said that the boy has eaten the apple.’
+'The man said that the boy has eaten the apple.'
 
 # clausal complements - qan + perfective verb, embedded subject ACC
 Source: b:19, Mohammad, attested
@@ -1155,7 +1155,7 @@ Judgment: g
 Phenomena: {clausal complement}
 qal-a 	al-rajul-u		qan	al-walad-a	yakul-a		al-tuffahat-a
 said-3sg.m DEF-man-NOM	that	DEF-boy-ACC	ate-PERF	DEF-boy-ACC
-'The man said that the boy has eaten the apple.’
+'The man said that the boy has eaten the apple.'
 
 # clausal complements - 2anna + perfective verb
 Source: b:19, Mohammad, attested
@@ -1164,7 +1164,7 @@ Judgment: u
 Phenomena: {clausal complement}
 qal-a 	al-rajul-u		2anna	al-walad-u	yakul-a		al-tuffahat-a
 said-3sg.m DEF-man-NOM	that	DEF-boy-u	ate-PERF	DEF-boy-ACC
-'The man said that the boy has eaten the apple.’
+'The man said that the boy has eaten the apple.'
 
 # clausal complements - 2inna + perfective verb
 Source: b:19, Mohammad, attested
@@ -1173,7 +1173,7 @@ Judgment: u
 Phenomena: {clausal complement}
 qal-a 	al-rajul-u		2inna	al-walad-u	yakul-a		al-tuffahat-a
 said-3sg.m DEF-man-NOM	that	DEF-boy-u	ate-PERF	DEF-boy-ACC
-'The man said that the boy has eaten the apple.’
+'The man said that the boy has eaten the apple.'
 
 # clausal complements - qan + no perfective marker
 Source: b:19, Mohammad, attested
@@ -1182,7 +1182,7 @@ Judgment: u
 Phenomena: {clausal complement}
 qal-a 	al-rajul-u		qan al-walad-u	yakul-a		al-tuffahat-a
 said-3sg.m DEF-man-NOM	that	DEF-boy-u	ate-3.sg.m	DEF-boy-ACC
-'The man said that the boy has eaten the apple.’
+'The man said that the boy has eaten the apple.'
 
 ###### Matrix yes-no questions #########
 
@@ -1193,7 +1193,7 @@ Judgment: g
 Phenomena: {yes-no questions}
 hal	nam-at		al-bint-u 
 Q.did 	slept-3.sg.f 	def-girl-nom.
-‘Did the girl sleep?’
+'Did the girl sleep?'
 
 # yes-no questions  - 2a, Q-V-NP, def NP
 Source: p:7, Btoosh, attested
@@ -1202,7 +1202,7 @@ Judgment: g
 Phenomena: {yes-no questions}
 2a	nam-at		al-bint-u 
 Q.did 	slept-3.sg.f 	the-girl-nom.
-‘Did the girl sleep?’
+'Did the girl sleep?'
 
 # yes-no questions - hal, Q-V-NP, indef NP
 Source: p:7, Btoosh, attested
@@ -1211,7 +1211,7 @@ Judgment: g
 Phenomena: {yes-no questions}
 hal	nam-at		bint-u 
 Q.did 	slept-3.sg.f 	 girl-nom.
-‘Did a girl sleep?’
+'Did a girl sleep?'
 
 # yes-no questions  - 2a, Q-V-NP, indef NP
 Source: p:7, Btoosh, attested
@@ -1220,7 +1220,7 @@ Judgment: g
 Phenomena: {yes-no questions}
 2a	nam-at		bint-u 
 Q.did 	slept-3.sg.f 	girl-nom.
-‘Did a girl sleep?’
+'Did a girl sleep?'
 
 #yes-no questions - V is sentence final, hal used only when  subject is definite
 Source: p:7, Btoosh, attested
@@ -1268,7 +1268,7 @@ Judgment: g
 Phenomena: {yes-no questions}
 2a	 	lam 	nam-at		al-bint-u 
 Q.did		not	slept-3.sg.f 	the-girl-nom.
-Didn’t the girl sleep?	
+Didn't the girl sleep?	
 
 
 #yes-no questions - negated yes-no questions - only 2a can be used
@@ -1278,7 +1278,7 @@ Judgment: u
 Phenomena: {yes-no questions}
 hal 		lam 	nam-at		al-bint-u 
 Q.did		not	slept-3.sg.f 	the-girl-nom.
-Didn’t the girl sleep?		
+Didn't the girl sleep?		
 
 #Question-markers are obligatorily sentence-initial
 
@@ -1289,7 +1289,7 @@ Judgment: u
 Phenomena: {yes-no questions}
 nam-at	 	hal	al-bint-u 
 slept-3.sg.f  	Q.did	the-girl-nom.
-‘Did the girl sleep?’
+'Did the girl sleep?'
 
 # yes-no questions - hal, Q-V-NP, def NP
 Source: p:7, Btoosh, attested
@@ -1298,7 +1298,7 @@ Judgment: u
 Phenomena: {yes-no questions}
 nam-at	 	al-bint-u  	hal
 slept-3.sg.f  	the-girl-nom Q.did
-‘Did the girl sleep?’
+'Did the girl sleep?'
 
 # yes-no questions  - 2a, Q-V-NP, def NP
 Source: p:7, Btoosh, attested
@@ -1307,7 +1307,7 @@ Judgment: u
 Phenomena: {yes-no questions}
 2a	nam-at		al-bint-u 
 Q.did 	slept-3.sg.f 	the-girl-nom.
-‘Did the girl sleep?’
+'Did the girl sleep?'
 
 #######yes-no questions as clausal complements(test-suite only0#######
 
@@ -1357,7 +1357,7 @@ Judgment: g
 Phenomena: {cl-mod}
 2in ja2-a ali-un yafuz-a
 If come-pfv.3sgm ali-NOM win-pfv.3sgm
-‘If Ali comes, he will win ’
+'If Ali comes, he will win '
 
 #Clausal Modifiers, Conditional phrase without “fa”
 Source: g:86, Alotaibi attested
@@ -1366,7 +1366,7 @@ Judgment: g
 Phenomena: {cl-mod}
 2in ja2-a ali-un qabal-a muhammad-a
 If come-pfv.3sgm Ali-NOM meet-pfv.3sgm Muhammad-ACC
-‘If Ali comes, he will mee Muhammad ’
+'If Ali comes, he will mee Muhammad '
 
 #Clausal Modifiers, Conditional phrase without “fa”
 Source: g:86, Alotaibi attested
@@ -1375,7 +1375,7 @@ Judgment: g
 Phenomena: {cl-mod}
 2in ja2-a ahmad-u dahab-a ali-un
 If come-pfv.3sgm ahmad-NOM leave-PFV ali-NOM
-‘If Ahmad comes, Ali will honor him ’
+'If Ahmad comes, Ali will honor him '
 
 #Clausal Modifiers, Conditional phrase without “fa”
 Source: g:86, Alotaibi attested
@@ -1384,7 +1384,7 @@ Judgment: u
 Phenomena: {wo}
 2in ja2-a ali-un yafuz-a
 If come-pfv.3sgm ali-NOM win-pfv.3sgm
-‘If Ali comes, he will win ’
+'If Ali comes, he will win '
 
 #Clausal Modifiers, Conditional phrase with fa
 Source: g:124, Alotaibi attested
@@ -1393,7 +1393,7 @@ Judgment: g
 Phenomena: {cl-mod}
 2in ja2-a ali-un fa-qad yafuz-u
 If come-pfv.3sgm ali-NOM then-might win-ipfv.3sgm
-‘If Ali comes, then he might win  ’
+'If Ali comes, then he might win  '
 
 #Clausal Modifiers, Conditional phrase with fa
 Source: g:124, Alotaibi attested
@@ -1402,7 +1402,7 @@ Judgment: u
 Phenomena: {cl-mod}
 2in ja2-a ali-un qad yafuz-u
 If come-pfv.3sgm ali-NOM might win-ipfv.3sgm
-‘Intended: If Ali comes, then he might win  ’
+'Intended: If Ali comes, then he might win  '
 
 #Clausal Modifiers, Conditional phrase with fa
 Source: g:120, Alotaibi attested
@@ -1411,7 +1411,7 @@ Judgment: g
 Phenomena: {cl-mod}
 2in ja2-a 2ahmad-u fa-qum la-hu
 If come-pfv.3sgm ahmad-NOM then-stand for-3sgm
-‘If Ahmad comes, then stand for him.’
+'If Ahmad comes, then stand for him.'
 
 #Clausal Modifiers, Conditional phrase with fa
 Source: g:120, Alotaibi attested
@@ -1420,7 +1420,7 @@ Judgment: u
 Phenomena: {cl-mod}
 2in ja2-a 2ahmad-u qum la-hu
 If come-pfv.3sgm ahmad-NOM stand for-3sgm
-‘Intended: If Ahmad comes, then stand for him.’
+'Intended: If Ahmad comes, then stand for him.'
 
 ##### Relative Clauses test suite only for this week############
 
@@ -1431,7 +1431,7 @@ Judgment: g
 Phenomena: {wh}
 Al-walad-u alladi darab-a al-bint-a saafar-a
 The-boy-NOM who hit-3sgm the-girl-ACC left-3sgm
-‘The boy who hit the girl left’
+'The boy who hit the girl left'
 
 #Clausal Modifiers, Relative Clauses, pronouns use of “alladi”
 Source: g:88, Obeidat, attested
@@ -1440,7 +1440,7 @@ Judgment: g
 Phenomena: {wh}
 Qabal-tu al-walad-a alladi darab-a-hu Ali
 Met-I the-boy-ACC who hit-3sgm-him Ali
-‘I met the boy whom Ali hit’
+'I met the boy whom Ali hit'
 
 #Clausal Modifiers, Relative Clauses, pronouns use of “alladi”
 Source: g:88, Obeidat, attested
@@ -1449,7 +1449,7 @@ Judgment: g
 Phenomena: {wh}
 Ra2ay-tu al-walad-a alladi darab-a al-bint-a
 saw-I the-boy-ACC who hit-3sgm the-girl-ACC
-‘I saw the boy who hit the girl’
+'I saw the boy who hit the girl'
 
 #Clausal Modifiers, Relative Clauses, pronouns use of feminine “allati”, predicative adjectives
 Source: g:91, Obeidat, attested
@@ -1458,7 +1458,7 @@ Judgment: g
 Phenomena: {wh}
 Al-maktabat-u allati 2ista3ar-tu al-kitab-a min-haa ba3iidah
 The-library-NOM which borrowed-I the-book-ACC from-it far
-‘The library from which I borrowed the book is far’
+'The library from which I borrowed the book is far'
 
 ##### argument optionality##########
 					
@@ -1526,7 +1526,7 @@ Judgment: g
 Phenomena: {agreement}
 kilab-un nam-uu
 dogs-NOM sleep-3pl.masc
-‘Dogs sleep’
+'Dogs sleep'
 
 #Generation
 Source: generation
@@ -1535,7 +1535,7 @@ Judgment: g
 Phenomena: {agreement, case}
 kilab-un tutarid-uu sayaar-a
 dog.3plmasc-NOM chase-3pl.masc car.3pl.masc-ACC
-‘Dogs chase cars’
+'Dogs chase cars'
 
 #Generation
 Source: generation
@@ -1544,4 +1544,4 @@ Judgment: g
 Phenomena: {pronouns}
 Tutarid-tu-ka
 chase-1sg-2sg
-‘I chase you’
+'I chase you'
