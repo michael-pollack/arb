@@ -124,3 +124,7 @@ caseagrnomindef-lex-rule.
 caseagraccindef-suffix :=
 %suffix (* -an)
 caseagraccindef-lex-rule.
+
+pred_agr-suffix :=
+%suffix (* -un)
+pred_agr-lex-rule.
