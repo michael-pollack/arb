@@ -136,6 +136,34 @@ basic-head-mod-phrase-simple :+ [ SYNSEM.LOCAL.CAT.MC #mc,
 
 adj-head-int-phrase :+ [ HEAD-DTR.SYNSEM.NON-LOCAL.SLASH.LIST < > ].
 
+n-bar-predicate-rule := unary-phrase & nocoord &
+  [ SYNSEM [ LOCAL.CAT [ HEAD verb & [MOD <>],
+	  	         VAL [ SPEC<>, COMPS < >,
+			       SUBJ < [ LOCAL [ CONT.HOOK.INDEX #arg1,
+					         CAT [ HEAD noun & [CASE nom],
+				      VAL.SPR < > ] ] ] > ] ],
+             NON-LOCAL #nl ],
+    C-CONT [ HOOK [ LTOP #ltop,
+		    INDEX #index & [E.ASPECT imperfective],
+		    XARG #arg1 ],
+	     RELS.LIST < arg12-ev-relation &
+		   [ PRED "_be_v_id_rel",
+		     LBL #ltop,
+		     ARG0 #index,
+		     ARG1 #arg1,
+		     ARG2 #arg2 ],
+		   quant-relation &
+		   [ PRED "exist_q_rel",
+		     ARG0 #arg2,
+		     RSTR #harg ] >,
+	     HCONS.LIST < qeq & [ HARG #harg, LARG #larg ] > ],
+    ARGS < [ SYNSEM [ LOCAL [ CAT [ HEAD noun & [CASE nom],
+		 		    VAL.SPR cons ],
+			      CONT.HOOK [ INDEX #arg2,
+	                                  LTOP #larg ]],
+	              NON-LOCAL #nl ]] > ].
+
+
 ;;;;;;;;;;;;;;
 ;;; Features
 ;;;;;;;;;;;;;;
@@ -390,6 +418,9 @@ trans-verb-lex := nom-acc-transitive-verb-lex &
                 VERB_PN_OBJ-FLAG -,
                 MC-FLAG - ] ].
 
+trans-cop-verb-lex := trans-verb-lex &
+[SYNSEM.LOCAL.CONT.HOOK.INDEX.E.ASPECT perfective].
+
 trans_comp_2anna-verb-lex := clausal-nominative-verb-lex & clausal-second-arg-trans-lex-item &
   [ INFLECTED [ VERB_PN_SUBJ-FLAG -,
                 VERB_PN_OBJ-FLAG -,
@@ -434,9 +465,19 @@ attr-adj-lex := adj-lex & intersective-mod-lex &
   [ SYNSEM.LOCAL.CAT.HEAD.MOD < [ LOCAL.CAT [ HEAD noun,
                                               VAL.SPR cons ] ] > ].
 
+;attr-only-adj-lex := attr-adj-lex &
+ ; [ SYNSEM.LOCAL.CAT [ HEAD.PRD -,
+  ;                     VAL.SUBJ < > ] ].
+
 attr-only-adj-lex := attr-adj-lex &
-  [ SYNSEM.LOCAL.CAT [ HEAD.PRD -,
-                       VAL.SUBJ < > ] ].
+  [ SYNSEM[LOCAL[CAT [ HEAD.PRD -,
+                       VAL.SUBJ < #subj & [LOCAL[CAT[HEAD noun & [CASE nom]], CONT.HOOK.INDEX #psub]]> ] ,
+
+		  CONT.HOOK.XARG #psub],
+			
+             LKEYS.KEYREL [ARG1 #psub]],
+           
+    ARG-ST < #subj > ].
 
 ;;;;;;;;;;;;;;;;;;;
 ;;; Subordinators
@@ -548,7 +589,8 @@ norm-adposition-lex := norm-sem-lex-item & no-hcons-lex-item & basic-intersectiv
                            WH.BOOL -,
                            VAL [ SPR < >,
                                  SPEC < >,
-                                 SUBJ < >,
+                                 SUBJ <#subj & [LOCAL [CAT [ HEAD noun & [CASE nom]],
+								CONT.HOOK.INDEX #psub]] >,
                                  COMPS < #comp &
                                          [ L-QUE #lque,
                                            LOCAL [ CAT [ HEAD noun,
@@ -556,12 +598,14 @@ norm-adposition-lex := norm-sem-lex-item & no-hcons-lex-item & basic-intersectiv
                                                    CONT.HOOK.INDEX #ind ] ] > ] ],
                      CONT.RELS.LIST < [ PRED #pred,
                                         ARG0 event,
-                                        ARG1 event-or-ref-index ] > ],
+                                        ARG1 event-or-ref-index ] > , CONT.HOOK.XARG #psub],
+			
              LKEYS.KEYREL arg12-ev-relation &
                           [ PRED #pred,
+				ARG1 #psub,
                             ARG2 #ind ],
              L-QUE #lque ],
-    ARG-ST < #comp > ].
+    ARG-ST < #subj, #comp > ].
 
 normadp1-norm-adposition-lex := norm-adposition-lex &
   [ SYNSEM.LOCAL.CAT [ VAL.COMPS.FIRST.LOCAL.CAT.HEAD.CASE gen,
@@ -1010,18 +1054,16 @@ MC_plus-lex-rule := MC-lex-rule-super & add-only-no-ccont-rule &
 MC_minus-lex:= MC-lex-rule-super &
  [ SYNSEM.LOCAL.CAT.MC - ].
 
-
 MC_minus-lex-rule := MC_minus-lex &
-  [ SYNSEM.LOCAL.CAT.VAL [ SUBJ < [ LOCAL [ CAT cat-sat & [ HEAD.CASE acc ],
+  [ SYNSEM.LOCAL.CAT[HEAD verb &[MOD<>] ,VAL [ SUBJ < [ LOCAL [ CAT cat-sat & [ HEAD.CASE acc ],
                                             CONT.HOOK #hook ] ] >,
 		           SPR #spr,
 			   SPEC #spec,
-			   COMPS #comps ],
+			   COMPS #comps ]],
     DTR.SYNSEM.LOCAL.CAT.VAL [ SUBJ < [ LOCAL.CONT.HOOK #hook ] >,
 			       SPR #spr,
 			       SPEC #spec,
 			       COMPS #comps ] ].
-
 
 defagr-lex-rule-super := add-only-no-ccont-rule & caseagr-rule-dtr &
   [ INFLECTED [ DEFAGR-FLAG +,

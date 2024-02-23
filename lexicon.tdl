@@ -249,7 +249,7 @@ qabal := trans-verb-lex &
   [ STEM < "qabal" >,
     SYNSEM.LKEYS.KEYREL.PRED "_met_v_rel" ].
 
-kan := trans-verb-lex &
+kan := trans-cop-verb-lex &
   [ STEM < "kan" >,
     SYNSEM.LKEYS.KEYREL.PRED "_be_v_id_rel" ].
 
