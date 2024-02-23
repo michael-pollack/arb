@@ -1114,10 +1114,10 @@ defagr-lex-rule-super := add-only-no-ccont-rule & caseagr-rule-dtr &
                       VERB_PN_SUBJ-FLAG #verb_pn_subj ] ] ].
 
 defagrpos-lex-rule := defagr-lex-rule-super & infl-lex-rule &
-  [ SYNSEM.LOCAL.CONT.HOOK.XARG.PNG.DEFINITION + ].
+  [ SYNSEM.LOCAL.CONT.HOOK.XARG.COG-ST uniq+fam+act].
 
 defagrneg-lex-rule := const-lex-rule & defagr-lex-rule-super &
-  [ SYNSEM.LOCAL.CONT.HOOK.XARG.PNG.DEFINITION - ].
+  [ SYNSEM.LOCAL.CONT.HOOK.XARG.COG-ST type-id ].
 
 caseagr-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule &
   [ INFLECTED [ CASEAGR-FLAG +,
@@ -1146,20 +1146,25 @@ caseagr-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule &
                       VERB_PN_SUBJ-FLAG #verb_pn_subj ] ] ].
 
 caseagrnomdef-lex-rule := caseagr-lex-rule-super &
-  [ SYNSEM.LOCAL [ CAT.HEAD.MOD.FIRST.LOCAL.CAT.HEAD.CASE nom,
-                                              CONT.HOOK.XARG.COG-ST uniq+fam+act ] ].
+  [ SYNSEM.LOCAL [ CAT.HEAD.MOD.FIRST.LOCAL [ CAT.HEAD.CASE nom,
+                                              CONT.HOOK.XARG.COG-ST uniq+fam+act ],
+                   CONT.HOOK.XARG.COG-ST uniq+fam+act ] ].
 
 caseagraccdef-lex-rule := caseagr-lex-rule-super &
-  [ SYNSEM.LOCAL [ CAT.HEAD.MOD.FIRST.LOCAL.CAT.HEAD.CASE acc,
-                                              CONT.HOOK.XARG.COG-ST uniq+fam+act ] ].
+  [ SYNSEM.LOCAL [ CAT.HEAD.MOD.FIRST.LOCAL [ CAT.HEAD.CASE acc,
+                                              CONT.HOOK.XARG.COG-ST uniq+fam+act ],
+                   CONT.HOOK.XARG.COG-ST uniq+fam+act ] ].
 
 caseagrnomindef-lex-rule := caseagr-lex-rule-super &
-  [ SYNSEM.LOCAL [ CAT.HEAD.MOD.FIRST.LOCAL.CAT.HEAD.CASE nom,
-                                              CONT.HOOK.XARG.COG-ST type-id ] ].
+  [ SYNSEM.LOCAL [ CAT.HEAD.MOD.FIRST.LOCAL [ CAT.HEAD.CASE nom,
+                                              CONT.HOOK.XARG.COG-ST type-id ],
+                   CONT.HOOK.XARG.COG-ST type-id ] ].
 
 caseagraccindef-lex-rule := caseagr-lex-rule-super &
-  [ SYNSEM.LOCAL [ CAT.HEAD.MOD.FIRST.LOCAL.CAT.HEAD.CASE acc,
-                                              CONT.HOOK.XARG.COG-ST type-id ] ].
+  [ SYNSEM.LOCAL [ CAT.HEAD.MOD.FIRST.LOCAL [ CAT.HEAD.CASE acc,
+                                              CONT.HOOK.XARG.COG-ST type-id ],
+                   CONT.HOOK.XARG.COG-ST type-id ] ].
+
 pred_or_attr_agr-lex-rule-super := add-only-no-ccont-rule &
   [ INFLECTED [ PRED_OR_ATTR_AGR-FLAG +,
                 NO_PN-FLAG #no_pn,
@@ -1186,14 +1191,18 @@ pred_or_attr_agr-lex-rule-super := add-only-no-ccont-rule &
 
 attr_agr-lex-rule := caseagr-rule-dtr & const-lex-rule & defagr-rule-dtr & pred_or_attr_agr-lex-rule-super &
   [ INFLECTED.DEFAGR-FLAG -,
-    SYNSEM.LOCAL.CAT.HEAD.MOD < [ LOCAL.CAT [ HEAD noun,
-                                              VAL.SPR cons ] ] > ].
+    SYNSEM.LOCAL [ CAT [ HEAD.MOD < [ LOCAL [ CAT [ HEAD noun,
+                                                    VAL.SPR cons ],
+                                              CONT.HOOK.XARG.COG-ST #defagreement ] ] >,
+                         VAL.SUBJ < > ],
+                   CONT.HOOK.XARG.COG-ST #defagreement ] ].
 
 pred_agr-lex-rule := infl-lex-rule & pred_or_attr_agr-lex-rule-super &
   [ INFLECTED.DEFAGR-FLAG #defagr,
     DTR.INFLECTED.DEFAGR-FLAG #defagr,
-    SYNSEM [ LOCAL [ CAT [ HEAD.PRD -,
-                       VAL.SUBJ < #subj & [ LOCAL [ CAT [ HEAD noun & [ CASE nom ] ], CONT.HOOK.INDEX #psub ] ] > ] ,
+    SYNSEM [ LOCAL [ CAT [ HEAD [PRD -,
+                                 MOD < > ],
+                           VAL.SUBJ < #subj & [ LOCAL [ CAT [ HEAD noun & [ CASE nom ] ], CONT.HOOK.INDEX #psub ] ] > ] ,
 		            CONT.HOOK.XARG #psub ],			
            LKEYS.KEYREL [ARG1 #psub] ],           
     ARG-ST < #subj > ].
