@@ -157,3 +157,5 @@ s1-top-coord := s1-top-coord-rule.
 s1-mid-coord := s1-mid-coord-rule.
 
 s1-bottom-coord := s1-bottom-coord-rule.
+
+np-predicate-phrase:= n-bar-predicate-rule.

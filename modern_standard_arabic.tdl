@@ -136,6 +136,34 @@ basic-head-mod-phrase-simple :+ [ SYNSEM.LOCAL.CAT.MC #mc,
 
 adj-head-int-phrase :+ [ HEAD-DTR.SYNSEM.NON-LOCAL.SLASH.LIST < > ].
 
+n-bar-predicate-rule := unary-phrase & nocoord &
+  [ SYNSEM [ LOCAL.CAT [ HEAD verb & [MOD <>],
+	  	         VAL [ SPEC<>, COMPS < >,
+			       SUBJ < [ LOCAL [ CONT.HOOK.INDEX #arg1,
+					         CAT [ HEAD noun & [CASE nom],
+				      VAL.SPR < > ] ] ] > ] ],
+             NON-LOCAL #nl ],
+    C-CONT [ HOOK [ LTOP #ltop,
+		    INDEX #index & [E.ASPECT imperfective],
+		    XARG #arg1 ],
+	     RELS.LIST < arg12-ev-relation &
+		   [ PRED "_be_v_id_rel",
+		     LBL #ltop,
+		     ARG0 #index,
+		     ARG1 #arg1,
+		     ARG2 #arg2 ],
+		   quant-relation &
+		   [ PRED "exist_q_rel",
+		     ARG0 #arg2,
+		     RSTR #harg ] >,
+	     HCONS.LIST < qeq & [ HARG #harg, LARG #larg ] > ],
+    ARGS < [ SYNSEM [ LOCAL [ CAT [ HEAD noun & [CASE nom],
+		 		    VAL.SPR cons ],
+			      CONT.HOOK [ INDEX #arg2,
+	                                  LTOP #larg ]],
+	              NON-LOCAL #nl ]] > ].
+
+
 ;;;;;;;;;;;;;;
 ;;; Features
 ;;;;;;;;;;;;;;
@@ -214,7 +242,7 @@ imperfective := aspect.
 noun-lex := basic-noun-lex & basic-non-wh-word-lex & non-local-none-lex-item & no-hcons-lex-item & non-mod-lex-item &
   [ ARG-ST < #spr >,
     SYNSEM.LOCAL.CAT.VAL [ COMPS < >,
-                           SUBJ <  >,
+                           SUBJ < >,
                            SPEC < >,
                            SPR < #spr &
                                  [ LOCAL.CAT.HEAD det,
@@ -390,6 +418,9 @@ trans-verb-lex := nom-acc-transitive-verb-lex &
                 VERB_PN_OBJ-FLAG -,
                 MC-FLAG - ] ].
 
+trans-cop-verb-lex := trans-verb-lex &
+[SYNSEM.LOCAL.CONT.HOOK.INDEX.E.ASPECT perfective].
+
 trans_comp_2anna-verb-lex := clausal-nominative-verb-lex & clausal-second-arg-trans-lex-item &
   [ INFLECTED [ VERB_PN_SUBJ-FLAG -,
                 VERB_PN_OBJ-FLAG -,
@@ -434,13 +465,9 @@ attr-adj-lex := adj-lex & intersective-mod-lex &
   [ SYNSEM.LOCAL.CAT.HEAD.MOD < [ LOCAL.CAT [ HEAD noun,
                                               VAL.SPR cons ] ] > ].
 
-
-
 ;attr-only-adj-lex := attr-adj-lex &
  ; [ SYNSEM.LOCAL.CAT [ HEAD.PRD -,
   ;                     VAL.SUBJ < > ] ].
-
-
 
 attr-only-adj-lex := attr-adj-lex &
   [ SYNSEM[LOCAL[CAT [ HEAD.PRD -,
@@ -451,36 +478,6 @@ attr-only-adj-lex := attr-adj-lex &
              LKEYS.KEYREL [ARG1 #psub]],
            
     ARG-ST < #subj > ].
-
-; NPs as standalone predicates
-
-n-bar-predicate-rule := unary-phrase & nocoord &
-  [ SYNSEM [ LOCAL.CAT [ HEAD verb,
-	  	         VAL [ COMPS < >,
-			       SUBJ < [ LOCAL [ CONT.HOOK.INDEX #arg1,
-					         CAT [ HEAD noun & [CASE nom],
-				      VAL.SPR < > ] ] ] > ] ],
-             NON-LOCAL #nl ],
-    C-CONT [ HOOK [ LTOP #ltop,
-		    INDEX #index,
-		    XARG #arg1 ],
-	     RELS.LIST < arg12-ev-relation &
-		   [ PRED "_be_v_id_rel",
-		     LBL #ltop,
-		     ARG0 #index,
-		     ARG1 #arg1,
-		     ARG2 #arg2 ],
-		   quant-relation &
-		   [ PRED "exist_q_rel",
-		     ARG0 #arg2,
-		     RSTR #harg ] >,
-	     HCONS.LIST < qeq & [ HARG #harg, LARG #larg ] > ],
-    ARGS < [ SYNSEM [ LOCAL [ CAT [ HEAD noun & [CASE nom],
-		 		    VAL.SPR cons ],
-			      CONT.HOOK [ INDEX #arg2,
-	                                  LTOP #larg ]],
-	              NON-LOCAL #nl ]] > ].
-
 
 ;;;;;;;;;;;;;;;;;;;
 ;;; Subordinators
@@ -1057,18 +1054,16 @@ MC_plus-lex-rule := MC-lex-rule-super & add-only-no-ccont-rule &
 MC_minus-lex:= MC-lex-rule-super &
  [ SYNSEM.LOCAL.CAT.MC - ].
 
-
 MC_minus-lex-rule := MC_minus-lex &
-  [ SYNSEM.LOCAL.CAT.VAL [ SUBJ < [ LOCAL [ CAT cat-sat & [ HEAD.CASE acc ],
+  [ SYNSEM.LOCAL.CAT[HEAD verb &[MOD<>] ,VAL [ SUBJ < [ LOCAL [ CAT cat-sat & [ HEAD.CASE acc ],
                                             CONT.HOOK #hook ] ] >,
 		           SPR #spr,
 			   SPEC #spec,
-			   COMPS #comps ],
+			   COMPS #comps ]],
     DTR.SYNSEM.LOCAL.CAT.VAL [ SUBJ < [ LOCAL.CONT.HOOK #hook ] >,
 			       SPR #spr,
 			       SPEC #spec,
 			       COMPS #comps ] ].
-
 
 defagr-lex-rule-super := add-only-no-ccont-rule & caseagr-rule-dtr &
   [ INFLECTED [ DEFAGR-FLAG +,
