@@ -181,19 +181,19 @@ huwa := ind_subj_pn_3sgm-noun-lex &
 
 tawel := common-adj-lex &
   [ STEM < "tawel" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_tall_adj_rel" ].
+    SYNSEM.LKEYS.KEYREL.PRED "_tall_a_rel" ].
 
 karim := common-adj-lex &
   [ STEM < "karim" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_generous_adj_rel" ].
+    SYNSEM.LKEYS.KEYREL.PRED "_generous_a_rel" ].
 
 mujtahid := common-adj-lex &
   [ STEM < "mujtahid" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_assiduous_adj_rel" ].
+    SYNSEM.LKEYS.KEYREL.PRED "_assiduous_a_rel" ].
 
 jay := common-adj-lex &
   [ STEM < "jay" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_jay_a_rel" ].
+    SYNSEM.LKEYS.KEYREL.PRED "_hungry_a_rel" ].
 
 fi := normadp1-norm-adposition-lex &
   [ STEM < "fi" >,
