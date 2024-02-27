@@ -14,3 +14,5 @@ MC_plus-lex := MC_plus-lex-rule.
 MC_minus-lex := MC_minus-lex-rule.
 
 defagrneg-lex := defagrneg-lex-rule.
+
+attr_agr-lex := attr_agr-lex-rule.

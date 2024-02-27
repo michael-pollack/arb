@@ -91,7 +91,7 @@ Source: b:9, Mohammad A. Mohammad, attested
 Vetted: s
 Judgment: g 
 Phenomena: {word order, determiner}
-qabal-a 	rajul-u 	walad-a
+qabal-a 	rajul-un 	walad-an
 met-3.SG.M	man-NOM		boy-ACC
 'A man met a boy.'
 
@@ -100,7 +100,7 @@ Source: b:9, Mohammad A. Mohammad, attested
 Vetted: s
 Judgment: g 
 Phenomena: {word order, determiner}
-qabal-a 	walad-a	rajul-u 
+qabal-a 	walad-an	rajul-un 
 met-3.SG.M	boy-ACC	man-NOM
 'A man met the boy.'
 
@@ -109,7 +109,7 @@ Source: b:9, Mohammad A. Mohammad, attested
 Vetted: s
 Judgment: u
 Phenomena: {word order, determiner}
-rajul-u 	qabal-a 	walad-a	
+rajul-un 	qabal-a 	walad-an	
 man-NOM		met-3.sg.m	boy-ACC	
 'A man met a boy.'
 
@@ -119,7 +119,7 @@ Source: b:10, Mohammad A. Mohammad, attested
 Vetted: s
 Judgment: u
 Phenomena: {word order, determiner}
-rajul-u 	walad-a	qabal-a 		
+rajul-un 	walad-an	qabal-a 		
 man-NOM		boy-ACC	met-3.SG.M	
 'A man met a boy.'
 
@@ -128,7 +128,7 @@ Source: b:10, Mohammad A. Mohammad, attested
 Vetted: s
 Judgment: u
 Phenomena: {word order, determiner}
-walad-a 	rajul-u		qabal-a 		
+walad-an 	rajul-un		qabal-a 		
 boy-ACC man-NOM		met-3.SG.M	
 'A man met a boy.'
 
@@ -138,7 +138,7 @@ Source: b:10, Mohammad A. Mohammad, attested
 Vetted: s
 Judgment: u
 Phenomena: {word order, determiner}
-walad-a 	qabal-a 	rajul-u			
+walad-an 	qabal-a 	rajul-un			
 boy-ACC 	met-3.SG.M	man-NOM	
 'A man met a boy.'
 
@@ -147,7 +147,7 @@ Source: b:9, Mohammad A. Mohammad, attested
 Vetted: s
 Judgment: g
 Phenomena: {word order, determiner}
-walad-u 	qadim-a 			
+walad-un 	qadim-a 			
 boy-NOM 	came-3.SG.M	
 'A boy came.'
 
@@ -156,7 +156,7 @@ Source: b:9, Mohammad A. Mohammad, attested
 Vetted: s
 Judgment: u
 Phenomena: {word order, determiner}
-qadim-a 	walad-u 		
+qadim-a 	walad-un 		
  came-3.SG.M	boy-NOM	
 'A boy came.'
 
@@ -176,7 +176,7 @@ Source: b:7, Mohammad A. Mohammad, attested
 Vetted: s
 Judgment: g
 Phenomena: {case}
-qabal-a	 	    walad-u      	arnab-a
+qabal-a	 	    walad-un     	arnab-a
 met-3sg.m		boy-nom     rabbit-acc
 'A boy met a rabbit.'
 
@@ -224,7 +224,7 @@ Source: c:2, Alonini, attested
 Vetted: s
 Judgment: g
 Phenomena: {case} 
-walad-u     wasal-a	 
+walad-un     wasal-a	 
 boy-nom     arrived-3sg.m		
 'A boy arrived.'
 
@@ -244,8 +244,8 @@ Source: d:2, AlQahtani, attested
 Vetted: s
 Judgment: g
 Phenomena: {agr, det, adj}
-rajul-u-n tawel-u-n daxal-a 2al-maktab-a
-man-NOM-NUM tall-NOM-NUN entered-3sgmasc the-office-ACC
+rajul-un tawel-un daxal-a 2al-maktab-a
+man-NOMNUM tall-NOM entered-3sgmasc the-office-ACC
 'A tall man entered the office.'
 
 #26- Noun phrase, indefinite, adjective agreement
@@ -271,8 +271,8 @@ Source: f:49, Alataibi, attested
 Vetted: f
 Judgment: u
 Phenomena: {agr}
-ja2-a al-rajul-u karim-u-n
-came-3sgmasc the-man-NOM generous-NOM-NUN
+ja2-a al-rajul-u karim-un
+came-3sgmasc the-man-NOM generous-NOM
 'Intended: The generous man came.'
 
 #######PRONOUNS#######

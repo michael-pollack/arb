@@ -36,27 +36,31 @@ head :+ [ PRON bool,
 
 noun :+ [ CASE case ].
 
-inflected :+ [ MC-FLAG luk,
-    VERB_PN_SUBJ-FLAG luk,
-    NO_PN-FLAG luk,
-    VERB_PN_OBJ-FLAG luk,
+inflected :+ [ NO_PN-FLAG luk,
     DEFAGR-FLAG luk,
+    CASEAGR-FLAG luk,
+    MC-FLAG luk,
     INTR-VERB-FLAG luk,
-    DET-FLAG luk,
     IMPERF-OR-PERF-FLAG luk,
+    PRED_OR_ATTR_AGR-FLAG luk,
+    VERB_PN_OBJ-FLAG luk,
+    DET-FLAG luk,
+    NOUNPOSS-FLAG luk,
     CASE-FLAG luk,
-    NOUNPOSS-FLAG luk ].
+    VERB_PN_SUBJ-FLAG luk ].
 
-infl-satisfied :+ [ MC-FLAG na-or-+,
-    VERB_PN_SUBJ-FLAG na-or-+,
-    NO_PN-FLAG na-or-+,
-    VERB_PN_OBJ-FLAG na-or-+,
+infl-satisfied :+ [ NO_PN-FLAG na-or-+,
     DEFAGR-FLAG na-or-+,
+    CASEAGR-FLAG na-or-+,
+    MC-FLAG na-or-+,
     INTR-VERB-FLAG na-or-+,
-    DET-FLAG na-or-+,
     IMPERF-OR-PERF-FLAG na-or-+,
+    PRED_OR_ATTR_AGR-FLAG na-or-+,
+    VERB_PN_OBJ-FLAG na-or-+,
+    DET-FLAG na-or-+,
+    NOUNPOSS-FLAG na-or-+,
     CASE-FLAG na-or-+,
-    NOUNPOSS-FLAG na-or-+ ].
+    VERB_PN_SUBJ-FLAG na-or-+ ].
 
 cat :+ [ POSSESSUM poss ].
 
@@ -454,30 +458,10 @@ trans_comp_2an-verb-lex := clausal-nominative-verb-lex & clausal-second-arg-tran
 
 ;;; Adjectives
 
-adj-lex := basic-intersective-adjective-lex & caseagr-rule-dtr.
+adj-lex := basic-intersective-adjective-lex & caseagr-rule-dtr & defagr-rule-dtr.
 
-common-adj-lex := attr-only-adj-lex &
-  [ INFLECTED.DEFAGR-FLAG - ].
-
-; Basic attributive adjective definition
-
-attr-adj-lex := adj-lex & intersective-mod-lex &
-  [ SYNSEM.LOCAL.CAT.HEAD.MOD < [ LOCAL.CAT [ HEAD noun,
-                                              VAL.SPR cons ] ] > ].
-
-;attr-only-adj-lex := attr-adj-lex &
- ; [ SYNSEM.LOCAL.CAT [ HEAD.PRD -,
-  ;                     VAL.SUBJ < > ] ].
-
-attr-only-adj-lex := attr-adj-lex &
-  [ SYNSEM[LOCAL[CAT [ HEAD.PRD -,
-                       VAL.SUBJ < #subj & [LOCAL[CAT[HEAD noun & [CASE nom]], CONT.HOOK.INDEX #psub]]> ] ,
-
-		  CONT.HOOK.XARG #psub],
-			
-             LKEYS.KEYREL [ARG1 #psub]],
-           
-    ARG-ST < #subj > ].
+common-adj-lex := adj-lex &
+  [ INFLECTED.PRED_OR_ATTR_AGR-FLAG - ].
 
 ;;;;;;;;;;;;;;;;;;;
 ;;; Subordinators
@@ -681,40 +665,55 @@ prog-neg-adverb-lex := neg-adv-lex &
 ;;; Lexical Rules
 ;;;;;;;;;;;;;;;;;;;
 
+; Stative predicate adjective lexical rule definition
+
+stative-pred-lex-rule := add-only-no-ccont-rule &
+  [ SYNSEM.LOCAL [ CAT.VAL.SUBJ < [ LOCAL [ CAT.HEAD.CASE real-case,
+                                            CONT.HOOK.INDEX #xarg,
+                                            CAT [ VAL [ SPR < >,
+                                                        COMPS < > ],
+                                                  HEAD noun ] ] ] >,
+                   CONT.HOOK.XARG #xarg ] ].
+
 ;;; Intermediate rule types
 
-det-rule-dtr := word-or-lexrule.
-caseagr-rule-dtr := word-or-lexrule.
 verb_suffix-rule-dtr := word-or-lexrule.
-verb_pn_obj-rule-dtr := word-or-lexrule.
+defagr-rule-dtr := word-or-lexrule.
 case-rule-dtr := word-or-lexrule.
-nounposs-rule-dtr := word-or-lexrule.
-MC-rule-dtr := word-or-lexrule.
 verb_pn_subj-rule-dtr := word-or-lexrule.
+caseagr-rule-dtr := word-or-lexrule.
+verb_pn_obj-rule-dtr := word-or-lexrule.
+MC-rule-dtr := word-or-lexrule.
+det-rule-dtr := word-or-lexrule.
+nounposs-rule-dtr := word-or-lexrule.
 
 ;;; Lexical rule types
 
 case-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule & nounposs-rule-dtr &
   [ INFLECTED [ CASE-FLAG +,
-                MC-FLAG #mc,
-                VERB_PN_SUBJ-FLAG #verb_pn_subj,
                 NO_PN-FLAG #no_pn,
-                VERB_PN_OBJ-FLAG #verb_pn_obj,
                 DEFAGR-FLAG #defagr,
+                CASEAGR-FLAG #caseagr,
+                MC-FLAG #mc,
                 INTR-VERB-FLAG #intr-verb,
-                DET-FLAG #det,
                 IMPERF-OR-PERF-FLAG #imperf-or-perf,
-                NOUNPOSS-FLAG #nounposs ],
+                PRED_OR_ATTR_AGR-FLAG #pred_or_attr_agr,
+                VERB_PN_OBJ-FLAG #verb_pn_obj,
+                DET-FLAG #det,
+                NOUNPOSS-FLAG #nounposs,
+                VERB_PN_SUBJ-FLAG #verb_pn_subj ],
     DTR case-rule-dtr &
-        [ INFLECTED [ MC-FLAG #mc,
-                      VERB_PN_SUBJ-FLAG #verb_pn_subj,
-                      NO_PN-FLAG #no_pn,
-                      VERB_PN_OBJ-FLAG #verb_pn_obj,
+        [ INFLECTED [ NO_PN-FLAG #no_pn,
                       DEFAGR-FLAG #defagr,
+                      CASEAGR-FLAG #caseagr,
+                      MC-FLAG #mc,
                       INTR-VERB-FLAG #intr-verb,
-                      DET-FLAG #det,
                       IMPERF-OR-PERF-FLAG #imperf-or-perf,
-                      NOUNPOSS-FLAG #nounposs ] ] ].
+                      PRED_OR_ATTR_AGR-FLAG #pred_or_attr_agr,
+                      VERB_PN_OBJ-FLAG #verb_pn_obj,
+                      DET-FLAG #det,
+                      NOUNPOSS-FLAG #nounposs,
+                      VERB_PN_SUBJ-FLAG #verb_pn_subj ] ] ].
 
 subjectdef-lex-rule := case-lex-rule-super &
   [ SYNSEM.LOCAL [ CAT.HEAD.CASE nom,
@@ -737,25 +736,29 @@ objectindef-lex-rule := case-lex-rule-super &
 
 det-lex-rule-super := add-only-no-ccont-rule & case-rule-dtr & nounposs-rule-dtr &
   [ INFLECTED [ DET-FLAG +,
-                MC-FLAG #mc,
-                VERB_PN_SUBJ-FLAG #verb_pn_subj,
                 NO_PN-FLAG #no_pn,
-                VERB_PN_OBJ-FLAG #verb_pn_obj,
                 DEFAGR-FLAG #defagr,
+                CASEAGR-FLAG #caseagr,
+                MC-FLAG #mc,
                 INTR-VERB-FLAG #intr-verb,
                 IMPERF-OR-PERF-FLAG #imperf-or-perf,
+                PRED_OR_ATTR_AGR-FLAG #pred_or_attr_agr,
+                VERB_PN_OBJ-FLAG #verb_pn_obj,
+                NOUNPOSS-FLAG #nounposs,
                 CASE-FLAG #case,
-                NOUNPOSS-FLAG #nounposs ],
+                VERB_PN_SUBJ-FLAG #verb_pn_subj ],
     DTR det-rule-dtr &
-        [ INFLECTED [ MC-FLAG #mc,
-                      VERB_PN_SUBJ-FLAG #verb_pn_subj,
-                      NO_PN-FLAG #no_pn,
-                      VERB_PN_OBJ-FLAG #verb_pn_obj,
+        [ INFLECTED [ NO_PN-FLAG #no_pn,
                       DEFAGR-FLAG #defagr,
+                      CASEAGR-FLAG #caseagr,
+                      MC-FLAG #mc,
                       INTR-VERB-FLAG #intr-verb,
                       IMPERF-OR-PERF-FLAG #imperf-or-perf,
+                      PRED_OR_ATTR_AGR-FLAG #pred_or_attr_agr,
+                      VERB_PN_OBJ-FLAG #verb_pn_obj,
+                      NOUNPOSS-FLAG #nounposs,
                       CASE-FLAG #case,
-                      NOUNPOSS-FLAG #nounposs ] ] ].
+                      VERB_PN_SUBJ-FLAG #verb_pn_subj ] ] ].
 
 def-lex-rule := det-lex-rule-super & infl-lex-rule &
   [ SYNSEM.LOCAL.CONT.HOOK.INDEX.COG-ST uniq+fam+act].
@@ -765,25 +768,29 @@ indef-lex-rule := const-lex-rule & det-lex-rule-super &
 
 nounposs-lex-rule-super := lex-rule &
   [ INFLECTED [ NOUNPOSS-FLAG +,
-                MC-FLAG #mc,
-                VERB_PN_SUBJ-FLAG #verb_pn_subj,
                 NO_PN-FLAG #no_pn,
-                VERB_PN_OBJ-FLAG #verb_pn_obj,
                 DEFAGR-FLAG #defagr,
+                CASEAGR-FLAG #caseagr,
+                MC-FLAG #mc,
                 INTR-VERB-FLAG #intr-verb,
-                DET-FLAG #det,
                 IMPERF-OR-PERF-FLAG #imperf-or-perf,
-                CASE-FLAG #case ],
+                PRED_OR_ATTR_AGR-FLAG #pred_or_attr_agr,
+                VERB_PN_OBJ-FLAG #verb_pn_obj,
+                DET-FLAG #det,
+                CASE-FLAG #case,
+                VERB_PN_SUBJ-FLAG #verb_pn_subj ],
     DTR nounposs-rule-dtr &
-        [ INFLECTED [ MC-FLAG #mc,
-                      VERB_PN_SUBJ-FLAG #verb_pn_subj,
-                      NO_PN-FLAG #no_pn,
-                      VERB_PN_OBJ-FLAG #verb_pn_obj,
+        [ INFLECTED [ NO_PN-FLAG #no_pn,
                       DEFAGR-FLAG #defagr,
+                      CASEAGR-FLAG #caseagr,
+                      MC-FLAG #mc,
                       INTR-VERB-FLAG #intr-verb,
-                      DET-FLAG #det,
                       IMPERF-OR-PERF-FLAG #imperf-or-perf,
-                      CASE-FLAG #case ] ] ].
+                      PRED_OR_ATTR_AGR-FLAG #pred_or_attr_agr,
+                      VERB_PN_OBJ-FLAG #verb_pn_obj,
+                      DET-FLAG #det,
+                      CASE-FLAG #case,
+                      VERB_PN_SUBJ-FLAG #verb_pn_subj ] ] ].
 
 posspn-lex-rule := infl-lex-rule & nounposs-lex-rule-super &
   [ SYNSEM.LOCAL.CAT [ HEAD #head,
@@ -835,23 +842,27 @@ nonpossessive-lex-rule-1 := add-only-no-ccont-rule &
 nonposs-lex-rule := const-lex-rule & nonpossessive-lex-rule-1 & nounposs-lex-rule-super.
 
 verb_suffix-lex-rule-super := MC-rule-dtr & add-only-no-ccont-rule & infl-lex-rule & verb_pn_obj-rule-dtr & verb_pn_subj-rule-dtr &
-  [ INFLECTED [ MC-FLAG #mc,
-                VERB_PN_SUBJ-FLAG #verb_pn_subj,
-                VERB_PN_OBJ-FLAG #verb_pn_obj,
-                DEFAGR-FLAG #defagr,
+  [ INFLECTED [ DEFAGR-FLAG #defagr,
+                CASEAGR-FLAG #caseagr,
+                MC-FLAG #mc,
                 INTR-VERB-FLAG #intr-verb,
+                PRED_OR_ATTR_AGR-FLAG #pred_or_attr_agr,
+                VERB_PN_OBJ-FLAG #verb_pn_obj,
                 DET-FLAG #det,
+                NOUNPOSS-FLAG #nounposs,
                 CASE-FLAG #case,
-                NOUNPOSS-FLAG #nounposs ],
+                VERB_PN_SUBJ-FLAG #verb_pn_subj ],
     DTR verb_suffix-rule-dtr &
-        [ INFLECTED [ MC-FLAG #mc,
-                      VERB_PN_SUBJ-FLAG #verb_pn_subj,
-                      VERB_PN_OBJ-FLAG #verb_pn_obj,
-                      DEFAGR-FLAG #defagr,
+        [ INFLECTED [ DEFAGR-FLAG #defagr,
+                      CASEAGR-FLAG #caseagr,
+                      MC-FLAG #mc,
                       INTR-VERB-FLAG #intr-verb,
+                      PRED_OR_ATTR_AGR-FLAG #pred_or_attr_agr,
+                      VERB_PN_OBJ-FLAG #verb_pn_obj,
                       DET-FLAG #det,
+                      NOUNPOSS-FLAG #nounposs,
                       CASE-FLAG #case,
-                      NOUNPOSS-FLAG #nounposs ] ] ].
+                      VERB_PN_SUBJ-FLAG #verb_pn_subj ] ] ].
 
 imperf-lex-rule := verb_suffix-lex-rule-super &
   [ INFLECTED [ IMPERF-OR-PERF-FLAG +,
@@ -921,23 +932,27 @@ perf-lex-rule := verb_suffix-lex-rule-super &
 
 verb_pn_subj-lex-rule-super := MC-rule-dtr & add-only-no-ccont-rule & verb_pn_obj-rule-dtr &
   [ INFLECTED [ VERB_PN_SUBJ-FLAG +,
-                MC-FLAG #mc,
-                VERB_PN_OBJ-FLAG #verb_pn_obj,
                 DEFAGR-FLAG #defagr,
+                CASEAGR-FLAG #caseagr,
+                MC-FLAG #mc,
                 INTR-VERB-FLAG #intr-verb,
-                DET-FLAG #det,
                 IMPERF-OR-PERF-FLAG #imperf-or-perf,
-                CASE-FLAG #case,
-                NOUNPOSS-FLAG #nounposs ],
+                PRED_OR_ATTR_AGR-FLAG #pred_or_attr_agr,
+                VERB_PN_OBJ-FLAG #verb_pn_obj,
+                DET-FLAG #det,
+                NOUNPOSS-FLAG #nounposs,
+                CASE-FLAG #case ],
     DTR verb_pn_subj-rule-dtr &
-        [ INFLECTED [ MC-FLAG #mc,
-                      VERB_PN_OBJ-FLAG #verb_pn_obj,
-                      DEFAGR-FLAG #defagr,
+        [ INFLECTED [ DEFAGR-FLAG #defagr,
+                      CASEAGR-FLAG #caseagr,
+                      MC-FLAG #mc,
                       INTR-VERB-FLAG #intr-verb,
-                      DET-FLAG #det,
                       IMPERF-OR-PERF-FLAG #imperf-or-perf,
-                      CASE-FLAG #case,
-                      NOUNPOSS-FLAG #nounposs ] ] ].
+                      PRED_OR_ATTR_AGR-FLAG #pred_or_attr_agr,
+                      VERB_PN_OBJ-FLAG #verb_pn_obj,
+                      DET-FLAG #det,
+                      NOUNPOSS-FLAG #nounposs,
+                      CASE-FLAG #case ] ] ].
 
 no_pn-lex-rule := const-lex-rule & verb_pn_subj-lex-rule-super &
   [ DTR.INFLECTED.IMPERF-OR-PERF-FLAG na,
@@ -970,25 +985,29 @@ verb_pn_subj-no-drop-lex-rule := const-lex-rule & verb_pn_subj-lex-rule-super &
 
 verb_pn_obj-lex-rule-super := MC-rule-dtr & add-only-no-ccont-rule &
   [ INFLECTED [ VERB_PN_OBJ-FLAG +,
-                MC-FLAG #mc,
-                VERB_PN_SUBJ-FLAG #verb_pn_subj,
                 NO_PN-FLAG #no_pn,
                 DEFAGR-FLAG #defagr,
+                CASEAGR-FLAG #caseagr,
+                MC-FLAG #mc,
                 INTR-VERB-FLAG #intr-verb,
-                DET-FLAG #det,
                 IMPERF-OR-PERF-FLAG #imperf-or-perf,
+                PRED_OR_ATTR_AGR-FLAG #pred_or_attr_agr,
+                DET-FLAG #det,
+                NOUNPOSS-FLAG #nounposs,
                 CASE-FLAG #case,
-                NOUNPOSS-FLAG #nounposs ],
+                VERB_PN_SUBJ-FLAG #verb_pn_subj ],
     DTR verb_pn_obj-rule-dtr &
-        [ INFLECTED [ MC-FLAG #mc,
-                      VERB_PN_SUBJ-FLAG #verb_pn_subj,
-                      NO_PN-FLAG #no_pn,
+        [ INFLECTED [ NO_PN-FLAG #no_pn,
                       DEFAGR-FLAG #defagr,
+                      CASEAGR-FLAG #caseagr,
+                      MC-FLAG #mc,
                       INTR-VERB-FLAG #intr-verb & na,
-                      DET-FLAG #det,
                       IMPERF-OR-PERF-FLAG #imperf-or-perf,
+                      PRED_OR_ATTR_AGR-FLAG #pred_or_attr_agr,
+                      DET-FLAG #det,
+                      NOUNPOSS-FLAG #nounposs,
                       CASE-FLAG #case,
-                      NOUNPOSS-FLAG #nounposs ] ] ].
+                      VERB_PN_SUBJ-FLAG #verb_pn_subj ] ] ].
 
 1sg_pn_obj-lex-rule := infl-lex-rule & verb_pn_obj-lex-rule-super &
   [ SYNSEM.LOCAL.CAT.VAL.COMPS.FIRST.LOCAL.CONT.HOOK.INDEX.PNG [ PER 1st,
@@ -1012,30 +1031,34 @@ verb_pn_obj-lex-rule-super := MC-rule-dtr & add-only-no-ccont-rule &
 verb_pn_obj-no-drop-lex-rule := const-lex-rule & verb_pn_obj-lex-rule-super &
   [ SYNSEM.LOCAL.CAT.VAL.COMPS.FIRST.OPT - ].
 
-MC-lex-rule-super := cat-change-only-lex-rule & const-lex-rule &
+MC-lex-rule-super := add-only-no-ccont-rule & const-lex-rule &
   [ INFLECTED [ MC-FLAG +,
-                VERB_PN_SUBJ-FLAG #verb_pn_subj,
                 NO_PN-FLAG #no_pn,
-                VERB_PN_OBJ-FLAG #verb_pn_obj,
                 DEFAGR-FLAG #defagr,
+                CASEAGR-FLAG #caseagr,
                 INTR-VERB-FLAG #intr-verb,
-                DET-FLAG #det,
                 IMPERF-OR-PERF-FLAG #imperf-or-perf,
+                PRED_OR_ATTR_AGR-FLAG #pred_or_attr_agr,
+                VERB_PN_OBJ-FLAG #verb_pn_obj,
+                DET-FLAG #det,
+                NOUNPOSS-FLAG #nounposs,
                 CASE-FLAG #case,
-                NOUNPOSS-FLAG #nounposs ],
+                VERB_PN_SUBJ-FLAG #verb_pn_subj ],
     DTR MC-rule-dtr &
-        [ INFLECTED [ VERB_PN_SUBJ-FLAG #verb_pn_subj,
-                      NO_PN-FLAG #no_pn,
-                      VERB_PN_OBJ-FLAG #verb_pn_obj,
+        [ INFLECTED [ NO_PN-FLAG #no_pn,
                       DEFAGR-FLAG #defagr,
+                      CASEAGR-FLAG #caseagr,
                       INTR-VERB-FLAG #intr-verb,
-                      DET-FLAG #det,
                       IMPERF-OR-PERF-FLAG #imperf-or-perf,
+                      PRED_OR_ATTR_AGR-FLAG #pred_or_attr_agr,
+                      VERB_PN_OBJ-FLAG #verb_pn_obj,
+                      DET-FLAG #det,
+                      NOUNPOSS-FLAG #nounposs,
                       CASE-FLAG #case,
-                      NOUNPOSS-FLAG #nounposs ] ] ].
+                      VERB_PN_SUBJ-FLAG #verb_pn_subj ] ] ].
 
 
-MC_plus-lex-rule := MC-lex-rule-super & add-only-no-ccont-rule &
+MC_plus-lex-rule := MC-lex-rule-super &
   [ SYNSEM.LOCAL.CAT.MC + ].
 
 
@@ -1066,53 +1089,123 @@ MC_minus-lex-rule := MC_minus-lex &
 			       COMPS #comps ] ].
 
 defagr-lex-rule-super := add-only-no-ccont-rule & caseagr-rule-dtr &
-  [ INFLECTED [ DEFAGR-FLAG +,
-                MC-FLAG #mc,
-                VERB_PN_SUBJ-FLAG #verb_pn_subj,
+  [ INFLECTED [ CASEAGR-FLAG -,
+                DEFAGR-FLAG +,
                 NO_PN-FLAG #no_pn,
-                VERB_PN_OBJ-FLAG #verb_pn_obj,
+                MC-FLAG #mc,
                 INTR-VERB-FLAG #intr-verb,
-                DET-FLAG #det,
                 IMPERF-OR-PERF-FLAG #imperf-or-perf,
+                PRED_OR_ATTR_AGR-FLAG #pred_or_attr_agr,
+                VERB_PN_OBJ-FLAG #verb_pn_obj,
+                DET-FLAG #det,
+                NOUNPOSS-FLAG #nounposs,
                 CASE-FLAG #case,
-                NOUNPOSS-FLAG #nounposs ],
-    DTR common-adj-lex &
-        [ INFLECTED [ MC-FLAG #mc,
-                      VERB_PN_SUBJ-FLAG #verb_pn_subj,
-                      NO_PN-FLAG #no_pn,
-                      VERB_PN_OBJ-FLAG #verb_pn_obj,
+                VERB_PN_SUBJ-FLAG #verb_pn_subj ],
+    DTR defagr-rule-dtr &
+        [ INFLECTED [ NO_PN-FLAG #no_pn,
+                      MC-FLAG #mc,
                       INTR-VERB-FLAG #intr-verb,
-                      DET-FLAG #det,
                       IMPERF-OR-PERF-FLAG #imperf-or-perf,
+                      PRED_OR_ATTR_AGR-FLAG #pred_or_attr_agr,
+                      VERB_PN_OBJ-FLAG #verb_pn_obj,
+                      DET-FLAG #det,
+                      NOUNPOSS-FLAG #nounposs,
                       CASE-FLAG #case,
-                      NOUNPOSS-FLAG #nounposs ] ] ].
+                      VERB_PN_SUBJ-FLAG #verb_pn_subj ] ] ].
 
 defagrpos-lex-rule := defagr-lex-rule-super & infl-lex-rule &
-  [ SYNSEM.LOCAL.CONT.HOOK.XARG.COG-ST uniq+fam+act ].
+  [ SYNSEM.LOCAL.CONT.HOOK.XARG.COG-ST uniq+fam+act].
 
 defagrneg-lex-rule := const-lex-rule & defagr-lex-rule-super &
   [ SYNSEM.LOCAL.CONT.HOOK.XARG.COG-ST type-id ].
 
 caseagr-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule &
-  [ INFLECTED #infl,
+  [ INFLECTED [ CASEAGR-FLAG +,
+                NO_PN-FLAG #no_pn,
+                DEFAGR-FLAG #defagr,
+                MC-FLAG #mc,
+                INTR-VERB-FLAG #intr-verb,
+                IMPERF-OR-PERF-FLAG #imperf-or-perf,
+                PRED_OR_ATTR_AGR-FLAG #pred_or_attr_agr,
+                VERB_PN_OBJ-FLAG #verb_pn_obj,
+                DET-FLAG #det,
+                NOUNPOSS-FLAG #nounposs,
+                CASE-FLAG #case,
+                VERB_PN_SUBJ-FLAG #verb_pn_subj ],
     DTR caseagr-rule-dtr &
-        [ INFLECTED #infl ] ].
+        [ INFLECTED [ NO_PN-FLAG #no_pn,
+                      DEFAGR-FLAG #defagr,
+                      MC-FLAG #mc,
+                      INTR-VERB-FLAG #intr-verb,
+                      IMPERF-OR-PERF-FLAG #imperf-or-perf,
+                      PRED_OR_ATTR_AGR-FLAG #pred_or_attr_agr,
+                      VERB_PN_OBJ-FLAG #verb_pn_obj,
+                      DET-FLAG #det,
+                      NOUNPOSS-FLAG #nounposs,
+                      CASE-FLAG #case,
+                      VERB_PN_SUBJ-FLAG #verb_pn_subj ] ] ].
 
 caseagrnomdef-lex-rule := caseagr-lex-rule-super &
-  [ SYNSEM.LOCAL [ CAT.HEAD.MOD.FIRST.LOCAL.CAT.HEAD.CASE nom,
-                                              CONT.HOOK.XARG.COG-ST uniq+fam+act ] ].
+  [ SYNSEM.LOCAL [ CAT.HEAD.MOD.FIRST.LOCAL [ CAT.HEAD.CASE nom,
+                                              CONT.HOOK.XARG.COG-ST uniq+fam+act ],
+                   CONT.HOOK.XARG.COG-ST uniq+fam+act ] ].
 
 caseagraccdef-lex-rule := caseagr-lex-rule-super &
-  [ SYNSEM.LOCAL [ CAT.HEAD.MOD.FIRST.LOCAL.CAT.HEAD.CASE acc,
-                                              CONT.HOOK.XARG.COG-ST uniq+fam+act ] ].
+  [ SYNSEM.LOCAL [ CAT.HEAD.MOD.FIRST.LOCAL [ CAT.HEAD.CASE acc,
+                                              CONT.HOOK.XARG.COG-ST uniq+fam+act ],
+                   CONT.HOOK.XARG.COG-ST uniq+fam+act ] ].
 
 caseagrnomindef-lex-rule := caseagr-lex-rule-super &
-  [ SYNSEM.LOCAL [ CAT.HEAD.MOD.FIRST.LOCAL.CAT.HEAD.CASE nom,
-                                              CONT.HOOK.XARG.COG-ST type-id ] ].
+  [ SYNSEM.LOCAL [ CAT.HEAD.MOD.FIRST.LOCAL [ CAT.HEAD.CASE nom,
+                                              CONT.HOOK.XARG.COG-ST type-id ],
+                   CONT.HOOK.XARG.COG-ST type-id ] ].
 
 caseagraccindef-lex-rule := caseagr-lex-rule-super &
-  [ SYNSEM.LOCAL [ CAT.HEAD.MOD.FIRST.LOCAL.CAT.HEAD.CASE acc,
-                                              CONT.HOOK.XARG.COG-ST type-id ] ].
+  [ SYNSEM.LOCAL [ CAT.HEAD.MOD.FIRST.LOCAL [ CAT.HEAD.CASE acc,
+                                              CONT.HOOK.XARG.COG-ST type-id ],
+                   CONT.HOOK.XARG.COG-ST type-id ] ].
+
+pred_or_attr_agr-lex-rule-super := add-only-no-ccont-rule &
+  [ INFLECTED [ PRED_OR_ATTR_AGR-FLAG +,
+                NO_PN-FLAG #no_pn,
+                CASEAGR-FLAG #caseagr,
+                MC-FLAG #mc,
+                INTR-VERB-FLAG #intr-verb,
+                IMPERF-OR-PERF-FLAG #imperf-or-perf,
+                VERB_PN_OBJ-FLAG #verb_pn_obj,
+                DET-FLAG #det,
+                NOUNPOSS-FLAG #nounposs,
+                CASE-FLAG #case,
+                VERB_PN_SUBJ-FLAG #verb_pn_subj ],
+    DTR common-adj-lex &
+        [ INFLECTED [ NO_PN-FLAG #no_pn,
+                      CASEAGR-FLAG #caseagr,
+                      MC-FLAG #mc,
+                      INTR-VERB-FLAG #intr-verb,
+                      IMPERF-OR-PERF-FLAG #imperf-or-perf,
+                      VERB_PN_OBJ-FLAG #verb_pn_obj,
+                      DET-FLAG #det,
+                      NOUNPOSS-FLAG #nounposs,
+                      CASE-FLAG #case,
+                      VERB_PN_SUBJ-FLAG #verb_pn_subj ] ] ].
+
+attr_agr-lex-rule := caseagr-rule-dtr & const-lex-rule & defagr-rule-dtr & pred_or_attr_agr-lex-rule-super &
+  [ INFLECTED.DEFAGR-FLAG -,
+    SYNSEM.LOCAL [ CAT [ HEAD.MOD < [ LOCAL [ CAT [ HEAD noun,
+                                                    VAL.SPR cons ],
+                                              CONT.HOOK.XARG.COG-ST #defagreement ] ] >,
+                         VAL.SUBJ < > ],
+                   CONT.HOOK.XARG.COG-ST #defagreement ] ].
+
+pred_agr-lex-rule := infl-lex-rule & pred_or_attr_agr-lex-rule-super &
+  [ INFLECTED.DEFAGR-FLAG #defagr,
+    DTR.INFLECTED.DEFAGR-FLAG #defagr,
+    SYNSEM [ LOCAL [ CAT [ HEAD [PRD -,
+                                 MOD < > ],
+                           VAL.SUBJ < #subj & [ LOCAL [ CAT [ HEAD noun & [ CASE nom ] ], CONT.HOOK.INDEX #psub ] ] > ] ,
+		            CONT.HOOK.XARG #psub ],			
+           LKEYS.KEYREL [ARG1 #psub] ],           
+    ARG-ST < #subj > ].
 
 ;;;;;;;;;;;;;;;;;;;
 ;;; Phrasal Types
