@@ -85,14 +85,6 @@ imperf-lex-rule.
 %suffix (* -wa)
 3pl_v_masc_subj-lex-rule.
 
-3pl_v_masc_subj-suffix2 :=
-%suffix (* -uu)
-3pl_v_masc_subj-lex-rule.
-
-1sg_pn_obj-suffix1 :=
-%suffix (* -ya)
-1sg_pn_obj-lex-rule.
-
 1sg_pn_obj-suffix2 :=
 %suffix (* -nii)
 1sg_pn_obj-lex-rule.

@@ -9,6 +9,10 @@ maktab := common_3sg_masc-noun-lex &
   [ STEM < "maktab" >,
     SYNSEM.LKEYS.KEYREL.PRED "_office_n_rel" ].
 
+sayaar := common_3sg_masc-noun-lex &
+  [ STEM < "sayaar" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_car_n_rel" ].
+
 dar := common_3sg_masc-noun-lex &
   [ STEM < "dar" >,
     SYNSEM.LKEYS.KEYREL.PRED "_house_n_rel" ].
@@ -217,7 +221,7 @@ yanj := intr-verb-lex &
   [ STEM < "yanj" >,
     SYNSEM.LKEYS.KEYREL.PRED "_succeed_v_rel" ].
 
-yafuz_1 := intr-verb-lex &
+yafuz := intr-verb-lex &
   [ STEM < "yafuz" >,
     SYNSEM.LKEYS.KEYREL.PRED "_win_v_rel" ].
 
@@ -233,9 +237,9 @@ nam := intr-verb-lex &
   [ STEM < "nam" >,
     SYNSEM.LKEYS.KEYREL.PRED "_sleep_v_rel" ].
 
-yafuz_2 := intr-verb-lex &
-  [ STEM < "yafuz" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_win_v_rel" ].
+yakul := intr-verb-lex &
+  [ STEM < "yakul" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_eat_v_rel" ].
 
 dahab := intr-verb-lex &
   [ STEM < "dahab" >,
@@ -268,10 +272,6 @@ zur := trans-verb-lex &
 sallam := trans-verb-lex &
   [ STEM < "sallam" >,
     SYNSEM.LKEYS.KEYREL.PRED "_greet_v_rel" ].
-
-yakul := trans-verb-lex &
-  [ STEM < "yakul" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_eat_v_rel" ].
 
 2aqlaq := trans-verb-lex &
   [ STEM < "2aqlaq" >,

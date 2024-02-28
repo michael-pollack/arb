@@ -61,8 +61,8 @@ E.TENSE : TENSE
   [e] << non-future
 
 E.ASPECT : ASPECT
-perfective << [e]
 imperfective << prog
+perfective << [e]
 
 E.MOOD : MOOD
   * <> *
