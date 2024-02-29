@@ -3,6 +3,8 @@ indef-lex := indef-lex-rule.
 
 nonposs-lex := nonposs-lex-rule.
 
+no_agr-lex := no_agr-lex-rule.
+
 no_pn-lex := no_pn-lex-rule.
 
 verb_pn_subj-no-drop-lex := verb_pn_subj-no-drop-lex-rule.
