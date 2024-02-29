@@ -146,8 +146,8 @@ adj-head-int-phrase :+ [ HEAD-DTR.SYNSEM.NON-LOCAL.SLASH.LIST < > ].
 
 n-bar-predicate-rule := unary-phrase & nocoord &
   [ SYNSEM [ LOCAL.CAT [ HEAD verb & [MOD <>],
-	  	         VAL [ SPEC<>, COMPS < >,
-			       SUBJ < [ LOCAL [ CONT.HOOK.INDEX #arg1,
+	  	         VAL [ SPEC<>, SPR<>,  COMPS < >,
+			       SUBJ < [ OPT -, LOCAL [ CONT.HOOK.INDEX #arg1,
 					         CAT [ HEAD noun & [CASE nom],
 				      VAL.SPR < > ] ] ] > ] ],
              NON-LOCAL #nl ],
@@ -552,6 +552,12 @@ q-particle2-lex := qpart-lex-item &
   [ SYNSEM.LOCAL.CAT [ MC #mc,
                        VAL.COMPS.FIRST.LOCAL.CAT.MC #mc & + ] ].
 
+q-indef-lex := q-particle2-lex &
+	[SYNSEM.LOCAL.CAT.VAL.COMPS < [LOCAL.CONT.HOOK.XARG.COG-ST type-id] >].
+
+q-def-lex := q-particle1-lex &
+	[SYNSEM.LOCAL.CAT.VAL.COMPS < [LOCAL.CONT.HOOK.XARG.COG-ST uniq+fam+act ] >].
+
 comps1-complementizer-lex-item := complementizer-lex-item & basic-non-wh-word-lex &
   [ SYNSEM.LOCAL [ CAT [ VAL.COMPS.FIRST.LOCAL.CAT.MC -,
                          MC na-or--,
@@ -576,17 +582,19 @@ clause :+ [ SYNSEM.NON-LOCAL.QUE.LIST < > ].
 ;;; Others
 
 norm-adposition-lex := norm-sem-lex-item & no-hcons-lex-item & basic-intersective-mod-lex & non-local-none-lex-item &
-  [ SYNSEM [ LOCAL [ CAT [ HEAD adp &
+  [ SYNSEM [ LOCAL [ CAT [ HEAD adp & 
                                 [ MOD < [ LOCAL.CAT [ VAL.SPR cons,
                                                       WH.BOOL - ] ] > ],
                            WH.BOOL -,
+
                            VAL [ SPR < >,
                                  SPEC < >,
-                                 SUBJ <#subj & [LOCAL [CAT [ HEAD noun & [CASE nom]],
+                                 SUBJ <#subj & [LOCAL [CAT [ HEAD noun & [CASE nom], VAL.SPR<>],
 								CONT.HOOK.INDEX #psub]] >,
-                                 COMPS < #comp &
-                                         [ L-QUE #lque,
-                                           LOCAL [ CAT [ HEAD noun,
+                                 COMPS <  #comp &
+                                         [OPT -, 
+					L-QUE #lque,
+                                            LOCAL [ CAT [ HEAD noun,
                                                          VAL.SPR < > ],
                                                    CONT.HOOK.INDEX #ind ] ] > ] ],
                      CONT.RELS.LIST < [ PRED #pred,
@@ -599,6 +607,7 @@ norm-adposition-lex := norm-sem-lex-item & no-hcons-lex-item & basic-intersectiv
                             ARG2 #ind ],
              L-QUE #lque ],
     ARG-ST < #subj, #comp > ].
+
 
 normadp1-norm-adposition-lex := norm-adposition-lex &
   [ SYNSEM.LOCAL.CAT [ VAL.COMPS.FIRST.LOCAL.CAT.HEAD.CASE gen,
@@ -1088,7 +1097,7 @@ verb_pn_obj-lex-rule-super := MC-rule-dtr & add-only-no-ccont-rule &
 verb_pn_obj-no-drop-lex-rule := const-lex-rule & verb_pn_obj-lex-rule-super &
   [ SYNSEM.LOCAL.CAT.VAL.COMPS.FIRST.OPT - ].
 
-MC-lex-rule-super := add-only-no-ccont-rule & const-lex-rule &
+MC-lex-rule-super := cat-change-only-lex-rule & const-lex-rule &
   [ INFLECTED [ MC-FLAG +,
                 NO_PN-FLAG #no_pn,
                 VERB_PN_OBJ-FLAG #verb_pn_obj,
@@ -1118,7 +1127,7 @@ MC-lex-rule-super := add-only-no-ccont-rule & const-lex-rule &
                       NOUNPOSS-FLAG #nounposs,
                       1PL_V_SUBJ-OR-1SG_V_SUBJ-OR-3PL_V_MASC_SUBJ-FLAG #1pl_v_subj-or-1sg_v_subj-or-3pl_v_masc_subj ] ] ].
 
-MC_plus-lex-rule := MC-lex-rule-super &
+MC_plus-lex-rule := MC-lex-rule-super & add-only-no-ccont-rule &
   [ SYNSEM.LOCAL.CAT.MC + ].
 
 
@@ -1138,7 +1147,7 @@ MC_minus-lex:= MC-lex-rule-super &
  [ SYNSEM.LOCAL.CAT.MC - ].
 
 MC_minus-lex-rule := MC_minus-lex &
-  [ SYNSEM.LOCAL.CAT[HEAD verb &[MOD<>] ,VAL [ SUBJ < [ LOCAL [ CAT cat-sat & [ HEAD.CASE acc ],
+  [ SYNSEM.LOCAL.CAT[HEAD verb &[MOD <>] ,VAL [ SUBJ < [ LOCAL [ CAT cat-sat & [ HEAD.CASE acc ],
                                             CONT.HOOK #hook ] ] >,
 		           SPR #spr,
 			   SPEC #spec,

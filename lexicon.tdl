@@ -319,10 +319,10 @@ lam := question_neg-adverb-lex &
   [ STEM < "lam" >,
     SYNSEM.LKEYS.KEYREL.PRED "_negQ_a_rel" ].
 
-hal := q-particle1-lex &
+hal := q-def-lex &
   [ STEM < "hal" > ].
 
-2a := q-particle2-lex &
+2a := q-indef-lex  &
   [ STEM < "2a" > ].
 
 la := neg-adv-lex &
