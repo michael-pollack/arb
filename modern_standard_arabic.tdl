@@ -586,24 +586,23 @@ norm-adposition-lex := norm-sem-lex-item & no-hcons-lex-item & basic-intersectiv
                                 [ MOD < [ LOCAL.CAT [ VAL.SPR cons,
                                                       WH.BOOL - ] ] > ],
                            WH.BOOL -,
-
                            VAL [ SPR < >,
                                  SPEC < >,
-                                 SUBJ <#subj & [LOCAL [CAT [ HEAD noun & [CASE nom], VAL.SPR<>],
+                                 SUBJ <#subj & [LOCAL [CAT [ HEAD noun & [CASE nom], VAL.SPR < > ],
 								CONT.HOOK.INDEX #psub]] >,
-                                 COMPS <  #comp &
+                                 COMPS <#comp &
                                          [OPT -, 
-					L-QUE #lque,
-                                            LOCAL [ CAT [ HEAD noun,
-                                                         VAL.SPR < > ],
-                                                   CONT.HOOK.INDEX #ind ] ] > ] ],
+					                                L-QUE #lque,
+                                          LOCAL [ CAT [ HEAD noun & [CASE gen],
+                                                        VAL.SPR < > ],
+                                                  CONT.HOOK.INDEX #ind ] ] > ] ],
                      CONT.RELS.LIST < [ PRED #pred,
                                         ARG0 event,
                                         ARG1 event-or-ref-index ] > , CONT.HOOK.XARG #psub],
 			
              LKEYS.KEYREL arg12-ev-relation &
                           [ PRED #pred,
-				ARG1 #psub,
+				                    ARG1 #psub,
                             ARG2 #ind ],
              L-QUE #lque ],
     ARG-ST < #subj, #comp > ].
@@ -1304,9 +1303,12 @@ head-final-head-nexus := head-final &
 
 
 head-subj-phrase := decl-head-subj-phrase & head-initial-head-nexus &
-  [ SYNSEM.LOCAL.CAT.MC #mc,
+  [ SYNSEM.LOCAL.CAT[HEAD verb, MC #mc],
     HEAD-DTR.SYNSEM.LOCAL.CAT.MC #mc ].
 
+non-verbal-head-subj-phrase := decl-head-subj-phrase & head-initial-head-nexus &
+  [ SYNSEM.LOCAL.CAT.MC #mc,
+    HEAD-DTR.SYNSEM.LOCAL.CAT[VAL.COMPS <>, MC #mc ]].
 
 subj-head-phrase := decl-head-subj-phrase & head-final-head-nexus &
   [ SYNSEM.LOCAL.CAT.MC #mc,
