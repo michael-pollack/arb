@@ -152,7 +152,7 @@ n-bar-predicate-rule := unary-phrase & nocoord &
 				      VAL.SPR < > ] ] ] > ] ],
              NON-LOCAL #nl ],
     C-CONT [ HOOK [ LTOP #ltop,
-		    INDEX #index & [E.ASPECT imperfective],
+		    INDEX #index,
 		    XARG #arg1 ],
 	     RELS.LIST < arg12-ev-relation &
 		   [ PRED "_be_v_id_rel",
@@ -443,6 +443,18 @@ trans_comp_2anna-verb-lex := clausal-nominative-verb-lex & clausal-second-arg-tr
                                              CONT.HOOK.INDEX.SF prop ] ] >,
              NON-LOCAL.QUE.LIST < > ] ].
 
+;trans_comp_idha-verb-lex := clausal-nominative-verb-lex & clausal-second-arg-trans-lex-item &
+ ; [ INFLECTED [ VERB_SUFFIX-FLAG -,
+  ;              VERB_PN_SUBJ-FLAG -,
+   ;             VERB_PN_OBJ-FLAG -,
+    ;            MC-FLAG - ],
+
+    ;SYNSEM [ LOCAL.CAT.VAL.COMPS < [ LOCAL [ CAT [ HEAD comp &
+    ;                                                    [ FORM complementizer_idha ],
+    ;                                               WH.BOOL - ],
+    ;                                         CONT.HOOK.INDEX.SF ques] ] >,
+    ;         NON-LOCAL.QUE.LIST < > ] ].
+
 trans_comp_2inna-verb-lex := clausal-nominative-verb-lex & clausal-second-arg-trans-lex-item &
   [ INFLECTED [ VERB_SUFFIX-FLAG -,
                 VERB_PN_SUBJ-FLAG -,
@@ -576,6 +588,14 @@ comps3-complementizer-lex-item := complementizer-lex-item & basic-non-wh-word-le
                                                  CONT.HOOK.INDEX.E.ASPECT perfective ],
                          HEAD.FORM complementizer_qan ],
                    CONT.HOOK.INDEX.SF prop ] ].
+
+;ques-complementizer-lex-item := complementizer-lex-item &
+ ; [ SYNSEM.LOCAL [ CAT [ WH + , VAL.COMPS.FIRST.LOCAL.CAT [ WH +, MC -,
+  ;                       MC na-or--,
+   ;                      HEAD.FORM complementizer_idha ]],
+    ;               CONT.HOOK.INDEX.SF ques ] ].
+
+
 
 clause :+ [ SYNSEM.NON-LOCAL.QUE.LIST < > ].
 
@@ -1303,14 +1323,30 @@ head-final-head-nexus := head-final &
   [ SYNSEM.ATTACH rmod ].
 
 
-head-subj-phrase := decl-head-subj-phrase & head-initial-head-nexus &
-  [ SYNSEM.LOCAL.CAT.MC #mc,
-    HEAD-DTR.SYNSEM.LOCAL.CAT.MC #mc ].
+;head-subj-phrase := decl-head-subj-phrase & head-initial-head-nexus &
+ ; [ SYNSEM.LOCAL.CAT.MC #mc,
+  ;  HEAD-DTR.SYNSEM.LOCAL.CAT.MC #mc ].
 
+
+;subj-head-phrase := decl-head-subj-phrase & head-final-head-nexus &
+ ; [ SYNSEM.LOCAL.CAT.MC #mc,
+  ;  HEAD-DTR.SYNSEM.LOCAL.CAT.MC #mc ].
 
 subj-head-phrase := decl-head-subj-phrase & head-final-head-nexus &
-  [ SYNSEM.LOCAL.CAT.MC #mc,
+  [ SYNSEM.LOCAL.CAT [HEAD verb, MC #mc],
     HEAD-DTR.SYNSEM.LOCAL.CAT.MC #mc ].
+
+head-subj-phrase := decl-head-subj-phrase & head-initial-head-nexus &
+  [ SYNSEM.LOCAL.CAT [HEAD verb, MC #mc],
+    HEAD-DTR.SYNSEM.LOCAL.CAT.MC #mc ].
+
+non-verbal-head-subj-phrase := decl-head-subj-phrase & head-initial-head-nexus &
+  [ SYNSEM.LOCAL.CAT [HEAD +njrpcdmo, MC #mc],
+    HEAD-DTR.SYNSEM.LOCAL.CAT [VAL.COMPS <>, MC #mc ]].
+
+non-verbal-subj-head-phrase := decl-head-subj-phrase & head-final-head-nexus &
+  [ SYNSEM.LOCAL.CAT [HEAD +njrpcdmo, MC #mc],
+    HEAD-DTR.SYNSEM.LOCAL.CAT [VAL.COMPS <>, MC #mc ]].
 
 head-comp-phrase := basic-head-1st-comp-phrase & head-initial-head-nexus &
   [ HEAD-DTR.SYNSEM.LOCAL.CAT.HEAD.INIT + ].
@@ -1660,3 +1696,6 @@ s1-mid-coord-rule := basic-s-mid-coord-rule & monopoly-mid-coord-rule &
 
 s1-bottom-coord-rule := conj-first-bottom-coord-rule & s-bottom-coord-phrase &
   [ SYNSEM.LOCAL.COORD-STRAT "1" ].
+
+qeq :+ 
+	[HARG.INSTLOC #2ANNA, LARG.INSTLOC  #2ANNA].
