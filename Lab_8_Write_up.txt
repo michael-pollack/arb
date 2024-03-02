@@ -1,0 +1,313 @@
+Language: Modern_Standard_Arabic
+Language code: arb
+Author: Michael Pollack and Benjemin Pong (together for the last one!)
+Date: 1/3/2024
+Source a: Ahmed, A. M. T. (2016). Case in Standard Arabic: A dependent case approach.
+Source b: Mohammad, M. A. (2000). Word order, agreement and pronominalization in Standard and Palestinian Arabic. Word Order, Agreement and Pronominalization in Standard and Palestinian Arabic, 1-213.
+Source c: Alonini, T. M. (2023). Unaccusative verbs in Modern Standard Arabic. Saudi Journal of Language Studies, 3(1), 47-58.
+Source d: AlQahtani, S. J. (2016). The Structure and Distribution of Determiner Phrases in Arabin: Standard Arabic and Saudi Dialects. Department of Linguistics, University of Ottowa. 
+Source e: Albuhayri, S. (2013). The Pronominal System in Standard Arabic: Stron, Clitic, and Affixal Pronouns. Arizona State University. 
+Source f: Alotaibi, Y. H (2022). Adjectives in Arabic. Taif University. 
+Source g: Obeidat, H, A (1984). Relative Clauses in Standard Arabic Resvisited. Studies in Linguistic Sciences, 14(2) 77-96
+Source h: Alotaibi, Y (2014) Conditional sentences in Modern Standard Arabic and the Taif Dialect. University of Essex. 
+Source p:  Btoosh, M. (2010). Wh-Movement in Standard Arabic: An Optimality-Theoretic 
+Source q: Alsager, Haroon N.. “The Syntax of Yes/No Questions in Modern Standard Arabic.” International Journal of English Linguistics 10 (2020): 179.
+
+####### INTRODUCTION #######
+Our final lab! In this lab, we were able to tamp down on a lot of overgeneration in our MT files and our coverage in general. There is still some room for improvement, but overall we have come a very long way from "wasal-a walad-u"!
+
+####### ELIMINATION OF AFFIXLESS VERBS #########
+
+We had been facing an issue in which our translations prominantly featured affixless verbs. For example, in our translations we had been seeing sentences such as the following:
+
+*al-kilab-u nam
+DEF-dogs-NOM sleep
+Intended: "the dogs sleep"
+
+However, in all of the cases of verbs being useed in our test suite and in our translations, the verb must feature some sort of agreement. The tricky part is that agreement can actualize in multiple ways. The suffix can either represent perfective agreement, or it can take the part of a dependent pronoun that corresponds to the subject. For example, both of the following sentences are correct:
+
+al-kilab-u nam-uu
+DEF-dogs-NOM sleep-PFV.3PLM
+"the dogs sleep"
+
+al-kilab-u nam-wa
+DEF-dogs-NOM sleep-PN.3PLM.SUBJ
+"the dogs sleep"
+
+To accomplish this phenomenon, we had to leverage the customization system. We set the verb_suffix class to be obligatory and added a new lexical affix-less rule type called no_agr. This rule type forbids the affix-less no_pn rule type found in the verb_pn_subj position class and requires the verb to take one of the dependent pronouns. This prevents the affix-dropping that we were seeing with the subject dropping rule that had come with our argument optionality. Because verb_suffix is required, the grammar no longer has the option of bypassing affixes altogether, giving us the results that we had sought. 
+
+Adding the additional required restraints required us to do a lot of updates to the TDL file, mainly adding these additional flags to all of the super classes: 
+
+~~~~~
+IMPERF-OR-NO_AGR-OR-PERF-FLAG #imperf-or-no_agr-or-perf,
+VERB_SUFFIX-FLAG #verb_suffix,
+1PL_V_SUBJ-OR-1SG_V_SUBJ-OR-3PL_V_MASC_SUBJ-FLAG #1pl_v_subj-or-1sg_v_subj-or-3pl_v_masc_subj 
+~~~~~
+
+####### ATTACHING ADPOSITIONS CORRECTLY ##########
+
+We're having an issue in some of our translations where the adposition "fi", which is the equivalent of "in", is attaching to its subject before attaching to its complement. 
+
+For context, "fi" should only be attaching immediately to a [CASE gen] complement, which can then take a [CASE nom] subject. For example:
+
+al-kilab-u fi al-hadiq-i
+DEF-dogs-NOM in DEF-park-GEN
+"the dogs are in the park"
+
+However, there's no constraint that says that "fi" must attach to its complement before attaching to its subject. This results in a sentence like the one below:
+
+*fi al-kilab-u al-hadiq-i
+in DEF-dogs-NOM DEF-park-GEN
+Intended: "The dogs are in the park"
+
+To address this issue, we made two major changes. First, we edited the norm-adposition-lex with the following edits:
+- We made it so that adpositions cannot take specifiers
+- We specified that the adposition must take a [CASE nom] subject
+- We specified that the adposition must take a [CASE gen] complement that cannot take specifiers
+
+This resulted in the following .tdl code:
+
+~~~~~
+norm-adposition-lex := norm-sem-lex-item & no-hcons-lex-item & basic-intersective-mod-lex & non-local-none-lex-item &
+  [ SYNSEM [ LOCAL [ CAT [ HEAD adp & 
+                                [ MOD < [ LOCAL.CAT [ VAL.SPR cons,
+                                                      WH.BOOL - ] ] > ],
+                           WH.BOOL -,
+                           VAL [ SPR < >,
+                                 SPEC < >,
+                                 SUBJ <#subj & [LOCAL [CAT [ HEAD noun & [CASE nom], VAL.SPR < > ],
+								CONT.HOOK.INDEX #psub]] >,
+                                 COMPS <#comp &
+                                         [OPT -, 
+					                                L-QUE #lque,
+                                          LOCAL [ CAT [ HEAD noun & [CASE gen],
+                                                        VAL.SPR < > ],
+                                                  CONT.HOOK.INDEX #ind ] ] > ] ],
+                     CONT.RELS.LIST < [ PRED #pred,
+                                        ARG0 event,
+                                        ARG1 event-or-ref-index ] > , CONT.HOOK.XARG #psub],
+			
+             LKEYS.KEYREL arg12-ev-relation &
+                          [ PRED #pred,
+				                    ARG1 #psub,
+                            ARG2 #ind ],
+             L-QUE #lque ],
+    ARG-ST < #subj, #comp > ].
+~~~~~
+
+We also edited the HEAD-SUBJ rules to ensure that the adposition would not attach to its subject before it attached to its complement. To accomplish this, we created an aditional HEAD-SUBJ rule that requires its complement to be empty. We then modified the original HEAD-SUBJ phrase so that it only takes [HEAD verb] phrases. Here are those rules:
+
+~~~~~
+head-subj-phrase := decl-head-subj-phrase & head-initial-head-nexus &
+  [ SYNSEM.LOCAL.CAT[HEAD verb, MC #mc],
+    HEAD-DTR.SYNSEM.LOCAL.CAT.MC #mc ].
+
+non-verbal-head-subj-phrase := decl-head-subj-phrase & head-initial-head-nexus &
+  [ SYNSEM.LOCAL.CAT.MC #mc,
+    HEAD-DTR.SYNSEM.LOCAL.CAT[VAL.COMPS <>, MC #mc ]].
+~~~~~
+
+###### GETTING ZERO-COPULA TRANSLATIONS ######
+
+In order to get our dependent pronoun translations functioning properly, we needed to add a pronoun dropping transfer rule. Fortunately, there was one readily available for us in mmt/tm/acm.tdl:
+
+~~~~~
+pronoun-delete-mtr := monotonic_omtr &
+ [ INPUT [ RELS < [ PRED "pron_rel",
+		     ARG0 #x,
+		     LBL #larg ],
+		 [ PRED "exist_q_rel",
+		   ARG0 #x,
+		   RSTR #harg ] >,
+	   HCONS < qeq & [ LARG #larg,
+			    HARG #harg ] > ],
+   OUTPUT [ RELS < >,
+	    HCONS < > ]].
+~~~~~
+
+We added this to our own transfer rules with the following line:
+
+~~~~~
+pro-drop := pronoun-delete-mtr.
+~~~~~
+
+This transfer rule was particularly helpful for us in getting our expected translations for the following:
+
+Tutarid-tu-ka
+chase-PN.1SG.SUBJ-PN.2SG.OBJ
+"I chase you"
+
+There are still other ways that this sentence can be uttered using overt pronouns, which are also still valid. For example. 
+
+tutarid-tu 2iyyaaka
+chase-PN.1SG.SUBJ PN.2SG.OBJ
+"I chase you"
+
+2aana tutarid-tu 2iyyaaka
+PN.1SG.SUBJ chase-PN.1SG.SUBJ PN.2SG.OBJ
+"I chase you"
+
+With the pro-drop transfer rule we were able to see all of these realizations occur in our translations. 
+
+~~~~~~~~~~~~~~~~~~~~ RESULTS ~~~~~~~~~~~~~~~~~~~~
+
+###### MT COVERAGE ######
+
+For eng, we were able to get translations for the following 14 sentences, shown here proceded by the number of that sentence as it appeared in eng.txt and followed by the number of translations it received and the sources of ambiguity (abreviations defined in each section below):
+
+(1) Dogs sleep - 4 {wo, agr}
+(3) I chase you - 21 {wo, agr, arg-opt}
+(4) Dogs eat - 4 {wo, agr}
+(11) Do cats chase dogs - 24 {wo, agr, ques}
+(12) Hungry dogs eat - 12 {wo, agr}
+(13) Dogs in the park eat - 12 {wo, agr}
+(14) Dogs eat in the park - 24 {wo, agr}
+(15) The dogs are hungry - 2 {wo}
+(16) The dogs are in the park - 2 {wo}
+(17) The dogs are the cats - 14 {wo, agr, und}
+(18) The dog s car sleeps - 2 {wo}
+(19) My dogs sleep - 4 {wo, agr}
+(25) The dog sleeps because the cat sleeps - 4 {wo}
+(26) The dog sleeps after the cat sleeps - 4 {wo}
+
+For sje, we were able to get translations for the following 8 sentences. 
+
+(1) Begnaga urri - 8 {wo, agr, und}
+(3) Moan haoskaoli duv - 21 {wo, agr, arg-opt}
+(4) Begnaga burri - 8 {wo, agr, und}
+(10) Gaahto haoskaoli bednagajd ja urri - 663 {the horror}
+(11) Gaahto bednagajd haoskaoli - 48 {wo, agr, ques, und}
+(12) Buojde bednaga burri - 48 {wo, agr, ques, und}
+(18) Bednaga bijjla aorraa - 4 {wo, und}
+(19) Muv bednaga urri - 4 {wo, agr}
+
+For most of these translations, there is still some level of ambiguity. However, all of what we are seeing is expected and can be narrowed down to the following.
+
+WORD ORDER {wo} - 
+Given that Arabic is a (mostly) free-word-order language, several of our translations recieved multiple actualizations of the same sentence that would be equally valid. For example, consider eng(1) "Dogs sleep". This can be either of the following:
+
+Kilab-un nam-uu
+dogs-NOM sleep-PFV.3PLM
+"Dogs sleep"
+
+Nam-uu kilab-un 
+sleep-PFV.3PLM dogs-NOM 
+"Dogs sleep"
+
+This affected every one of our translations, inflating our total count with multiple valid actualizations of the same sentence.
+
+AGREEMENT {agr} - 
+As mentioned previously, there are multiple valid ways for a verb to agree with its subject. It can use an agreement marker to specify perfective or imperfective, or it can use a dependent pronoun. This means we had many cases in which translations were provided using both of these strategies. For example, again consider eng(1). In addition to the two actualizations shown above, we also recieved the following below: 
+
+Kilab-un nam-wa
+dogs-NOM sleep-PN.3PLM.SUBJ
+"Dogs sleep"
+
+Nam-wa kilab-un 
+sleep-PN.3PLM.SUBJ dogs-NOM
+"Dogs sleep"
+
+All four of the sentences shown are expected and valid. 
+
+ARGUMENT OPTIONALITY {arg-opt} - 
+In Arabic, it is possible to drop overt pronouns in favor of dependent ones. However, this dropping is not necessary, and dependent pronouns can also be present this source of ambiguity was mostly relevant for eng(3) and sje(3), for which multiple actualizations of each of the following are valid: 
+
+Tutarid-tu-ka
+chase-PN.1SG.SUBJ-PN.2SG.OBJ
+"I chase you"
+
+Tutarid-tu 2iyaaka
+chase-PN.1SG.SUBJ PN.2SG.OBJ
+"I chase you"
+
+2aana Tutarid-tu 2iyaaka
+PN.1SG.SUBJ chase-PN.1SG.SUBJ PN.2SG.OBJ
+"I chase you"
+
+This phenomenon, combined with word order and agreement, gave us the 21 translations listed for eng(3) and sje(3)
+
+UNDERSPECIFICATION {und} - 
+There were cases in which underspecification of certain features yielded multiple potential translations. For eng, this was most prevalent in eng(17). Normally, when someone is speaking about a current condition in arabic, they will use a zero-copula assignment that corresponds to the imperfective aspect and holds both the subject and the assigned NP or ADJ in [CASE nom]. That means that eng(17) would ideally translate to an iteration of the following:
+
+Al-kilab-u al-qitat-u
+DEF-dogs-NOM DEF-cats-NOM
+"the dogs are the cats"
+
+However, when someone is speaking in Arabic of a past condition, they typically employ the verb "kan", which is always used in the perfective aspect and which conjugates its object in [CASE acc], like a typical transitive verb. This would give us something like the following:
+
+Al-kilab-u kan-uu al-qitat-a
+DEF-dogs-NOM be-PFV.3PLM DEF-cats-ACC
+"the dogs are the cats"
+
+This distinction, however, is implied through aspect and is not a form of present vs. past tense. Therefore, this caused both actualizations to appear in eng(17).
+
+This was a much more prominent issue in sje, from which the definiteness agreement defined in our COG-ST values was underspecied. This gave us actualizations for both definite and indefinite translations. For example, in sje(1) we received the following:
+
+Al-kilab-u nam-uu
+DEF-dogs-NOM sleep-PFV.3PLM
+Intended: "dogs sleep"
+
+If definiteness is underspecified, both examples such as this and the translations recieved for eng(1) are valid. 
+
+QUESTION MARKER {ques} -
+Our final source of ambiguity came from the question marker (which could also technically be a case of underspecification). This only applied to eng(11), and produced both sentences in which the question marker "2a" was present and those in which it was not. We learned that this was because the English sentences are unspecified for whether they are a question or a declarative sentence. This means that, for eng(11), we get multiple actualizations of the following:
+
+2a qitat-un tutarid-wa kilab-an
+QUES cats-NOM chase-PN.3PLF.SUBJ dogs-ACC
+"Do cats chase dogs"
+
+Qitat-un tutarid-wa kilab-an
+cats-NOM chase-PN.3PLF.SUBJ dogs-ACC
+Intended: "Do cats chase dogs"
+
+THE HORROR {the horror} - 
+Something awful is going on with sje(10) that we didn't have time to fully investigate. We believe that it has something to do with conjunctions in combinations with some of the other sources of ambiguity shown above. We would like to resolve this, but having reached 7 other valid translations in sje, we decided to prioritize reducing other sources of ambiguity elsewhere. 
+
+##### TESTSUITE COVERAGE ########
+
+We saw some improvement in our test suite coverage in from Lab 7 to Lab 8. Our coverage increased from 60.4% in Lab 7 to 61.5% in Lab 8 and our overgeneration reduced from 26.9% in Lab 7 to 18% in Lab 8. 
+
+It appears our average number of parses for each sentence was 1, with 44 sentences only recieving one parse. There were, however, 12 sentences with two parses, 1 with 3 parses, 1 with 4 parses, and 1 with 10 parses. 
+
+For the outlier there with 10 parses, there is some further cause for frustration, as this is actually also an example of overgeneration. That result came from this test case:
+
+Source: g:49, Alotaibi, attested
+Vetted: s
+Judgment: u
+Phenomena: {non-verbal predicate}
+Al-walad-u karim-un fi 	al-hadiq-i
+DEF-boy-NOM generous-NOM in	DEF-park-GEN
+Intended: 'The generous boy is in the park'
+
+This appears to be an example of something breaking in our attributive adjective agreement, likely due to our implementation of predicative adjectives. The predicative adjective "karim-un" appears to be attaching both to "al-walad-u" and "fi al-hadiq-i" as both a head and a complement. None of these parses should be occurring, and so it appears that some edits would need to be made to the agreement requirements between attributive adjectives and the nouns that they are modifying. 
+
+This ambiguity appears to have bled into some of the other instances where we're seeing less parses. For example, here is one of the other sentences that recieved multiple parses. 
+
+Source: f:49, Alataibi, attested
+Vetted: s
+Judgment: g
+Phenomena: {agr, det, adj}
+ja2-a al-rajul-u al-karim-u
+came-PFV.3SGMASC the-man-NOM the-generous-NOM
+'The generous man came.'
+
+In this case, it appears as though the parser is choosing between HEAD-ADJ and HEAD-ADJ-INT to attach the adjective. We believe this may be tied to the same renewal of ambiguity we were seeing with the 10-parse sentence. 
+
+Another source of ambiguity appears to be the optionality of the BARE-NP rule, as evidenced by the following test case:
+
+Source: b:19, Mohammad, attested
+Vetted:s
+Judgment: g
+Phenomena: {clausal complement}
+qal-a 	al-rajul-u		2inna	al-bint-a 	qabal-at	al-walad-a	
+said-3sg.m DEF-man-NOM	that	DEF-girl-ACC	met-3.SG.F	DEF-boy-ACC
+'The man said that the girl met the boy.'
+
+The grammar appears to view the BARE-NP rule as optional for "al-bint-u" in this case, resultantly generating two trees. 
+
+From other parse trees that we have seen, these seem to be the dominant forces maintaining ambiguity in our grammar, and they would be the first we would address to combat further overgeneration. 
+
+###### CONCLUSION #####
+That's all folks!
+
+

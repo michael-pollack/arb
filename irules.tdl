@@ -25,25 +25,17 @@ def-prefix :=
 %prefix (* al-)
 def-lex-rule.
 
-posspn-suffix1 :=
-%suffix (* -hu)
-posspn-lex-rule.
-
-posspn-suffix2 :=
-%suffix (* -ki)
-posspn-lex-rule.
-
-posspn-suffix3 :=
-%suffix (* -hi)
-posspn-lex-rule.
-
-posspn-suffix4 :=
+posspn_1-suffix :=
 %suffix (* -ii)
-posspn-lex-rule.
+posspn_1-lex-rule.
 
-posspn-suffix5 :=
-%suffix (* -tu)
-posspn-lex-rule.
+posspn_2-suffix :=
+%suffix (* -ki)
+posspn_2-lex-rule.
+
+posspn_3-suffix :=
+%suffix (* -hu)
+posspn_3-lex-rule.
 
 imperf-suffix :=
 %suffix (* -u)

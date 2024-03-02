@@ -2,7 +2,7 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;; Grammar of Modern_Standard_Arabic
 ;;; created at:
-;;;     Wed Feb 28 21:43:36 UTC 2024
+;;;     Fri Mar 01 20:28:27 UTC 2024
 ;;; based on Matrix customization system version of:
 ;;;     Fri 27 Oct 2023 04:16:13 PM UTC
 ;;;
@@ -841,7 +841,7 @@ nounposs-lex-rule-super := lex-rule &
                       MC-FLAG #mc,
                       1PL_V_SUBJ-OR-1SG_V_SUBJ-OR-3PL_V_MASC_SUBJ-FLAG #1pl_v_subj-or-1sg_v_subj-or-3pl_v_masc_subj ] ] ].
 
-posspn-lex-rule := infl-lex-rule & nounposs-lex-rule-super &
+posspn_1-lex-rule := infl-lex-rule & nounposs-lex-rule-super &
   [ SYNSEM.LOCAL.CAT [ HEAD #head,
                        VAL [ SPR < >,
                              SPEC #spec,
@@ -852,7 +852,8 @@ posspn-lex-rule := infl-lex-rule & nounposs-lex-rule-super &
                          [ PRED "pron_rel",
                            LBL #lbl2,
                            ARG0 #possessor &
-                                [ COG-ST activ-or-more,
+                                [ PNG.PER 1st,
+                                  COG-ST activ-or-more,
                                   SPECI + ] ],
                          quant-relation &
                          [ PRED "exist_q_rel",
@@ -889,6 +890,92 @@ nonpossessive-lex-rule-1 := add-only-no-ccont-rule &
                        POSSESSUM nonpossessive ] ].
 
 nonposs-lex-rule := const-lex-rule & nonpossessive-lex-rule-1 & nounposs-lex-rule-super.
+
+posspn_2-lex-rule := infl-lex-rule & nounposs-lex-rule-super &
+  [ SYNSEM.LOCAL.CAT [ HEAD #head,
+                       VAL [ SPR < >,
+                             SPEC #spec,
+                             SUBJ #subj,
+                             COMPS #comps ] ],
+    C-CONT [ HOOK #hook,
+             RELS.LIST < noun-relation &
+                         [ PRED "pron_rel",
+                           LBL #lbl2,
+                           ARG0 #possessor &
+                                [ PNG.PER 2nd,
+                                  COG-ST activ-or-more,
+                                  SPECI + ] ],
+                         quant-relation &
+                         [ PRED "exist_q_rel",
+                           ARG0 #possessum,
+                           RSTR #harg ],
+                         arg12-ev-relation &
+                         [ PRED "poss_rel",
+                           LBL #lbl,
+                           ARG1 #possessum,
+                           ARG2 #possessor ],
+                         quant-relation &
+                         [ PRED "exist_q_rel",
+                           ARG0 #possessor,
+                           RSTR #harg2 ] >,
+             HCONS.LIST < qeq &
+                          [ HARG #harg,
+                            LARG #lbl ],
+                          qeq &
+                          [ HARG #harg2,
+                            LARG #lbl2 ] > ],
+    DTR.SYNSEM.LOCAL [ CONT.HOOK #hook &
+                                 [ INDEX #possessum &
+                                         [ COG-ST activ-or-more ],
+                                   LTOP #lbl ],
+                       CAT [ HEAD #head &
+                                  [ PRON - ],
+                             VAL [ SPEC #spec,
+                                   SUBJ #subj,
+                                   COMPS #comps ] ] ] ].
+
+posspn_3-lex-rule := infl-lex-rule & nounposs-lex-rule-super &
+  [ SYNSEM.LOCAL.CAT [ HEAD #head,
+                       VAL [ SPR < >,
+                             SPEC #spec,
+                             SUBJ #subj,
+                             COMPS #comps ] ],
+    C-CONT [ HOOK #hook,
+             RELS.LIST < noun-relation &
+                         [ PRED "pron_rel",
+                           LBL #lbl2,
+                           ARG0 #possessor &
+                                [ PNG.PER 3rd,
+                                  COG-ST activ-or-more,
+                                  SPECI + ] ],
+                         quant-relation &
+                         [ PRED "exist_q_rel",
+                           ARG0 #possessum,
+                           RSTR #harg ],
+                         arg12-ev-relation &
+                         [ PRED "poss_rel",
+                           LBL #lbl,
+                           ARG1 #possessum,
+                           ARG2 #possessor ],
+                         quant-relation &
+                         [ PRED "exist_q_rel",
+                           ARG0 #possessor,
+                           RSTR #harg2 ] >,
+             HCONS.LIST < qeq &
+                          [ HARG #harg,
+                            LARG #lbl ],
+                          qeq &
+                          [ HARG #harg2,
+                            LARG #lbl2 ] > ],
+    DTR.SYNSEM.LOCAL [ CONT.HOOK #hook &
+                                 [ INDEX #possessum &
+                                         [ COG-ST activ-or-more ],
+                                   LTOP #lbl ],
+                       CAT [ HEAD #head &
+                                  [ PRON - ],
+                             VAL [ SPEC #spec,
+                                   SUBJ #subj,
+                                   COMPS #comps ] ] ] ].
 
 verb_suffix-lex-rule-super := MC-rule-dtr & add-only-no-ccont-rule & verb_pn_obj-rule-dtr & verb_pn_subj-rule-dtr &
   [ INFLECTED [ VERB_SUFFIX-FLAG +,
@@ -1321,17 +1408,11 @@ head-initial-head-nexus := head-initial &
 head-final-head-nexus := head-final &
   [ SYNSEM.ATTACH rmod ].
 
-
 head-subj-phrase := decl-head-subj-phrase & head-initial-head-nexus &
-  [ SYNSEM.LOCAL.CAT[HEAD verb, MC #mc],
-    HEAD-DTR.SYNSEM.LOCAL.CAT.MC #mc ].
-
-
-subj-head-phrase := decl-head-subj-phrase & head-final-head-nexus &
   [ SYNSEM.LOCAL.CAT [HEAD verb, MC #mc],
     HEAD-DTR.SYNSEM.LOCAL.CAT.MC #mc ].
 
-head-subj-phrase := decl-head-subj-phrase & head-initial-head-nexus &
+subj-head-phrase := decl-head-subj-phrase & head-final-head-nexus &
   [ SYNSEM.LOCAL.CAT [HEAD verb, MC #mc],
     HEAD-DTR.SYNSEM.LOCAL.CAT.MC #mc ].
 
