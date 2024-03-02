@@ -237,7 +237,7 @@ nam := intr-verb-lex &
   [ STEM < "nam" >,
     SYNSEM.LKEYS.KEYREL.PRED "_sleep_v_rel" ].
 
-yakul := intr-verb-lex &
+yakul := trans-verb-lex &
   [ STEM < "yakul" >,
     SYNSEM.LKEYS.KEYREL.PRED "_eat_v_rel" ].
 
@@ -253,7 +253,7 @@ qabal := trans-verb-lex &
   [ STEM < "qabal" >,
     SYNSEM.LKEYS.KEYREL.PRED "_met_v_rel" ].
 
-kan := trans-cop-verb-lex &
+kan := trans-verb-lex &
   [ STEM < "kan" >,
     SYNSEM.LKEYS.KEYREL.PRED "_be_v_id_rel" ].
 

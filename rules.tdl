@@ -20,6 +20,10 @@ head-comp := head-comp-phrase.
 
 head-subj := head-subj-phrase.
 
+non-verb-subj-head := non-verbal-subj-head-phrase. 
+
+non-verb-head-subj := non-verbal-head-subj-phrase.
+
 comp-head := comp-head-phrase.
 
 subj-head := subj-head-phrase.

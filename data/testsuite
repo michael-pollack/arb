@@ -436,9 +436,9 @@ Source: b:13, Mohammad, attested
 Vetted: s
 Judgment: g
 Phenomena: {aspect}
-al-walad-u				    yakul-a		al-tuffahat-a
-DEF-boy-NOM			eat-PERF	DEF-apple-ACC
-'The boy has eaten the apple.'
+al-walad-u				    qabal-a		al-tuffahat-a
+DEF-boy-NOM			meet-PERF	DEF-apple-ACC
+'The boy has met the apple.'
 
 
 #40 imperfective verb
@@ -446,8 +446,8 @@ Source: b:13, Mohammad, attested
 Vetted: s
 Judgment: g
 Phenomena: {aspect}
-al-walad-u				yakul-u		al-tuffahat-a
-DEF-boy-NOM				eat-PROG	DEF-apple-ACC
+al-walad-u				qabal-u		al-tuffahat-a
+DEF-boy-NOM				meet-PROG	DEF-apple-ACC
 'The boy is eating the apple.'
 
 #41 perfective verb aspect -a (cannot follow agreement marker)
@@ -455,9 +455,9 @@ Source: b:13, Mohammad, attested
 Vetted: s
 Judgment: u
 Phenomena: {aspect}
-al-walad-u				    yakul-a-a		al-tuffahat-a
-DEF-boy-NOM				    eat-3sg.m-PERF	DEF-apple-ACC
-'The boy has eaten the apple.'
+al-walad-u				    qabal-a-a		al-tuffahat-a
+DEF-boy-NOM				    meet-3sg.m-PERF	DEF-apple-ACC
+'The boy has met the apple.'
 
 
 #42 imperfective verb (cannot follow agreement marker)
@@ -465,8 +465,8 @@ Source: b:13, Mohammad, attested
 Vetted: s
 Judgment: u
 Phenomena: {aspect}
-al-walad-u				yakul-a-u	al-tuffahat-a
-DEF-boy-NOM			eat-3sgm-PROG	DEF-apple-ACC
+al-walad-u				qabal-a-u	al-tuffahat-a
+DEF-boy-NOM			meet-3sgm-PROG	DEF-apple-ACC
 'The boy is eating the apple.'
 
 #######Negation###########
@@ -476,8 +476,8 @@ Source: b:13, Mohammad, attested
 Vetted: s
 Judgment: g
 Phenomena: {negation}
-al-walad-u		lan		    yakul-a			al-tuffahat-a
-DEF-boy-NOM		not		    eat-PERF	DEF-apple-ACC
+al-walad-u		lan		    qabal-a			al-tuffahat-a
+DEF-boy-NOM		not		    meet-PERF	DEF-apple-ACC
 'The boy will not eat the apple.'
 
 
@@ -486,8 +486,8 @@ Source: b:13, Mohammad, attested
 Vetted: s
 Judgment: g
 Phenomena: {negation}
-al-walad-u		la 		yakul-u			al-tuffahat-a
-DEF-boy-NOM		not		eat-PROG	DEF-apple-ACC
+al-walad-u		la 		qabal-u			al-tuffahat-a
+DEF-boy-NOM		not		meet-PROG	DEF-apple-ACC
 'The boy is not eating the apple.'
 
 #45 Negation la perfective verb
@@ -495,8 +495,8 @@ Source: b:13, Mohammad, attested
 Vetted: s
 Judgment: u
 Phenomena: {negation}
-al-walad-u		la 		yakul-a			al-tuffahat-a
-DEF-boy-NOM		not		eat-PERF	DEF-apple-ACC
+al-walad-u		la 		qabal-a			al-tuffahat-a
+DEF-boy-NOM		not		meet-PERF	DEF-apple-ACC
 Intended: 'The boy will not eat the apple.'
 
 
@@ -505,8 +505,8 @@ Source: b:13, Mohammad, attested
 Vetted: s
 Judgment: u
 Phenomena: {negation}b:\13, Mohammad, attested
-al-walad-u		lan		yakul-u			al-tuffahat-a
-DEF-boy-NOM		not		eat-PROG	DEF-apple-ACC
+al-walad-u		lan		qabal-u			al-tuffahat-a
+DEF-boy-NOM		not		meet-PROG	DEF-apple-ACC
 Intended: 'The boy is not eating the apple.'
 
 #agreement##############
@@ -971,7 +971,7 @@ Source: a:207, Ahmed, attested
 Vetted:s
 Judgment: g
 Phenomena: {poss, pn}
-Zayd-un ma3ruuf-un bi-nazaahat-i-hi
+Zayd-un ma3ruuf-un bi-nazaahat-i-hu
 Zayd-NOM known-NOM for-honesty-GEN-his
 'Zayd is known for his honesty'
 
@@ -1090,7 +1090,7 @@ Source: b:19, Mohammad, attested
 Vetted:s
 Judgment: g
 Phenomena: {clausal complement}
-Hasib-a 	al-rajul-u		2anna	al-bint-at  	qabal-at	al-walad-a	
+Hasib-a 	al-rajul-u		2anna	al-bint-a  	qabal-at	al-walad-a	
 Thought-3sg.m DEF-man-NOM	that	DEF-girl-ACC	met-3.SG.F		DEF-boy-ACC
 'The man thought that the girl met the boy.'
 
@@ -1099,7 +1099,7 @@ Source: b:19, Mohammad, attested
 Vetted:s
 Judgment: g
 Phenomena: {clausal complement}
-qal-a 	al-rajul-u		2inna	al-bint-at 	qabal-at	al-walad-a	
+qal-a 	al-rajul-u		2inna	al-bint-a 	qabal-at	al-walad-a	
 said-3sg.m DEF-man-NOM	that	DEF-girl-ACC	met-3.SG.F	DEF-boy-ACC
 'The man said that the girl met the boy.'
 
@@ -1108,7 +1108,7 @@ Source: b:19, Mohammad, attested
 Vetted:s
 Judgment: u
 Phenomena: {clausal complement}	
-Hasib-a 	al-rajul-u		2inna	al-bint-at  	qabal-at	al-walad-a	
+Hasib-a 	al-rajul-u		2inna	al-bint-a  	qabal-at	al-walad-a	
 Thought-3sg.m DEF-man-NOM	that	DEF-girl-ACC	met-3.SG.F		DEF-boy-ACC
 'The man thought that the girl met the boy.'
 
@@ -1117,7 +1117,7 @@ Source: b:19, Mohammad, attested
 Vetted:s
 Judgment: u
 Phenomena: {clausal complement}	
-qal-a 	al-rajul-u		2anna	al-bint-at 	qabal-at	al-walad-a	
+qal-a 	al-rajul-u		2anna	al-bint-a 	qabal-at	al-walad-a	
 said-3sg.m DEF-man-NOM	that	DEF-girl-ACC	met-3.SG.F	DEF-boy-ACC
 'The man said that the girl met the boy.'
 
@@ -1144,45 +1144,45 @@ Source: b:19, Mohammad, attested
 Vetted:s
 Judgment: g
 Phenomena: {clausal complement}	
-qal-a 	al-rajul-u		qan	al-walad-u	yakul-a		al-tuffahat-a
-said-3sg.m DEF-man-NOM	that	DEF-boy-u	ate-PERF	DEF-boy-ACC
-'The man said that the boy has eaten the apple.'
+qal-a 	al-rajul-u		qan	al-walad-u	qabal-a		al-tuffahat-a
+said-3sg.m DEF-man-NOM	that	DEF-boy-u	meet-PERF	DEF-boy-ACC
+'The man said that the boy has met the apple.'
 
 # clausal complements - qan + perfective verb, embedded subject ACC
 Source: b:19, Mohammad, attested
 Vetted:s
 Judgment: g
 Phenomena: {clausal complement}
-qal-a 	al-rajul-u		qan	al-walad-a	yakul-a		al-tuffahat-a
-said-3sg.m DEF-man-NOM	that	DEF-boy-ACC	ate-PERF	DEF-boy-ACC
-'The man said that the boy has eaten the apple.'
+qal-a 	al-rajul-u		qan	al-walad-a	qabal-a		al-tuffahat-a
+said-3sg.m DEF-man-NOM	that	DEF-boy-ACC	meet-PERF	DEF-boy-ACC
+'The man said that the boy has met the apple.'
 
 # clausal complements - 2anna + perfective verb
 Source: b:19, Mohammad, attested
 Vetted:s
 Judgment: u
 Phenomena: {clausal complement}
-qal-a 	al-rajul-u		2anna	al-walad-u	yakul-a		al-tuffahat-a
-said-3sg.m DEF-man-NOM	that	DEF-boy-u	ate-PERF	DEF-boy-ACC
-'The man said that the boy has eaten the apple.'
+qal-a 	al-rajul-u		2anna	al-walad-u	qabal-a		al-tuffahat-a
+said-3sg.m DEF-man-NOM	that	DEF-boy-u	meet-PERF	DEF-boy-ACC
+'The man said that the boy has met the apple.'
 
 # clausal complements - 2inna + perfective verb
 Source: b:19, Mohammad, attested
 Vetted:s
 Judgment: u
 Phenomena: {clausal complement}
-qal-a 	al-rajul-u		2inna	al-walad-u	yakul-a		al-tuffahat-a
-said-3sg.m DEF-man-NOM	that	DEF-boy-u	ate-PERF	DEF-boy-ACC
-'The man said that the boy has eaten the apple.'
+qal-a 	al-rajul-u		2inna	al-walad-u	qabal-a		al-tuffahat-a
+said-3sg.m DEF-man-NOM	that	DEF-boy-u	meet-PERF	DEF-boy-ACC
+'The man said that the boy has met the apple.'
 
 # clausal complements - qan + no perfective marker
 Source: b:19, Mohammad, attested
 Vetted:s
 Judgment: u
 Phenomena: {clausal complement}
-qal-a 	al-rajul-u		qan al-walad-u	yakul-a		al-tuffahat-a
-said-3sg.m DEF-man-NOM	that	DEF-boy-u	ate-3.sg.m	DEF-boy-ACC
-'The man said that the boy has eaten the apple.'
+qal-a 	al-rajul-u		qan al-walad-u	qabal-a		al-tuffahat-a
+said-3sg.m DEF-man-NOM	that	DEF-boy-u	meet-3.sg.m	DEF-boy-ACC
+'The man said that the boy has met the apple.'
 
 ###### Matrix yes-no questions #########
 
@@ -1236,7 +1236,7 @@ Source: p:7, Btoosh, attested
 Vetted:s
 Judgment: u
 Phenomena: {yes-no questions}
-2a 		walad-u  		qadim-a
+2a 		walad-un  		qadim-a
 Q.did		boy.3.sg.m-nom	came-3sg.m
 Intended: Did the boy come?
 
@@ -1246,7 +1246,7 @@ Source: p:7, Btoosh, attested
 Vetted:s
 Judgment: g
 Phenomena: {yes-no questions}
-2a		walad-u  		qadim-a
+2a		walad-un  		qadim-a
 Q.did		boy.3.sg.m-nom	came-3sg.m
 Did a boy come?
 
@@ -1255,7 +1255,7 @@ Source: p:7, Btoosh, attested
 Vetted:s
 Judgment: u
 Phenomena: {yes-no questions}
-hal 		walad-u  		qadim-a
+hal 		walad-un  		qadim-a
 Q.did		boy.3.sg.m-nom	came-3sg.m
 Did a boy come?
 
